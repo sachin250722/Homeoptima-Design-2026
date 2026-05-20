@@ -1,0 +1,166 @@
+/* Archivo Font */
+@font-face {
+    font-family: "Archivo";
+    src: url("../../../fonts/Archivo-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Poppins Font */
+@font-face {
+    font-family: "Poppins";
+    src: url("../../fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Archivo", sans-serif;
+}
+
+a {
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+$primary : #2C6EFE !default;
+$secondary: #0E171F !default;
+$secondary-dark: #084CC0 !default;
+$heading-color: #0E171F !default;
+$dark: #0E171F !default;
+$white: #fff !default;
+$radius: 12px !default;
+$radius-lg: 24px !default;
+$radius-md: 12px !default;
+$radius-sm: 4px !default;
+$text-muted: #2E2E2ECC;
+$light-color: #F2F6FF;
+// light-varible
+
+
+
+
+// VARIABLES
+:root {
+    --primary-color: #{$primary};
+    --secondary-color: #{$secondary};
+    --secondary-dark: #{$secondary-dark};
+    --dark:#{$dark};
+    --white: #{$white};
+    --heading-color:#{$heading-color};
+    --light-color:#{$light-color};
+    --radius:#{$radius};
+    --radius-md:#{$radius-md};
+    --radius-lg:#{$radius-lg};
+    --radius-sm:#{$radius-sm};
+    --text-muted:#{$text-muted};
+}
+
+::selection {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+::-moz-selection {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+// RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+// GLOBAL
+body {
+    background-color: var(--body-bg-color);
+    font-family: "Poppins", sans-serif;
+}
+
+.bg-body-tertiary {
+    background-color: transparent !important;
+    padding: 18px 0;
+}
+
+p {
+    color: #929DAA;
+    font-weight: 500;
+    margin-bottom: 0;
+
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+    transition: all 0.5s;
+    font-weight: 500;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Archivo", sans-serif;
+    font-weight: 500;
+    color: var(--heading-color);
+}
+
+// ================= Typography =================
+
+h1 {
+    font-size: 76px;
+}
+
+h2 {
+    font-size: 70px;
+}
+
+h3 {
+    font-size: 48px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+
+.text-primary {
+    color: var(--primary-color) !important;
+}

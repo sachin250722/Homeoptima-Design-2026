@@ -1,0 +1,22 @@
+// ABSTRACTS
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/reset.scss";
+
+// LAYOUT
+@import "layout/header";
+@import "layout/footer";
+@import "include";
+
+
+
+// PAGES
+@import "pages/home";
+
+
+
+
+// auth\\
+
+// @import "auth/login"
+

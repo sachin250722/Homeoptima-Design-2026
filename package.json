@@ -1,0 +1,17 @@
+{
+  "name": "ho-design-2026",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend design system and prototype assets for HomeOptima 2026",
+  "scripts": {
+    "build:sass": "sass styles/scss/style.scss styles/css/style.css --no-source-map",
+    "watch:sass": "sass --watch styles/scss/style.scss:styles/css/style.css",
+    "start": "npx live-server --port=8000 --open=index.html",
+    "dev": "concurrently \"npm run watch:sass\" \"npm run start\""
+  },
+  "devDependencies": {
+    "sass": "^1.76.0",
+    "live-server": "^1.2.2",
+    "concurrently": "^8.2.0"
+  }
+}
