@@ -4,6 +4,7 @@
         font-size: 14px;
         padding: 12px 24px !important;
         font-weight: 500;
+       
     }
 
     .navbar-brand {
@@ -35,4 +36,11 @@
     }
 
 
+}
+
+.navbar-toggler{
+
+    &:focus {
+        box-shadow: none!important;
+    }
 }

@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="libraries/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="libraries/bootstrap-select/bootstrap-select.min.css">
     <!-- golbal-style.css -->
     <link rel="stylesheet" href="styles/css/style.css">
 </head>
@@ -15,11 +18,28 @@
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Logo</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="javascript:void(0);" class="d-block d-lg-none">
+                            <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 19L23.0002 23.0002" stroke="#0E171F" stroke-width="2" stroke-linecap="square"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M21.001 13.0005C21.001 8.58194 17.4191 5 13.0005 5C8.58194 5 5 8.58194 5 13.0005C5 17.4191 8.58194 21.001 13.0005 21.001C17.4191 21.001 21.001 17.4191 21.001 13.0005Z"
+                                    stroke="#0E171F" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                            </svg>
+    
+                        </a>
+                        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 14V11.6667H21V14H0ZM0 8.16667V5.83333H21V8.16667H0ZM0 2.33333V0H21V2.33333H0Z"
+                                    fill="#0E171F" />
+                            </svg>
+    
+                        </button>
+
+                    </div>
                     <div class="collapse navbar-collapse" id="navbarScroll">
                         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
                             style="--bs-scroll-height: 100px;">
@@ -43,15 +63,16 @@
                             </li>
                         </ul>
 
-                    </div>
-                    <!-- extra-nav -->
-                    <div class="extra-nav">
-                        <a href="javascript:void(0);" class="btn btn-outline-primary me-3">Sign in <img
-                                src="images/icons/chevron-right.svg" alt="">
-                        </a>
-                        <a href="javascript:void(0);" class="btn btn-primary">My properties <img
-                                src="images/icons/chevron-right-white.svg" alt="">
-                        </a>
+                        <!-- extra-nav -->
+                        <div class="extra-nav ms-auto">
+                            <a href="javascript:void(0);" class="btn btn-outline-primary me-lg-3 mb-3">Sign in <img
+                                    src="images/icons/chevron-right.svg" alt="">
+                            </a>
+                            <a href="javascript:void(0);"
+                                class="btn btn-primary d-xl-inline-block  d-lg-none d-inline-block">My properties <img
+                                    src="images/icons/chevron-right-white.svg" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -61,11 +82,349 @@
     <!-- header-end -->
 
     <!-- main-start -->
+    <main>
+        <div class="d-block d-md-none">
+            <img src="images/icons/top-banner-img.svg" class="w-100" alt="">
 
+        </div>
+        <section class="banner-section">
+            <div class="outer-line">
+                <img src="images/icons/banner-line.svg" alt="">
+            </div>
+            <div class="container">
+                <div class="banner-content">
+                    <span class="badge badge-banner">Exclusive flyer offer</span>
+                    <h1>Start Tracking Your Home's Value Starting Today.</h1>
+                    <p>Complete The Form Now!</p>
+                </div>
+                <div class="banner-bottom-content">
+                    <div class="row gx-4">
+                        <div class="col-lg-6">
+                            <div class="info-card">
+                                <div class="card-header-text">
+                                    <h3>Estimated Market Value</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+
+                                <div class="house-image">
+                                    <img src="images/flayer-landing-page-img/01.jpg" alt="House" />
+                                </div>
+
+                                <div class="review-box">
+                                    <div class="review-icon">
+                                        <img src="images/flayer-landing-page-img/02.png" alt="">
+                                    </div>
+                                    <div class="review-content">
+                                        <h4>Top Home Valuation Tool!</h4>
+                                        <div class="stars">
+                                            <span><img src="images/icons/star.svg" alt=""></span>
+                                            <span><img src="images/icons/star.svg" alt=""></span>
+                                            <span><img src="images/icons/star.svg" alt=""></span>
+                                            <span><img src="images/icons/star.svg" alt=""></span>
+                                            <span><img src="images/icons/light-star.svg" alt=""></span>
+                                            <small>700+ Reviews</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6">
+                            <div class="form-card h-100">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <label class="form-label">Property address <span><svg width="6" height="6"
+                                                        viewBox="0 0 6 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M4.60519 0.798687L5.23519 1.91869L3.31719 2.63269L5.23519 3.34669L4.59119 4.49469L2.99519 3.23469L3.28919 5.26469H2.00119L2.26719 3.23469L0.671188 4.52269L-0.000812486 3.33269L1.90319 2.61869L-0.000812486 1.93269L0.643188 0.784687L2.28119 2.04469L2.00119 0.000686646H3.30319L2.99519 2.04469L4.60519 0.798687Z"
+                                                            fill="#E9BD5F" />
+                                                    </svg>
+                                                </span></label>
+                                            <input type="text" class="form-control"
+                                                value="7215 Visor Gate, Mississauga" />
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label">Apt unit <span><svg width="6" height="6"
+                                                        viewBox="0 0 6 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M4.60519 0.798687L5.23519 1.91869L3.31719 2.63269L5.23519 3.34669L4.59119 4.49469L2.99519 3.23469L3.28919 5.26469H2.00119L2.26719 3.23469L0.671188 4.52269L-0.000812486 3.33269L1.90319 2.61869L-0.000812486 1.93269L0.643188 0.784687L2.28119 2.04469L2.00119 0.000686646H3.30319L2.99519 2.04469L4.60519 0.798687Z"
+                                                            fill="#E9BD5F" />
+                                                    </svg>
+                                                </span></label>
+                                            <input type="text" class="form-control" placeholder="Enter apt unit" />
+                                        </div>
+
+                                        <div class="col-12">
+                                            <label class="form-label">Email <span><svg width="6" height="6"
+                                                        viewBox="0 0 6 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M4.60519 0.798687L5.23519 1.91869L3.31719 2.63269L5.23519 3.34669L4.59119 4.49469L2.99519 3.23469L3.28919 5.26469H2.00119L2.26719 3.23469L0.671188 4.52269L-0.000812486 3.33269L1.90319 2.61869L-0.000812486 1.93269L0.643188 0.784687L2.28119 2.04469L2.00119 0.000686646H3.30319L2.99519 2.04469L4.60519 0.798687Z"
+                                                            fill="#E9BD5F" />
+                                                    </svg>
+                                                </span></label>
+                                            <input type="email" class="form-control"
+                                                placeholder="Enter email address (e.g john@doe.com)" />
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label class="form-label">First name <span><svg width="6" height="6"
+                                                        viewBox="0 0 6 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M4.60519 0.798687L5.23519 1.91869L3.31719 2.63269L5.23519 3.34669L4.59119 4.49469L2.99519 3.23469L3.28919 5.26469H2.00119L2.26719 3.23469L0.671188 4.52269L-0.000812486 3.33269L1.90319 2.61869L-0.000812486 1.93269L0.643188 0.784687L2.28119 2.04469L2.00119 0.000686646H3.30319L2.99519 2.04469L4.60519 0.798687Z"
+                                                            fill="#E9BD5F" />
+                                                    </svg>
+                                                </span></label>
+                                            <input type="text" class="form-control" placeholder="Enter full name" />
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label class="form-label">Last name <span><svg width="6" height="6"
+                                                        viewBox="0 0 6 6" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M4.60519 0.798687L5.23519 1.91869L3.31719 2.63269L5.23519 3.34669L4.59119 4.49469L2.99519 3.23469L3.28919 5.26469H2.00119L2.26719 3.23469L0.671188 4.52269L-0.000812486 3.33269L1.90319 2.61869L-0.000812486 1.93269L0.643188 0.784687L2.28119 2.04469L2.00119 0.000686646H3.30319L2.99519 2.04469L4.60519 0.798687Z"
+                                                            fill="#E9BD5F" />
+                                                    </svg>
+                                                </span></label>
+                                            <input type="text" class="form-control" placeholder="Enter full name" />
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-xl-2 col-lg-3 col-4">
+                                                    <label class="form-label d-block">Phone <span>
+                                                        </span></label>
+                                                    <select class="selectpicker">
+                                                        <option value="us"
+                                                            data-content="<img src='images/icons/flag/01.svg' alt='USA' >">
+                                                            USA (+1)
+                                                        </option>
+
+                                                        <option value="in"
+                                                            data-content="<img src='images/icons/flag/01.svg' alt='India'/>">
+                                                            USA (+1)
+                                                        </option>
+                                                    </select>
+
+                                                </div>
+                                                <div class="col-xl-10 col-lg-9 col-8">
+                                                    <label class="form-label"> <span>
+                                                        </span></label>
+                                                    <input type="tel" class="form-control" placeholder="Enter phone" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-12">
+                                            <button type="submit" class="btn valuation-btn w-100">
+                                                Track home value now
+                                                <span><img src="images/icons/chevron-right-white.svg" alt=""></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div class="shape">
+            <img src="images/icons/section-shape.svg" alt="">
+        </div>
+        <!-- testimonial-section-start -->
+        <section class="testimonial-section">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="testimonial-left-content">
+                            <h2>What clients say <span class="text-primary">.</span></h2>
+                            <p>In rutrum imperdiet felis sed efficitur. Vivamus magna magna, sodales nec metus vitae,
+                                bibendum egestas odio.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 offset-lg-1">
+                        <div class="testimonial-right-content">
+                            <div class="swiper testimonial-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-card">
+                                            <div class="testimonial-card-header">
+                                                <div class="stars">
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/light-star.svg" alt=""></span>
+
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-card-body">
+                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    Etiam sit
+                                                    amet turpis
+                                                    dapibus, sagittis ante finibus, congue nulla. Curabitur tincidunt
+                                                    malesuada
+                                                    tellus, nec sodales ligula accumsan eu.</p>
+                                            </div>
+                                            <div class="testimonial-card-footer">
+                                                <div class="client-media">
+                                                    <img src="images/flayer-landing-page-img/03.png" alt="">
+                                                </div>
+                                                <div class="client-content">
+                                                    <h5>John Doe</h5>
+                                                    <span>Mississauga</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- second-slide-start -->
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-card">
+                                            <div class="testimonial-card-header">
+                                                <div class="stars">
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/light-star.svg" alt=""></span>
+
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-card-body">
+                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    Etiam sit
+                                                    amet turpis
+                                                    dapibus, sagittis ante finibus, congue nulla. Curabitur tincidunt
+                                                    malesuada
+                                                    tellus, nec sodales ligula accumsan eu.</p>
+                                            </div>
+                                            <div class="testimonial-card-footer">
+                                                <div class="client-media">
+                                                    <img src="images/flayer-landing-page-img/03.png" alt="">
+                                                </div>
+                                                <div class="client-content">
+                                                    <h5>John Doe</h5>
+                                                    <span>Mississauga</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- third-slide-start -->
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-card">
+                                            <div class="testimonial-card-header">
+                                                <div class="stars">
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/light-star.svg" alt=""></span>
+
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-card-body">
+                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    Etiam sit
+                                                    amet turpis
+                                                    dapibus, sagittis ante finibus, congue nulla. Curabitur tincidunt
+                                                    malesuada
+                                                    tellus, nec sodales ligula accumsan eu.</p>
+                                            </div>
+                                            <div class="testimonial-card-footer">
+                                                <div class="client-media">
+                                                    <img src="images/flayer-landing-page-img/03.png" alt="">
+                                                </div>
+                                                <div class="client-content">
+                                                    <h5>John Doe</h5>
+                                                    <span>Mississauga</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-card">
+                                            <div class="testimonial-card-header">
+                                                <div class="stars">
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/star.svg" alt=""></span>
+                                                    <span><img src="images/icons/light-star.svg" alt=""></span>
+
+                                                </div>
+                                            </div>
+                                            <div class="testimonial-card-body">
+                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    Etiam sit
+                                                    amet turpis
+                                                    dapibus, sagittis ante finibus, congue nulla. Curabitur tincidunt
+                                                    malesuada
+                                                    tellus, nec sodales ligula accumsan eu.</p>
+                                            </div>
+                                            <div class="testimonial-card-footer">
+                                                <div class="client-media">
+                                                    <img src="images/flayer-landing-page-img/03.png" alt="">
+                                                </div>
+                                                <div class="client-content">
+                                                    <h5>John Doe</h5>
+                                                    <span>Mississauga</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <div class="testimonial-controls">
+                                <button class="nav-btn prev-btn" type="button">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 18L9 12L15 6" stroke="#2C6EFE" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+
+                                <div class="custom-dots">
+                                    <span class="dot active"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+
+                                <button class="nav-btn next-btn" type="button">
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.75 12.75L6.75 6.75L0.75 0.75" stroke="#2C6EFE" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- testimonial-section-end -->
+    </main>
 
     <!-- main-end -->
     <!-- footer::start -->
-    <footer class="home-footer py-5">
+    <footer class="home-footer">
         <div class="container">
             <div class="row g-4">
                 <!-- Logo / About -->
@@ -150,7 +509,7 @@
                                 </svg>
                             </span>
                             <span>contact@gmail.com</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            <svg class="ms-auto ms-10" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
@@ -168,7 +527,7 @@
                                 </svg>
                             </span>
                             <span>(123) 456-7896</span>
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            <svg class="ms-auto" width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round"
                                     stroke-linejoin="round" />
@@ -177,11 +536,12 @@
                         </a>
                     </div>
 
-                    <a href="#" class="btn-contact mt-3">Contact us <img class="" src="images/icons/chevron-right.svg" alt=""></a>
+                    <a href="#" class="btn-contact">Contact us <img class="" src="images/icons/chevron-right.svg"
+                            alt=""></a>
                 </div>
             </div>
 
-            <div class="footer-bottom mt-5 pt-4">
+            <div class="footer-bottom">
                 <div class="row align-items-center gy-3">
                     <div class="col-lg-4 text-center text-lg-start">
                         <p class="mb-0 small-text">© 2026 HomeOptima — All Right Reserved</p>
@@ -202,6 +562,7 @@
             </div>
         </div>
     </footer>
+
     <!-- footer::end -->
 
 
@@ -210,6 +571,13 @@
     <!-- js -->
     <script src="libraries/jquery/jquery.min.js"></script>
     <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="libraries/swiper/swiper-bundle.min.js"></script>
+    <script src="libraries/bootstrap-select/boostrap-select.js"></script>
+
+
+    <script src="js/custom-swiper.js"></script>
+
+
 
 </body>
 
