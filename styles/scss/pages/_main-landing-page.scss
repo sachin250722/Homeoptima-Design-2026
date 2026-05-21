@@ -30,8 +30,19 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 24px;
+        gap: 96px;
         padding: 80px 24px;
+        width: 100%;
+
+        @include respond("tab-port") { gap: 48px; }
+        @include respond("phone")    { gap: 32px; }
+    }
+
+    .hero-text-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
         width: 100%;
     }
 
@@ -131,6 +142,8 @@
         display: flex;
         align-items: center;
         gap: 8px;
+        align-self: stretch;
+        border-radius: $radius !important;
 
         img {
             width: 16px;
@@ -147,19 +160,30 @@
     border-bottom: 1px solid rgba(146, 157, 170, 0.12);
     padding: 56px 0;
 
+    .stats-bar-row {
+        @include respond("laptop") { gap: 0 !important; }
+    }
+
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
     .stat-number {
         font-family: "Archivo", sans-serif;
         font-weight: 300;
         font-size: 34px;
-        line-height: 1.1;
+        line-height: 38px;
         color: #29323C;
-        margin-bottom: 8px;
+        margin-bottom: 0;
     }
 
     .stat-label {
         font-family: "Poppins", sans-serif;
         font-weight: 300;
         font-size: 16px;
+        line-height: 25px;
         color: #929DAA;
         letter-spacing: 1px;
     }
@@ -195,6 +219,9 @@
         z-index: 1;
     }
 
+    .section-header {
+        margin-bottom: 56px;
+    }
 }
 
 // ================================================
@@ -206,16 +233,79 @@
     background: $white;
     overflow: hidden;
 
+    .listings-header-row {
+        margin-bottom: 56px;
+    }
+
+    .listings-swiper-outer {
+        position: relative;
+
+        .container {
+            position: relative;
+            overflow: visible;
+        }
+    }
+
+    .listings-swiper {
+        overflow: visible !important;
+    }
+
+    .listings-next-fade {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 160px;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0.9) 20%, transparent);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 20px;
+        pointer-events: none;
+        z-index: 10;
+
+        @include respond("tab-port") { display: none; }
+    }
+
+    .listings-next-btn {
+        pointer-events: auto;
+        width: 56px;
+        height: 56px;
+        border-radius: 999px;
+        background: $white;
+        border: 1px solid rgba(146, 157, 170, 0.4);
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        flex-shrink: 0;
+        @include transitionFast;
+
+        &:hover {
+            border-color: $primary;
+            box-shadow: 0 0 0 3px rgba($primary, 0.1);
+        }
+    }
+
     .listing-card {
         background: $white;
         border: 1px solid rgba($dark, 0.08);
         border-radius: $radius-lg;
         overflow: hidden;
         box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+        @include transitionMedium;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.12);
+        }
 
         .listing-img {
             height: 320px;
             overflow: hidden;
+
+            @include respond("phone") { height: 220px; }
 
             img {
                 width: 100%;
@@ -227,22 +317,31 @@
 
         .listing-body {
             padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .listing-body-lower {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
 
         .listing-price {
             font-family: "Archivo", sans-serif;
             font-weight: 600;
             font-size: 28px;
+            line-height: 32px;
             color: $dark;
-            margin-bottom: 8px;
         }
 
         .listing-name {
             font-family: "Archivo", sans-serif;
             font-weight: 600;
             font-size: 20px;
+            line-height: 24px;
             color: $dark;
-            margin-bottom: 8px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -250,16 +349,15 @@
 
         .listing-desc {
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 24px;
             color: #929DAA;
             font-weight: 400;
-            margin-bottom: 16px;
         }
 
         .listing-meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 16px;
             align-items: center;
         }
 
@@ -268,34 +366,15 @@
             align-items: center;
             gap: 4px;
             font-size: 14px;
+            line-height: 16px;
             color: #929DAA;
             font-weight: 400;
+            white-space: nowrap;
 
             img {
                 width: 16px;
                 height: 16px;
             }
-        }
-    }
-
-    .listings-pagination {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-
-        .swiper-pagination-bullet {
-            width: 8px;
-            height: 8px;
-            background: rgba($primary, 0.24);
-            opacity: 1;
-            border-radius: 999px;
-            transition: all 0.3s;
-        }
-
-        .swiper-pagination-bullet-active {
-            width: 20px;
-            background: $primary;
-            border-radius: 999px;
         }
     }
 }
@@ -305,25 +384,25 @@
 // ================================================
 .why-us-section {
     position: relative;
-    background: transparent;
+    background: $primary;
 
     .why-us-wave {
         width: 100%;
         line-height: 0;
+        display: block;
 
-        img {
+        svg {
             width: 100%;
             display: block;
         }
 
-        &--bottom img {
+        &--bottom {
             transform: scaleY(-1);
         }
     }
 
     .why-us-inner {
         position: relative;
-        background: $primary;
         padding: 80px 0;
         overflow: hidden;
 
@@ -349,10 +428,23 @@
         }
     }
 
-    .section-header.text-center {
-        .section-desc {
-            max-width: 680px;
-            margin: 0 auto;
+    .why-us-header-row {
+        margin-bottom: 56px;
+    }
+
+    .why-us-badge-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 24px;
+
+        .section-badge {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            margin-bottom: 0;
         }
     }
 }
@@ -408,20 +500,20 @@
             display: block;
         }
 
-        &--sm {
-            width: 436px;
-            height: 500px;
-        }
+        // &--sm {
+        //     width: 436px;
+        //     height: 500px;
+        // }
 
-        &--lg {
-            width: 464px;
-            height: 532px;
-        }
+        // &--lg {
+        //     width: 464px;
+        //     height: 532px;
+        // }
 
-        &--md {
-            width: 366px;
-            height: 420px;
-        }
+        // &--md {
+        //     width: 366px;
+        //     height: 420px;
+        // }
 
         @include respond("tab-port") {
 
@@ -486,12 +578,24 @@
     .advantage-card {
         position: relative;
         background: $white;
+        border: 1px solid rgba($dark, 0.08);
         border-radius: $radius-lg;
         box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
         overflow: hidden;
         height: 340px;
         display: flex;
         align-items: stretch;
+        @include transitionMedium;
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.10);
+        }
+
+        @include respond("phone") {
+            height: auto;
+            min-height: 280px;
+        }
 
         &--img-right {
             .advantage-card-content {
@@ -596,7 +700,7 @@
     }
 
     .agent-photo {
-        flex: 0 0 462px;
+        width: 100%;
         height: 560px;
         border-radius: $radius-lg;
         overflow: hidden;
@@ -608,14 +712,7 @@
             object-position: top center;
         }
 
-        @include respond("tab-land") {
-            flex: 0 0 360px;
-            height: 440px;
-        }
-
-        @include respond("tab-port") {
-            display: none;
-        }
+        @include respond("tab-land") { height: 440px; }
     }
 
     .agent-info {
@@ -768,33 +865,12 @@
             display: block;
         }
 
-        &--tl {
-            width: 82px;
-            height: 82px;
-            top: 56px;
-            left: 160px;
-        }
+        @include respond("tab-port") { display: none; }
 
-        &--bl {
-            width: 197px;
-            height: 197px;
-            bottom: 64px;
-            left: 64px;
-        }
-
-        &--tr {
-            width: 180px;
-            height: 180px;
-            top: 40px;
-            right: 140px;
-        }
-
-        &--br {
-            width: 131px;
-            height: 131px;
-            bottom: 72px;
-            right: 152px;
-        }
+        &--tl { width: 82px;  height: 82px;  top: 56px;    left: 160px; }
+        &--bl { width: 197px; height: 197px; bottom: 64px;  left: 64px; }
+        &--tr { width: 180px; height: 180px; top: 40px;    right: 140px; }
+        &--br { width: 131px; height: 131px; bottom: 72px; right: 152px; }
     }
 
     .cta-content {
@@ -867,13 +943,9 @@
         line-height: 1.1;
         margin-bottom: 24px;
 
-        @include respond("tab-land") {
-            font-size: 48px;
-        }
-
-        @include respond("tab-port") {
-            font-size: 36px;
-        }
+        @include respond("tab-land") { font-size: 48px; }
+        @include respond("tab-port") { font-size: 36px; }
+        @include respond("phone")    { font-size: 28px; }
     }
 
     .testimonial-card {
@@ -960,6 +1032,9 @@
         padding: 80px;
         min-height: 492px;
         box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+
+        @include respond("tab-port") { padding: 48px 40px; min-height: auto; }
+        @include respond("phone")    { padding: 32px 24px; }
     }
 
     .app-glow {
@@ -1052,15 +1127,14 @@
         right: 0;
         top: 0;
         bottom: 0;
-        width: 362px;
-        border-radius: 36px;
+        width: 422px;
         overflow: hidden;
-        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
 
         .app-phone-screen {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-position: bottom;
+            object-fit: contain;
             display: block;
         }
     }

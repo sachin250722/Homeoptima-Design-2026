@@ -13,6 +13,7 @@
     font-weight: 500;
     font-style: normal;
 }
+
 @font-face {
     font-family: "Poppins";
     src: url("../../fonts/Poppins-Medium.ttf") format("truetype");
@@ -139,7 +140,7 @@ h5,
 h6 {
     font-family: "Archivo", sans-serif;
     font-weight: 500;
-    color: var(--heading-color)!important;
+    color: var(--heading-color);
 }
 
 // ================= Typography =================
