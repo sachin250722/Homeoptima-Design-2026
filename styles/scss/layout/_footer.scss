@@ -1,57 +1,65 @@
 .home-footer {
     background: linear-gradient(180deg, #0d1721 0%, #0b121a 100%);
     color: #b8c2cf;
+    padding-top: 100px;
+    padding-bottom: 40px;
+
+    @include respond ('tab-port'){
+        padding-top: 40px;
+    }
 
     .footer-logo {
-        width: 64px;
-        height: 28px;
+        padding: 12px 44px;
         border-radius: 4px;
         background: #ffffff;
-          color: rgba(14, 23, 31, 0.68);
-        color: #111827;
-        font-size: 13px;
-        font-weight: 600;
+        color: rgba(14, 23, 31, 0.68);
+        font-size: 14px;
+        font-weight: 700;
         text-decoration: none;
+        font-family: "Archivo", sans-serif;
     }
 
     .footer-text {
-       margin-top:16px;
+        margin-top: 16px;
         font-weight: 300;
         font-style: Light;
         font-size: 13px;
         margin-bottom: 40px;
         line-height: 18px;
         letter-spacing: 0px;
-      
-
-
     }
-    .footer-social{
-        .footer-title{
+
+    .footer-social {
+        .footer-title {
             font-size: 18px;
             font-weight: 600;
-            margin-top:14px;
+            margin-bottom: 14px;
         }
     }
 
     .footer-title {
-        color: #ffffff;
-        font-size: 15px;
+        color: rgba(255, 255, 255, 0.8)!important;
+        font-size: 24px;
         font-weight: 600;
-        margin-bottom: 18px;
+        margin-bottom: 30px;
+        font-family: "Poppins", sans-serif;
+        letter-spacing: 1px;
     }
 
     .footer-links {
         margin: 0;
 
         li {
-            margin-bottom: 14px;
+            margin-bottom: 20px;
 
             a {
-                color: #9aa6b5;
-                font-size: 13px;
+
+                color: rgba(255, 255, 255, 0.68);
+
+                font-size: 16px;
                 text-decoration: none;
                 transition: 0.3s ease;
+                font-weight: 400;
 
                 &:hover {
                     color: #ffffff;
@@ -66,25 +74,13 @@
             gap: 20px;
             flex-wrap: wrap;
 
-            a {
-                width: 28px;
-                height: 28px;
-                border-radius: 50%;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                color: #ffffff;
-                background: transparent;
-                border: 1px solid transparent;
-                text-decoration: none;
-                transition: 0.3s ease;
 
-                &:hover {
-                    background: rgba(255, 255, 255, 0.08);
-                    border-color: rgba(255, 255, 255, 0.08);
-                }
-            }
         }
+    }
+
+    .footer-bottom {
+        padding-top: 40px;
+        margin-top: 56px;
     }
 
     .contact-box {
@@ -92,21 +88,23 @@
         flex-direction: column;
         border-radius: 12px;
         overflow: hidden;
-        width: fit-content;
-        
+        width: 220px;
 
         a {
             display: flex;
             align-items: center;
-            gap: 10px;
             padding: 12px 14px;
-         
             background: rgba(255, 255, 255, 0.04);
             color: #d7dde6;
             text-decoration: none;
             font-size: 14px;
             transition: 0.3s ease;
             font-weight: 400;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+            &:last-child {
+                border-bottom: 0;
+            }
 
             &:hover {
                 background: rgba(255, 255, 255, 0.08);
@@ -117,6 +115,8 @@
                 display: inline-flex;
                 justify-content: center;
                 color: #4f8cff;
+                margin-right: 4px;
+                flex-shrink: unset;
             }
 
             i.ms-auto {
@@ -130,14 +130,16 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
-        padding: 10px 18px;
-        border: 1px solid rgba(255, 255, 255, 0.35);
-        border-radius: 8px;
+        padding: 12px 53px;
+        border: 1px solid rgba(255, 255, 255, 1);
+        border-radius: 12px;
         color: #ffffff;
         text-decoration: none;
-        font-size: 13px;
+        font-size: 16px;
         transition: 0.3s ease;
-        width: 75%;
+        font-weight: 500;
+        margin-top:30px;
+
 
         &:hover {
             background: #ffffff;
