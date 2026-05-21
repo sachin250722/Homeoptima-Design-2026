@@ -1,0 +1,1099 @@
+// ================================================
+//  MAIN LANDING PAGE STYLES
+// ================================================
+
+// ================================================
+//  1. HERO
+// ================================================
+.hero-section {
+    position: relative;
+    min-height: 840px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url('../../../images/main-landing-hero.png');
+    background-size: cover;
+    background-position: center;
+
+    .hero-bg-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(14, 23, 31, 0.53);
+        z-index: 1;
+    }
+
+    .hero-inner {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+        padding: 80px 24px;
+        width: 100%;
+    }
+
+    .hero-location-badges {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: rgba(14, 23, 31, 0.32);
+        backdrop-filter: blur(12px);
+        font-size: 12px;
+        font-family: "Poppins", sans-serif;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-heading {
+        font-family: "Archivo", sans-serif;
+        font-weight: 800;
+        font-size: 76px;
+        line-height: 1.03;
+        color: $white;
+        margin-bottom: 0;
+
+        @include respond("tab-land") {
+            font-size: 52px;
+        }
+
+        @include respond("tab-port") {
+            font-size: 38px;
+        }
+    }
+
+    .hero-sub {
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        line-height: 1.7;
+        color: $white;
+        font-weight: 400;
+        max-width: none;
+    }
+
+    .hero-search-wrap {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(3px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 18px;
+        padding: 10px;
+        box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-search-input {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: $white;
+        border: 1px solid #F2F2F2;
+        border-radius: $radius;
+        padding: 16px 24px;
+
+        .hero-search-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 16px;
+            font-family: "Poppins", sans-serif;
+            color: rgba(146, 157, 170, 0.56);
+            width: 100%;
+
+            &::placeholder {
+                color: rgba(146, 157, 170, 0.56);
+            }
+        }
+    }
+
+    .hero-search-btn {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+// ================================================
+//  2. STATS BAR
+// ================================================
+.stats-bar {
+    background: $white;
+    border-bottom: 1px solid rgba(146, 157, 170, 0.12);
+    padding: 56px 0;
+
+    .stat-number {
+        font-family: "Archivo", sans-serif;
+        font-weight: 300;
+        font-size: 34px;
+        line-height: 1.1;
+        color: #29323C;
+        margin-bottom: 8px;
+    }
+
+    .stat-label {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        color: #929DAA;
+        letter-spacing: 1px;
+    }
+}
+
+// ================================================
+//  3. WHAT WE DO
+// ================================================
+.what-we-do-section {
+    position: relative;
+    background: $white;
+    padding: 80px 0;
+    overflow: hidden;
+
+    .wwd-bg-wave {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.6;
+
+        img {
+            position: absolute;
+            width: 166%;
+            left: -33%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+}
+
+// ================================================
+//  4. FEATURED LISTINGS
+// ================================================
+.listings-section {
+    position: relative;
+    padding: 80px 0;
+    background: $white;
+    overflow: hidden;
+
+    .listing-card {
+        background: $white;
+        border: 1px solid rgba($dark, 0.08);
+        border-radius: $radius-lg;
+        overflow: hidden;
+        box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+
+        .listing-img {
+            height: 320px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+
+        .listing-body {
+            padding: 24px;
+        }
+
+        .listing-price {
+            font-family: "Archivo", sans-serif;
+            font-weight: 600;
+            font-size: 28px;
+            color: $dark;
+            margin-bottom: 8px;
+        }
+
+        .listing-name {
+            font-family: "Archivo", sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            color: $dark;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .listing-desc {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #929DAA;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        .listing-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .listing-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 14px;
+            color: #929DAA;
+            font-weight: 400;
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+
+    .listings-pagination {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background: rgba($primary, 0.24);
+            opacity: 1;
+            border-radius: 999px;
+            transition: all 0.3s;
+        }
+
+        .swiper-pagination-bullet-active {
+            width: 20px;
+            background: $primary;
+            border-radius: 999px;
+        }
+    }
+}
+
+// ================================================
+//  5. WHY CHOOSE US
+// ================================================
+.why-us-section {
+    position: relative;
+    background: transparent;
+
+    .why-us-wave {
+        width: 100%;
+        line-height: 0;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        &--bottom img {
+            transform: scaleY(-1);
+        }
+    }
+
+    .why-us-inner {
+        position: relative;
+        background: $primary;
+        padding: 80px 0;
+        overflow: hidden;
+
+        .why-us-bg-wave {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.15;
+            z-index: 0;
+
+            img {
+                position: absolute;
+                width: 166%;
+                left: -33%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .section-header.text-center {
+        .section-desc {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+    }
+}
+
+// ================================================
+//  6. WHERE DO YOU WANT TO LIVE
+// ================================================
+.cities-section {
+    padding: 80px 0;
+    background: $white;
+    overflow: hidden;
+
+    .cities-swiper-wrap {
+        position: relative;
+    }
+
+    .swiper.cities-swiper {
+        overflow: visible;
+    }
+
+    .cities-swiper-fade {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 200px;
+        background: linear-gradient(to right, transparent, $white 65%);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 24px;
+        z-index: 10;
+        pointer-events: none;
+
+        .slider-arrow {
+            pointer-events: all;
+        }
+    }
+
+    .city-card {
+        position: relative;
+        border-radius: $radius-lg;
+        overflow: hidden;
+        border: 1px solid rgba($dark, 0.08);
+        box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+        cursor: pointer;
+        @include transitionMedium;
+
+        img:first-child {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        &--sm {
+            width: 436px;
+            height: 500px;
+        }
+
+        &--lg {
+            width: 464px;
+            height: 532px;
+        }
+
+        &--md {
+            width: 366px;
+            height: 420px;
+        }
+
+        @include respond("tab-port") {
+
+            &--sm,
+            &--lg,
+            &--md {
+                width: 280px;
+                height: 360px;
+            }
+        }
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    .city-card-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 24px;
+        background: linear-gradient(to top, rgba(#0E171F, 0.85), transparent);
+    }
+
+    .city-card-name {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        color: $white;
+        margin-bottom: 8px;
+    }
+
+    .city-explore {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 13px;
+        font-weight: 600;
+        color: $white;
+        font-family: "Poppins", sans-serif;
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+
+        &:hover {
+            color: rgba($white, 0.8);
+        }
+    }
+}
+
+// ================================================
+//  7. YOUR REAL ESTATE ADVANTAGE
+// ================================================
+.advantage-section {
+    padding: 80px 0;
+    background: $white;
+
+    .advantage-card {
+        position: relative;
+        background: $white;
+        border-radius: $radius-lg;
+        box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+        height: 340px;
+        display: flex;
+        align-items: stretch;
+
+        &--img-right {
+            .advantage-card-content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 24px;
+                z-index: 1;
+
+                .service-icon-wrap { margin-bottom: 0; }
+            }
+
+            .advantage-card-img {
+                position: absolute;
+                right: 0;
+                top: -4px;
+                bottom: -4px;
+                width: 48%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: calc(100% + 8px);
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &--img-gradient {
+            .advantage-card-img::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(80deg, $white 8%, transparent 22%);
+                pointer-events: none;
+            }
+        }
+    }
+
+    .advantage-title {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: $dark;
+        line-height: 1.35;
+        margin-bottom: 10px;
+    }
+
+    .advantage-desc {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #929DAA;
+        font-weight: 400;
+        margin-bottom: 16px;
+    }
+}
+
+// ================================================
+//  8. MEET YOUR AGENT
+// ================================================
+.agent-section {
+    position: relative;
+    background: transparent;
+
+    .agent-section-wave {
+        width: 100%;
+        line-height: 0;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    .agent-section-inner {
+        position: relative;
+        background: $light-color;
+        padding: 80px 0;
+        overflow: hidden;
+
+        .agent-bg-wave {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.5;
+            z-index: 0;
+
+            img {
+                position: absolute;
+                width: 166%;
+                left: -33%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .agent-photo {
+        flex: 0 0 462px;
+        height: 560px;
+        border-radius: $radius-lg;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        @include respond("tab-land") {
+            flex: 0 0 360px;
+            height: 440px;
+        }
+
+        @include respond("tab-port") {
+            display: none;
+        }
+    }
+
+    .agent-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .agent-stat-number {
+        font-family: "Archivo", sans-serif;
+        font-weight: 300;
+        font-size: 28px;
+        color: #29323C;
+        margin-bottom: 4px;
+    }
+
+    .agent-stat-label {
+        font-size: 14px;
+        color: #929DAA;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
+
+    .agent-name {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        color: $dark;
+        margin-bottom: 4px;
+    }
+
+    .agent-title {
+        font-size: 14px;
+        color: #929DAA;
+        font-weight: 400;
+    }
+
+    .agent-cta-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+
+    .agent-contact-pills {
+        display: flex;
+        border-radius: $radius;
+        overflow: hidden;
+        background: $white;
+        border: 1px solid rgba($dark, 0.08);
+    }
+
+    .agent-pill {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 12px 20px;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        color: $dark;
+        font-weight: 400;
+        border-right: 1px solid rgba($dark, 0.08);
+        @include transitionFast;
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+
+        &:hover {
+            background: rgba($dark, 0.03);
+            color: $primary;
+        }
+    }
+}
+
+// ================================================
+//  9. READY TO MAKE YOUR NEXT MOVE (CTA)
+// ================================================
+.cta-section {
+    position: relative;
+    background: transparent;
+
+    .cta-section-wave {
+        width: 100%;
+        line-height: 0;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    .cta-inner {
+        position: relative;
+        background: $primary;
+        padding: 80px 40px;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-bg-wave {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.15;
+        z-index: 0;
+
+        img {
+            position: absolute;
+            width: 166%;
+            left: -33%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    // Decorative house photos in corners
+    .cta-deco {
+        position: absolute;
+        z-index: 1;
+        border-radius: $radius-lg;
+        overflow: hidden;
+        border: 1px solid rgba($dark, 0.08);
+        box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        &--tl {
+            width: 82px;
+            height: 82px;
+            top: 56px;
+            left: 160px;
+        }
+
+        &--bl {
+            width: 197px;
+            height: 197px;
+            bottom: 64px;
+            left: 64px;
+        }
+
+        &--tr {
+            width: 180px;
+            height: 180px;
+            top: 40px;
+            right: 140px;
+        }
+
+        &--br {
+            width: 131px;
+            height: 131px;
+            bottom: 72px;
+            right: 152px;
+        }
+    }
+
+    .cta-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1000px;
+    }
+
+    .cta-heading {
+        font-family: "Archivo", sans-serif;
+        font-weight: 500;
+        font-size: 68px;
+        color: $white;
+        line-height: 1.1;
+        margin-bottom: 24px;
+
+        @include respond("tab-land") {
+            font-size: 48px;
+        }
+
+        @include respond("tab-port") {
+            font-size: 36px;
+        }
+    }
+
+    .cta-sub {
+        font-size: 20px;
+        line-height: 1.7;
+        color: rgba($white, 0.8);
+        font-weight: 400;
+        margin-bottom: 32px;
+    }
+
+    .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: $white;
+        color: $primary;
+        padding: 16px 24px !important;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: $radius;
+        @include transitionMedium;
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+
+        &:hover {
+            background: rgba($white, 0.9);
+            color: $primary;
+        }
+    }
+}
+
+// ================================================
+//  10. TESTIMONIALS
+// ================================================
+.testimonials-section {
+    padding: 80px 0;
+    background: $white;
+
+    .testimonials-heading {
+        font-family: "Archivo", sans-serif;
+        font-weight: 500;
+        font-size: 68px;
+        color: $dark;
+        line-height: 1.1;
+        margin-bottom: 24px;
+
+        @include respond("tab-land") {
+            font-size: 48px;
+        }
+
+        @include respond("tab-port") {
+            font-size: 36px;
+        }
+    }
+
+    .testimonial-card {
+        flex: 0 0 380px;
+        background: $white;
+        border: 1px solid rgba($dark, 0.08);
+        border-radius: $radius-lg;
+        padding: 24px;
+        box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .testimonial-stars {
+        display: flex;
+        gap: 4px;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .testimonial-text {
+        font-size: 20px;
+        line-height: 1.8;
+        color: $dark;
+        font-weight: 300;
+        flex: 1;
+    }
+
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .testimonial-avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 28px;
+        overflow: hidden;
+        background: #EAF6FC;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .testimonial-name {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: $dark;
+        margin-bottom: 4px;
+    }
+
+    .testimonial-location {
+        font-size: 14px;
+        color: #929DAA;
+        font-weight: 400;
+    }
+}
+
+// ================================================
+//  11. APP DOWNLOAD
+// ================================================
+.app-section {
+    padding: 80px 0;
+    background: $white;
+
+    .app-card {
+        position: relative;
+        background: #0E171F;
+        border-radius: $radius-lg;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px;
+        min-height: 492px;
+        box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+    }
+
+    .app-glow {
+        position: absolute;
+        width: 581px;
+        height: 581px;
+        border-radius: 999px;
+        background: $primary;
+        filter: blur(340px);
+        right: 432px;
+        top: 95px;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .app-text-col {
+        position: relative;
+        z-index: 1;
+        max-width: 580px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .app-heading {
+        font-family: "Archivo", sans-serif;
+        font-weight: 500;
+        font-size: 68px;
+        line-height: 1.1;
+        color: $white;
+        margin-bottom: 0;
+
+        .text-primary {
+            color: #2E7CF6 !important;
+        }
+
+        @include respond("tab-land") {
+            font-size: 48px;
+        }
+
+        @include respond("tab-port") {
+            font-size: 36px;
+        }
+    }
+
+    .app-desc {
+        font-size: 20px;
+        line-height: 1.7;
+        color: #B8C5D4;
+        font-weight: 300;
+        max-width: none;
+    }
+
+    .app-store-badges {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
+        .app-badge {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+    }
+
+    .app-phone-col {
+        position: absolute;
+        right: 80px;
+        top: 0;
+        bottom: 0;
+        width: 648px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+
+        @include respond("laptop") {
+            display: none;
+        }
+    }
+
+    .app-phone-wrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .app-phone-device {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 362px;
+        border-radius: 36px;
+        overflow: hidden;
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+
+        .app-phone-screen {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .app-review-overlay {
+        position: absolute;
+        left: 0;
+        top: 319px;
+        width: 308px;
+        background: rgba(69, 53, 18, 0.8);
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(233, 189, 95, 0.24);
+        border-radius: $radius-lg;
+        padding: 16px;
+        box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+    }
+
+    .app-review-stars {
+        display: flex;
+        gap: 4px;
+        margin-bottom: 12px;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    .app-review-text {
+        font-size: 12px;
+        line-height: 1.8;
+        color: #E9BD5F;
+        font-weight: 300;
+        max-width: none;
+    }
+}

@@ -1,0 +1,175 @@
+// ================================================
+//  GLOBAL REUSABLE ATOMS
+//  Shared across all pages — import once in style.scss
+// ================================================
+
+// ---- Section typography ----
+
+.section-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: $primary;
+    background: linear-gradient(180deg, rgba($primary, 0.06), rgba($primary, 0.16));
+    border: 0.5px solid $primary;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+
+    &--white {
+        color: $white;
+        background: linear-gradient(180deg, rgba($white, 0.06), rgba($white, 0.16));
+        border-color: $white;
+    }
+}
+
+.section-header {
+    margin-bottom: 40px;
+
+    &.text-center {
+        text-align: center;
+        margin-bottom: 48px;
+    }
+}
+
+.section-title {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.1;
+    color: $dark;
+    margin-bottom: 16px;
+
+    &.text-white { color: $white; }
+
+    @include respond("tab-land") { font-size: 36px; }
+    @include respond("tab-port") { font-size: 28px; }
+}
+
+.section-desc {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #929DAA;
+    max-width: 680px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+// ---- Shared card atoms ----
+
+.service-icon-wrap {
+    width: 50px;
+    height: 50px;
+    border-radius: $radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-bottom: 24px;
+
+    img { width: 34px; height: 34px; object-fit: contain; }
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $dark;
+    font-family: "Poppins", sans-serif;
+    @include transitionFast;
+
+    img { width: 18px; height: 18px; }
+
+    &:hover { color: $primary; }
+}
+
+.service-card {
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    padding: 24px;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex: 1;
+    min-width: 0;
+
+    .service-card-body {
+        flex: 1;
+        margin-bottom: 24px;
+    }
+
+    .service-title {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: $dark;
+        margin-bottom: 10px;
+    }
+
+    .service-desc {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #929DAA;
+        font-weight: 400;
+        max-width: none;
+    }
+}
+
+// ---- Slider controls (shared by all swiper sections) ----
+
+.slider-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.slider-arrow {
+    width: 56px;
+    height: 56px;
+    border-radius: 999px;
+    background: $white;
+    border: 1px solid rgba(146, 157, 170, 0.24);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include transitionFast;
+
+    img { width: 24px; height: 24px; }
+
+    &:hover {
+        border-color: $primary;
+        box-shadow: 0 0 0 3px rgba($primary, 0.1);
+    }
+}
+
+.slider-dots {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.slider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba($primary, 0.24);
+    cursor: pointer;
+
+    &--active {
+        width: 12px;
+        height: 12px;
+        background: $primary;
+    }
+}

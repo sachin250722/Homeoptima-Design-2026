@@ -75,3 +75,4 @@ Thumbs.db
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+styles/css/style.css

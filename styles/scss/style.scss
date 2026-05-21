@@ -1,3 +1,5 @@
+// includes from bootstrap
+@import "include";
 // ABSTRACTS
 @import "abstracts/variables";
 @import "abstracts/mixins";
@@ -6,12 +8,13 @@
 // LAYOUT
 @import "layout/header";
 @import "layout/footer";
-@import "include";
+@import "layout/global";
 
 
 
 // PAGES
 @import "pages/home";
+@import "pages/main-landing-page";
 
 
 
