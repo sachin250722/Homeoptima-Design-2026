@@ -72,7 +72,7 @@ const testimonialsSwiper = new Swiper('.testimonials-swiper', {
             slidesPerView: 1,
         },
         1200: {
-            slidesPerView: 1.3,
+            slidesPerView: 2.3,
         },
     },
 });
