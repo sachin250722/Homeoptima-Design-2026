@@ -1,0 +1,1168 @@
+// ================================================
+//  HOME VALUE HUB RESULTS PAGE
+// ================================================
+
+// ---- PAGE WRAPPER ----
+.hvh-results-page {
+    background: var(--light-color, #f7f8fa);
+}
+
+// ---- ANNOUNCEMENT BAR ----
+.hvh-announcement-bar {
+    background: #EBF1FF;
+    border-bottom: 1px solid rgba($primary, 0.12);
+    padding: 9px 0;
+
+    .hvh-announcement-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hvh-announcement-text {
+        font-size: 14px;
+        font-weight: 500;
+        color: rgba($dark, 0.75);
+        font-family: "Poppins", sans-serif;
+    }
+
+    .hvh-announcement-cta {
+        font-size: 13px;
+        font-weight: 600;
+        color: $white;
+        background: $dark;
+        padding: 5px 18px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        @include transitionFast;
+
+        &:hover {
+            background: $primary;
+            color: $white;
+        }
+    }
+}
+
+// ---- 1. RESULTS HERO ----
+.hvh-results-hero {
+    background: $white;
+    padding: 48px 0 56px;
+
+    @include respond("tab-port") {
+        padding: 32px 0 40px;
+    }
+
+    // -- Hero Image --
+    .hvh-hero-img-wrap {
+        border-radius: $radius-lg;
+        overflow: hidden;
+        height: 100%;
+        min-height: 520px;
+
+        @include respond("tab-land") {
+            min-height: 440px;
+        }
+
+        @include respond("tab-port") {
+            min-height: 260px;
+        }
+    }
+
+    .hvh-hero-img {
+        width: 100%;
+        height: 100%;
+        min-height: 520px;
+        object-fit: cover;
+        display: block;
+
+        @include respond("tab-land") {
+            min-height: 440px;
+        }
+
+        @include respond("tab-port") {
+            min-height: 260px;
+        }
+    }
+
+    // -- Hero Card --
+    .hvh-hero-card {
+        background: $white;
+        border: 1px solid rgba($dark, 0.08);
+        border-radius: $radius-lg;
+        overflow: hidden;
+        box-shadow: 0 4px 32px rgba($dark, 0.08);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    // -- Card Top Row --
+    .hvh-hero-card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 24px 28px;
+        border-bottom: 1px solid rgba($dark, 0.07);
+
+        @include respond("tab-port") {
+            padding: 18px 20px;
+        }
+    }
+
+    .hvh-hero-card-heading {
+        font-size: 14px;
+        font-weight: 500;
+        color: rgba($dark, 0.65);
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 0;
+    }
+
+    // -- Address Block --
+    .hvh-hero-address-block {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 28px 28px 20px;
+
+        @include respond("tab-port") {
+            padding: 20px 20px 16px;
+        }
+    }
+
+    .hvh-hero-pin {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba($primary, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 6px;
+    }
+
+    .hvh-hero-address-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hvh-results-address {
+        font-family: "Archivo", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: $dark;
+        line-height: 1.2;
+        margin-bottom: 0;
+
+        @include respond("tab-land") {
+            font-size: 22px;
+        }
+
+        @include respond("tab-port") {
+            font-size: 20px;
+        }
+    }
+
+    .hvh-add-property-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #929DAA;
+        font-family: "Poppins", sans-serif;
+
+        svg {
+            flex-shrink: 0;
+        }
+
+        &:hover {
+            color: $primary;
+
+            svg path {
+                stroke: $primary;
+            }
+        }
+    }
+
+    // -- Specs Row --
+    .hvh-hero-specs-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 16px 28px;
+        border-top: 1px solid rgba($dark, 0.06);
+        border-bottom: 1px solid rgba($dark, 0.06);
+        margin: 0 28px;
+        border-left: none;
+        border-right: none;
+
+        @include respond("tab-port") {
+            margin: 0 20px;
+            padding: 14px 0;
+        }
+    }
+
+    .hvh-hero-spec {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: $dark;
+
+        img {
+            width: 20px;
+            height: 20px;
+            opacity: 0.6;
+        }
+    }
+
+    .hvh-spec-divider {
+        width: 1px;
+        height: 16px;
+        background: rgba($dark, 0.15);
+        display: inline-block;
+        flex-shrink: 0;
+    }
+
+    // -- Estimated Value Block (dark panel) --
+    .hvh-hero-value-block {
+        background: $dark;
+        padding: 28px 28px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: auto;
+
+        @include respond("tab-port") {
+            padding: 22px 20px 20px;
+        }
+    }
+
+    .hvh-hero-value-label {
+        font-size: 12px;
+        font-weight: 500;
+        color: rgba($white, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 0;
+    }
+
+    .hvh-hero-value-amount {
+        font-family: "Archivo", sans-serif;
+        font-size: 44px;
+        font-weight: 700;
+        color: $white;
+        line-height: 1;
+
+        @include respond("tab-land") {
+            font-size: 36px;
+        }
+
+        @include respond("tab-port") {
+            font-size: 28px;
+        }
+    }
+
+    .hvh-hero-value-range {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: rgba($white, 0.55);
+        font-family: "Poppins", sans-serif;
+
+        strong {
+            color: rgba($white, 0.85);
+            font-weight: 500;
+        }
+
+        svg {
+            flex-shrink: 0;
+            color: rgba($white, 0.5);
+        }
+    }
+}
+
+// ---- 2. VALUATION OVERVIEW ----
+.hvh-valuation-section {
+    background: $light-color;
+    padding: 60px 0;
+
+    @include respond("tab-port") {
+        padding: 40px 0;
+    }
+}
+
+.hvh-val-card {
+    background: $white;
+    border-radius: $radius-lg;
+    padding: 28px 32px;
+    box-shadow: 0 4px 32px rgba($dark, 0.06);
+
+    @include respond("tab-port") {
+        padding: 22px 20px;
+    }
+}
+
+.hvh-val-card-title {
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: $dark;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba($dark, 0.07);
+}
+
+.hvh-val-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba($dark, 0.05);
+
+    &:last-child { border-bottom: none; }
+}
+
+.hvh-val-key {
+    font-size: 14px;
+    color: rgba($dark, 0.55);
+    font-weight: 400;
+}
+
+.hvh-val-val {
+    font-size: 14px;
+    color: $dark;
+    font-weight: 600;
+}
+
+.hvh-val-positive {
+    color: #22c55e !important;
+}
+
+// Market Insights
+.hvh-insight-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba($dark, 0.05);
+
+    &:last-child { border-bottom: none; }
+
+    .hvh-insight-heading {
+        font-family: "Archivo", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: $dark;
+        margin-bottom: 6px;
+    }
+
+    .hvh-insight-text {
+        font-size: 13px;
+        color: rgba($dark, 0.55);
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+}
+
+// Valuation Range Slider
+.hvh-range-wrap {
+    margin: 8px 0 4px;
+}
+
+.hvh-range-track {
+    position: relative;
+    height: 6px;
+    background: rgba($dark, 0.1);
+    border-radius: 999px;
+    margin: 24px 0 12px;
+}
+
+.hvh-range-fill {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 0;
+    bottom: 0;
+    background: $primary;
+    border-radius: 999px;
+}
+
+.hvh-range-thumb {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    background: $white;
+    border: 2px solid $primary;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba($primary, 0.3);
+
+    &--lo { left: 10%; }
+    &--hi { left: 90%; }
+}
+
+.hvh-range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 600;
+    color: $dark;
+}
+
+// Current Equity Chart
+.hvh-equity-wrap {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 8px 0;
+
+    canvas {
+        max-width: 160px;
+        max-height: 160px;
+    }
+}
+
+.hvh-equity-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hvh-equity-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: $dark;
+}
+
+.hvh-equity-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+
+    &--equity   { background: #E9BD5F; }
+    &--mortgage { background: $primary; }
+}
+
+// ---- 3. BRAMPTON MARKET STATS ----
+.hvh-market-stats-section {
+    background: $primary;
+    padding: 70px 0 60px;
+    clip-path: polygon(0 40px, 100% 0, 100% 100%, 0 100%);
+    margin-top: -40px;
+
+    @include respond("tab-port") {
+        padding: 60px 0 48px;
+        clip-path: polygon(0 24px, 100% 0, 100% 100%, 0 100%);
+        margin-top: -24px;
+    }
+}
+
+.hvh-market-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba($white, 0.4);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: $white;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 14px;
+}
+
+.hvh-market-title {
+    font-family: "Archivo", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: $white;
+    margin-bottom: 12px;
+    line-height: 1.15;
+
+    @include respond("tab-land") { font-size: 32px; }
+    @include respond("tab-port") { font-size: 26px; }
+}
+
+.hvh-market-sub {
+    font-size: 15px;
+    color: rgba($white, 0.75);
+    max-width: 520px;
+    margin-bottom: 0;
+}
+
+.hvh-market-outline-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 1.5px solid rgba($white, 0.5);
+    border-radius: $radius;
+    font-size: 14px;
+    font-weight: 500;
+    color: $white;
+    font-family: "Poppins", sans-serif;
+    @include transitionFast;
+
+    img { width: 14px; }
+
+    &:hover {
+        background: rgba($white, 0.1);
+        border-color: $white;
+        color: $white;
+    }
+}
+
+// Chart card
+.hvh-market-chart-card {
+    background: $white;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.hvh-market-chart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 28px;
+    border-bottom: 1px solid rgba($dark, 0.06);
+
+    @include respond("tab-port") {
+        padding: 16px 18px;
+    }
+}
+
+.hvh-market-chart-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hvh-market-chart-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba($dark, 0.55);
+}
+
+.hvh-market-chart-value {
+    font-family: "Archivo", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: $dark;
+}
+
+.hvh-market-chart-pct {
+    font-size: 14px;
+    font-weight: 600;
+    color: #22c55e;
+}
+
+.hvh-market-tabs {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba($dark, 0.04);
+    border-radius: $radius-sm;
+    padding: 4px;
+}
+
+.hvh-market-tab {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba($dark, 0.55);
+    padding: 7px 14px;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    @include transitionFast;
+
+    &:hover { color: $dark; }
+
+    &--active {
+        background: $primary;
+        color: $white;
+    }
+}
+
+.hvh-market-chart-body {
+    padding: 24px 28px 20px;
+    height: 280px;
+    position: relative;
+
+    @include respond("tab-port") {
+        height: 220px;
+        padding: 16px 12px 12px;
+    }
+
+    canvas { width: 100% !important; height: 100% !important; }
+}
+
+// ---- 4. VALUATION CHANGE FROM UPGRADES ----
+.hvh-upgrades-section {
+    background: $light-color;
+    padding: 72px 0 64px;
+
+    @include respond("tab-port") {
+        padding: 48px 0;
+    }
+}
+
+.hvh-upgrades-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+
+    @include respond("tab-port") {
+        margin-bottom: 28px;
+    }
+}
+
+.hvh-upgrades-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba($primary, 0.3);
+    background: rgba($primary, 0.06);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: $primary;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 14px;
+}
+
+.hvh-upgrades-title {
+    font-family: "Archivo", sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: $dark;
+    line-height: 1.15;
+    margin-bottom: 0;
+
+    @include respond("tab-land") { font-size: 36px; }
+    @include respond("tab-port") { font-size: 28px; }
+}
+
+.hvh-title-dot {
+    color: $primary;
+}
+
+// Table
+.hvh-upgrades-table-wrap {
+    background: $white;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba($dark, 0.06);
+}
+
+.hvh-upgrades-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead tr {
+        border-bottom: 1px solid rgba($dark, 0.08);
+    }
+
+    th {
+        font-family: "Archivo", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: $dark;
+        padding: 16px 24px;
+        text-align: left;
+        border-right: 1px solid rgba($dark, 0.07);
+
+        &:last-child { border-right: none; }
+    }
+
+    td {
+        font-size: 14px;
+        color: rgba($dark, 0.55);
+        font-weight: 400;
+        padding: 16px 24px;
+        border-bottom: 1px solid rgba($dark, 0.05);
+        border-right: 1px solid rgba($dark, 0.05);
+        vertical-align: middle;
+
+        &:last-child { border-right: none; }
+    }
+
+    tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    tbody tr:hover td {
+        background: rgba($primary, 0.02);
+    }
+
+    @include respond("tab-port") {
+        th, td { padding: 12px 14px; font-size: 13px; }
+    }
+}
+
+.hvh-upgrades-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hvh-upgrades-action-btn {
+    font-size: 13px;
+    font-weight: 500;
+    color: $primary;
+    font-family: "Poppins", sans-serif;
+    @include transitionFast;
+
+    &:hover { color: $secondary-dark; }
+
+    &--del {
+        color: #ef4444;
+
+        &:hover { color: #dc2626; }
+    }
+}
+
+// Pagination
+.hvh-upgrades-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.hvh-upgrades-showing {
+    font-size: 13px;
+    color: rgba($dark, 0.5);
+    font-family: "Poppins", sans-serif;
+}
+
+.hvh-pagination {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hvh-page-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba($dark, 0.55);
+    background: $white;
+    border: 1px solid rgba($dark, 0.1);
+    font-family: "Poppins", sans-serif;
+    @include transitionFast;
+
+    &:hover {
+        border-color: $primary;
+        color: $primary;
+    }
+
+    &--active {
+        background: $primary;
+        border-color: $primary;
+        color: $white;
+
+        &:hover { color: $white; }
+    }
+
+    &--arrow {
+        color: rgba($dark, 0.4);
+        border-color: rgba($dark, 0.08);
+
+        svg { display: block; }
+
+        &:hover { color: $primary; border-color: $primary; }
+    }
+}
+
+.hvh-page-ellipsis {
+    font-size: 13px;
+    color: rgba($dark, 0.4);
+    line-height: 36px;
+    padding: 0 2px;
+}
+
+// ---- 5. ESTIMATED VALUE CARD ----
+.hvh-value-section {
+    padding: 56px 0 48px;
+
+    @include respond("tab-port") {
+        padding: 40px 0;
+    }
+}
+
+.hvh-value-card {
+    background: $white;
+    border-radius: $radius-lg;
+    padding: 48px 40px;
+    box-shadow: 0 4px 32px rgba($dark, 0.06);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    @include respond("tab-port") {
+        padding: 32px 24px;
+    }
+
+    .hvh-value-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: rgba($dark, 0.55);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        margin-bottom: 12px;
+    }
+
+    .hvh-value-amount {
+        font-family: "Archivo", sans-serif;
+        font-size: 68px;
+        font-weight: 600;
+        color: $primary;
+        line-height: 1;
+        margin-bottom: 16px;
+
+        @include respond("tab-land") {
+            font-size: 48px;
+        }
+
+        @include respond("tab-port") {
+            font-size: 36px;
+        }
+    }
+
+    .hvh-value-range {
+        font-size: 16px;
+        color: rgba($dark, 0.6);
+        margin-bottom: 32px;
+
+        span {
+            font-weight: 600;
+            color: $dark;
+        }
+    }
+
+    .hvh-value-actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+}
+
+// ---- 3. PROPERTY DETAILS GRID ----
+.hvh-details-section {
+    padding: 0 0 56px;
+
+    @include respond("tab-port") {
+        padding-bottom: 40px;
+    }
+}
+
+.hvh-details-card {
+    background: $white;
+    border-radius: $radius-lg;
+    padding: 32px 28px;
+    box-shadow: 0 4px 32px rgba($dark, 0.06);
+    height: 100%;
+
+    .hvh-details-title {
+        font-family: "Archivo", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: $dark;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba($dark, 0.07);
+    }
+
+    .hvh-detail-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba($dark, 0.05);
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .hvh-detail-key {
+            font-size: 14px;
+            color: rgba($dark, 0.55);
+            font-weight: 400;
+        }
+
+        .hvh-detail-val {
+            font-size: 14px;
+            color: $dark;
+            font-weight: 600;
+        }
+    }
+}
+
+// ---- 4. MARKET TRENDS ----
+.hvh-trends-section {
+    padding: 0 0 56px;
+
+    @include respond("tab-port") {
+        padding-bottom: 40px;
+    }
+
+    .hvh-section-title {
+        font-family: "Archivo", sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: $dark;
+        margin-bottom: 24px;
+    }
+}
+
+.hvh-trend-card {
+    background: $white;
+    border-radius: $radius-lg;
+    padding: 24px 28px;
+    box-shadow: 0 4px 32px rgba($dark, 0.06);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .hvh-trend-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: rgba($dark, 0.55);
+        text-transform: uppercase;
+        letter-spacing: 0.7px;
+    }
+
+    .hvh-trend-value {
+        font-family: "Archivo", sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        color: $dark;
+        line-height: 1.1;
+    }
+
+    .hvh-trend-change {
+        font-size: 13px;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+
+        &--up {
+            color: #22c55e;
+        }
+
+        &--down {
+            color: #ef4444;
+        }
+    }
+}
+
+// ---- 5. COMPARABLE HOMES ----
+.hvh-comps-section {
+    padding: 0 0 56px;
+
+    @include respond("tab-port") {
+        padding-bottom: 40px;
+    }
+
+    .hvh-section-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hvh-section-title {
+        font-family: "Archivo", sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: $dark;
+        margin-bottom: 0;
+    }
+}
+
+.hvh-comp-card {
+    background: $white;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: 0 4px 32px rgba($dark, 0.06);
+    @include transitionMedium;
+
+    &:hover {
+        box-shadow: 0 8px 48px rgba($dark, 0.10);
+        transform: translateY(-2px);
+    }
+
+    .hvh-comp-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .hvh-comp-body {
+        padding: 20px;
+    }
+
+    .hvh-comp-price {
+        font-family: "Archivo", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: $dark;
+        margin-bottom: 4px;
+    }
+
+    .hvh-comp-address {
+        font-size: 14px;
+        color: rgba($dark, 0.6);
+        margin-bottom: 16px;
+    }
+
+    .hvh-comp-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: rgba($dark, 0.65);
+            font-weight: 400;
+
+            img {
+                width: 16px;
+                height: 16px;
+                opacity: 0.55;
+            }
+        }
+    }
+}
+
+// ---- 6. CTA STRIP ----
+.hvh-cta-strip {
+    background: $primary;
+    border-radius: $radius-lg;
+    padding: 48px 40px;
+    text-align: center;
+    margin-bottom: 56px;
+    position: relative;
+    overflow: hidden;
+
+    @include respond("tab-port") {
+        padding: 32px 24px;
+        margin-bottom: 40px;
+    }
+
+    .hvh-cta-title {
+        font-family: "Archivo", sans-serif;
+        font-size: 32px;
+        font-weight: 600;
+        color: $white;
+        margin-bottom: 12px;
+
+        @include respond("tab-port") {
+            font-size: 24px;
+        }
+    }
+
+    .hvh-cta-sub {
+        font-size: 16px;
+        color: rgba($white, 0.8);
+        margin-bottom: 28px;
+    }
+
+    .hvh-cta-btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .btn-white {
+        background: $white;
+        color: $primary;
+        font-weight: 600;
+        border-radius: $radius;
+        padding: 14px 28px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 15px;
+        @include transitionMedium;
+
+        img { width: 16px; }
+
+        &:hover {
+            background: rgba($white, 0.9);
+            color: $primary;
+        }
+    }
+
+    .btn-outline-white {
+        background: transparent;
+        color: $white;
+        font-weight: 500;
+        border: 1.5px solid rgba($white, 0.6);
+        border-radius: $radius;
+        padding: 14px 28px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 15px;
+        text-decoration: none;
+        @include transitionMedium;
+
+        img {
+            width: 16px;
+            filter: brightness(0) invert(1);
+        }
+
+        &:hover {
+            border-color: $white;
+            background: rgba($white, 0.08);
+            color: $white;
+        }
+    }
+}

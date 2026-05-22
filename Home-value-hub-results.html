@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Primary Meta -->
+    <title>Home Value Results — HomeOptima | Your Estimated Home Value</title>
+    <meta name="description"
+        content="See your estimated home value based on current market data for your Southern Ontario neighbourhood. Get a detailed breakdown and connect with a HomeOptima agent.">
+    <meta name="keywords"
+        content="home value estimate, house worth, home valuation Southern Ontario, property value Mississauga, home value Oakville, HomeOptima home value hub">
+    <meta name="author" content="HomeOptima">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/css/style.css">
+</head>
+
+<body class="hvh-results-page">
+
+    <!-- ==================== HEADER ==================== -->
+    <div class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="main-landing-page.html">Logo</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Buy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sell</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home Value</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Open Houses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pre-construction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- extra-nav -->
+                    <div class="extra-nav">
+                        <a href="javascript:void(0);" class="btn btn-outline-primary me-3">Sign in <img
+                                src="images/icons/chevron-right.svg" alt="">
+                        </a>
+                        <a href="javascript:void(0);" class="btn btn-primary">My properties <img
+                                src="images/icons/chevron-right-white.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- ==================== /HEADER ==================== -->
+
+    <main>
+
+        <!-- ==================== ANNOUNCEMENT BAR ==================== -->
+        <div class="hvh-announcement-bar">
+            <div class="container">
+                <div class="hvh-announcement-inner">
+                    <span class="hvh-announcement-text">Find your next home?</span>
+                    <a href="main-landing-page.html" class="hvh-announcement-cta">Click here</a>
+                </div>
+            </div>
+        </div>
+        <!-- ==================== /ANNOUNCEMENT BAR ==================== -->
+
+        <!-- ==================== 1. RESULTS HERO ==================== -->
+        <section class="hvh-results-hero">
+            <div class="container">
+                <div class="row g-4 align-items-stretch">
+
+                    <!-- Left: Property Image -->
+                    <div class="col-lg-5">
+                        <div class="hvh-hero-img-wrap">
+                            <img src="images/listing-01.jpg" alt="123 Lakeview Drive, Mississauga" class="hvh-hero-img">
+                        </div>
+                    </div>
+
+                    <!-- Right: Property Info Card -->
+                    <div class="col-lg-7">
+                        <div class="hvh-hero-card">
+
+                            <!-- Card Top: heading + CTA -->
+                            <div class="hvh-hero-card-top">
+                                <p class="hvh-hero-card-heading">Ready to Make Your Next Move?</p>
+                                <a href="#" class="btn btn-primary d-inline-flex align-items-center gap-2">
+                                    Get started
+                                    <img src="images/icons/chevron-right-white.svg" alt="">
+                                </a>
+                            </div>
+
+                            <!-- Address Block -->
+                            <div class="hvh-hero-address-block">
+                                <div class="hvh-hero-pin">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 21C12 21 5 13.6471 5 8.82353C5 5.04294 8.13401 2 12 2C15.866 2 19 5.04294 19 8.82353C19 13.6471 12 21 12 21Z" stroke="#2C6EFE" stroke-width="1.5" stroke-linejoin="round"/>
+                                        <path d="M12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11Z" stroke="#2C6EFE" stroke-width="1.5"/>
+                                    </svg>
+                                </div>
+                                <div class="hvh-hero-address-content">
+                                    <h1 class="hvh-results-address">123 Lakeview Drive, Mississauga</h1>
+                                    <a href="#" class="hvh-add-property-link">
+                                        Add property
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 18L15 12L9 6" stroke="#929DAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Property Specs Row -->
+                            <div class="hvh-hero-specs-row">
+                                <div class="hvh-hero-spec">
+                                    <img src="images/icons/bed.svg" alt="Beds">
+                                    <span>4 bed</span>
+                                </div>
+                                <span class="hvh-spec-divider"></span>
+                                <div class="hvh-hero-spec">
+                                    <img src="images/icons/bath.svg" alt="Baths">
+                                    <span>3 bath</span>
+                                </div>
+                                <span class="hvh-spec-divider"></span>
+                                <div class="hvh-hero-spec">
+                                    <img src="images/icons/sqft.svg" alt="Area">
+                                    <span>2,400 sqft</span>
+                                </div>
+                            </div>
+
+                            <!-- Estimated Value Block (dark panel) -->
+                            <div class="hvh-hero-value-block">
+                                <p class="hvh-hero-value-label">Estimated Home Value</p>
+                                <div class="hvh-hero-value-amount">$1,249,000</div>
+                                <div class="hvh-hero-value-range">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.21 15.89A10 10 0 1 1 8 2.83" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M22 12A10 10 0 0 0 12 2v10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span>Estimated range: <strong>$1,190,000</strong> – <strong>$1,310,000</strong></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ==================== /RESULTS HERO ==================== -->
+
+        <!-- ==================== 2. VALUATION OVERVIEW ==================== -->
+        <section class="hvh-valuation-section">
+            <div class="container">
+                <div class="row g-4">
+
+                    <!-- Left: Valuation Overview + Market Insights -->
+                    <div class="col-lg-7">
+
+                        <!-- Valuation Overview Card -->
+                        <div class="hvh-val-card mb-4">
+                            <h3 class="hvh-val-card-title">Valuation Overview</h3>
+                            <div class="hvh-val-row">
+                                <span class="hvh-val-key">Estimated Value</span>
+                                <strong class="hvh-val-val">$1,249,000</strong>
+                            </div>
+                            <div class="hvh-val-row">
+                                <span class="hvh-val-key">Price per Sq Ft</span>
+                                <strong class="hvh-val-val">$520</strong>
+                            </div>
+                            <div class="hvh-val-row">
+                                <span class="hvh-val-key">Last Sale Price</span>
+                                <strong class="hvh-val-val">$895,000 (2019)</strong>
+                            </div>
+                            <div class="hvh-val-row">
+                                <span class="hvh-val-key">Value Change (5yr)</span>
+                                <strong class="hvh-val-val hvh-val-positive">+39.5%</strong>
+                            </div>
+                        </div>
+
+                        <!-- Market Insights Card -->
+                        <div class="hvh-val-card">
+                            <h3 class="hvh-val-card-title">Market Insights</h3>
+                            <div class="hvh-insight-item">
+                                <h6 class="hvh-insight-heading">Neighborhood Trends</h6>
+                                <p class="hvh-insight-text">Home values in Lakeview, Mississauga have risen steadily over the past 5 years. Demand remains strong driven by school ratings, transit access, and proximity to Lake Ontario.</p>
+                            </div>
+                            <div class="hvh-insight-item">
+                                <h6 class="hvh-insight-heading">Market Activity</h6>
+                                <p class="hvh-insight-text">The current sale-to-list ratio sits at 103%, with an average of 18 days on market. Inventory is down 8 listings versus last month, keeping upward pressure on prices.</p>
+                            </div>
+                            <div class="hvh-insight-item">
+                                <h6 class="hvh-insight-heading">Comparable Properties</h6>
+                                <p class="hvh-insight-text">14 comparable detached homes sold within 1 km in the past 90 days at an average of $1,195,000 — placing your home 4.5% above neighbourhood average.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Valuation Range + Current Equity -->
+                    <div class="col-lg-5">
+
+                        <!-- Valuation Range Card -->
+                        <div class="hvh-val-card mb-4">
+                            <h3 class="hvh-val-card-title">Valuation Range</h3>
+                            <div class="hvh-range-wrap">
+                                <div class="hvh-range-track">
+                                    <div class="hvh-range-fill"></div>
+                                    <div class="hvh-range-thumb hvh-range-thumb--lo"></div>
+                                    <div class="hvh-range-thumb hvh-range-thumb--hi"></div>
+                                </div>
+                                <div class="hvh-range-labels">
+                                    <span>$1,180,000</span>
+                                    <span>$1,310,000</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-primary w-100 d-inline-flex align-items-center justify-content-center gap-2 mt-3">
+                                Request pro-valuation
+                                <img src="images/icons/chevron-right-white.svg" alt="">
+                            </a>
+                        </div>
+
+                        <!-- Current Equity Card (Pie Chart) -->
+                        <div class="hvh-val-card">
+                            <h3 class="hvh-val-card-title">Current Equity</h3>
+                            <div class="hvh-equity-wrap">
+                                <canvas id="equityChart" width="200" height="200"></canvas>
+                                <div class="hvh-equity-legend">
+                                    <div class="hvh-equity-legend-item">
+                                        <span class="hvh-equity-dot hvh-equity-dot--equity"></span>
+                                        <span>Equity</span>
+                                    </div>
+                                    <div class="hvh-equity-legend-item">
+                                        <span class="hvh-equity-dot hvh-equity-dot--mortgage"></span>
+                                        <span>Mortgage</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary w-100 d-inline-flex align-items-center justify-content-center gap-2 mt-3">
+                                Recalculate
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ==================== /VALUATION OVERVIEW ==================== -->
+
+        <!-- ==================== 3. BRAMPTON MARKET STATS ==================== -->
+        <section class="hvh-market-stats-section">
+            <div class="container">
+                <div class="row align-items-start mb-4">
+                    <div class="col-lg-8">
+                        <span class="hvh-market-badge">Stats</span>
+                        <h2 class="hvh-market-title">Brampton Market Stats</h2>
+                        <p class="hvh-market-sub">Tracking home value changes since purchase, based on your local market data and comparable sales in Southern Ontario.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                        <a href="#" class="hvh-market-outline-btn">
+                            View full stats
+                            <img src="images/icons/chevron-right-white.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Chart Card -->
+                <div class="hvh-market-chart-card">
+                    <div class="hvh-market-chart-header">
+                        <div class="hvh-market-chart-meta">
+                            <span class="hvh-market-chart-label">Since Purchase Change in Valuation</span>
+                            <span class="hvh-market-chart-value">$354,000 <span class="hvh-market-chart-pct">↑ 39.5%</span></span>
+                        </div>
+                        <div class="hvh-market-tabs">
+                            <button class="hvh-market-tab" data-range="6m">6 months</button>
+                            <button class="hvh-market-tab" data-range="1y">Year</button>
+                            <button class="hvh-market-tab" data-range="5y">5 Years</button>
+                            <button class="hvh-market-tab hvh-market-tab--active" data-range="all">Since purchase</button>
+                        </div>
+                    </div>
+                    <div class="hvh-market-chart-body">
+                        <canvas id="marketChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== /BRAMPTON MARKET STATS ==================== -->
+
+        <!-- ==================== 4. VALUATION CHANGE FROM UPGRADES ==================== -->
+        <section class="hvh-upgrades-section">
+            <div class="container">
+
+                <!-- Section Header -->
+                <div class="hvh-upgrades-header">
+                    <div>
+                        <span class="hvh-upgrades-badge">Valuation</span>
+                        <h2 class="hvh-upgrades-title">Valuation Change<br>From Upgrades<span class="hvh-title-dot">.</span></h2>
+                    </div>
+                    <a href="#" class="btn btn-primary d-inline-flex align-items-center gap-2">
+                        Add upgrade
+                        <img src="images/icons/chevron-right-white.svg" alt="">
+                    </a>
+                </div>
+
+                <!-- Upgrades Table -->
+                <div class="hvh-upgrades-table-wrap">
+                    <table class="hvh-upgrades-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Install date</th>
+                                <th>Expense</th>
+                                <th>Life left</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Kitchen Renovation</td>
+                                <td>Jan 2021</td>
+                                <td>$45,000</td>
+                                <td>12 years</td>
+                                <td>
+                                    <div class="hvh-upgrades-actions">
+                                        <a href="#" class="hvh-upgrades-action-btn">Edit</a>
+                                        <a href="#" class="hvh-upgrades-action-btn hvh-upgrades-action-btn--del">Delete</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Roof Replacement</td>
+                                <td>Mar 2019</td>
+                                <td>$18,500</td>
+                                <td>18 years</td>
+                                <td>
+                                    <div class="hvh-upgrades-actions">
+                                        <a href="#" class="hvh-upgrades-action-btn">Edit</a>
+                                        <a href="#" class="hvh-upgrades-action-btn hvh-upgrades-action-btn--del">Delete</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Bathroom Remodel</td>
+                                <td>Jun 2022</td>
+                                <td>$22,000</td>
+                                <td>10 years</td>
+                                <td>
+                                    <div class="hvh-upgrades-actions">
+                                        <a href="#" class="hvh-upgrades-action-btn">Edit</a>
+                                        <a href="#" class="hvh-upgrades-action-btn hvh-upgrades-action-btn--del">Delete</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hardwood Flooring</td>
+                                <td>Aug 2020</td>
+                                <td>$14,000</td>
+                                <td>20 years</td>
+                                <td>
+                                    <div class="hvh-upgrades-actions">
+                                        <a href="#" class="hvh-upgrades-action-btn">Edit</a>
+                                        <a href="#" class="hvh-upgrades-action-btn hvh-upgrades-action-btn--del">Delete</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>HVAC System</td>
+                                <td>Nov 2023</td>
+                                <td>$9,800</td>
+                                <td>15 years</td>
+                                <td>
+                                    <div class="hvh-upgrades-actions">
+                                        <a href="#" class="hvh-upgrades-action-btn">Edit</a>
+                                        <a href="#" class="hvh-upgrades-action-btn hvh-upgrades-action-btn--del">Delete</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="hvh-upgrades-pagination">
+                    <span class="hvh-upgrades-showing">Showing 1 pages</span>
+                    <div class="hvh-pagination">
+                        <a href="#" class="hvh-page-btn hvh-page-btn--arrow" aria-label="Previous">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="#" class="hvh-page-btn hvh-page-btn--active">1</a>
+                        <a href="#" class="hvh-page-btn">2</a>
+                        <a href="#" class="hvh-page-btn">3</a>
+                        <span class="hvh-page-ellipsis">…</span>
+                        <a href="#" class="hvh-page-btn hvh-page-btn--arrow" aria-label="Next">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ==================== /VALUATION CHANGE FROM UPGRADES ==================== -->
+
+        <!-- ==================== 5. ESTIMATED VALUE ==================== -->
+        <section class="hvh-value-section">
+            <div class="container">
+                <div class="hvh-value-card">
+                    <p class="hvh-value-label">Estimated Market Value</p>
+                    <div class="hvh-value-amount">$1,249,000</div>
+                    <p class="hvh-value-range">Estimated range: <span>$1,190,000</span> – <span>$1,310,000</span></p>
+                    <div class="hvh-value-actions">
+                        <a href="#" class="btn btn-primary d-inline-flex align-items-center gap-2">
+                            Get a free agent consultation <img src="images/icons/chevron-right-white.svg" alt="">
+                        </a>
+                        <a href="#" class="btn btn-outline-primary d-inline-flex align-items-center gap-2">
+                            List my home <img src="images/icons/chevron-right.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== /ESTIMATED VALUE ==================== -->
+
+        <!-- ==================== 3. PROPERTY DETAILS ==================== -->
+        <section class="hvh-details-section">
+            <div class="container">
+                <div class="row g-4">
+
+                    <!-- Property Details -->
+                    <div class="col-lg-6">
+                        <div class="hvh-details-card">
+                            <h2 class="hvh-details-title">Property Details</h2>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Property Type</span>
+                                <span class="hvh-detail-val">Detached</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Bedrooms</span>
+                                <span class="hvh-detail-val">4</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Bathrooms</span>
+                                <span class="hvh-detail-val">3</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Square Footage</span>
+                                <span class="hvh-detail-val">2,400 sqft</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Lot Size</span>
+                                <span class="hvh-detail-val">50 × 120 ft</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Year Built</span>
+                                <span class="hvh-detail-val">2004</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Garage</span>
+                                <span class="hvh-detail-val">2-car attached</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Basement</span>
+                                <span class="hvh-detail-val">Finished</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Valuation Breakdown -->
+                    <div class="col-lg-6">
+                        <div class="hvh-details-card">
+                            <h2 class="hvh-details-title">Valuation Breakdown</h2>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Last Sale Price</span>
+                                <span class="hvh-detail-val">$895,000 (2019)</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Assessed Value (2025)</span>
+                                <span class="hvh-detail-val">$1,180,000</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Price per sqft</span>
+                                <span class="hvh-detail-val">$520</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Neighbourhood Avg.</span>
+                                <span class="hvh-detail-val">$1,195,000</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Price vs. Avg.</span>
+                                <span class="hvh-detail-val" style="color:#22c55e;">+4.5%</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Confidence Score</span>
+                                <span class="hvh-detail-val">High</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Data Points Used</span>
+                                <span class="hvh-detail-val">14 comparable sales</span>
+                            </div>
+                            <div class="hvh-detail-row">
+                                <span class="hvh-detail-key">Last Updated</span>
+                                <span class="hvh-detail-val">May 22, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ==================== /PROPERTY DETAILS ==================== -->
+
+        <!-- ==================== 4. MARKET TRENDS ==================== -->
+        <section class="hvh-trends-section">
+            <div class="container">
+                <h2 class="hvh-section-title">Market Trends — Lakeview, Mississauga</h2>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="hvh-trend-card">
+                            <span class="hvh-trend-label">Median Sale Price</span>
+                            <div class="hvh-trend-value">$1,195,000</div>
+                            <span class="hvh-trend-change hvh-trend-change--up">↑ 3.2% vs last year</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="hvh-trend-card">
+                            <span class="hvh-trend-label">Avg. Days on Market</span>
+                            <div class="hvh-trend-value">18 days</div>
+                            <span class="hvh-trend-change hvh-trend-change--down">↓ 4 days vs last year</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="hvh-trend-card">
+                            <span class="hvh-trend-label">Sale-to-List Ratio</span>
+                            <div class="hvh-trend-value">103%</div>
+                            <span class="hvh-trend-change hvh-trend-change--up">↑ 1% vs last year</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="hvh-trend-card">
+                            <span class="hvh-trend-label">Active Listings</span>
+                            <div class="hvh-trend-value">42</div>
+                            <span class="hvh-trend-change hvh-trend-change--down">↓ 8 vs last month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== /MARKET TRENDS ==================== -->
+
+        <!-- ==================== 5. COMPARABLE HOMES ==================== -->
+        <section class="hvh-comps-section">
+            <div class="container">
+                <div class="hvh-section-header">
+                    <h2 class="hvh-section-title">Comparable Homes Nearby</h2>
+                    <a href="#" class="btn btn-outline-primary d-inline-flex align-items-center gap-2">
+                        View all listings <img src="images/icons/chevron-right.svg" alt="">
+                    </a>
+                </div>
+                <div class="row g-4">
+
+                    <!-- Comp 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="hvh-comp-card">
+                            <img class="hvh-comp-img" src="images/listing-01.jpg" alt="Lakeview Detached — Mississauga">
+                            <div class="hvh-comp-body">
+                                <div class="hvh-comp-price">$1,275,000</div>
+                                <p class="hvh-comp-address">118 Lakeview Dr, Mississauga</p>
+                                <div class="hvh-comp-meta">
+                                    <span><img src="images/icons/bed.svg" alt="">4 beds</span>
+                                    <span><img src="images/icons/bath.svg" alt="">3 baths</span>
+                                    <span><img src="images/icons/sqft.svg" alt="">2,500 sqft</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comp 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="hvh-comp-card">
+                            <img class="hvh-comp-img" src="images/listing-02.jpg" alt="Detached Home — Mississauga">
+                            <div class="hvh-comp-body">
+                                <div class="hvh-comp-price">$1,199,000</div>
+                                <p class="hvh-comp-address">204 Lakeshore Blvd, Mississauga</p>
+                                <div class="hvh-comp-meta">
+                                    <span><img src="images/icons/bed.svg" alt="">4 beds</span>
+                                    <span><img src="images/icons/bath.svg" alt="">2 baths</span>
+                                    <span><img src="images/icons/sqft.svg" alt="">2,250 sqft</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comp 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="hvh-comp-card">
+                            <img class="hvh-comp-img" src="images/listing-03.jpg" alt="Detached Home — Mississauga">
+                            <div class="hvh-comp-body">
+                                <div class="hvh-comp-price">$1,310,000</div>
+                                <p class="hvh-comp-address">77 Cawthra Rd, Mississauga</p>
+                                <div class="hvh-comp-meta">
+                                    <span><img src="images/icons/bed.svg" alt="">5 beds</span>
+                                    <span><img src="images/icons/bath.svg" alt="">3 baths</span>
+                                    <span><img src="images/icons/sqft.svg" alt="">2,700 sqft</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- ==================== /COMPARABLE HOMES ==================== -->
+
+        <!-- ==================== 6. CTA STRIP ==================== -->
+        <section class="container">
+            <div class="hvh-cta-strip">
+                <h2 class="hvh-cta-title">Ready to act on your home's value?</h2>
+                <p class="hvh-cta-sub">Get a free, no-obligation consultation with a HomeOptima agent — we'll walk you through your options.</p>
+                <div class="hvh-cta-btns">
+                    <a href="#" class="btn-white">
+                        Talk to an agent <img src="images/icons/chevron-right.svg" alt="">
+                    </a>
+                    <a href="#" class="btn-outline-white">
+                        List my home <img src="images/icons/chevron-right-white.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- ==================== /CTA STRIP ==================== -->
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="home-footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Logo / About -->
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="footer-logo d-inline-flex align-items-center justify-content-center">
+                        Logo
+                    </a>
+                    <p class="footer-text">
+                        Local expertise. Honest advice. Real results for buyers, sellers, and homeowners.
+                    </p>
+                    <div class="footer-social">
+                        <h6 class="footer-title">Follow Us</h6>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook">
+                                <img src="images/icons/facebook.svg" alt="">
+                            </a>
+                            <a href="#" aria-label="X">
+                                <img src="images/icons/x.svg" alt="">
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <img src="images/icons/instagram.svg" alt="">
+                            </a>
+                            <a href="#" aria-label="TikTok">
+                                <img src="images//icons/tiktok.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discover -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Discover</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Search Listings</a></li>
+                        <li><a href="#">Open Houses</a></li>
+                        <li><a href="#">Pre-construction</a></li>
+                        <li><a href="#">First-Time Buyers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Home Owner -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Home Owner</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Home Value Hub</a></li>
+                        <li><a href="#">Real Estate Scorecard</a></li>
+                        <li><a href="#">My Properties</a></li>
+                        <li><a href="#">Sell Your Home</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Company</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Flyer Scan</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-12">
+                    <h6 class="footer-title">Primary Contact</h6>
+                    <div class="contact-box">
+                        <a href="mailto:contact@gmail.com">
+                            <span class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.4975 11.9988H4.9975M4.91284 12.2903L2.57792 19.265C2.39449 19.813 2.30277 20.0869 2.36859 20.2556C2.42575 20.4022 2.54851 20.5132 2.7 20.5555C2.87443 20.6042 3.1379 20.4856 3.66483 20.2485L20.3763 12.7284C20.8906 12.4969 21.1478 12.3812 21.2273 12.2204C21.2963 12.0808 21.2963 11.9169 21.2273 11.7772C21.1478 11.6164 20.8906 11.5007 20.3763 11.2693L3.659 3.74654C3.13366 3.51013 2.87099 3.39193 2.69673 3.44042C2.54539 3.48253 2.42264 3.59332 2.36528 3.73956C2.29923 3.90795 2.38997 4.18133 2.57144 4.72809L4.91349 11.7843C4.94466 11.8782 4.96024 11.9252 4.9664 11.9732C4.97186 12.0158 4.9718 12.059 4.96623 12.1016C4.95996 12.1496 4.94425 12.1965 4.91284 12.2903Z"
+                                        stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>contact@gmail.com</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="tel:+1234567896">
+                            <span class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.38028 8.85335C9.07627 10.303 10.0251 11.6616 11.2266 12.8632C12.4282 14.0648 13.7869 15.0136 15.2365 15.7096C15.3612 15.7694 15.4235 15.7994 15.5024 15.8224C15.7828 15.9041 16.127 15.8454 16.3644 15.6754C16.4313 15.6275 16.4884 15.5704 16.6027 15.4561C16.9523 15.1064 17.1271 14.9316 17.3029 14.8174C17.9658 14.3864 18.8204 14.3864 19.4833 14.8174C19.6591 14.9316 19.8339 15.1064 20.1835 15.4561L20.3783 15.6509C20.9098 16.1824 21.1755 16.4481 21.3198 16.7335C21.6069 17.301 21.6069 17.9713 21.3198 18.5389C21.1755 18.8242 20.9098 19.09 20.3783 19.6214L20.2207 19.779C19.6911 20.3087 19.4263 20.5735 19.0662 20.7757C18.6667 21.0001 18.0462 21.1615 17.588 21.1601C17.1751 21.1589 16.8928 21.0788 16.3284 20.9186C13.295 20.0576 10.4326 18.4332 8.04466 16.0452C5.65668 13.6572 4.03221 10.7948 3.17124 7.76144C3.01103 7.19699 2.93092 6.91477 2.9297 6.50182C2.92833 6.0436 3.08969 5.42311 3.31411 5.0236C3.51636 4.66357 3.78117 4.39876 4.3108 3.86913L4.46843 3.7115C4.99987 3.18006 5.2656 2.91433 5.55098 2.76999C6.11854 2.48292 6.7888 2.48292 7.35636 2.76999C7.64174 2.91433 7.90747 3.18006 8.43891 3.7115L8.63378 3.90637C8.98338 4.25597 9.15819 4.43078 9.27247 4.60655C9.70347 5.26945 9.70347 6.12403 9.27247 6.78692C9.15819 6.96269 8.98338 7.1375 8.63378 7.4871C8.51947 7.60142 8.46231 7.65857 8.41447 7.72538C8.24446 7.96281 8.18576 8.30707 8.26748 8.58743C8.29048 8.66632 8.32041 8.72866 8.38028 8.85335Z"
+                                        stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>(123) 456-7896</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <a href="#" class="btn-contact mt-3">Contact us <img class="" src="images/icons/chevron-right.svg"
+                            alt=""></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom mt-5 pt-4">
+                <div class="row align-items-center gy-3">
+                    <div class="col-lg-4 text-center text-lg-start">
+                        <p class="mb-0 small-text">© 2026 HomeOptima — All Right Reserved</p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <a href="#" class="footer-brand">
+                            <img src="images/01.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <a href="#" class="small-link">Terms of Use</a>
+                        <span class="dot">•</span>
+                        <a href="#" class="small-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ==================== /FOOTER ==================== -->
+
+    <!-- Scripts -->
+    <script src="libraries/jquery/jquery.min.js"></script>
+    <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script>
+    // ── Equity Pie Chart ────────────────────────────────────────────────────
+    (function () {
+        var ctx = document.getElementById('equityChart');
+        if (!ctx) return;
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Equity', 'Mortgage'],
+                datasets: [{
+                    data: [32, 68],
+                    backgroundColor: ['#E9BD5F', '#2C6EFE'],
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                cutout: '62%',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function (ctx) { return ctx.label + ': ' + ctx.parsed + '%'; }
+                        }
+                    }
+                }
+            }
+        });
+    })();
+
+    // ── Market Stats Line Chart ─────────────────────────────────────────────
+    (function () {
+        var ctx = document.getElementById('marketChart');
+        if (!ctx) return;
+        var labels = ['Sep 2014','Sep 2015','Sep 2016','Sep 2017','Sep 2018','Sep 2019','Sep 2020','Sep 2021','Sep 2022','Sep 2023','Sep 2024','Sep 2025'];
+        var data   = [895000, 980000, 1100000, 1150000, 1080000, 1050000, 1120000, 1450000, 1520000, 1350000, 2100000, 1249000];
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Valuation',
+                    data: data,
+                    borderColor: '#2C6EFE',
+                    backgroundColor: 'rgba(44,110,254,0.08)',
+                    borderWidth: 2,
+                    pointBackgroundColor: '#2C6EFE',
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { font: { size: 11 }, color: '#929DAA' }
+                    },
+                    y: {
+                        grid: { color: 'rgba(0,0,0,0.05)' },
+                        ticks: {
+                            font: { size: 11 },
+                            color: '#929DAA',
+                            callback: function (v) {
+                                return v >= 1000000 ? (v / 1000000).toFixed(1) + 'M' : (v / 1000) + 'K';
+                            }
+                        },
+                        min: 500000,
+                        max: 2200000
+                    }
+                }
+            }
+        });
+
+        // Tab switcher
+        document.querySelectorAll('.hvh-market-tab').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.hvh-market-tab').forEach(function (b) { b.classList.remove('hvh-market-tab--active'); });
+                this.classList.add('hvh-market-tab--active');
+            });
+        });
+    })();
+    </script>
+
+</body>
+
+</html>
