@@ -12989,7 +12989,7 @@ textarea.form-control {
   .shape img {
     width: 100%;
     position: relative;
-    top: -3px;
+    top: -2px;
   }
   .testimonial-section {
     padding: 40px 0;
@@ -13940,6 +13940,762 @@ textarea.form-control {
   color: #E9BD5F;
   font-weight: 300;
   max-width: none;
+}
+
+.ftb-hero-section {
+  background-color: var(--light-color);
+  padding: 72px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-hero-section {
+    padding: 48px 0 60px;
+  }
+}
+
+.ftb-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: rgba(33, 37, 41, 0.72);
+  background: rgba(33, 37, 41, 0.07);
+  border: 1px solid rgba(33, 37, 41, 0.12);
+  margin-bottom: 20px;
+}
+
+.ftb-hero-title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1.1;
+  color: #0E171F;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+}
+@media only screen and (max-width: 74.9375rem) {
+  .ftb-hero-title {
+    font-size: 42px;
+  }
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-hero-title {
+    font-size: 34px;
+  }
+}
+@media only screen and (max-width: 35.9375rem) {
+  .ftb-hero-title {
+    font-size: 28px;
+  }
+}
+
+.ftb-hero-sub {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #929DAA;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-hero-sub {
+    max-width: 100%;
+    font-size: 15px;
+  }
+}
+
+.ftb-hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.ftb-hero-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.ftb-hero-cta .btn img {
+  width: 16px;
+  height: 16px;
+}
+@media only screen and (max-width: 35.9375rem) {
+  .ftb-hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ftb-hero-cta .btn,
+  .ftb-hero-cta .ftb-btn-ghost {
+    justify-content: center;
+  }
+}
+
+.ftb-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(33, 37, 41, 0.18);
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  color: #212529;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.ftb-btn-ghost img {
+  width: 16px;
+  height: 16px;
+}
+.ftb-btn-ghost:hover {
+  border-color: #0d6efd;
+  color: #0d6efd;
+  background: rgba(13, 110, 253, 0.04);
+}
+
+.ftb-hero-img-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 20px 60px 0px rgba(33, 37, 41, 0.1);
+  line-height: 0;
+}
+.ftb-hero-img-wrap img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-hero-img-wrap img {
+    height: 280px;
+  }
+}
+
+.ftb-benefits-section {
+  background: #fff;
+  padding: 80px 0 88px;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-benefits-section {
+    padding: 56px 0 64px;
+  }
+}
+
+@keyframes marqueeUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+/* optional: pause on hover */
+.ftb-benefits-section:hover .ftb-process-steps {
+  animation-play-state: paused;
+}
+
+.ftb-wave-deco {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+.ftb-wave-deco svg {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-wave-deco {
+    width: 70%;
+    opacity: 0.6;
+  }
+}
+
+.ftb-benefits-title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 1.15;
+  color: #212529;
+  margin-bottom: 16px;
+  letter-spacing: -0.3px;
+}
+@media only screen and (max-width: 74.9375rem) {
+  .ftb-benefits-title {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-benefits-title {
+    font-size: 28px;
+  }
+}
+
+.ftb-benefits-sub {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #929DAA;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  max-width: 480px;
+  margin-bottom: 0;
+}
+
+.ftb-benefit-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(33, 37, 41, 0.07);
+  border-radius: 24px;
+  padding: 24px 22px;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  -webkit-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.ftb-benefit-card:hover {
+  background: #fff;
+  box-shadow: 0px 8px 32px rgba(33, 37, 41, 0.07);
+  transform: translateY(-3px);
+}
+
+.ftb-benefit-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+.ftb-benefit-icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.ftb-benefit-title {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.ftb-benefit-desc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #929DAA;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0;
+}
+
+.ftb-process-section {
+  background: #0d6efd;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-process-section {
+    padding: 64px 0;
+  }
+}
+
+.ftb-process-waves {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.ftb-process-waves svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ftb-process-row {
+  --bs-gutter-x: 2.5rem;
+  --bs-gutter-y: 2.5rem;
+}
+
+.ftb-process-left {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ftb-process-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.16));
+  border: 0.5px solid #fff;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.ftb-process-title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 16px;
+}
+@media only screen and (max-width: 74.9375rem) {
+  .ftb-process-title {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-process-title {
+    font-size: 28px;
+  }
+}
+
+.ftb-process-sub {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-process-sub {
+    font-size: 15px;
+  }
+}
+
+.ftb-process-img-wrap {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(33, 37, 41, 0.08);
+  box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+  flex: 1;
+}
+.ftb-process-img-wrap img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  display: block;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-process-img-wrap img {
+    min-height: 200px;
+  }
+}
+
+.ftb-process-steps {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.ftb-process-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.ftb-process-num {
+  width: 80px;
+  height: 80px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #fff;
+  flex-shrink: 0;
+  background: rgba(249, 249, 249, 0.16);
+}
+
+.ftb-process-item-body {
+  flex: 1;
+}
+
+.ftb-process-item-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.ftb-process-item-desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+}
+
+.ftb-process-connector {
+  display: flex;
+  align-items: center;
+  padding: 4px 0 4px 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ftb-process-connector svg {
+  display: block;
+}
+
+.ftb-process-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 220px;
+  background: linear-gradient(to bottom, rgba(13, 110, 253, 0) 0%, #0d6efd 100%);
+  pointer-events: none;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-process-fade {
+    height: 140px;
+  }
+}
+
+.ftb-programs-section {
+  background: #fff;
+  padding: 80px 0 88px;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-programs-section {
+    padding: 56px 0 64px;
+  }
+}
+
+.ftb-program-card {
+  background: #fff;
+  border: 1px solid rgba(33, 37, 41, 0.08);
+  border-radius: 24px;
+  padding: 28px 24px;
+  height: 100%;
+  box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+  -webkit-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.ftb-program-card:hover {
+  box-shadow: 0px 16px 60px 0px rgba(0, 0, 0, 0.09);
+  transform: translateY(-3px);
+}
+
+.ftb-incentives-section {
+  background: #fff;
+  padding: 80px 0 88px;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-incentives-section {
+    padding: 56px 0 64px;
+  }
+}
+
+.ftb-consult-section {
+  background: #f2f6ff;
+  padding: 80px 0;
+  position: relative;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-consult-section {
+    padding: 60px 0;
+  }
+}
+
+.ftb-consult-wave {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.ftb-consult-wave svg {
+  display: block;
+  width: 100%;
+  height: 70px;
+}
+.ftb-consult-wave--top {
+  margin-bottom: -2px;
+  background: #fff;
+}
+.ftb-consult-wave--top svg path {
+  fill: #f2f6ff;
+}
+.ftb-consult-wave--bottom {
+  margin-top: -2px;
+  background: #fff;
+}
+.ftb-consult-wave--bottom svg path {
+  fill: #f2f6ff;
+}
+
+.ftb-consult-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  padding: 24px;
+}
+
+.ftb-consult-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.ftb-form-group {
+  margin-bottom: 20px;
+}
+
+.ftb-form-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #212529;
+  margin-bottom: 8px;
+  letter-spacing: -0.14px;
+}
+
+.ftb-required {
+  color: #E9BD5F;
+}
+
+.ftb-form-control {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #212529;
+  background: #fff;
+  border: 1px solid #ededed;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(17, 18, 57, 0.03);
+  outline: none;
+  -webkit-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.ftb-form-control::placeholder {
+  color: #929DAA;
+  font-weight: 400;
+}
+.ftb-form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+.ftb-phone-wrap {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.ftb-phone-prefix {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 12px;
+  background: #fff;
+  border: 1px solid #ededed;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(17, 18, 57, 0.03);
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #212529;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.ftb-phone-input {
+  flex: 1;
+  min-width: 0;
+}
+
+.ftb-select-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.ftb-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 40px;
+  color: #929DAA;
+}
+.ftb-select option {
+  color: #212529;
+}
+.ftb-select option:first-child {
+  color: #929DAA;
+}
+
+.ftb-select-icon {
+  position: absolute;
+  right: 14px;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.ftb-consult-alt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.ftb-consult-alt span {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #6b7b8d;
+}
+
+.ftb-btn-ghost--sm {
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.ftb-testimonials-section {
+  background: #fff;
+  padding: 80px 0 100px;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .ftb-testimonials-section {
+    padding: 56px 0 72px;
+  }
+}
+
+.ftb-testimonial-card {
+  background: #fff;
+  border: 1px solid rgba(33, 37, 41, 0.08);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  -webkit-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.ftb-testimonial-card:hover {
+  box-shadow: 0px 16px 60px 0px rgba(0, 0, 0, 0.09);
+  transform: translateY(-3px);
+}
+
+.ftb-stars {
+  display: flex;
+  gap: 2px;
+}
+.ftb-stars svg {
+  flex-shrink: 0;
+}
+
+.ftb-testimonial-quote {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #212529;
+  margin: 0;
+  flex: 1;
+}
+
+.ftb-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 24px;
+}
+
+.ftb-author-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #eaf6fc;
+}
+.ftb-author-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ftb-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.ftb-author-info strong {
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+  display: block;
+}
+.ftb-author-info span {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #929DAA;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */
