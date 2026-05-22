@@ -4,9 +4,9 @@
       "Bash(sass styles/scss/style.scss styles/css/style.css)",
       "mcp__figma__get_screenshot",
       "mcp__figma__get_design_context",
-      "WebFetch(domain:www.figma.com)",
-      "Bash(findstr /c:\"<section\" \"d:\\\\sumedha-projects 1\\\\Homeoptima-design-git\\\\Homeoptima-Design-2026\\\\first-time-home-buyer-landing.html\")",
-      "Bash(python3 *)"
+      "Bash(npm run *)",
+      "mcp__figma__get_metadata",
+      "PowerShell(Get-ChildItem \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\\" -Name | Where-Object { $_ -notlike \"icons\" })"
     ]
   }
 }
