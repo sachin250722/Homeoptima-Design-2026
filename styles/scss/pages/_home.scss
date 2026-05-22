@@ -235,14 +235,11 @@
         border-radius: 999px;
         line-height: 16px;
         margin-bottom: 24px;
-
-
     }
 
     .banner-content {
-        max-width: 575px;
+        // max-width: 575px;
         margin-bottom: 56px;
-
     }
 
     h1 {
@@ -379,9 +376,6 @@
     border-radius: 50%;
     margin: 0 !important;
     background: rgba(44, 110, 254, 0.24);
-
-
-
 }
 
 .swiper-pagination-bullet-active {
@@ -501,7 +495,7 @@
     .shape img {
         width: 100%;
         position: relative;
-        top: -3px;
+        top: -2px;
 
     }
 
