@@ -27,28 +27,24 @@ const listingsSwiper = new Swiper('.listings-swiper', {
 //  Cities Swiper
 // ================================================
 const citiesSwiper = new Swiper('.cities-swiper', {
-    slidesPerView: 1,
+    slidesPerView: 1.1,
     spaceBetween: 24,
     slidesPerGroup: 1,
     loop: true,
     grabCursor: true,
-    pagination: {
-        el: '.listings-pagination',
-        clickable: true,
+    navigation: {
+        nextEl: '#citiesNext',
     },
     breakpoints: {
         576: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.5,
         },
         768: {
-            slidesPerView: 2,
+            slidesPerView: 2.2,
         },
         1200: {
             slidesPerView: 3.5,
         },
-    },
-    navigation: {
-        nextEl: '#citiesNext',
     },
 });
 
