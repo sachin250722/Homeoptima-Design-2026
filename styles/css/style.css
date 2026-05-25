@@ -13354,6 +13354,36 @@ textarea.form-control {
   width: 16px;
   height: 16px;
 }
+.listings-section .listing-card--sold .listing-img {
+  position: relative;
+}
+.listings-section .listing-card--sold .listing-img img {
+  filter: grayscale(100%);
+}
+
+.listing-sold-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44, 110, 254, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.listing-sold-tag {
+  background: rgba(44, 110, 254, 0.82);
+  color: #fff;
+  font-family: "Archivo", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 10px 32px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(2px);
+}
 
 .why-us-section {
   position: relative;
@@ -16394,7 +16424,7 @@ textarea.form-control {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 40px;
   padding: 16px 28px;
   border-top: 1px solid rgba(33, 37, 41, 0.06);
   border-bottom: 1px solid rgba(33, 37, 41, 0.06);
@@ -16801,9 +16831,6 @@ textarea.form-control {
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
   transition: all 0.2s;
-}
-.hvh-market-tab:hover {
-  color: #212529;
 }
 .hvh-market-tab--active {
   background: #0d6efd;
