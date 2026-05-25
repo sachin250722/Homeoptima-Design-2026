@@ -4,9 +4,24 @@
       "Bash(sass styles/scss/style.scss styles/css/style.css)",
       "mcp__figma__get_screenshot",
       "mcp__figma__get_design_context",
-      "WebFetch(domain:www.figma.com)",
-      "Bash(findstr /c:\"<section\" \"d:\\\\sumedha-projects 1\\\\Homeoptima-design-git\\\\Homeoptima-Design-2026\\\\first-time-home-buyer-landing.html\")",
-      "Bash(python3 *)"
+      "Bash(npm run *)",
+      "mcp__figma__get_metadata",
+      "PowerShell(Get-ChildItem \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\\" -Name | Where-Object { $_ -notlike \"icons\" })",
+      "Bash(npx sass *)",
+      "Bash(python *)",
+      "Bash(python3 *)",
+      "Bash(where node *)",
+      "Bash(node *)",
+      "Bash(dir *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\ADMIN\\\\.claude\\\\projects\\\\E--Home-Optima-Homeoptima-2026-Homeoptima-Design-2026\\\\e9fb3c38-dbeb-4036-b6bd-e829cdf5d37a\\\\tool-results\\\\\" | Select-Object Name, @{N='SizeKB';E={[math]::Round\\($_.Length/1KB,1\\)}})",
+      "Bash(Select-String -Path \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\Home-value-hub-results.html\" -Pattern \"hvh-announcement-bar|hvh-hero-card|hvh-hero-img-wrap|hvh-results-address\")",
+      "Bash(Select-Object LineNumber, Line)",
+      "Bash(curl -s -o \"C:/Users/ADMIN/AppData/Local/Temp/hero_full.png\" \"https://www.figma.com/api/mcp/asset/1376521b-f7b3-4172-903a-6d7d89a33973\")",
+      "Bash(curl -s -o \"C:/Users/ADMIN/AppData/Local/Temp/page_full.png\" \"https://www.figma.com/api/mcp/asset/6ca97c43-42ec-491d-837d-815fc3bb7440\")",
+      "Bash(curl -s -o \"C:/Users/ADMIN/AppData/Local/Temp/page_hires.png\" \"https://www.figma.com/api/mcp/asset/301de5ab-4ff2-4887-a86d-e7bfb96afc09\")",
+      "Bash(curl -s -o \"C:/Users/ADMIN/AppData/Local/Temp/sec_overview.png\" \"https://www.figma.com/api/mcp/asset/5c940f85-db25-4016-aa14-e1e8f5dbf062\")",
+      "Bash(curl -s -o \"C:/Users/ADMIN/AppData/Local/Temp/sec_market.png\" \"https://www.figma.com/api/mcp/asset/d3aa48eb-a2ed-4668-bff0-5a8974a46556\")",
+      "Bash(curl -s -o \"C:/Users/ADMIN/AppData/Local/Temp/sec_valuation.png\" \"https://www.figma.com/api/mcp/asset/1f27278b-9bc5-423c-a644-774b3d57dc30\")"
     ]
   }
 }

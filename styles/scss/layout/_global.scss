@@ -42,23 +42,25 @@
     font-family: "Archivo", sans-serif;
     font-weight: 600;
     font-size: 48px;
-    line-height: 1.1;
+    line-height: 62px;
     color: $dark;
     margin-bottom: 16px;
 
     &.text-white { color: $white; }
 
-    @include respond("tab-land") { font-size: 36px; }
-    @include respond("tab-port") { font-size: 28px; }
+    @include respond("tab-land") { font-size: 36px; line-height: 1.2; }
+    @include respond("tab-port") { font-size: 28px; line-height: 1.2; }
 }
 
 .section-desc {
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 20px;
+    line-height: 32px;
     color: #929DAA;
     max-width: 680px;
     font-weight: 400;
     margin-bottom: 0;
+
+    @include respond("tab-port") { font-size: 18px; line-height: 28px; }
 }
 
 // ---- Shared card atoms ----
@@ -131,7 +133,6 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-top: 32px;
 }
 
 .slider-arrow {
