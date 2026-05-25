@@ -1,0 +1,1323 @@
+// ============================================================
+//  HOME VALUE HUB — PAGE  (Figma node 2225:91149)
+//  Scope: body.hv-page
+//  All section classes prefixed .hv-
+// ============================================================
+
+
+// ============================================================
+//  PAGE-SCOPED BTN OVERRIDES
+// ============================================================
+.hv-page {
+    background: #fbfdff;
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: $radius !important;
+        padding: 12px 24px;
+        @include transitionFast;
+
+        img {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+    }
+
+    .btn-primary {
+        background: $primary;
+        border-color: $primary;
+        color: $white;
+
+        &:hover {
+            background: darken($primary, 8%);
+            border-color: darken($primary, 8%);
+        }
+    }
+
+    .btn-outline-primary {
+        background: transparent;
+        border: 1px solid rgba($dark, 0.2);
+        color: $dark;
+
+        &:hover {
+            background: rgba($dark, 0.04);
+            border-color: rgba($dark, 0.4);
+        }
+    }
+}
+
+.three-line-shape {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+
+    &.style-1{
+        right:auto;
+        left:0;
+    }
+
+}
+
+// ============================================================
+//  WAVE DIVIDERS
+// ============================================================
+.hv-wave {
+    line-height: 0;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: $white;
+
+    svg {
+        display: block;
+    }
+
+    // When placed directly above a blue section
+    &--blue-bottom {
+        background: $primary;
+    }
+
+    // Wave top of light-blue section
+    &--to-light {
+        background: $light-color;
+    }
+
+    // Wave bottom of light-blue section
+    &--from-light {
+        background: $light-color;
+    }
+}
+
+
+// ============================================================
+//  SHARED ICON BOX (reused across sections)
+// ============================================================
+.hv-icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: $radius;
+    flex-shrink: 0;
+
+    svg {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+    }
+
+    &--blue {
+        background: rgba(46, 124, 246, 0.12);
+    }
+
+    &--yellow {
+        background: rgba(233, 189, 95, 0.12);
+    }
+
+    &--green {
+        background: rgba(141, 235, 146, 0.12);
+    }
+
+    &--red {
+        background: rgba(255, 130, 118, 0.12);
+    }
+}
+
+
+// ============================================================
+//  1. HERO SECTION
+// ============================================================
+.hv-hero {
+    position: relative;
+    min-height: 920px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url('../../images/listing-01.jpg');
+    background-size: cover;
+    background-position: center;
+
+    @include respond('tab-port') {
+        min-height: 700px;
+    }
+
+    @include respond('phone') {
+        min-height: 560px;
+    }
+}
+
+.hv-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(14, 23, 31, 0.52);
+    pointer-events: none;
+}
+
+.hv-hero-body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    padding: 80px 24px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+// Pill badge
+.hv-hero-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(14, 23, 31, 0.32);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+// Heading
+.hv-hero-heading {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: 76px;
+    line-height: 1.026;
+    color: $white;
+    margin-bottom: 0;
+
+    @include respond('tab-land') {
+        font-size: 56px;
+    }
+
+    @include respond('tab-port') {
+        font-size: 40px;
+    }
+
+    @include respond('phone') {
+        font-size: 30px;
+    }
+
+    @include respond('mobile-xs') {
+        font-size: 26px;
+    }
+}
+
+// Sub-text
+.hv-hero-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $white;
+    margin-bottom: 0;
+
+    @include respond('tab-port') {
+        font-size: 16px;
+    }
+}
+
+// Address search bar
+.hv-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 720px;
+
+    @include respond('phone') {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 12px;
+    }
+}
+
+.hv-search-input-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: $white;
+    border: 1px solid #f2f2f2;
+    border-radius: $radius;
+    padding: 16px 24px;
+    min-width: 0;
+
+    @include respond('phone') {
+        width: 100%;
+    }
+}
+
+.hv-search-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.hv-search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: $dark;
+    width: 100%;
+
+    &::placeholder {
+        color: rgba(146, 157, 170, 0.56);
+    }
+}
+
+.hv-search-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 16px 24px !important;
+    border-radius: $radius !important;
+
+    @include respond('phone') {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+// ============================================================
+//  2. WHY SECTION
+// ============================================================
+.hv-why {
+    background: $white;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+
+    @include respond('tab-port') {
+        padding: 64px 0;
+    }
+
+    @include respond('phone') {
+        padding: 48px 0;
+    }
+}
+
+.hv-why-header {
+    max-width: 682px;
+    margin-bottom: 56px;
+
+    @include respond('tab-port') {
+        margin-bottom: 36px;
+        max-width: 100%;
+    }
+}
+
+// 3 feature cards row
+.hv-why-cards {
+    display: flex;
+    gap: 24px;
+
+    @include respond('tab-port') {
+        flex-wrap: wrap;
+
+        .hv-feature-card {
+            flex: 0 0 calc(50% - 12px);
+        }
+    }
+
+    @include respond('phone') {
+        flex-direction: column;
+
+        .hv-feature-card {
+            flex: 1;
+        }
+    }
+}
+
+.hv-feature-card {
+    flex: 1;
+    min-width: 0;
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    padding: 24px;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @include transitionMedium;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 60px rgba(44, 110, 254, 0.1);
+        border-color: rgba($primary, 0.2);
+    }
+}
+
+.hv-feature-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hv-feature-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.6;
+    color: $dark;
+    margin-bottom: 0;
+}
+
+.hv-feature-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #929DAA;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+
+// ============================================================
+//  3. HOW IT WORKS (BLUE)
+// ============================================================
+
+.main-hv-how {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        width: 752px;
+        height: 752px;
+        border-radius: 752px;
+        background: rgba(255, 255, 255, 0.16);
+        filter: blur(200px);
+        position: absolute;
+        right: -275px;
+        top: -185px;
+
+    }
+}
+
+.wave-how {
+    position: absolute;
+    left: 0px;
+    top: 87px;
+    opacity: 0.24;
+    z-index: -1;
+
+}
+
+.hv-how {
+    background: $primary;
+    padding: 120px 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+
+
+
+
+
+    @include respond('tab-port') {
+        padding: 80px 0;
+    }
+
+    @include respond('phone') {
+        padding: 60px 0;
+    }
+}
+
+.hv-how-inner {
+    display: flex;
+    gap: 120px;
+    align-items: flex-start;
+
+    @include respond('tab-land') {
+        gap: 60px;
+    }
+
+    @include respond('tab-port') {
+        flex-direction: column;
+        gap: 56px;
+    }
+}
+
+// Left column
+.hv-how-left {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.hv-how-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.hv-how-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+
+    @include respond('tab-port') {
+        font-size: 16px;
+    }
+}
+
+.hv-how-img-card {
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+    height: 370px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    @include respond('tab-port') {
+        height: 260px;
+    }
+
+    @include respond('phone') {
+        display: none;
+    }
+}
+
+// Right column: numbered steps
+.hv-how-right {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.hv-step {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hv-step-num {
+    width: 80px;
+    height: 80px;
+    border-radius: 999px;
+    background: rgba(249, 249, 249, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    span {
+        font-family: 'Poppins', sans-serif;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 1.43;
+        color: $white;
+    }
+}
+
+.hv-step-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hv-step-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.33;
+    color: $white;
+    margin-bottom: 0;
+}
+
+.hv-step-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+}
+
+
+// ============================================================
+//  4. STATS SECTION
+// ============================================================
+.hv-stats {
+    background: $white;
+    padding: 80px 0;
+
+    @include respond('tab-port') {
+        padding: 64px 0;
+    }
+
+    @include respond('phone') {
+        padding: 48px 0;
+    }
+}
+
+.hv-stats-inner {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+
+    @include respond('tab-land') {
+        gap: 60px;
+    }
+
+    @include respond('tab-port') {
+        flex-direction: column;
+        gap: 48px;
+    }
+}
+
+.hv-stats-left {
+    flex: 0 0 580px;
+    min-width: 0;
+
+    @include respond('tab-land') {
+        flex: 0 0 420px;
+    }
+
+    @include respond('tab-port') {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+.hv-stats-heading {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1.1;
+    color: $dark;
+    margin-bottom: 24px;
+
+    .text-primary {
+        color: $primary !important;
+    }
+
+    @include respond('tab-land') {
+        font-size: 36px;
+    }
+
+    @include respond('tab-port') {
+        font-size: 28px;
+    }
+
+    @include respond('phone') {
+        font-size: 24px;
+    }
+}
+
+.hv-stats-right {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    gap: 24px;
+
+    @include respond('phone') {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+.hv-stat-col {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hv-stat-number {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    font-size: 34px;
+    line-height: 1.12;
+    color: #29323C;
+}
+
+.hv-stat-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.56;
+    letter-spacing: 1px;
+    color: #929DAA;
+}
+
+
+// ============================================================
+//  5. HOMEOWNER RESOURCES (LIGHT BLUE)
+// ============================================================
+.hv-resources {
+    background: $light-color;
+    padding: 80px, 0px; // extra bottom padding for overlay
+    position: relative;
+    overflow: hidden;
+
+    @include respond('tab-port') {
+        padding-bottom: 160px;
+    }
+
+    @include respond('phone') {
+        padding-bottom: 140px;
+    }
+}
+
+.hv-resources-header {
+    margin-bottom: 56px;
+    max-width: 682px;
+    position: relative;
+    z-index: 9;
+
+    @include respond('tab-port') {
+        margin-bottom: 36px;
+        max-width: 100%;
+    }
+}
+
+.hv-resources-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    @include respond('tab-port') {
+        flex-wrap: wrap;
+
+        .hv-resource-card {
+            flex: 0 0 calc(50% - 8px);
+        }
+    }
+
+    @include respond('phone') {
+        flex-direction: column;
+
+        .hv-resource-card {
+            flex: 1;
+        }
+    }
+}
+
+.hv-resource-card {
+    flex: 1;
+    min-width: 0;
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    padding: 24px;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @include transitionMedium;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 60px rgba(44, 110, 254, 0.1);
+        border-color: rgba($primary, 0.15);
+    }
+}
+
+.hv-resource-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hv-resource-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.6;
+    color: $dark;
+    margin-bottom: 0;
+}
+
+.hv-resource-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #929DAA;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.hv-resource-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: $dark;
+    text-decoration: none;
+    @include transitionFast;
+
+    img {
+        width: 18px;
+        height: 18px;
+    }
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+// Glassmorphism CTA overlay at section bottom
+.hv-resources-cta-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background: linear-gradient(to bottom, rgba(242, 246, 255, 0) 0%, #F2F6FF 40%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 2;
+    padding: 80px 24px;
+
+    @include respond('tab-port') {
+        height: 220px;
+        padding: 60px 24px;
+    }
+
+    @include respond('phone') {
+        height: 180px;
+        padding: 40px 24px;
+    }
+}
+
+.hv-resources-cta-btn {
+    padding: 15px 32px !important;
+    font-size: 16px !important;
+    white-space: nowrap;
+
+    @include respond('phone') {
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+
+// ============================================================
+//  6. CTA BLUE SECTION
+// ============================================================
+.hv-cta-blue {
+    background: $primary;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    @include respond('tab-port') {
+        padding: 80px 0;
+    }
+
+    @include respond('phone') {
+        padding: 60px 0;
+    }
+}
+
+// Decorative corner house photos
+.hv-cta-deco {
+    position: absolute;
+    z-index: 1;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    border: 1px solid rgba($dark, 0.08);
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    &--tl {
+        width: 82px;
+        height: 82px;
+        top: 56px;
+        left: 8%;
+    }
+
+    &--bl {
+        width: 197px;
+        height: 197px;
+        bottom: 64px;
+        left: 4%;
+    }
+
+    &--tr {
+        width: 180px;
+        height: 180px;
+        top: 40px;
+        right: 8%;
+    }
+
+    &--br {
+        width: 131px;
+        height: 131px;
+        bottom: 72px;
+        right: 9%;
+    }
+
+    @include respond('tab-port') {
+        display: none;
+    }
+}
+
+.hv-cta-blue-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hv-cta-blue-heading {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 68px;
+    line-height: 1.147;
+    color: $white;
+    margin-bottom: 0;
+
+    @include respond('tab-land') {
+        font-size: 48px;
+    }
+
+    @include respond('tab-port') {
+        font-size: 36px;
+    }
+
+    @include respond('phone') {
+        font-size: 28px;
+    }
+}
+
+.hv-cta-blue-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+
+    @include respond('tab-port') {
+        font-size: 16px;
+    }
+}
+
+.hv-cta-blue-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: $white !important;
+    border: 1px solid $white !important;
+    color: $primary !important;
+    padding: 16px 32px !important;
+    border-radius: $radius !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    @include transitionFast;
+
+    img {
+        width: 16px;
+        height: 16px;
+        filter: invert(39%) sepia(99%) saturate(2153%) hue-rotate(211deg) brightness(101%) contrast(103%);
+    }
+
+    &:hover {
+        background: rgba($white, 0.9) !important;
+        color: darken($primary, 8%) !important;
+    }
+}
+
+
+// ============================================================
+//  7. APP DOWNLOAD SECTION
+// ============================================================
+.hv-app {
+    background: $white;
+    padding: 80px 0;
+
+    @include respond('tab-port') {
+        padding: 64px 0;
+    }
+
+    @include respond('phone') {
+        padding: 48px 0;
+    }
+}
+
+.hv-app-card {
+    background: var(--dark);
+    border-radius: $radius-lg;
+    padding: 96px 80px;
+    min-height: 492px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+
+    @include respond('tab-land') {
+        padding: 60px;
+        gap: 48px;
+    }
+
+    @include respond('tab-port') {
+        flex-direction: column;
+        padding: 48px 32px;
+        gap: 48px;
+        min-height: auto;
+    }
+
+    @include respond('phone') {
+        padding: 32px 24px;
+    }
+}
+
+// Blue glow
+.hv-app-glow {
+    position: absolute;
+    right: -60px;
+    top: 95px;
+    width: 581px;
+    height: 581px;
+    background: $primary;
+    border-radius: 999px;
+    filter: blur(340px);
+    pointer-events: none;
+    z-index: 0;
+
+    @include respond('tab-port') {
+        display: none;
+    }
+}
+
+// Left column
+.hv-app-left {
+    flex: 0 0 500px;
+    min-width: 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include respond('tab-land') {
+        flex: 0 0 400px;
+    }
+
+    @include respond('tab-port') {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+.hv-app-heading {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 68px;
+    line-height: 1.09;
+    color: $white;
+    margin-bottom: 0;
+
+    @include respond('tab-land') {
+        font-size: 48px;
+    }
+
+    @include respond('tab-port') {
+        font-size: 36px;
+    }
+
+    @include respond('phone') {
+        font-size: 28px;
+    }
+}
+
+.hv-app-dot {
+    color: $primary;
+}
+
+.hv-app-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #B8C5D4;
+    margin-bottom: 0;
+
+    @include respond('tab-port') {
+        font-size: 16px;
+    }
+}
+
+// Store badges
+.hv-app-stores {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hv-store-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 8px 16px;
+    text-decoration: none;
+    @include transitionFast;
+    background-color:#fff;
+
+   
+
+    svg {
+        flex-shrink: 0;
+    }
+}
+
+.hv-store-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.hv-store-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color:var(--dark);
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hv-store-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+    line-height: 1.3;
+}
+
+// Right column
+.hv-app-right {
+        flex: 1;
+    min-width: 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+    position: relative;
+    bottom: -97px;
+    right: -84px;
+    
+
+    @include respond('tab-port') {
+        min-height: 320px;
+        width: 100%;
+    }
+}
+
+// Floating review card
+.hv-app-review-card {
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%) translateY(-20px);
+    z-index: 3;
+    width: 280px;
+    background: rgba(69, 53, 18, 0.8);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(233, 189, 95, 0.24);
+    border-radius: $radius-lg;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+
+    @include respond('tab-port') {
+        display: none;
+    }
+}
+
+.hv-review-stars {
+    display: flex;
+    gap: 4px;
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.hv-review-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.67;
+    color: #E9BD5F;
+    margin-bottom: 0;
+}
+
+// CSS Phone Mockup
+.hv-phone-mockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hv-phone-frame {
+    width: 240px;
+    height: 480px;
+    background: #1a1a2e;
+    border-radius: 36px;
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        0 40px 80px rgba(0, 0, 0, 0.6),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    @include respond('tab-port') {
+        width: 200px;
+        height: 400px;
+    }
+}
+
+.hv-phone-notch {
+    width: 80px;
+    height: 20px;
+    background: #1a1a2e;
+    border-radius: 0 0 14px 14px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.hv-phone-screen {
+    flex: 1;
+    overflow: hidden;
+    margin: 0 3px 3px;
+    border-radius: 0 0 34px 34px;
+}
+
+.hv-phone-screen-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+// ============================================================
+//  RESPONSIVE — extra global overrides
+// ============================================================
+@include respond('tab-port') {
+    .hv-hero-body {
+        padding: 64px 24px;
+    }
+
+    .hv-search-bar {
+        max-width: 100%;
+    }
+
+    .hv-why-cards {
+        flex-wrap: wrap;
+    }
+
+    .hv-resources-row {
+        flex-wrap: wrap;
+    }
+}
+
+@include respond('phone') {
+    .hv-why-cards {
+        flex-direction: column;
+    }
+
+    .hv-how-right {
+        gap: 32px;
+    }
+
+    .hv-stats-right {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .hv-resources-row {
+        flex-direction: column;
+    }
+
+    .hv-app-stores {
+        flex-direction: column;
+    }
+}
