@@ -1,4 +1,36 @@
 
+// Agent section: photo fades (left), info slides (right), synced via realIndex
+const agentPhotoSwiper = new Swiper(".agent-photo-swiper", {
+    slidesPerView: 1,
+    loop: true,
+    speed: 600,
+    effect: "fade",
+    fadeEffect: { crossFade: true },
+    allowTouchMove: false,
+});
+
+const agentInfoSwiper = new Swiper(".agent-info-swiper", {
+    slidesPerView: 1,
+    loop: true,
+    speed: 600,
+    navigation: {
+        nextEl: "#agentNext",
+        prevEl: "#agentPrev",
+    },
+    pagination: {
+        el: "#agentPagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + ' agent-dot"></span>';
+        },
+    },
+    on: {
+        slideChange: function () {
+            agentPhotoSwiper.slideToLoop(this.realIndex, 600);
+        },
+    },
+});
+
 const swiper = new Swiper(".testimonial-swiper", {
     slidesPerView: 2.35,
     spaceBetween: 24,

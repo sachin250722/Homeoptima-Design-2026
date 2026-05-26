@@ -196,7 +196,7 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 40px;
         padding: 16px 28px;
         border-top: 1px solid rgba($dark, 0.06);
         border-bottom: 1px solid rgba($dark, 0.06);
@@ -596,8 +596,6 @@
     cursor: pointer;
     font-family: "Poppins", sans-serif;
     @include transitionFast;
-
-    &:hover { color: $dark; }
 
     &--active {
         background: $primary;
