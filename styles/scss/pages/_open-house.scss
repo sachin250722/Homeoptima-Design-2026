@@ -1,0 +1,902 @@
+// ================================================
+//  OPEN HOUSE PAGE  —  _open-house.scss
+//  Sections: 1. Hero + Navbar  |  2. FAQ  |  (Footer reuses _footer.scss)
+// ================================================
+
+
+// ================================================
+//  1. HERO SECTION
+// ================================================
+
+.oh-hero {
+    position: relative;
+    width: 100%;
+
+    &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #0E171F8F;
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    // ---- Background image + overlay ----
+    &__bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    &__bg-img {
+        width: 106%;
+        height: 110%;
+        max-width: none;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        top: -5%;
+        left: -3%;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba($secondary, 0.56);
+    }
+
+    // ---- Navbar inside hero ----
+    &__nav {
+        position: relative;
+        z-index: 10;
+        background: $white;
+
+        // Keep navbar white on top of hero bg
+        .bg-body-tertiary {
+            background-color: $white !important;
+        }
+    }
+
+    // ---- Hero body content ----
+    &__body {
+        position: relative;
+        z-index: 2;
+        padding: 56px 0;
+
+        @include respond("tab-port") {
+            padding: 40px 0;
+        }
+
+        @include respond("phone-land") {
+            padding: 32px 0;
+        }
+    }
+
+    // ---- Left column ----
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    // ---- Event badges ----
+    &__badges {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    &__badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px;
+        border-radius: 999px;
+        font-family: "Poppins", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 999px;
+        background: rgba(14, 23, 31, 0.32);
+        backdrop-filter: blur(12px);
+
+    }
+
+    // ---- Property title ----
+    &__title {
+        font-family: "Archivo", sans-serif;
+        font-weight: 800;
+        font-size: 76px;
+        line-height: 1.03;
+        color: $white;
+        margin-bottom: 0;
+
+        @include respond("tab-land") {
+            font-size: 56px;
+        }
+
+        @include respond("tab-port") {
+            font-size: 44px;
+        }
+
+        @include respond("phone") {
+            font-size: 36px;
+        }
+    }
+
+    // ---- Subtitle ----
+    &__desc {
+        font-size: 20px;
+        line-height: 32px;
+        color: $white;
+        font-weight: 400;
+        max-width: 640px;
+        margin-bottom: 0;
+
+        @include respond("tab-port") {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+
+    // ---- Location / Date / Time info card ----
+    &__info-card {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 10px 24px 10px 10px;
+        border-radius: 18px;
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        width:fit-content;
+
+        @include respond("phone") {
+            padding: 10px 16px;
+        }
+    }
+
+    &__info-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        &--datetime {
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        span {
+            color: $white;
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            line-height: 1;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+    }
+
+    &__info-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        span {
+            color: $white;
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+    }
+
+    &__info-icon {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+// ================================================
+//  GAIN ACCESS FORM CARD
+// ================================================
+
+.oh-form-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 16px 24px 0;
+    }
+
+    &__title {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        color: $dark;
+        margin-bottom: 0;
+    }
+
+    &__qr {
+        flex-shrink: 0;
+        width: 56px;
+        height: 56px;
+        border-radius: 8px;
+        overflow: hidden;
+
+        svg,
+        img {
+            width: 56px;
+            height: 56px;
+            display: block;
+        }
+    }
+
+    &__footer {
+        padding: 12px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+}
+
+
+// ================================================
+//  FORM FIELDS
+// ================================================
+
+.oh-form {
+    padding: 16px 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &--half {
+            flex: 1;
+            min-width: 0;
+        }
+
+        &--checkboxes {
+            gap: 12px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+        flex-direction: column;
+
+        @include respond("phone-land") {
+            flex-direction: column;
+        }
+    }
+
+    &__label {
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: $dark;
+        line-height: 18px;
+        letter-spacing: -0.14px;
+        margin-bottom: 0;
+    }
+
+    &__required {
+        color: #E9BD5F;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 12px 16px;
+        background: $white;
+        border: 1px solid #EDEDED;
+        border-radius: 8px;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: $dark;
+        line-height: 24px;
+        letter-spacing: -0.14px;
+        box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
+        @include transitionFast;
+
+        &::placeholder {
+            color: #929DAA;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: $primary;
+            box-shadow: 0 0 0 3px rgba($primary, 0.1);
+        }
+
+        // Override Bootstrap form-control
+        &.form-control:focus {
+            border-color: $primary;
+            box-shadow: 0 0 0 3px rgba($primary, 0.1);
+        }
+    }
+
+    // ---- Phone field ----
+    &__phone-wrap {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    &__phone-code {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 12px;
+        background: $white;
+        border: 1px solid #EDEDED;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
+        flex-shrink: 0;
+        cursor: pointer;
+        @include transitionFast;
+
+        &:hover {
+            border-color: rgba($dark, 0.3);
+        }
+    }
+
+    &__phone-prefix {
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        color: $dark;
+        white-space: nowrap;
+    }
+
+    &__flag {
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__input--phone {
+        flex: 1;
+        min-width: 0;
+    }
+
+    // ---- Select ----
+    &__select-wrap {
+        position: relative;
+    }
+
+    &__select {
+        appearance: none;
+        -webkit-appearance: none;
+        padding-right: 36px !important;
+        cursor: pointer;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%23929DAA' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+
+        &.form-select {
+            border: 1px solid #EDEDED;
+            border-radius: 8px;
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            color: $dark;
+            box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
+
+            &:focus {
+                border-color: $primary;
+                box-shadow: 0 0 0 3px rgba($primary, 0.1);
+            }
+        }
+    }
+
+    // ---- Radio pills ----
+    &__radio-group {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    &__radio-pill {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px 6px 6px;
+        background: $white;
+        border: 1px solid #EDEDED;
+        border-radius: 999px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
+        @include transitionFast;
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        span:last-child {
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            color: $dark;
+            line-height: 24px;
+            letter-spacing: -0.14px;
+            white-space: nowrap;
+        }
+
+        &:hover {
+            border-color: rgba($primary, 0.4);
+        }
+
+        &--checked {
+            border-color: #EDEDED;
+        }
+    }
+
+    &__radio-dot {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1.5px solid rgba($dark, 0.5);
+        flex-shrink: 0;
+
+        &--checked {
+            border-color: $primary;
+            background: radial-gradient(circle at center, $primary 42%, transparent 42%);
+        }
+    }
+
+    // ---- Checkboxes ----
+    &__checkbox-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+
+        input[type="checkbox"] {
+            display: none;
+        }
+    }
+
+    &__checkbox-box {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        background: $white;
+        border: 1.5px solid rgba($dark, 0.5);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
+        @include transitionFast;
+
+        &--checked {
+            background: $primary;
+            border-color: $primary;
+        }
+
+        svg {
+            display: none;
+        }
+
+        &--checked svg {
+            display: block;
+        }
+    }
+
+    &__checkbox-input:checked+.oh-form__checkbox-box {
+        background: $primary;
+        border-color: $primary;
+
+        svg {
+            display: block;
+        }
+    }
+
+    &__checkbox-label {
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: $dark;
+        line-height: 18px;
+        letter-spacing: -0.14px;
+    }
+
+    // ---- Submit button ----
+    &__submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 24px;
+        border-radius: $radius;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        @include transitionMedium;
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    // ---- Security note ----
+    &__security {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        svg {
+            flex-shrink: 0;
+        }
+
+        span {
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba($dark, 0.68);
+            white-space: nowrap;
+
+            @include respond("phone") {
+                white-space: normal;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+// ================================================
+//  2. FAQ SECTION
+// ================================================
+
+.oh-faq {
+    padding: 80px 0;
+    background: #FBFDFF;
+
+    @include respond("tab-port") {
+        padding: 56px 0;
+    }
+
+    @include respond("phone-land") {
+        padding: 40px 0;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include respond("tab-port") {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        font-family: "Archivo", sans-serif;
+        font-weight: 500;
+        font-size: 68px;
+        line-height: 74px;
+        color: $dark;
+        margin-bottom: 24px;
+
+        @include respond("tab-land") {
+            font-size: 52px;
+            line-height: 60px;
+        }
+
+        @include respond("tab-port") {
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        @include respond("phone") {
+            font-size: 32px;
+            line-height: 1.2;
+        }
+    }
+}
+
+
+// ---- Accordion ----
+
+.oh-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__item {
+        background: $white;
+        border: 1px solid rgba($dark, 0.08) !important;
+        border-radius: 16px !important;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+        @include transitionFast;
+
+        &--active,
+        &:has(.accordion-button:not(.collapsed)) {
+            border-color: $primary !important;
+        }
+    }
+
+    &__btn {
+        font-family: "Archivo", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: $dark;
+        padding: 24px 16px;
+        background: $white !important;
+        border: none;
+        box-shadow: none !important;
+        @include transitionFast;
+
+        &::after {
+            // Override Bootstrap chevron with plus/close icons
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 5V19M5 12H19' stroke='%23E9BD5F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-size: 24px 24px;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        &:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 6L6 18M6 6L18 18' stroke='%232C6EFE' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            transform: none;
+        }
+
+        &:focus {
+            box-shadow: none !important;
+        }
+
+        &:hover {
+            color: $primary;
+        }
+
+        @include respond("phone") {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    &__body {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #929DAA;
+        font-weight: 400;
+        padding: 0 16px 24px;
+    }
+}
+.oh-form__radio-group {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.oh-form__radio-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: #fff;
+    user-select: none;
+    margin: 0;
+}
+
+.oh-form__radio-pill:hover {
+    border-color: #2C6EFE;
+    background-color: #f5f9ff;
+}
+
+/* Hide native radio input */
+.oh-form__radio-pill input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}
+
+/* Custom radio dot */
+.oh-form__radio-dot {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d1d5db;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+/* ⭐ MAGIC: When radio is checked */
+.oh-form__radio-pill:has(input[type="radio"]:checked) {
+    border-color: #2C6EFE;
+    background-color: #f5f9ff;
+}
+
+.oh-form__radio-pill:has(input[type="radio"]:checked) .oh-form__radio-dot {
+    border-color: #2C6EFE;
+}
+
+/* Inner dot when checked */
+.oh-form__radio-pill:has(input[type="radio"]:checked) .oh-form__radio-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #2C6EFE;
+}
+
+/* ========================================
+   CHECKBOXES
+======================================== */
+
+.oh-form__field--checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.oh-form__checkbox-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+    margin: 0;
+}
+
+/* Hide native checkbox input */
+.oh-form__checkbox-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}
+
+/* Custom checkbox box */
+.oh-form__checkbox-box {
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    background-color: #fff;
+}
+
+/* Hide SVG by default */
+.oh-form__checkbox-box svg {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* ⭐ MAGIC: When checkbox is checked */
+.oh-form__checkbox-item:has(.oh-form__checkbox-input:checked) .oh-form__checkbox-box {
+    background-color: #2C6EFE;
+    border-color: #2C6EFE;
+}
+
+/* Show SVG when checked */
+.oh-form__checkbox-item:has(.oh-form__checkbox-input:checked) .oh-form__checkbox-box svg {
+    opacity: 1;
+}
+
+/* Hover effect */
+.oh-form__checkbox-item:hover .oh-form__checkbox-box {
+    border-color: #2C6EFE;
+}
+
+.oh-form__checkbox-label {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+}
+
+// ================================================
+//  RESPONSIVE TWEAKS
+// ================================================
+
+@include respond("tab-land") {
+    .oh-form-card {
+        &__title {
+            font-size: 24px;
+        }
+    }
+
+    .oh-form {
+        &__input {
+            font-size: 13px;
+        }
+
+        &__label {
+            font-size: 13px;
+        }
+    }
+
+}
+
+@include respond("tab-port") {
+    .oh-hero__left{
+        text-align: center;
+    }
+    .oh-hero__badges{
+        justify-content: center;
+    }
+    .oh-hero__info-card,
+    .oh-hero__info-row--datetime{
+        gap:16px;
+    }
+    .btn-close{
+       background:none;
+    }
+    .oh-hero__info-card {
+        width: 100%;
+    }
+
+    .oh-form-card {
+        margin-top: 32px;
+    }
+    .oh-accordion__btn{
+        padding: 16px;
+    }
+}
+
+@include respond("phone-land") {
+    .oh-form {
+       padding: 0px;
+        gap: 14px;
+    }
+
+    .oh-form-card {
+        &__header {
+            padding: 16px 16px 0;
+        }
+
+        &__footer {
+            padding: 12px 16px;
+        }
+    }
+
+    .oh-form__security span {
+        font-size: 12px;
+    }
+}
