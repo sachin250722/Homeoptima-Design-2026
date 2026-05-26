@@ -64,7 +64,7 @@ const swiper = new Swiper(".testimonial-swiper", {
 });
 
 const swiper1 = new Swiper(".testimonial-swiper-1", {
-    slidesPerView: 3,
+    slidesPerView: 4,
     spaceBetween: 24,
     loop: true,
     navigation: {
@@ -90,7 +90,7 @@ const swiper1 = new Swiper(".testimonial-swiper-1", {
             slidesPerView: 2,
         },
          1400: {
-            slidesPerView: 3,
+            slidesPerView: 4,
         }
     }
 });
