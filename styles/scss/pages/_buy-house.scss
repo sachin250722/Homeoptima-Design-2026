@@ -1,0 +1,656 @@
+// ================================================
+//  BUY HOUSE PAGE  —  _buy-house.scss
+//  Sections: 1. Hero  2. Why Choose Us  3. How It Works
+//            4. City Cards  5. CTA Banner  6. Testimonials
+//  (Footer reuses _footer.scss)
+// ================================================
+
+
+// ================================================
+//  1. HERO SECTION
+// ================================================
+
+.bh-hero {
+    position: relative;
+    width: 100%;
+
+    &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:rgba(14, 23, 31, 0.56);
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    &__bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba($secondary, 0.56);
+    }
+
+    &__nav {
+        position: relative;
+        z-index: 10;
+        background: $white;
+
+        .bg-body-tertiary {
+            background-color: $white !important;
+        }
+    }
+
+    &__body {
+        position: relative;
+        z-index: 2;
+        padding: 56px 0 72px;
+
+        @include respond("tab-port") {
+            padding: 40px 0 56px;
+        }
+
+        @include respond("phone-land") {
+            padding: 32px 0 40px;
+        }
+    }
+
+    // ---- Left column ----
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px;
+        border-radius: 999px;
+        font-family: "Poppins", sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 999px;
+        background: rgba(14, 23, 31, 0.32);
+        backdrop-filter: blur(12px);
+        width: fit-content;
+    }
+
+    &__title {
+        color: #FFF;
+        font-family: Archivo;
+        font-size: 76px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 78px;
+        /* 102.632% */
+
+        @include respond("tab-land") {
+            font-size: 56px;
+        }
+
+        @include respond("tab-port") {
+            font-size: 44px;
+            line-height: 43px;
+            text-align: center;
+        }
+
+        @include respond("phone") {
+            font-size: 44px;
+        }
+    }
+
+    &__desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+        color: $white;
+        font-weight: 400;
+        margin-bottom: 0;
+
+        @include respond("tab-port") {
+            font-size: 18px;
+            line-height: 28px;
+        }
+    }
+
+    // ---- Trust bar ----
+    &__trust {
+        display: flex;
+        gap: 40px;
+        // flex-wrap: wrap;
+        padding: 10px 24px 10px 10px;
+        border-radius: 18px;
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        max-width: 622px;
+        margin-top:22px;
+
+      
+
+        @include respond("phone") {
+            flex-direction: column;
+            padding: 12px 16px;
+        }
+    }
+
+    &__trust-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            font-family: "Poppins", sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: $white;
+            white-space: nowrap;
+
+            @include respond("tab-port") {
+                font-size: 13px;
+            }
+        }
+    }
+
+    &__trust-icon {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+
+// ================================================
+//  LEAD FORM CARD
+// ================================================
+
+.bh-form-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+
+    &__header {
+        padding: 20px 24px 0;
+    }
+
+    &__title {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 34px;
+        color: $dark;
+        margin-bottom: 6px;
+
+        @include respond("tab-land") {
+            font-size: 22px;
+        }
+    }
+
+    &__sub {
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        line-height: 24px;
+        color: #929DAA;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    &__footer {
+        padding: 12px 24px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+
+// ================================================
+//  LEAD FORM FIELDS
+// ================================================
+
+.bh-form {
+    padding: 16px 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        &--half {
+            flex: 1;
+            min-width: 0;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 12px;
+
+        @include respond("phone-land") {
+            flex-direction: column;
+        }
+    }
+
+    &__label {
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: $dark;
+        line-height: 18px;
+        letter-spacing: -0.14px;
+    }
+
+    &__required {
+        color: #E9BD5F;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 11px 14px;
+        background: $white;
+        border: 1px solid #EDEDED;
+        border-radius: 8px;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        color: $dark;
+        line-height: 22px;
+        box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
+        @include transitionFast;
+
+        &::placeholder {
+            color: #929DAA;
+        }
+
+        &:focus,
+        &.form-control:focus,
+        &.form-select:focus {
+            outline: none;
+            border-color: $primary;
+            box-shadow: 0 0 0 3px rgba($primary, 0.1);
+        }
+    }
+
+    // Phone field
+    &__phone-wrap {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    &__phone-code {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 11px 12px;
+        background: $white;
+        border: 1px solid #EDEDED;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
+        flex-shrink: 0;
+        cursor: pointer;
+        @include transitionFast;
+
+        &:hover {
+            border-color: rgba($dark, 0.3);
+        }
+    }
+
+    &__phone-prefix {
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        color: $dark;
+        white-space: nowrap;
+    }
+
+    &__flag {
+        width: 22px;
+        height: 22px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__input--phone {
+        flex: 1;
+        min-width: 0;
+    }
+
+    // Select dropdown
+    &__select {
+        appearance: none;
+        -webkit-appearance: none;
+        cursor: pointer;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%23929DAA' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        padding-right: 36px !important;
+
+        &.form-select {
+            border: 1px solid #EDEDED;
+            border-radius: 8px;
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            color: $dark;
+        }
+
+        option[value=""][disabled] {
+            color: #929DAA;
+        }
+    }
+
+    &__submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 24px;
+        border-radius: $radius;
+        font-size: 15px;
+        font-weight: 500;
+        @include transitionMedium;
+
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__security {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+
+        svg {
+            flex-shrink: 0;
+        }
+
+        span {
+            font-family: "Poppins", sans-serif;
+            font-size: 13px;
+            color: rgba($dark, 0.68);
+
+            @include respond("phone") {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+// ================================================
+//  2. WHY CHOOSE US
+// ================================================
+
+.bh-why {
+    padding: 80px 0;
+    background: #FBFDFF;
+    position: relative;
+
+    @include respond("tab-port") {
+        padding: 56px 0;
+    }
+
+    &__header {
+        margin-bottom: 56px;
+
+        .section-desc {
+            margin-top: 16px;
+        }
+    }
+
+    &__title {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 62px;
+        color: $dark;
+        margin-bottom: 0;
+
+        @include respond("tab-land") {
+            font-size: 38px;
+            line-height: 1.2;
+        }
+
+        @include respond("tab-port") {
+            font-size: 30px;
+        }
+    }
+}
+
+
+
+// ================================================
+//  3. HOW IT WORKS
+// ================================================
+
+.bh-steps {
+    padding: 80px 0;
+    background: $light-color;
+
+    @include respond("tab-port") {
+        padding: 56px 0;
+    }
+
+    &__header-row {
+        margin-bottom: 48px;
+    }
+
+    &__title {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 62px;
+        color: $dark;
+        margin-top: 12px;
+        margin-bottom: 0;
+
+        @include respond("tab-land") {
+            font-size: 38px;
+            line-height: 1.2;
+        }
+
+        @include respond("tab-port") {
+            font-size: 30px;
+        }
+    }
+
+    // ---- Step numbers row ----
+    &__numbers {
+        margin-bottom: 32px;
+
+        @include respond("tab-port") {
+            display: none;
+        }
+    }
+
+    &__numbers-track {
+        display: flex;
+        align-items: center;
+    }
+
+    &__number-circle {
+        width: 56px;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: rgba($primary, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: $primary;
+        z-index: 1;
+    }
+
+    &__connector {
+        flex: 1;
+      
+        padding: 0 4px;
+    }
+}
+
+.card-bh{
+    position: relative;
+    z-index: 2;
+}
+
+.bh-step-card {
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    padding: 24px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    @include transitionMedium;
+
+    &:hover {
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+        transform: translateY(-4px);
+    }
+
+    &__icon {
+        width: 52px;
+        height: 52px;
+        border-radius: $radius;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-bottom: 20px;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        &--blue {
+            background: rgba(46, 124, 246, 0.12);
+        }
+
+        &--yellow {
+            background: rgba(233, 189, 95, 0.12);
+        }
+
+        &--green {
+            background: rgba(141, 235, 146, 0.12);
+        }
+
+        &--coral {
+            background: rgba(255, 130, 118, 0.12);
+        }
+    }
+
+    &__title {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: $dark;
+        margin-bottom: 10px;
+    }
+
+    &__desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 26px;
+        color: #929DAA;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// ================================================
+//  RESPONSIVE TWEAKS
+// ================================================
+
+@include respond("tab-land") {
+    .bh-form-card__header {
+        padding: 16px 20px 0;
+    }
+
+    .bh-form {
+        padding: 14px 20px 0;
+    }
+
+    .bh-form-card__footer {
+        padding: 12px 20px 14px;
+    }
+}
+
+@include respond("tab-port") {
+    .bh-form-card {
+        margin-top: 0;
+    }
+
+    
+}
+
+@include respond("phone-land") {
+    .bh-form {
+        padding: 12px 16px 0;
+        gap: 12px;
+    }
+
+    .bh-form-card {
+        &__header {
+            padding: 14px 16px 0;
+        }
+
+        &__footer {
+            padding: 10px 16px 14px;
+        }
+    }
+
+    .bh-cta {
+        padding: 48px 20px;
+    }
+}
