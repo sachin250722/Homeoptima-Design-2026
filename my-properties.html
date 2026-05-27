@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Primary Meta -->
+    <title>My Properties | HomeOptima — Track & Manage Your Property Valuations</title>
+    <meta name="description"
+        content="Track and manage all your property valuations in one place. View estimated values, market changes, and insights — powered by HomeOptima.">
+    <meta name="keywords"
+        content="my properties, property valuation, home value tracker, homeoptima, real estate portfolio, property management">
+    <meta name="author" content="HomeOptima">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My Properties — HomeOptima">
+    <meta property="og:description"
+        content="Track and manage your property valuations with real-time market data from HomeOptima.">
+    <meta property="og:site_name" content="HomeOptima">
+    <meta property="og:locale" content="en_CA">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Properties — HomeOptima">
+    <meta name="twitter:description" content="Track, manage and grow your real estate portfolio with HomeOptima.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="libraries/swiper/swiper-bundle.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles/css/style.css">
+</head>
+
+<body class="mp-page">
+
+    <!-- ============================= HEADER ============================= -->
+      <header class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Logo</a>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="javascript:void(0);" class="d-block d-lg-none">
+                            <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 19L23.0002 23.0002" stroke="#0E171F" stroke-width="2" stroke-linecap="square"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M21.001 13.0005C21.001 8.58194 17.4191 5 13.0005 5C8.58194 5 5 8.58194 5 13.0005C5 17.4191 8.58194 21.001 13.0005 21.001C17.4191 21.001 21.001 17.4191 21.001 13.0005Z"
+                                    stroke="#0E171F" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <svg width="21" height="14" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 14V11.6667H21V14H0ZM0 8.16667V5.83333H21V8.16667H0ZM0 2.33333V0H21V2.33333H0Z"
+                                    fill="#0E171F" />
+                            </svg>
+                        </button>
+
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Buy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sell</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home Value</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Open Houses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pre-construction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Blog</a>
+                            </li>
+                        </ul>
+
+                        <!-- extra-nav -->
+                        <div class="extra-nav ms-auto">
+                            <a href="javascript:void(0);" class="btn btn-outline-primary me-lg-3 mb-lg-0 mb-3">Sign in <img
+                                    src="images/icons/chevron-right.svg" alt="">
+                            </a>
+                            <a href="javascript:void(0);"
+                                class="btn btn-primary d-xl-inline-block  d-lg-none d-inline-block">My properties <img
+                                    src="images/icons/chevron-right-white.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    <!-- ============================= /HEADER ============================= -->
+
+
+    <!-- ============================= S1. HERO / PAGE HEADER ============================= -->
+     <section class="mp-hero">
+
+        <!-- Decorative wave background -->
+        <div class="mp-hero__wave" aria-hidden="true">
+            <img src="images/wave.png" alt="">
+        </div>
+
+        <div class="container">
+
+            <!-- Page title row -->
+            <div class="mp-hero__top d-flex align-items-start justify-content-between">
+                <div class="mp-hero__text">
+                    <h1 class="mp-hero__heading">My Properties</h1>
+                    <p class="mp-hero__subtitle">Track and manage your property valuations</p>
+                </div>
+                <a href="javascript:void(0);" class="btn btn-primary mp-hero__cta ">
+                    Add properties
+                    <img src="images/icons/chevron-right-white.svg" alt="">
+                </a>
+            </div>
+
+            <!-- Stats cards -->
+            <div class="row mp-stats">
+
+                <!-- Total Properties -->
+                <div class="col-12 col-md-4">
+                    <div class="mp-stat-card">
+                        <div class="mp-stat-card__header">
+                            <span class="mp-stat-card__label">Total Properties</span>
+                            <div class="mp-stat-card__icon mp-stat-card__icon--blue">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.39844 11.974C3.39844 11.323 3.39844 10.9976 3.48234 10.6978C3.55665 10.4323 3.67879 10.1826 3.84273 9.96095C4.02782 9.71071 4.28473 9.51089 4.79855 9.11125L12.4852 3.13278C12.8833 2.82309 13.0824 2.66825 13.3022 2.60872C13.4962 2.55621 13.7007 2.55621 13.8946 2.60872C14.1145 2.66825 14.3135 2.82309 14.7117 3.13278L22.3983 9.11125C22.9121 9.51089 23.1691 9.71071 23.3541 9.96095C23.5181 10.1826 23.6402 10.4323 23.7145 10.6978C23.7984 10.9976 23.7984 11.323 23.7984 11.974V20.1736C23.7984 21.443 23.7984 22.0777 23.5514 22.5626C23.3341 22.9891 22.9873 23.3359 22.5608 23.5532C22.076 23.8002 21.4412 23.8002 20.1718 23.8002H7.0251C5.75565 23.8002 5.12093 23.8002 4.63606 23.5532C4.20956 23.3359 3.8628 22.9891 3.64549 22.5626C3.39844 22.0777 3.39844 21.443 3.39844 20.1736V11.974Z"
+                                        stroke="#2E7CF6" stroke-width="1.2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                        <div class="mp-stat-card__value">2</div>
+                    </div>
+                </div>
+
+                <!-- Total Value -->
+                <div class="col-12 col-md-4">
+                    <div class="mp-stat-card">
+                        <div class="mp-stat-card__header">
+                            <span class="mp-stat-card__label">Total Value</span>
+                            <div class="mp-stat-card__icon mp-stat-card__icon--yellow">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.80078 18.1333C6.80078 20.637 8.83042 22.6666 11.3341 22.6666H15.8674C18.3711 22.6666 20.4008 20.637 20.4008 18.1333C20.4008 15.6296 18.3711 13.5999 15.8674 13.5999H11.3341C8.83042 13.5999 6.80078 11.5703 6.80078 9.0666C6.80078 6.56291 8.83042 4.53327 11.3341 4.53327H15.8674C18.3711 4.53327 20.4008 6.56291 20.4008 9.0666M13.6008 2.2666V24.9333"
+                                        stroke="#E9BD5F" stroke-width="1.2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                        <div class="mp-stat-card__value">$2,270,000</div>
+                    </div>
+                </div>
+
+                <!-- Value Increase (dark card) -->
+                <div class="col-12 col-md-4">
+                    <div class="mp-stat-card mp-stat-card--dark">
+                        <div class="mp-stat-card__header">
+                            <span class="mp-stat-card__label">Value Increase</span>
+                            <div class="mp-stat-card__icon mp-stat-card__icon--green">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.0374 18.0091C23.3164 19.7142 22.1887 21.2167 20.7529 22.3852C19.317 23.5538 17.6168 24.3529 15.8008 24.7125C13.9849 25.0722 12.1084 24.9815 10.3356 24.4485C8.56273 23.9154 6.94746 22.9562 5.63097 21.6546C4.31448 20.3531 3.33687 18.7489 2.7836 16.9822C2.23033 15.2156 2.11825 13.3403 2.45716 11.5204C2.79607 9.70039 3.57564 7.99115 4.72773 6.54207C5.87982 5.09299 7.36935 3.9482 9.06608 3.20777M24.0701 9.26336C24.5238 10.3587 24.8021 11.5167 24.8965 12.6947C24.9198 12.9858 24.9315 13.1313 24.8737 13.2624C24.8254 13.3719 24.7298 13.4755 24.6245 13.5324C24.4985 13.6004 24.341 13.6004 24.0261 13.6004H14.5061C14.1887 13.6004 14.03 13.6004 13.9088 13.5387C13.8022 13.4843 13.7155 13.3977 13.6612 13.291C13.5994 13.1698 13.5994 13.0111 13.5994 12.6938V3.17377C13.5994 2.85885 13.5994 2.7014 13.6675 2.57535C13.7244 2.47006 13.828 2.37442 13.9375 2.32614C14.0686 2.26835 14.2141 2.28002 14.5051 2.30335C15.6832 2.3978 16.8412 2.6761 17.9365 3.1298C19.3115 3.69936 20.5609 4.53416 21.6133 5.58656C22.6657 6.63896 23.5005 7.88833 24.0701 9.26336Z"
+                                        stroke="#8DEB92" stroke-width="1.2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+
+                            </div>
+                        </div>
+                        <div class="mp-stat-card__value">+$70,000</div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Stats cards -->
+
+        </div>
+    </section>
+    <!-- ============================= /S1. HERO / PAGE HEADER ============================= -->
+
+
+    <!-- ============================= S2. PROPERTIES LIST ============================= -->
+    <section class="mp-properties">
+        <div class="container">
+            <div class="mp-properties__list">
+
+                <!-- ── Property Card 1 — Active ── -->
+                <article class="mp-property-card">
+                    <div class="mp-property-card__gallery">
+                        <!-- Swiper -->
+                        <div class="swiper mp-property-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-01.jpg" alt="7215 Visor Gate, Mississauga"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-02.jpg" alt="7215 Visor Gate, Mississauga"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-03.jpg" alt="7215 Visor Gate, Mississauga"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-04.jpg" alt="7215 Visor Gate, Mississauga"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <div class="mp-property-card__controls">
+                            <button class="mp-property-card__arrow mp-property-card__arrow--prev"
+                                aria-label="Previous image">
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </button>
+                            <div class="mp-property-card__dots swiper-pagination-custom"></div>
+                            <button class="mp-property-card__arrow mp-property-card__arrow--next"
+                                aria-label="Next image">
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mp-property-card__details">
+                        <div class="mp-property-card__address-row">
+                            <div class="mp-property-card__address-group">
+                                <div class="mp-property-card__loc-icon" aria-hidden="true">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18.1569 28.4867C17.5788 29.0281 16.8059 29.3307 16.0015 29.3307C15.1971 29.3307 14.4243 29.0281 13.846 28.4867C8.55069 23.4987 1.45435 17.9266 4.91503 9.83694C6.78617 5.46294 11.2778 2.66406 16.0015 2.66406C20.7252 2.66406 25.2168 5.46294 27.088 9.83694C30.5443 17.9165 23.4653 23.5159 18.1569 28.4867Z"
+                                            stroke="#2C6EFE" stroke-width="2" />
+                                        <path
+                                            d="M20.6576 14.6667C20.6576 17.244 18.5682 19.3333 15.9909 19.3333C13.4136 19.3333 11.3242 17.244 11.3242 14.6667C11.3242 12.0893 13.4136 10 15.9909 10C18.5682 10 20.6576 12.0893 20.6576 14.6667Z"
+                                            stroke="#2C6EFE" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="mp-property-card__address-info">
+                                    <h3 class="mp-property-card__address">7215 Visor Gate, Mississauga</h3>
+                                    <div class="mp-property-card__tags">
+                                        <span class="mp-property-card__tag">Mississauga</span>
+                                        <span class="mp-property-card__tag">ON</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="mp-property-card__status mp-property-card__status--active">Active</span>
+                        </div>
+                        <div class="mp-property-card__middle">
+                            <div class="mp-property-card__features">
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.5039 13.125H1.50391" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M16.5039 15.75V12C16.5039 10.5858 16.5039 9.8787 16.0646 9.43935C15.6252 9 14.9181 9 13.5039 9H4.50391C3.08969 9 2.38258 9 1.94325 9.43935C1.50391 9.8787 1.50391 10.5858 1.50391 12V15.75"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M12.0039 9V7.96335C12.0039 7.58272 11.9353 7.45541 11.5836 7.30538C10.8512 6.99292 9.96226 6.75 9.00391 6.75C8.04556 6.75 7.15657 6.99292 6.42421 7.30538C6.07256 7.45541 6.00391 7.58272 6.00391 7.96335V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                        <path
+                                            d="M14.9961 9V5.52043C14.9961 5.0017 14.9961 4.74233 14.868 4.4974C14.7399 4.25246 14.5574 4.12568 14.1924 3.87212C12.7207 2.84983 10.929 2.25 8.99609 2.25C7.06321 2.25 5.27153 2.84983 3.79982 3.87212C3.43478 4.12568 3.25227 4.25246 3.12419 4.4974C2.99609 4.74233 2.99609 5.0017 2.99609 5.52043V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                    </svg>
+                                    4 bed
+                                </span>
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.50391 15L3.75391 15.75M13.5039 15L14.2539 15.75" stroke="#E9BD5F"
+                                            stroke-width="1.125" stroke-linecap="round" />
+                                        <path
+                                            d="M2.25 9V9.75C2.25 12.2248 2.25 13.4623 3.01885 14.2312C3.78769 15 5.02513 15 7.5 15H10.5C12.9748 15 14.2123 15 14.9812 14.2312C15.75 13.4623 15.75 12.2248 15.75 9.75V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M1.50391 9H16.5039" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" />
+                                        <path
+                                            d="M2.99609 9V4.14255C2.99609 3.09733 3.84342 2.25 4.88864 2.25C5.72734 2.25 6.466 2.80199 6.70364 3.60631L6.74609 3.75"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                        <path d="M6.00391 4.5L7.87891 3" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    3 bath
+                                </span>
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.72109 2.06357C3.94166 2.20853 3.36803 2.46493 2.91452 2.91843C2.46102 3.37193 2.20463 3.94557 2.05967 4.725M13.2711 2.06357C14.0505 2.20853 14.6242 2.46493 15.0777 2.91843C15.5311 3.37193 15.7876 3.94557 15.9325 4.725M10.4211 1.87871C9.98279 1.875 9.50902 1.875 8.99609 1.875C8.48317 1.875 8.00939 1.875 7.57109 1.87871M16.1173 7.575C16.1211 8.0133 16.1211 8.48708 16.1211 9C16.1211 9.51292 16.1211 9.9867 16.1173 10.4251M1.87481 7.575C1.87109 8.0133 1.87109 8.48708 1.87109 9C1.87109 9.51292 1.87109 9.9867 1.87481 10.4251M2.05967 13.275C2.20463 14.0544 2.46102 14.6281 2.91452 15.0816C3.36803 15.5351 3.94166 15.7915 4.72109 15.9365M15.9325 13.275C15.7876 14.0544 15.5311 14.6281 15.0777 15.0816C14.6242 15.5351 14.0505 15.7915 13.2711 15.9365M10.4211 16.1213C9.98279 16.125 9.50902 16.125 8.99609 16.125C8.48324 16.125 8.00947 16.125 7.57124 16.1213"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    2,400 sqft
+                                </span>
+                            </div>
+                            <div class="mp-property-card__values">
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Estimated Value</span>
+                                    <span class="mp-property-card__value-amount">$1,285,000</span>
+                                </div>
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Value Change</span>
+                                    <span
+                                        class="mp-property-card__value-amount mp-property-card__value-amount--positive">+$45,000</span>
+                                </div>
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Last Updated</span>
+                                    <span
+                                        class="mp-property-card__value-amount mp-property-card__value-amount--sm">April
+                                        15, 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mp-property-card__actions">
+                            <div class="mp-property-card__actions-left">
+                                <a href="javascript:void(0);" class="btn btn-primary">Request update <img
+                                        src="images/icons/chevron-right-white.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">Contact agent <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">View report <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                            </div>
+                            <div class="mp-property-card__actions-right">
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">View <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                                <button class="mp-property-card__delete-btn" aria-label="Delete property">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.2401 4.07812H20.4001M4.08008 8.15813H28.5601M25.8401 8.15813L24.8863 22.4644C24.7432 24.6108 24.6717 25.684 24.2081 26.4977C23.8 27.2142 23.1843 27.7901 22.4423 28.1497C21.5996 28.5581 20.524 28.5581 18.3728 28.5581H14.2674C12.1162 28.5581 11.0406 28.5581 10.1978 28.1497C9.45583 27.7901 8.8402 27.2142 8.43206 26.4977C7.96847 25.684 7.89692 24.6108 7.75383 22.4644L6.80008 8.15813"
+                                            stroke="#2E7CF6" stroke-width="1.44" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Property Card 2 — Active ── -->
+                <article class="mp-property-card">
+                    <div class="mp-property-card__gallery">
+                        <!-- Swiper -->
+                        <div class="swiper mp-property-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-02.jpg" alt="342 Lakeshore Blvd, Oakville"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-03.jpg" alt="342 Lakeshore Blvd, Oakville"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-04.jpg" alt="342 Lakeshore Blvd, Oakville"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-01.jpg" alt="342 Lakeshore Blvd, Oakville"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <div class="mp-property-card__controls">
+                            <button class="mp-property-card__arrow mp-property-card__arrow--prev"
+                                aria-label="Previous image">
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </button>
+                            <div class="mp-property-card__dots swiper-pagination-custom"></div>
+                            <button class="mp-property-card__arrow mp-property-card__arrow--next"
+                                aria-label="Next image">
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mp-property-card__details">
+                        <div class="mp-property-card__address-row">
+                            <div class="mp-property-card__address-group">
+                                <div class="mp-property-card__loc-icon" aria-hidden="true">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18.1569 28.4867C17.5788 29.0281 16.8059 29.3307 16.0015 29.3307C15.1971 29.3307 14.4243 29.0281 13.846 28.4867C8.55069 23.4987 1.45435 17.9266 4.91503 9.83694C6.78617 5.46294 11.2778 2.66406 16.0015 2.66406C20.7252 2.66406 25.2168 5.46294 27.088 9.83694C30.5443 17.9165 23.4653 23.5159 18.1569 28.4867Z"
+                                            stroke="#2C6EFE" stroke-width="2" />
+                                        <path
+                                            d="M20.6576 14.6667C20.6576 17.244 18.5682 19.3333 15.9909 19.3333C13.4136 19.3333 11.3242 17.244 11.3242 14.6667C11.3242 12.0893 13.4136 10 15.9909 10C18.5682 10 20.6576 12.0893 20.6576 14.6667Z"
+                                            stroke="#2C6EFE" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="mp-property-card__address-info">
+                                    <h3 class="mp-property-card__address">342 Lakeshore Blvd, Oakville</h3>
+                                    <div class="mp-property-card__tags">
+                                        <span class="mp-property-card__tag">Oakville</span>
+                                        <span class="mp-property-card__tag">ON</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="mp-property-card__status mp-property-card__status--active">Active</span>
+                        </div>
+                        <div class="mp-property-card__middle">
+                            <div class="mp-property-card__features">
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.5039 13.125H1.50391" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M16.5039 15.75V12C16.5039 10.5858 16.5039 9.8787 16.0646 9.43935C15.6252 9 14.9181 9 13.5039 9H4.50391C3.08969 9 2.38258 9 1.94325 9.43935C1.50391 9.8787 1.50391 10.5858 1.50391 12V15.75"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M12.0039 9V7.96335C12.0039 7.58272 11.9353 7.45541 11.5836 7.30538C10.8512 6.99292 9.96226 6.75 9.00391 6.75C8.04556 6.75 7.15657 6.99292 6.42421 7.30538C6.07256 7.45541 6.00391 7.58272 6.00391 7.96335V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                        <path
+                                            d="M14.9961 9V5.52043C14.9961 5.0017 14.9961 4.74233 14.868 4.4974C14.7399 4.25246 14.5574 4.12568 14.1924 3.87212C12.7207 2.84983 10.929 2.25 8.99609 2.25C7.06321 2.25 5.27153 2.84983 3.79982 3.87212C3.43478 4.12568 3.25227 4.25246 3.12419 4.4974C2.99609 4.74233 2.99609 5.0017 2.99609 5.52043V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                    </svg>
+                                    5 bed
+                                </span>
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.50391 15L3.75391 15.75M13.5039 15L14.2539 15.75" stroke="#E9BD5F"
+                                            stroke-width="1.125" stroke-linecap="round" />
+                                        <path
+                                            d="M2.25 9V9.75C2.25 12.2248 2.25 13.4623 3.01885 14.2312C3.78769 15 5.02513 15 7.5 15H10.5C12.9748 15 14.2123 15 14.9812 14.2312C15.75 13.4623 15.75 12.2248 15.75 9.75V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M1.50391 9H16.5039" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" />
+                                        <path
+                                            d="M2.99609 9V4.14255C2.99609 3.09733 3.84342 2.25 4.88864 2.25C5.72734 2.25 6.466 2.80199 6.70364 3.60631L6.74609 3.75"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                        <path d="M6.00391 4.5L7.87891 3" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    4 bath
+                                </span>
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.72109 2.06357C3.94166 2.20853 3.36803 2.46493 2.91452 2.91843C2.46102 3.37193 2.20463 3.94557 2.05967 4.725M13.2711 2.06357C14.0505 2.20853 14.6242 2.46493 15.0777 2.91843C15.5311 3.37193 15.7876 3.94557 15.9325 4.725M10.4211 1.87871C9.98279 1.875 9.50902 1.875 8.99609 1.875C8.48317 1.875 8.00939 1.875 7.57109 1.87871M16.1173 7.575C16.1211 8.0133 16.1211 8.48708 16.1211 9C16.1211 9.51292 16.1211 9.9867 16.1173 10.4251M1.87481 7.575C1.87109 8.0133 1.87109 8.48708 1.87109 9C1.87109 9.51292 1.87109 9.9867 1.87481 10.4251M2.05967 13.275C2.20463 14.0544 2.46102 14.6281 2.91452 15.0816C3.36803 15.5351 3.94166 15.7915 4.72109 15.9365M15.9325 13.275C15.7876 14.0544 15.5311 14.6281 15.0777 15.0816C14.6242 15.5351 14.0505 15.7915 13.2711 15.9365M10.4211 16.1213C9.98279 16.125 9.50902 16.125 8.99609 16.125C8.48324 16.125 8.00947 16.125 7.57124 16.1213"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    3,100 sqft
+                                </span>
+                            </div>
+                            <div class="mp-property-card__values">
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Estimated Value</span>
+                                    <span class="mp-property-card__value-amount">$985,000</span>
+                                </div>
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Value Change</span>
+                                    <span
+                                        class="mp-property-card__value-amount mp-property-card__value-amount--positive">+$25,000</span>
+                                </div>
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Last Updated</span>
+                                    <span
+                                        class="mp-property-card__value-amount mp-property-card__value-amount--sm">April
+                                        12, 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mp-property-card__actions">
+                            <div class="mp-property-card__actions-left">
+                                <a href="javascript:void(0);" class="btn btn-primary">Request update <img
+                                        src="images/icons/chevron-right-white.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">Contact agent <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">View report <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                            </div>
+                            <div class="mp-property-card__actions-right">
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">View <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                                <button class="mp-property-card__delete-btn" aria-label="Delete property">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.2401 4.07812H20.4001M4.08008 8.15813H28.5601M25.8401 8.15813L24.8863 22.4644C24.7432 24.6108 24.6717 25.684 24.2081 26.4977C23.8 27.2142 23.1843 27.7901 22.4423 28.1497C21.5996 28.5581 20.524 28.5581 18.3728 28.5581H14.2674C12.1162 28.5581 11.0406 28.5581 10.1978 28.1497C9.45583 27.7901 8.8402 27.2142 8.43206 26.4977C7.96847 25.684 7.89692 24.6108 7.75383 22.4644L6.80008 8.15813"
+                                            stroke="#2E7CF6" stroke-width="1.44" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Property Card 3 — Active ── -->
+                <article class="mp-property-card">
+                    <div class="mp-property-card__gallery">
+                        <!-- Swiper -->
+                        <div class="swiper mp-property-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-03.jpg" alt="88 Royal Park Ave, Vaughan"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-01.jpg" alt="88 Royal Park Ave, Vaughan"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-02.jpg" alt="88 Royal Park Ave, Vaughan"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-04.jpg" alt="88 Royal Park Ave, Vaughan"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <div class="mp-property-card__controls">
+                            <button class="mp-property-card__arrow mp-property-card__arrow--prev"
+                                aria-label="Previous image">
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </button>
+                            <div class="mp-property-card__dots swiper-pagination-custom"></div>
+                            <button class="mp-property-card__arrow mp-property-card__arrow--next"
+                                aria-label="Next image">
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mp-property-card__details">
+                        <div class="mp-property-card__address-row">
+                            <div class="mp-property-card__address-group">
+                                <div class="mp-property-card__loc-icon" aria-hidden="true">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18.1569 28.4867C17.5788 29.0281 16.8059 29.3307 16.0015 29.3307C15.1971 29.3307 14.4243 29.0281 13.846 28.4867C8.55069 23.4987 1.45435 17.9266 4.91503 9.83694C6.78617 5.46294 11.2778 2.66406 16.0015 2.66406C20.7252 2.66406 25.2168 5.46294 27.088 9.83694C30.5443 17.9165 23.4653 23.5159 18.1569 28.4867Z"
+                                            stroke="#2C6EFE" stroke-width="2" />
+                                        <path
+                                            d="M20.6576 14.6667C20.6576 17.244 18.5682 19.3333 15.9909 19.3333C13.4136 19.3333 11.3242 17.244 11.3242 14.6667C11.3242 12.0893 13.4136 10 15.9909 10C18.5682 10 20.6576 12.0893 20.6576 14.6667Z"
+                                            stroke="#2C6EFE" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="mp-property-card__address-info">
+                                    <h3 class="mp-property-card__address">88 Royal Park Ave, Vaughan</h3>
+                                    <div class="mp-property-card__tags">
+                                        <span class="mp-property-card__tag">Vaughan</span>
+                                        <span class="mp-property-card__tag">ON</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="mp-property-card__status mp-property-card__status--active">Active</span>
+                        </div>
+                        <div class="mp-property-card__middle">
+                            <div class="mp-property-card__features">
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.5039 13.125H1.50391" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M16.5039 15.75V12C16.5039 10.5858 16.5039 9.8787 16.0646 9.43935C15.6252 9 14.9181 9 13.5039 9H4.50391C3.08969 9 2.38258 9 1.94325 9.43935C1.50391 9.8787 1.50391 10.5858 1.50391 12V15.75"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M12.0039 9V7.96335C12.0039 7.58272 11.9353 7.45541 11.5836 7.30538C10.8512 6.99292 9.96226 6.75 9.00391 6.75C8.04556 6.75 7.15657 6.99292 6.42421 7.30538C6.07256 7.45541 6.00391 7.58272 6.00391 7.96335V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                        <path
+                                            d="M14.9961 9V5.52043C14.9961 5.0017 14.9961 4.74233 14.868 4.4974C14.7399 4.25246 14.5574 4.12568 14.1924 3.87212C12.7207 2.84983 10.929 2.25 8.99609 2.25C7.06321 2.25 5.27153 2.84983 3.79982 3.87212C3.43478 4.12568 3.25227 4.25246 3.12419 4.4974C2.99609 4.74233 2.99609 5.0017 2.99609 5.52043V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                    </svg>
+                                    3 bed
+                                </span>
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.50391 15L3.75391 15.75M13.5039 15L14.2539 15.75" stroke="#E9BD5F"
+                                            stroke-width="1.125" stroke-linecap="round" />
+                                        <path
+                                            d="M2.25 9V9.75C2.25 12.2248 2.25 13.4623 3.01885 14.2312C3.78769 15 5.02513 15 7.5 15H10.5C12.9748 15 14.2123 15 14.9812 14.2312C15.75 13.4623 15.75 12.2248 15.75 9.75V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M1.50391 9H16.5039" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" />
+                                        <path
+                                            d="M2.99609 9V4.14255C2.99609 3.09733 3.84342 2.25 4.88864 2.25C5.72734 2.25 6.466 2.80199 6.70364 3.60631L6.74609 3.75"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                        <path d="M6.00391 4.5L7.87891 3" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    2 bath
+                                </span>
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.72109 2.06357C3.94166 2.20853 3.36803 2.46493 2.91452 2.91843C2.46102 3.37193 2.20463 3.94557 2.05967 4.725M13.2711 2.06357C14.0505 2.20853 14.6242 2.46493 15.0777 2.91843C15.5311 3.37193 15.7876 3.94557 15.9325 4.725M10.4211 1.87871C9.98279 1.875 9.50902 1.875 8.99609 1.875C8.48317 1.875 8.00939 1.875 7.57109 1.87871M16.1173 7.575C16.1211 8.0133 16.1211 8.48708 16.1211 9C16.1211 9.51292 16.1211 9.9867 16.1173 10.4251M1.87481 7.575C1.87109 8.0133 1.87109 8.48708 1.87109 9C1.87109 9.51292 1.87109 9.9867 1.87481 10.4251M2.05967 13.275C2.20463 14.0544 2.46102 14.6281 2.91452 15.0816C3.36803 15.5351 3.94166 15.7915 4.72109 15.9365M15.9325 13.275C15.7876 14.0544 15.5311 14.6281 15.0777 15.0816C14.6242 15.5351 14.0505 15.7915 13.2711 15.9365M10.4211 16.1213C9.98279 16.125 9.50902 16.125 8.99609 16.125C8.48324 16.125 8.00947 16.125 7.57124 16.1213"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    1,850 sqft
+                                </span>
+                            </div>
+                            <div class="mp-property-card__values">
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Estimated Value</span>
+                                    <span class="mp-property-card__value-amount">$1,285,000</span>
+                                </div>
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Value Change</span>
+                                    <span
+                                        class="mp-property-card__value-amount mp-property-card__value-amount--positive">+$45,000</span>
+                                </div>
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Last Updated</span>
+                                    <span
+                                        class="mp-property-card__value-amount mp-property-card__value-amount--sm">April
+                                        15, 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mp-property-card__actions">
+                            <div class="mp-property-card__actions-left">
+                                <a href="javascript:void(0);" class="btn btn-primary">Request update <img
+                                        src="images/icons/chevron-right-white.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">Contact agent <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">View report <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                            </div>
+                            <div class="mp-property-card__actions-right">
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">View <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                                <button class="mp-property-card__delete-btn" aria-label="Delete property">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.2401 4.07812H20.4001M4.08008 8.15813H28.5601M25.8401 8.15813L24.8863 22.4644C24.7432 24.6108 24.6717 25.684 24.2081 26.4977C23.8 27.2142 23.1843 27.7901 22.4423 28.1497C21.5996 28.5581 20.524 28.5581 18.3728 28.5581H14.2674C12.1162 28.5581 11.0406 28.5581 10.1978 28.1497C9.45583 27.7901 8.8402 27.2142 8.43206 26.4977C7.96847 25.684 7.89692 24.6108 7.75383 22.4644L6.80008 8.15813"
+                                            stroke="#2E7CF6" stroke-width="1.44" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Property Card 4 — Watching ── -->
+                <article class="mp-property-card">
+                    <div class="mp-property-card__gallery">
+                        <!-- Swiper -->
+                        <div class="swiper mp-property-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-04.jpg" alt="512 Garden Court, Milton"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-01.jpg" alt="512 Garden Court, Milton"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-02.jpg" alt="512 Garden Court, Milton"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-03.jpg" alt="512 Garden Court, Milton"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <div class="mp-property-card__controls">
+                            <button class="mp-property-card__arrow mp-property-card__arrow--prev"
+                                aria-label="Previous image">
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </button>
+                            <div class="mp-property-card__dots swiper-pagination-custom"></div>
+                            <button class="mp-property-card__arrow mp-property-card__arrow--next"
+                                aria-label="Next image">
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mp-property-card__details">
+                        <div class="mp-property-card__address-row">
+                            <div class="mp-property-card__address-group">
+                                <div class="mp-property-card__loc-icon" aria-hidden="true">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18.1569 28.4867C17.5788 29.0281 16.8059 29.3307 16.0015 29.3307C15.1971 29.3307 14.4243 29.0281 13.846 28.4867C8.55069 23.4987 1.45435 17.9266 4.91503 9.83694C6.78617 5.46294 11.2778 2.66406 16.0015 2.66406C20.7252 2.66406 25.2168 5.46294 27.088 9.83694C30.5443 17.9165 23.4653 23.5159 18.1569 28.4867Z"
+                                            stroke="#2C6EFE" stroke-width="2" />
+                                        <path
+                                            d="M20.6576 14.6667C20.6576 17.244 18.5682 19.3333 15.9909 19.3333C13.4136 19.3333 11.3242 17.244 11.3242 14.6667C11.3242 12.0893 13.4136 10 15.9909 10C18.5682 10 20.6576 12.0893 20.6576 14.6667Z"
+                                            stroke="#2C6EFE" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="mp-property-card__address-info">
+                                    <h3 class="mp-property-card__address">512 Garden Court, Milton</h3>
+                                    <div class="mp-property-card__tags">
+                                        <span class="mp-property-card__tag">Milton</span>
+                                        <span class="mp-property-card__tag">ON</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="mp-property-card__status mp-property-card__status--watching">Watching</span>
+                        </div>
+                        <div class="mp-property-card__middle">
+                            <div class="mp-property-card__features">
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.5039 13.125H1.50391" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M16.5039 15.75V12C16.5039 10.5858 16.5039 9.8787 16.0646 9.43935C15.6252 9 14.9181 9 13.5039 9H4.50391C3.08969 9 2.38258 9 1.94325 9.43935C1.50391 9.8787 1.50391 10.5858 1.50391 12V15.75"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M12.0039 9V7.96335C12.0039 7.58272 11.9353 7.45541 11.5836 7.30538C10.8512 6.99292 9.96226 6.75 9.00391 6.75C8.04556 6.75 7.15657 6.99292 6.42421 7.30538C6.07256 7.45541 6.00391 7.58272 6.00391 7.96335V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                        <path
+                                            d="M14.9961 9V5.52043C14.9961 5.0017 14.9961 4.74233 14.868 4.4974C14.7399 4.25246 14.5574 4.12568 14.1924 3.87212C12.7207 2.84983 10.929 2.25 8.99609 2.25C7.06321 2.25 5.27153 2.84983 3.79982 3.87212C3.43478 4.12568 3.25227 4.25246 3.12419 4.4974C2.99609 4.74233 2.99609 5.0017 2.99609 5.52043V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                    </svg>
+                                    4 bed
+                                </span>
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.50391 15L3.75391 15.75M13.5039 15L14.2539 15.75" stroke="#E9BD5F"
+                                            stroke-width="1.125" stroke-linecap="round" />
+                                        <path
+                                            d="M2.25 9V9.75C2.25 12.2248 2.25 13.4623 3.01885 14.2312C3.78769 15 5.02513 15 7.5 15H10.5C12.9748 15 14.2123 15 14.9812 14.2312C15.75 13.4623 15.75 12.2248 15.75 9.75V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M1.50391 9H16.5039" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" />
+                                        <path
+                                            d="M2.99609 9V4.14255C2.99609 3.09733 3.84342 2.25 4.88864 2.25C5.72734 2.25 6.466 2.80199 6.70364 3.60631L6.74609 3.75"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                        <path d="M6.00391 4.5L7.87891 3" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    3 bath
+                                </span>
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.72109 2.06357C3.94166 2.20853 3.36803 2.46493 2.91452 2.91843C2.46102 3.37193 2.20463 3.94557 2.05967 4.725M13.2711 2.06357C14.0505 2.20853 14.6242 2.46493 15.0777 2.91843C15.5311 3.37193 15.7876 3.94557 15.9325 4.725M10.4211 1.87871C9.98279 1.875 9.50902 1.875 8.99609 1.875C8.48317 1.875 8.00939 1.875 7.57109 1.87871M16.1173 7.575C16.1211 8.0133 16.1211 8.48708 16.1211 9C16.1211 9.51292 16.1211 9.9867 16.1173 10.4251M1.87481 7.575C1.87109 8.0133 1.87109 8.48708 1.87109 9C1.87109 9.51292 1.87109 9.9867 1.87481 10.4251M2.05967 13.275C2.20463 14.0544 2.46102 14.6281 2.91452 15.0816C3.36803 15.5351 3.94166 15.7915 4.72109 15.9365M15.9325 13.275C15.7876 14.0544 15.5311 14.6281 15.0777 15.0816C14.6242 15.5351 14.0505 15.7915 13.2711 15.9365M10.4211 16.1213C9.98279 16.125 9.50902 16.125 8.99609 16.125C8.48324 16.125 8.00947 16.125 7.57124 16.1213"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    2,400 sqft
+                                </span>
+                            </div>
+                            <div class="mp-property-card__values">
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Estimated Value</span>
+                                    <span class="mp-property-card__value-amount">$1,285,000</span>
+                                </div>
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Value Change</span>
+                                    <span
+                                        class="mp-property-card__value-amount mp-property-card__value-amount--positive">+$45,000</span>
+                                </div>
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Last Updated</span>
+                                    <span
+                                        class="mp-property-card__value-amount mp-property-card__value-amount--sm">April
+                                        15, 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mp-property-card__actions">
+                            <div class="mp-property-card__actions-left">
+                                <a href="javascript:void(0);" class="btn btn-primary">Request update <img
+                                        src="images/icons/chevron-right-white.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">Contact agent <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">View report <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                            </div>
+                            <div class="mp-property-card__actions-right">
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">View <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                                <button class="mp-property-card__delete-btn" aria-label="Delete property">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.2401 4.07812H20.4001M4.08008 8.15813H28.5601M25.8401 8.15813L24.8863 22.4644C24.7432 24.6108 24.6717 25.684 24.2081 26.4977C23.8 27.2142 23.1843 27.7901 22.4423 28.1497C21.5996 28.5581 20.524 28.5581 18.3728 28.5581H14.2674C12.1162 28.5581 11.0406 28.5581 10.1978 28.1497C9.45583 27.7901 8.8402 27.2142 8.43206 26.4977C7.96847 25.684 7.89692 24.6108 7.75383 22.4644L6.80008 8.15813"
+                                            stroke="#2E7CF6" stroke-width="1.44" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Property Card 5 — Watching ── -->
+                <article class="mp-property-card">
+                    <div class="mp-property-card__gallery">
+                        <!-- Swiper -->
+                        <div class="swiper mp-property-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-01.jpg" alt="9 Thornbury Cres, Mississauga"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-02.jpg" alt="9 Thornbury Cres, Mississauga"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-03.jpg" alt="9 Thornbury Cres, Mississauga"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-04.jpg" alt="9 Thornbury Cres, Mississauga"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <div class="mp-property-card__controls">
+                            <button class="mp-property-card__arrow mp-property-card__arrow--prev"
+                                aria-label="Previous image">
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </button>
+                            <div class="mp-property-card__dots swiper-pagination-custom"></div>
+                            <button class="mp-property-card__arrow mp-property-card__arrow--next"
+                                aria-label="Next image">
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mp-property-card__details">
+                        <div class="mp-property-card__address-row">
+                            <div class="mp-property-card__address-group">
+                                <div class="mp-property-card__loc-icon" aria-hidden="true">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18.1569 28.4867C17.5788 29.0281 16.8059 29.3307 16.0015 29.3307C15.1971 29.3307 14.4243 29.0281 13.846 28.4867C8.55069 23.4987 1.45435 17.9266 4.91503 9.83694C6.78617 5.46294 11.2778 2.66406 16.0015 2.66406C20.7252 2.66406 25.2168 5.46294 27.088 9.83694C30.5443 17.9165 23.4653 23.5159 18.1569 28.4867Z"
+                                            stroke="#2C6EFE" stroke-width="2" />
+                                        <path
+                                            d="M20.6576 14.6667C20.6576 17.244 18.5682 19.3333 15.9909 19.3333C13.4136 19.3333 11.3242 17.244 11.3242 14.6667C11.3242 12.0893 13.4136 10 15.9909 10C18.5682 10 20.6576 12.0893 20.6576 14.6667Z"
+                                            stroke="#2C6EFE" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="mp-property-card__address-info">
+                                    <h3 class="mp-property-card__address">9 Thornbury Cres, Mississauga</h3>
+                                    <div class="mp-property-card__tags">
+                                        <span class="mp-property-card__tag">Mississauga</span>
+                                        <span class="mp-property-card__tag">ON</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="mp-property-card__status mp-property-card__status--watching">Watching</span>
+                        </div>
+                        <div class="mp-property-card__middle">
+                            <div class="mp-property-card__features">
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.5039 13.125H1.50391" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M16.5039 15.75V12C16.5039 10.5858 16.5039 9.8787 16.0646 9.43935C15.6252 9 14.9181 9 13.5039 9H4.50391C3.08969 9 2.38258 9 1.94325 9.43935C1.50391 9.8787 1.50391 10.5858 1.50391 12V15.75"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M12.0039 9V7.96335C12.0039 7.58272 11.9353 7.45541 11.5836 7.30538C10.8512 6.99292 9.96226 6.75 9.00391 6.75C8.04556 6.75 7.15657 6.99292 6.42421 7.30538C6.07256 7.45541 6.00391 7.58272 6.00391 7.96335V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                        <path
+                                            d="M14.9961 9V5.52043C14.9961 5.0017 14.9961 4.74233 14.868 4.4974C14.7399 4.25246 14.5574 4.12568 14.1924 3.87212C12.7207 2.84983 10.929 2.25 8.99609 2.25C7.06321 2.25 5.27153 2.84983 3.79982 3.87212C3.43478 4.12568 3.25227 4.25246 3.12419 4.4974C2.99609 4.74233 2.99609 5.0017 2.99609 5.52043V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                    </svg>
+                                    4 bed
+                                </span>
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.50391 15L3.75391 15.75M13.5039 15L14.2539 15.75" stroke="#E9BD5F"
+                                            stroke-width="1.125" stroke-linecap="round" />
+                                        <path
+                                            d="M2.25 9V9.75C2.25 12.2248 2.25 13.4623 3.01885 14.2312C3.78769 15 5.02513 15 7.5 15H10.5C12.9748 15 14.2123 15 14.9812 14.2312C15.75 13.4623 15.75 12.2248 15.75 9.75V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M1.50391 9H16.5039" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" />
+                                        <path
+                                            d="M2.99609 9V4.14255C2.99609 3.09733 3.84342 2.25 4.88864 2.25C5.72734 2.25 6.466 2.80199 6.70364 3.60631L6.74609 3.75"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                        <path d="M6.00391 4.5L7.87891 3" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    3 bath
+                                </span>
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.72109 2.06357C3.94166 2.20853 3.36803 2.46493 2.91452 2.91843C2.46102 3.37193 2.20463 3.94557 2.05967 4.725M13.2711 2.06357C14.0505 2.20853 14.6242 2.46493 15.0777 2.91843C15.5311 3.37193 15.7876 3.94557 15.9325 4.725M10.4211 1.87871C9.98279 1.875 9.50902 1.875 8.99609 1.875C8.48317 1.875 8.00939 1.875 7.57109 1.87871M16.1173 7.575C16.1211 8.0133 16.1211 8.48708 16.1211 9C16.1211 9.51292 16.1211 9.9867 16.1173 10.4251M1.87481 7.575C1.87109 8.0133 1.87109 8.48708 1.87109 9C1.87109 9.51292 1.87109 9.9867 1.87481 10.4251M2.05967 13.275C2.20463 14.0544 2.46102 14.6281 2.91452 15.0816C3.36803 15.5351 3.94166 15.7915 4.72109 15.9365M15.9325 13.275C15.7876 14.0544 15.5311 14.6281 15.0777 15.0816C14.6242 15.5351 14.0505 15.7915 13.2711 15.9365M10.4211 16.1213C9.98279 16.125 9.50902 16.125 8.99609 16.125C8.48324 16.125 8.00947 16.125 7.57124 16.1213"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    2,400 sqft
+                                </span>
+                            </div>
+                            <div class="mp-property-card__values">
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Estimated Value</span>
+                                    <span class="mp-property-card__value-amount">$1,285,000</span>
+                                </div>
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Value Change</span>
+                                    <span
+                                        class="mp-property-card__value-amount mp-property-card__value-amount--positive">+$45,000</span>
+                                </div>
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Last Updated</span>
+                                    <span
+                                        class="mp-property-card__value-amount mp-property-card__value-amount--sm">April
+                                        15, 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mp-property-card__actions">
+                            <div class="mp-property-card__actions-left">
+                                <a href="javascript:void(0);" class="btn btn-primary">Request update <img
+                                        src="images/icons/chevron-right-white.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">Contact agent <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">View report <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                            </div>
+                            <div class="mp-property-card__actions-right">
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">View <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                                <button class="mp-property-card__delete-btn" aria-label="Delete property">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.2401 4.07812H20.4001M4.08008 8.15813H28.5601M25.8401 8.15813L24.8863 22.4644C24.7432 24.6108 24.6717 25.684 24.2081 26.4977C23.8 27.2142 23.1843 27.7901 22.4423 28.1497C21.5996 28.5581 20.524 28.5581 18.3728 28.5581H14.2674C12.1162 28.5581 11.0406 28.5581 10.1978 28.1497C9.45583 27.7901 8.8402 27.2142 8.43206 26.4977C7.96847 25.684 7.89692 24.6108 7.75383 22.4644L6.80008 8.15813"
+                                            stroke="#2E7CF6" stroke-width="1.44" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── Property Card 6 — Watching ── -->
+                <article class="mp-property-card">
+                    <div class="mp-property-card__gallery">
+                        <!-- Swiper -->
+                        <div class="swiper mp-property-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-02.jpg" alt="1104 Stavebank Rd, Mississauga"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-04.jpg" alt="1104 Stavebank Rd, Mississauga"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-01.jpg" alt="1104 Stavebank Rd, Mississauga"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mp-property-card__img-wrap">
+                                        <img src="images/listing-03.jpg" alt="1104 Stavebank Rd, Mississauga"
+                                            class="mp-property-card__img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <div class="mp-property-card__controls">
+                            <button class="mp-property-card__arrow mp-property-card__arrow--prev"
+                                aria-label="Previous image">
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </button>
+                            <div class="mp-property-card__dots swiper-pagination-custom"></div>
+                            <button class="mp-property-card__arrow mp-property-card__arrow--next"
+                                aria-label="Next image">
+                                <img src="images/icons/chevron-right.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mp-property-card__details">
+                        <div class="mp-property-card__address-row">
+                            <div class="mp-property-card__address-group">
+                                <div class="mp-property-card__loc-icon" aria-hidden="true">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18.1569 28.4867C17.5788 29.0281 16.8059 29.3307 16.0015 29.3307C15.1971 29.3307 14.4243 29.0281 13.846 28.4867C8.55069 23.4987 1.45435 17.9266 4.91503 9.83694C6.78617 5.46294 11.2778 2.66406 16.0015 2.66406C20.7252 2.66406 25.2168 5.46294 27.088 9.83694C30.5443 17.9165 23.4653 23.5159 18.1569 28.4867Z"
+                                            stroke="#2C6EFE" stroke-width="2" />
+                                        <path
+                                            d="M20.6576 14.6667C20.6576 17.244 18.5682 19.3333 15.9909 19.3333C13.4136 19.3333 11.3242 17.244 11.3242 14.6667C11.3242 12.0893 13.4136 10 15.9909 10C18.5682 10 20.6576 12.0893 20.6576 14.6667Z"
+                                            stroke="#2C6EFE" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <div class="mp-property-card__address-info">
+                                    <h3 class="mp-property-card__address">1104 Stavebank Rd, Mississauga</h3>
+                                    <div class="mp-property-card__tags">
+                                        <span class="mp-property-card__tag">Mississauga</span>
+                                        <span class="mp-property-card__tag">ON</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="mp-property-card__status mp-property-card__status--watching">Watching</span>
+                        </div>
+                        <div class="mp-property-card__middle">
+                            <div class="mp-property-card__features">
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.5039 13.125H1.50391" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M16.5039 15.75V12C16.5039 10.5858 16.5039 9.8787 16.0646 9.43935C15.6252 9 14.9181 9 13.5039 9H4.50391C3.08969 9 2.38258 9 1.94325 9.43935C1.50391 9.8787 1.50391 10.5858 1.50391 12V15.75"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path
+                                            d="M12.0039 9V7.96335C12.0039 7.58272 11.9353 7.45541 11.5836 7.30538C10.8512 6.99292 9.96226 6.75 9.00391 6.75C8.04556 6.75 7.15657 6.99292 6.42421 7.30538C6.07256 7.45541 6.00391 7.58272 6.00391 7.96335V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                        <path
+                                            d="M14.9961 9V5.52043C14.9961 5.0017 14.9961 4.74233 14.868 4.4974C14.7399 4.25246 14.5574 4.12568 14.1924 3.87212C12.7207 2.84983 10.929 2.25 8.99609 2.25C7.06321 2.25 5.27153 2.84983 3.79982 3.87212C3.43478 4.12568 3.25227 4.25246 3.12419 4.4974C2.99609 4.74233 2.99609 5.0017 2.99609 5.52043V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                    </svg>
+                                    4 bed
+                                </span>
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.50391 15L3.75391 15.75M13.5039 15L14.2539 15.75" stroke="#E9BD5F"
+                                            stroke-width="1.125" stroke-linecap="round" />
+                                        <path
+                                            d="M2.25 9V9.75C2.25 12.2248 2.25 13.4623 3.01885 14.2312C3.78769 15 5.02513 15 7.5 15H10.5C12.9748 15 14.2123 15 14.9812 14.2312C15.75 13.4623 15.75 12.2248 15.75 9.75V9"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M1.50391 9H16.5039" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" />
+                                        <path
+                                            d="M2.99609 9V4.14255C2.99609 3.09733 3.84342 2.25 4.88864 2.25C5.72734 2.25 6.466 2.80199 6.70364 3.60631L6.74609 3.75"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round" />
+                                        <path d="M6.00391 4.5L7.87891 3" stroke="#E9BD5F" stroke-width="1.125"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    3 bath
+                                </span>
+                                <span class="mp-property-card__feature">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.72109 2.06357C3.94166 2.20853 3.36803 2.46493 2.91452 2.91843C2.46102 3.37193 2.20463 3.94557 2.05967 4.725M13.2711 2.06357C14.0505 2.20853 14.6242 2.46493 15.0777 2.91843C15.5311 3.37193 15.7876 3.94557 15.9325 4.725M10.4211 1.87871C9.98279 1.875 9.50902 1.875 8.99609 1.875C8.48317 1.875 8.00939 1.875 7.57109 1.87871M16.1173 7.575C16.1211 8.0133 16.1211 8.48708 16.1211 9C16.1211 9.51292 16.1211 9.9867 16.1173 10.4251M1.87481 7.575C1.87109 8.0133 1.87109 8.48708 1.87109 9C1.87109 9.51292 1.87109 9.9867 1.87481 10.4251M2.05967 13.275C2.20463 14.0544 2.46102 14.6281 2.91452 15.0816C3.36803 15.5351 3.94166 15.7915 4.72109 15.9365M15.9325 13.275C15.7876 14.0544 15.5311 14.6281 15.0777 15.0816C14.6242 15.5351 14.0505 15.7915 13.2711 15.9365M10.4211 16.1213C9.98279 16.125 9.50902 16.125 8.99609 16.125C8.48324 16.125 8.00947 16.125 7.57124 16.1213"
+                                            stroke="#E9BD5F" stroke-width="1.125" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                    2,400 sqft
+                                </span>
+                            </div>
+                            <div class="mp-property-card__values">
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Estimated Value</span>
+                                    <span class="mp-property-card__value-amount">$1,285,000</span>
+                                </div>
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Value Change</span>
+                                    <span
+                                        class="mp-property-card__value-amount mp-property-card__value-amount--positive">+$45,000</span>
+                                </div>
+                                <div class="mp-property-card__value-item">
+                                    <span class="mp-property-card__value-label">Last Updated</span>
+                                    <span
+                                        class="mp-property-card__value-amount mp-property-card__value-amount--sm">April
+                                        15, 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mp-property-card__actions">
+                            <div class="mp-property-card__actions-left">
+                                <a href="javascript:void(0);" class="btn btn-primary">Request update <img
+                                        src="images/icons/chevron-right-white.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">Contact agent <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">View report <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                            </div>
+                            <div class="mp-property-card__actions-right">
+                                <a href="javascript:void(0);" class="btn btn-outline-primary">View <img
+                                        src="images/icons/chevron-right.svg" alt=""></a>
+                                <button class="mp-property-card__delete-btn" aria-label="Delete property">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12.2401 4.07812H20.4001M4.08008 8.15813H28.5601M25.8401 8.15813L24.8863 22.4644C24.7432 24.6108 24.6717 25.684 24.2081 26.4977C23.8 27.2142 23.1843 27.7901 22.4423 28.1497C21.5996 28.5581 20.524 28.5581 18.3728 28.5581H14.2674C12.1162 28.5581 11.0406 28.5581 10.1978 28.1497C9.45583 27.7901 8.8402 27.2142 8.43206 26.4977C7.96847 25.684 7.89692 24.6108 7.75383 22.4644L6.80008 8.15813"
+                                            stroke="#2E7CF6" stroke-width="1.44" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    <!-- ============================= /S2. PROPERTIES LIST ============================= -->
+
+
+    
+  
+
+
+    <!-- ===================== REQUEST REPORT ===================== -->
+        <section class="hvh-rr-section">
+            <!-- Decorative wave lines -->
+            <div class="three-line-shape style-1">
+                            <img src="images/left-3-line.png" alt="Decorative three lines shape1">
+                        </div>
+
+            <div class="container">
+                <div class="row g-5 align-items-center">
+
+                    <!-- Left: Text -->
+                    <div class="col-lg-6">
+                        <div class="hvh-rr-left">
+                            <span class="section-badge">Request report</span>
+                            <h2 class="hvh-rr-heading">Lorem ipsum dolor<br>sit amet, consectetur</h2>
+                            <p class="hvh-rr-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet
+                                turpis dapibus, sagittis ante finibus, congue nulla.</p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Form Card -->
+                    <div class="col-lg-5 ms-auto">
+                        <div class="hvh-rr-form-card">
+                            <div class="hvh-rr-form-card__top">
+
+                                <!-- Full name -->
+                                <div class="hvh-rr-field">
+                                    <label class="hvh-rr-field__label">Full name <span
+                                            class="hvh-rr-field__req">*</span></label>
+                                    <input type="text" class="hvh-rr-input" placeholder="Enter full name">
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="hvh-rr-field">
+                                    <label class="hvh-rr-field__label">Phone <span
+                                            class="hvh-rr-field__req">*</span></label>
+                                    <div class="hvh-rr-phone-group">
+                                        <div class="hvh-rr-phone-code">
+                                            <span>+1</span>
+                                            <span>🇺🇸</span>
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                <path d="M6 9L12 15L18 9" stroke="#929DAA" stroke-width="1.5"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <input type="tel" class="hvh-rr-input hvh-rr-input--phone"
+                                            placeholder="Enter phone">
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="hvh-rr-field">
+                                    <label class="hvh-rr-field__label">Email <span
+                                            class="hvh-rr-field__req">*</span></label>
+                                    <input type="email" class="hvh-rr-input"
+                                        placeholder="Enter email address (e.g john@doe.com)">
+                                </div>
+
+                                <!-- Property address -->
+                                <div class="hvh-rr-field">
+                                    <label class="hvh-rr-field__label">Property address <span
+                                            class="hvh-rr-field__req">*</span></label>
+                                    <input type="text" class="hvh-rr-input" placeholder="Enter property address">
+                                </div>
+
+                                <!-- Tell us about your property -->
+                                <div class="hvh-rr-field">
+                                    <label class="hvh-rr-field__label">Tell us about your property <span
+                                            class="hvh-rr-field__req">*</span></label>
+                                    <textarea class="hvh-rr-input hvh-rr-textarea" placeholder="Input here"></textarea>
+                                </div>
+
+                            </div>
+                            <div class="hvh-rr-form-card__bottom">
+                                <button type="submit" class="hvh-rr-submit-btn">
+                                    Request report
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 6L15 12L9 18" stroke="white" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== 10. CTA ===================== -->
+        <div class="shape hvh-rr-section-shap" aria-hidden="true">
+            <img src="images/icons/blue-shape.svg" alt="Decorative wave shape" class="shape-img">
+        </div>
+
+        <section class="hv-cta-blue">
+            <div class="wave-how">
+
+                <svg width="1680" height="460" viewBox="0 0 1680 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.24">
+                        <path
+                            d="M1956.38 372.619C1878.54 372.619 1797.09 351.525 1714.11 309.857C1673.49 289.457 1635.76 266.081 1599.26 243.473C1571.02 225.978 1541.82 207.887 1511.49 191.31C1426.91 145.079 1348.06 120.381 1270.44 115.802C1166.01 109.632 1067.81 140.129 972.879 169.613C891.676 194.835 807.706 220.915 718.386 225.13C582.035 231.591 454.998 187.112 348.704 142.777C331.44 135.576 313.935 128.089 297.004 120.849C204.589 81.3236 109.03 40.4546 0.84314 23.4023C-122.654 3.93172 -281.09 24.2158 -344.966 100.631L-348.805 99.2973C-283.873 21.6254 -123.258 0.950143 1.88187 20.6721C110.806 37.8419 206.689 78.8497 299.413 118.506C316.336 125.742 333.833 133.225 351.071 140.416C456.756 184.499 582.955 228.695 718.072 222.328C806.562 218.151 890.149 192.188 970.986 167.081C1066.45 137.428 1165.15 106.779 1270.84 113.003C1349.38 117.636 1429.02 142.548 1514.31 189.167C1544.74 205.8 1573.99 223.922 1602.28 241.447C1638.69 264.004 1676.35 287.329 1716.79 307.639C1802.2 350.53 1885.9 371.4 1965.4 369.712C2048.5 367.933 2146.62 333.037 2164.79 271.867L2169.07 272.397C2150.47 334.998 2050.33 370.706 1965.54 372.52C1962.5 372.586 1959.44 372.619 1956.38 372.619Z"
+                            fill="#05BAFF" />
+                        <path
+                            d="M191.296 263.635C167.449 263.635 143.439 262.49 119.392 259.975C52.5187 252.98 -11.2128 235.759 -72.8458 219.105C-84.0141 216.088 -95.1785 213.073 -106.346 210.117C-178.922 190.921 -256.963 173.451 -336.051 175.596C-423.154 177.964 -499.202 206.771 -529.8 248.986L-533.75 247.795C-502.471 204.643 -424.941 175.199 -336.238 172.788C-256.359 170.622 -177.731 188.196 -104.694 207.518C-93.5089 210.475 -82.3414 213.493 -71.1645 216.514C-9.7608 233.104 53.7281 250.258 120.091 257.2C289.89 274.964 459.026 223.738 571.465 183.662C605.149 171.658 639.045 158.822 671.83 146.409C774.344 107.594 880.348 67.4576 996.248 46.362C1179.57 12.9938 1386.56 30.7712 1549.93 93.9133C1591.58 110.012 1631.06 129.101 1669.24 147.562C1696.91 160.938 1725.52 174.77 1754.7 187.346C1839.12 223.711 1914.58 241.871 1985.38 242.866C2074.89 244.139 2158.44 213.469 2188.8 168.326L2192.8 169.442C2161.75 215.608 2076.33 246.892 1985.29 245.677C1913.62 244.669 1837.41 226.354 1752.29 189.682C1723 177.064 1694.34 163.209 1666.63 149.81C1628.53 131.393 1589.14 112.347 1547.69 96.3231C1385.32 33.5737 1179.62 15.9042 997.43 49.0655C882.071 70.0647 776.314 110.108 674.034 148.833C641.227 161.254 607.306 174.099 573.576 186.121C476.446 220.741 337.176 263.632 191.296 263.635Z"
+                            fill="#B5F6FF" />
+                        <path
+                            d="M579.969 460.001C535.636 460.003 493.395 454.722 454.829 443.94C351.064 414.933 283.523 350.658 231.146 291.607C223.204 282.656 215.368 273.614 207.521 264.554C162.031 212.051 114.992 157.76 43.7566 118.643C-74.4717 53.7204 -253.124 40.8151 -390.705 87.2602L-392.727 84.7712C-253.609 37.8057 -72.9602 50.8595 46.5823 116.503C118.413 155.949 165.648 210.463 211.326 263.183C219.166 272.235 226.997 281.268 234.925 290.213C286.953 348.86 353.966 412.682 456.565 441.364C577.083 475.053 734.463 454.269 877.53 385.752C941.015 355.347 998.332 318.805 1053.76 283.465C1103.99 251.447 1155.92 218.339 1212.4 189.801C1280.18 155.546 1457.01 80.1217 1634.44 119.501C1696.19 133.205 1749.32 159.413 1800.7 184.757L1807.31 188.014C1863.07 215.481 1918.39 241.048 1982.02 252.058C2054.08 264.522 2127.02 253.645 2167.82 224.337L2171.06 226.213C2129.18 256.3 2054.54 267.515 1980.89 254.772C1916.49 243.629 1860.78 217.892 1804.67 190.248L1798.06 186.99C1746.95 161.781 1694.1 135.713 1633.02 122.157C1457.64 83.2319 1282.32 158.042 1215.09 192.013C1158.8 220.453 1106.96 253.503 1056.83 285.464C1001.29 320.872 943.861 357.485 880.126 388.008C781.427 435.276 675.852 459.998 579.969 460.001Z"
+                            fill="#0096F9" />
+                        <path
+                            d="M895.723 411.999C698.199 412.005 528.352 318.715 416.496 247.46C396.841 234.94 376.939 221.943 357.693 209.373C242.337 134.036 123.055 56.1353 -31.3547 21.2799C-209.582 -18.9512 -416.359 7.02711 -558.123 87.4747L-561 85.3647C-491.361 45.8457 -404.275 18.6375 -309.155 6.68593C-214.046 -5.26713 -117.478 -1.13743 -29.916 18.6284C125.447 53.6993 245.092 131.835 360.796 207.4C380.033 219.963 399.923 232.954 419.561 245.463C534.494 318.676 710.912 415.281 915 408.89C1019.28 405.63 1125.74 376.328 1250.05 316.678C1283.64 300.565 1316.8 283.267 1348.88 266.539C1411.57 233.85 1476.39 200.05 1547.27 173.52C1619.64 146.432 1762.23 105.098 1904.09 132.696C1988.69 149.15 2059.65 187.897 2122.26 222.083L2242 287.473L2239.18 289.616L2119.44 224.226C2057.15 190.218 1986.56 151.67 1902.83 135.384C1762.55 108.095 1621.22 149.088 1549.45 175.95C1478.86 202.37 1414.18 236.103 1351.62 268.723C1319.51 285.469 1286.31 302.785 1252.66 318.93C1127.62 378.93 1020.39 408.407 915.213 411.696C908.692 411.899 902.188 411.999 895.723 411.999Z"
+                            fill="#75E2FF" />
+                    </g>
+                </svg>
+
+            </div>
+            <!-- Decorative corner house photos -->
+            <div class="hv-cta-deco hv-cta-deco--tl"><img src="images/listing-03.jpg" alt=""></div>
+            <div class="hv-cta-deco hv-cta-deco--bl"><img src="images/listing-04.jpg" alt=""></div>
+            <div class="hv-cta-deco hv-cta-deco--tr"><img src="images/listing-01.jpg" alt=""></div>
+            <div class="hv-cta-deco hv-cta-deco--br"><img src="images/listing-02.jpg" alt=""></div>
+
+            <div class="container">
+                <div class="hv-cta-blue-content">
+                    <h2 class="hv-cta-blue-heading">Ready to make your<br>next move?</h2>
+                    <p class="hv-cta-blue-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br
+                            class="d-none d-lg-block">Vivamus ut interdum lacus.</p>
+                    <a href="#" class="hv-cta-blue-btn btn">
+                        Get a free home valuation
+                        <img src="images/icons/chevron-right.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+          <footer class="home-footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Logo / About -->
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="footer-logo d-inline-flex align-items-center justify-content-center">
+                        Logo
+                    </a>
+
+                    <p class="footer-text">
+                        Local expertise. Honest advice. Real results for buyers, sellers, and homeowners.
+                    </p>
+
+                    <div class="footer-social">
+                        <h6 class="footer-title">Follow Us</h6>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook">
+                                <img src="images/icons/facebook.svg" alt="">
+
+                            </a>
+                            <a href="#" aria-label="X">
+                                <img src="images/icons/x.svg" alt="">
+
+
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <img src="images/icons/instagram.svg" alt="">
+
+                            </a>
+                            <a href="#" aria-label="TikTok">
+                                <img src="images//icons/tiktok.svg" alt="">
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discover -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Discover</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Search Listings</a></li>
+                        <li><a href="#">Open Houses</a></li>
+                        <li><a href="#">Pre-construction</a></li>
+                        <li><a href="#">First-Time Buyers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Home Owner -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Home Owner</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Home Value Hub</a></li>
+                        <li><a href="#">Real Estate Scorecard</a></li>
+                        <li><a href="#">My Properties</a></li>
+                        <li><a href="#">Sell Your Home</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Company</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Flyer Scan</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-12">
+                    <h6 class="footer-title">Primary Contact</h6>
+
+                    <div class="contact-box">
+                        <a href="mailto:contact@gmail.com">
+                            <span class="contact-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.4975 11.9988H4.9975M4.91284 12.2903L2.57792 19.265C2.39449 19.813 2.30277 20.0869 2.36859 20.2556C2.42575 20.4022 2.54851 20.5132 2.7 20.5555C2.87443 20.6042 3.1379 20.4856 3.66483 20.2485L20.3763 12.7284C20.8906 12.4969 21.1478 12.3812 21.2273 12.2204C21.2963 12.0808 21.2963 11.9169 21.2273 11.7772C21.1478 11.6164 20.8906 11.5007 20.3763 11.2693L3.659 3.74654C3.13366 3.51013 2.87099 3.39193 2.69673 3.44042C2.54539 3.48253 2.42264 3.59332 2.36528 3.73956C2.29923 3.90795 2.38997 4.18133 2.57144 4.72809L4.91349 11.7843C4.94466 11.8782 4.96024 11.9252 4.9664 11.9732C4.97186 12.0158 4.9718 12.059 4.96623 12.1016C4.95996 12.1496 4.94425 12.1965 4.91284 12.2903Z"
+                                        stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>contact@gmail.com</span>
+                            <svg class="ms-auto ms-10" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </a>
+
+                        <a href="tel:+1234567896">
+                            <span class="contact-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.38028 8.85335C9.07627 10.303 10.0251 11.6616 11.2266 12.8632C12.4282 14.0648 13.7869 15.0136 15.2365 15.7096C15.3612 15.7694 15.4235 15.7994 15.5024 15.8224C15.7828 15.9041 16.127 15.8454 16.3644 15.6754C16.4313 15.6275 16.4884 15.5704 16.6027 15.4561C16.9523 15.1064 17.1271 14.9316 17.3029 14.8174C17.9658 14.3864 18.8204 14.3864 19.4833 14.8174C19.6591 14.9316 19.8339 15.1064 20.1835 15.4561L20.3783 15.6509C20.9098 16.1824 21.1755 16.4481 21.3198 16.7335C21.6069 17.301 21.6069 17.9713 21.3198 18.5389C21.1755 18.8242 20.9098 19.09 20.3783 19.6214L20.2207 19.779C19.6911 20.3087 19.4263 20.5735 19.0662 20.7757C18.6667 21.0001 18.0462 21.1615 17.588 21.1601C17.1751 21.1589 16.8928 21.0788 16.3284 20.9186C13.295 20.0576 10.4326 18.4332 8.04466 16.0452C5.65668 13.6572 4.03221 10.7948 3.17124 7.76144C3.01103 7.19699 2.93092 6.91477 2.9297 6.50182C2.92833 6.0436 3.08969 5.42311 3.31411 5.0236C3.51636 4.66357 3.78117 4.39876 4.3108 3.86913L4.46843 3.7115C4.99987 3.18006 5.2656 2.91433 5.55098 2.76999C6.11854 2.48292 6.7888 2.48292 7.35636 2.76999C7.64174 2.91433 7.90747 3.18006 8.43891 3.7115L8.63378 3.90637C8.98338 4.25597 9.15819 4.43078 9.27247 4.60655C9.70347 5.26945 9.70347 6.12403 9.27247 6.78692C9.15819 6.96269 8.98338 7.1375 8.63378 7.4871C8.51947 7.60142 8.46231 7.65857 8.41447 7.72538C8.24446 7.96281 8.18576 8.30707 8.26748 8.58743C8.29048 8.66632 8.32041 8.72866 8.38028 8.85335Z"
+                                        stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>(123) 456-7896</span>
+                            <svg class="ms-auto" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L10 8L6 4" stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                        </a>
+                    </div>
+
+                    <a href="#" class="btn-contact">Contact us <img class="" src="images/icons/chevron-right.svg"
+                            alt=""></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="row align-items-center gy-3">
+                    <div class="col-lg-4 text-center text-lg-start">
+                        <p class="mb-0 small-text">© 2026 HomeOptima — All Right Reserved</p>
+                    </div>
+
+                    <div class="col-lg-4 text-center">
+                        <a href="#" class="footer-brand">
+                            <img src="images/01.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <a href="#" class="small-link">Terms of Use</a>
+                        <span class="dot">•</span>
+                        <a href="#" class="small-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Wave: blue to white -->
+
+    <!-- Bootstrap JS -->
+    <script src="libraries/jquery/jquery.min.js"></script>
+    <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="libraries/swiper/swiper-bundle.min.js"></script>
+    <script src="libraries/bootstrap-select/boostrap-select.js"></script>
+
+
+    <script src="js/custom-swiper.js"></script>
+</body>
+
+</html>

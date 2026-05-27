@@ -95,6 +95,35 @@ const swiper1 = new Swiper(".testimonial-swiper-1", {
     }
 });
 
+// property-swiper
+document.querySelectorAll('.mp-property-card').forEach(function (card) {
+    const swiperEl = card.querySelector('.mp-property-swiper');
+    const prevBtn  = card.querySelector('.mp-property-card__arrow--prev');
+    const nextBtn  = card.querySelector('.mp-property-card__arrow--next');
+    const pagEl    = card.querySelector('.swiper-pagination-custom');
+
+    if (!swiperEl) return;
+
+    new Swiper(swiperEl, {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        speed: 500,
+        navigation: {
+            prevEl: prevBtn,
+            nextEl: nextBtn,
+        },
+        pagination: {
+            el: pagEl,
+            clickable: true,
+            bulletClass: 'mp-property-card__dot',
+            bulletActiveClass: 'mp-property-card__dot--active',
+        },
+    });
+});
+
+
+
 if(jQuery('.dataTables_length select').length > 0 ){
 			jQuery('.dataTables_length select').selectpicker();
 		}
