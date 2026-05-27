@@ -59,10 +59,10 @@
         border-radius: $radius-lg;
         overflow: hidden;
         height: 100%;
-        min-height: 520px;
+        min-height: 460px;
 
         @include respond("tab-land") {
-            min-height: 440px;
+            min-height: 380px;
         }
 
         @include respond("tab-port") {
@@ -73,12 +73,12 @@
     .hvh-hero-img {
         width: 100%;
         height: 100%;
-        min-height: 520px;
+        min-height: 460px;
         object-fit: cover;
         display: block;
 
         @include respond("tab-land") {
-            min-height: 440px;
+            min-height: 380px;
         }
 
         @include respond("tab-port") {
@@ -86,16 +86,12 @@
         }
     }
 
-    // -- Hero Card --
-    .hvh-hero-card {
-        background: $white;
-        border: 1px solid rgba($dark, 0.08);
-        border-radius: $radius-lg;
-        overflow: hidden;
-        box-shadow: 0 4px 32px rgba($dark, 0.08);
-        height: 100%;
+    // -- Hero Right Column --
+    .hvh-hero-right {
         display: flex;
         flex-direction: column;
+        gap: 16px;
+        height: 100%;
     }
 
     // -- Card Top Row --
@@ -105,31 +101,48 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 12px;
-        padding: 24px 28px;
-        border-bottom: 1px solid rgba($dark, 0.07);
+        background: $white;
+        border: 1px solid rgba($dark, 0.08);
+        border-radius: 16px;
+        padding: 8px 8px 8px 24px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
 
         @include respond("tab-port") {
-            padding: 18px 20px;
+            padding: 12px 12px 12px 18px;
         }
     }
 
     .hvh-hero-card-heading {
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 500;
-        color: rgba($dark, 0.65);
+        color: $dark;
         font-family: "Poppins", sans-serif;
         margin-bottom: 0;
+        white-space: nowrap;
     }
 
-    // -- Address Block --
-    .hvh-hero-address-block {
+    // -- Address List --
+    .hvh-hero-address-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hvh-hero-address-item {
         display: flex;
         align-items: flex-start;
-        gap: 14px;
-        padding: 28px 28px 20px;
+        gap: 16px;
+        background: $white;
+        border: 1px solid rgba($dark, 0.08);
+        border-radius: 24px;
+        padding: 16px;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+        cursor: pointer;
+        @include transitionFast;
 
-        @include respond("tab-port") {
-            padding: 20px 20px 16px;
+        &--active {
+            border-color: $primary;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
         }
     }
 
@@ -142,134 +155,196 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 6px;
+        margin-top: 2px;
     }
 
     .hvh-hero-address-content {
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
+        min-width: 0;
     }
 
     .hvh-results-address {
         font-family: "Archivo", sans-serif;
-        font-size: 28px;
+        font-size: 22px;
         font-weight: 700;
         color: $dark;
         line-height: 1.2;
         margin-bottom: 0;
 
         @include respond("tab-land") {
-            font-size: 22px;
+            font-size: 20px;
         }
 
         @include respond("tab-port") {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 
-    .hvh-add-property-link {
+    // -- Address Tags (pill badges) --
+    .hvh-hero-address-tags {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .hvh-hero-tag {
         display: inline-flex;
         align-items: center;
-        gap: 4px;
-        font-size: 13px;
-        font-weight: 500;
-        color: #929DAA;
+        justify-content: center;
+        padding: 6px 14px;
+        background: rgba($dark, 0.46);
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 400;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
         font-family: "Poppins", sans-serif;
+        white-space: nowrap;
+    }
+
+    // -- Radio Button --
+    .hvh-hero-radio {
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1.5px solid rgba($dark, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+
+        &--selected {
+            border-color: $primary;
+        }
+    }
+
+    .hvh-hero-radio-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: $primary;
+    }
+
+    // -- Add Property + Search --
+    .hvh-hero-add-section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hvh-hero-add-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba($primary, 0.1);
+        border: none;
+        border-radius: 12px;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $dark;
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+        align-self: flex-start;
+        @include transitionFast;
+
+        &:hover {
+            background: rgba($primary, 0.18);
+        }
+
+        svg {
+            flex-shrink: 0;
+        }
+    }
+
+    .hvh-hero-search-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .hvh-hero-search-wrap {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: $white;
+        border: 1px solid #EDEDED;
+        border-radius: 8px;
+        padding: 12px 16px;
+        box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
+        min-width: 0;
 
         svg {
             flex-shrink: 0;
         }
 
-        &:hover {
-            color: $primary;
+        input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 14px;
+            color: $dark;
+            font-family: "Poppins", sans-serif;
+            min-width: 0;
 
-            svg path {
-                stroke: $primary;
+            &::placeholder {
+                color: #929DAA;
             }
         }
     }
 
-    // -- Specs Row --
-    .hvh-hero-specs-row {
+    // -- Bottom: Value + Specs side-by-side --
+    .hvh-hero-bottom {
         display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 40px;
-        padding: 16px 28px;
-        border-top: 1px solid rgba($dark, 0.06);
-        border-bottom: 1px solid rgba($dark, 0.06);
-        margin: 0 28px;
-        border-left: none;
-        border-right: none;
-
-        @include respond("tab-port") {
-            margin: 0 20px;
-            padding: 14px 0;
-        }
+        align-items: stretch;
+        gap: 4px;
     }
 
-    .hvh-hero-spec {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 14px;
-        font-weight: 600;
-        color: $dark;
-
-        img {
-            width: 20px;
-            height: 20px;
-            opacity: 0.6;
-        }
-    }
-
-    .hvh-spec-divider {
-        width: 1px;
-        height: 16px;
-        background: rgba($dark, 0.15);
-        display: inline-block;
-        flex-shrink: 0;
-    }
-
-    // -- Estimated Value Block (dark panel) --
+    // -- Dark Value Panel --
     .hvh-hero-value-block {
+        flex: 1;
         background: $dark;
-        padding: 28px 28px 24px;
+        padding: 24px;
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin-top: auto;
+        border-radius: 24px 0 0 24px;
+        min-width: 0;
 
         @include respond("tab-port") {
-            padding: 22px 20px 20px;
+            padding: 20px 18px;
         }
     }
 
     .hvh-hero-value-label {
-        font-size: 12px;
-        font-weight: 500;
-        color: rgba($white, 0.5);
-        text-transform: uppercase;
-        letter-spacing: 0.8px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #B9B9B9;
         font-family: "Poppins", sans-serif;
         margin-bottom: 0;
     }
 
     .hvh-hero-value-amount {
         font-family: "Archivo", sans-serif;
-        font-size: 44px;
+        font-size: 34px;
         font-weight: 700;
         color: $white;
-        line-height: 1;
+        line-height: 1.15;
 
         @include respond("tab-land") {
-            font-size: 36px;
+            font-size: 28px;
         }
 
         @include respond("tab-port") {
-            font-size: 28px;
+            font-size: 24px;
         }
     }
 
@@ -277,18 +352,54 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        font-size: 13px;
-        color: rgba($white, 0.55);
+        font-size: 14px;
+        color: #8D8D8D;
         font-family: "Poppins", sans-serif;
-
-        strong {
-            color: rgba($white, 0.85);
-            font-weight: 500;
-        }
 
         svg {
             flex-shrink: 0;
-            color: rgba($white, 0.5);
+            color: #8D8D8D;
+        }
+
+        span {
+            line-height: 1.5;
+        }
+    }
+
+    // -- White Specs Panel --
+    .hvh-hero-specs-panel {
+        flex-shrink: 0;
+        background: $white;
+        border: 1px solid rgba($dark, 0.08);
+        border-radius: 0 24px 24px 0;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+
+        @include respond("tab-port") {
+            padding: 20px 18px;
+            gap: 18px;
+        }
+    }
+
+    .hvh-hero-spec {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgba($dark, 0.8);
+        font-family: "Poppins", sans-serif;
+        white-space: nowrap;
+
+        img {
+            width: 24px;
+            height: 24px;
+            opacity: 0.7;
+            flex-shrink: 0;
         }
     }
 }
@@ -1313,6 +1424,20 @@
         }
     }
 
+    // ---- Agent slides ----
+    .hvh-agent-slides {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hvh-agent-slide {
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+
+        &--active { display: flex; }
+    }
+
     // ---- Agent row ----
     .hvh-agent-row {
         display: flex;
@@ -1554,6 +1679,27 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
+    }
+
+    // ---- Tab Panels ----
+    .hvh-lf-panel {
+        display: none;
+        &--active { display: block; }
+    }
+
+    .hvh-lf-map-wrap {
+        border-radius: $radius;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .hvh-lf-map-iframe {
+        width: 100%;
+        height: 380px;
+        border: 0;
+        display: block;
+
+        @include respond("tab-port") { height: 260px; }
     }
 
     // ---- Tab Bar ----

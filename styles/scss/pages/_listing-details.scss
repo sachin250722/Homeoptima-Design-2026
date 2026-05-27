@@ -1,0 +1,930 @@
+// ================================================
+//  LISTING DETAILS PAGE
+//  All page-specific classes prefixed .ld-
+// ================================================
+
+
+// ---- 1. PROPERTY HEADER ----
+
+.ld-property-header {
+    padding: 32px 0;
+    border-bottom: 1px solid rgba($dark, 0.08);
+    background: $white;
+}
+
+.ld-location-badges {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.ld-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: $white;
+    background: rgba($dark, 0.46);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ld-property-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.ld-property-title {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.15;
+    color: $dark;
+    margin: 0;
+
+    @include respond("tab-land") { font-size: 32px; }
+    @include respond("tab-port") { font-size: 24px; }
+    @include respond("phone")    { font-size: 20px; }
+}
+
+.ld-share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background: $primary;
+    color: $white;
+    border: none;
+    border-radius: $radius;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    flex-shrink: 0;
+    @include transitionFast;
+
+    svg, img { width: 16px; height: 16px; flex-shrink: 0; }
+
+    &:hover { background: darken($primary, 8%); color: $white; }
+}
+
+
+// ---- 2. DETAIL SECTION ----
+
+.ld-detail-section {
+    padding: 40px 0 80px;
+    background: $white;
+}
+
+
+// ---- 3. PHOTO GALLERY ----
+
+.ld-gallery {
+    display: grid;
+    grid-template-columns: 1fr 296px;
+    gap: 24px;
+    height: 420px;
+    margin-bottom: 16px;
+
+    @include respond("tab-port") { grid-template-columns: 1fr; height: auto; }
+}
+
+.ld-gallery-main {
+    border-radius: $radius-lg;
+    overflow: hidden;
+    background: #e8ecf0;
+    height: 100%;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: opacity 0.15s ease, transform 0.3s ease;
+
+        &.ld-img-swap { opacity: 0; }
+    }
+}
+
+.ld-gallery-thumbs {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+}
+
+.ld-gallery-thumb {
+    flex: 1;
+    overflow: hidden;
+    border-radius: $radius-lg;
+    background: #e8ecf0;
+    cursor: pointer;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: opacity 0.15s ease, transform 0.3s ease;
+
+        &.ld-img-swap { opacity: 0; }
+        &:hover { transform: scale(1.04); }
+    }
+}
+
+
+// ---- 4. THUMBNAIL STRIP ----
+
+.ld-thumb-strip {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 0;
+    margin-bottom: 8px;
+
+    @include respond("phone") { flex-wrap: wrap; gap: 12px; }
+}
+
+.ld-thumb-images {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.ld-thumb-img {
+    width: 80px;
+    height: 80px;
+    border-radius: $radius;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid transparent;
+    flex-shrink: 0;
+    background: #e8ecf0;
+    opacity: 0.5;
+    @include transitionFast;
+
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    &--active { border-color: $primary; opacity: 1; }
+    &:hover   { opacity: 1; }
+
+    @include respond("phone") { width: 60px; height: 60px; }
+}
+
+.ld-thumb-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    min-width: 0;
+}
+
+.ld-thumb-arrows {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ld-thumb-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ld-thumb-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: rgba($primary, 0.24);
+    cursor: pointer;
+    @include transitionFast;
+
+    &--active { background: $primary; }
+    &--sm     { width: 8px; height: 8px; }
+}
+
+.ld-count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    border-radius: 999px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: $white;
+    background: $primary;
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+
+// ---- 5. SPECS BAR ----
+
+.ld-specs-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 24px;
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg $radius-lg 0 0;
+    margin-bottom: 4px;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+}
+
+.ld-spec-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba($dark, 0.68);
+
+    img, svg { width: 18px; height: 18px; flex-shrink: 0; }
+}
+
+
+// ---- 6. PRICE + ADDRESS ----
+
+.ld-price-address {
+    padding: 24px;
+    background: $dark;
+    border-radius: 0 0 $radius-lg $radius-lg;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.ld-price {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.2;
+    color: $white;
+    margin: 0;
+
+    @include respond("tab-land") { font-size: 28px; }
+    @include respond("phone")    { font-size: 24px; }
+}
+
+.ld-address {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #8d8d8d;
+    letter-spacing: 1px;
+
+    svg, img { width: 24px; height: 24px; flex-shrink: 0; }
+}
+
+
+// ---- 7. CONTENT CARD (description, features, map) ----
+
+.ld-content-card {
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+}
+
+.ld-card-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba($dark, 0.08);
+}
+
+.ld-card-title {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: $dark;
+    margin: 0;
+}
+
+.ld-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ld-description-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #929DAA;
+    font-weight: 400;
+    margin: 0;
+}
+
+.ld-see-more {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: $primary;
+    text-decoration: none;
+    line-height: 1.3;
+
+    &:hover { color: darken($primary, 10%); }
+}
+
+
+// ---- 8. FEATURES GRID ----
+
+.ld-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+
+    @include respond("phone") { grid-template-columns: 1fr; }
+}
+
+.ld-features-col-title {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: $dark;
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.ld-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #929DAA;
+    line-height: 38px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    svg, img { width: 20px; height: 20px; flex-shrink: 0; }
+}
+
+
+// ---- 9. MAP ----
+
+.ld-map-frame {
+    height: 320px;
+    background: #f2f6ff;
+    border-radius: $radius;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 16px;
+
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    @include respond("tab-port") { height: 220px; }
+}
+
+.ld-map-pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    background: $primary;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
+
+    svg { width: 24px; height: 24px; }
+}
+
+.ld-nearby-heading {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: $dark;
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.ld-nearby-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ld-nearby-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #929DAA;
+    line-height: 38px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    svg, img { width: 20px; height: 20px; flex-shrink: 0; }
+}
+
+
+// ---- 10. SIDEBAR CARDS ----
+
+.ld-sidebar-card {
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+}
+
+// Used for cards WITH a bordered header (Property Details)
+.ld-sidebar-card-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid #ececec;
+
+    h5 {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        color: $dark;
+        margin: 0;
+    }
+}
+
+// Used for cards WITHOUT bordered header (Mortgage, Next Steps)
+.ld-sidebar-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.ld-sidebar-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: $dark;
+    margin: 0;
+    line-height: 1.6;
+}
+
+// Mortgage rows
+.ld-mortgage-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ld-mortgage-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #929DAA;
+    line-height: 1.25;
+}
+
+.ld-mortgage-value {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: $dark;
+    line-height: 1.3;
+}
+
+.ld-mortgage-note {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #929DAA;
+    margin: 0;
+    line-height: 1.25;
+}
+
+// Agent/Next Steps card
+.ld-agent-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ld-agent-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #e8ecf0;
+
+    img { width: 100%; height: 100%; object-fit: cover; display: block; }
+}
+
+.ld-agent-name {
+    font-family: "Archivo", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: $dark;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.ld-agent-role {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #929DAA;
+    margin: 0;
+    line-height: 1.25;
+}
+
+// Horizontal contact bar (email | phone with divider)
+.ld-agent-contact-bar {
+    display: flex;
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius;
+    height: 48px;
+    overflow: hidden;
+}
+
+.ld-agent-bar-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 16px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: $dark;
+    text-decoration: none;
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include transitionFast;
+
+    svg, img { width: 18px; height: 18px; flex-shrink: 0; }
+
+    &:first-child { border-right: 1px solid rgba($dark, 0.08); }
+    &:hover { color: $primary; }
+}
+
+.ld-agent-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ld-agent-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ld-agent-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba($primary, 0.24);
+    cursor: pointer;
+    @include transitionFast;
+
+    &--active { width: 12px; height: 12px; background: $primary; }
+}
+
+// Agent slide wrapper
+.ld-agent-slides {
+    display: flex;
+    flex-direction: column;
+}
+
+.ld-agent-slide {
+    display: none;
+    flex-direction: column;
+    gap: 24px;
+
+    &--active { display: flex; }
+}
+
+// Property details table
+.ld-details-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.ld-details-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 24px;
+    border-bottom: 1px solid #ececec;
+    white-space: nowrap;
+
+    &:last-child { border-bottom: 0; }
+}
+
+.ld-details-label {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #929DAA;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ld-details-value {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: $dark;
+    text-align: right;
+}
+
+
+// ---- 11. SIMILAR PROPERTIES ----
+// Reuses global .listing-card — only section wrapper & grid here.
+
+
+// ---- 12. NEIGHBORHOOD & LIFE FACTORS ----
+
+.ld-neighborhood-section {
+    padding: 80px 0;
+    background: $white;
+
+    @include respond("tab-port") { padding: 56px 0; }
+}
+
+.ld-neighborhood-header {
+    margin-bottom: 40px;
+}
+
+.ld-neighborhood-tabs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid rgba($dark, 0.08);
+    margin-bottom: 40px;
+}
+
+.ld-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #929DAA;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    background: none;
+    cursor: pointer;
+    @include transitionFast;
+
+    svg, img { width: 18px; height: 18px; flex-shrink: 0; }
+
+    &:hover { color: $dark; }
+
+    &--active {
+        color: $primary;
+        border-bottom-color: $primary;
+    }
+
+    @include respond("phone") { padding: 10px 12px; font-size: 13px; }
+}
+
+.ld-tab-content {
+    display: none;
+
+    &--active { display: block; }
+}
+
+.ld-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @include respond("tab-land") { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    @include respond("phone")    { grid-template-columns: 1fr; gap: 16px; }
+}
+
+.ld-stat-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: #F7F9FC;
+    border-radius: $radius;
+    border: 1px solid rgba($dark, 0.06);
+}
+
+.ld-stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: $radius;
+    background: rgba($primary, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg, img { width: 20px; height: 20px; }
+}
+
+.ld-stat-content { flex: 1; min-width: 0; }
+
+.ld-stat-category {
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #929DAA;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.ld-stat-value {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: $dark;
+    margin-bottom: 6px;
+    line-height: 1.1;
+}
+
+.ld-stat-desc {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #929DAA;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+// ---- 13. CONTACT SECTION (Ask About This Property) ----
+
+.ld-contact-section {
+    position: relative;
+    background: $primary;
+    overflow: hidden;
+}
+
+.ld-contact-wave-top {
+    position: relative;
+    line-height: 0;
+    z-index: 2;
+
+    svg { display: block; width: 100%; height: auto; fill: $white; }
+}
+
+.ld-contact-wave-bottom {
+    position: relative;
+    line-height: 0;
+    z-index: 2;
+    transform: scaleX(-1) rotate(180deg);
+
+    svg { display: block; width: 100%; height: auto; fill: $white; }
+}
+
+.ld-contact-inner {
+    position: relative;
+    z-index: 3;
+    padding: 60px 0;
+}
+
+.ld-contact-title {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.1;
+    color: $white;
+    margin-bottom: 16px;
+
+    @include respond("tab-land") { font-size: 36px; }
+    @include respond("tab-port") { font-size: 28px; }
+    @include respond("phone")    { font-size: 24px; }
+}
+
+.ld-contact-desc {
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba($white, 0.78);
+    font-weight: 400;
+    max-width: 480px;
+    margin-bottom: 0;
+}
+
+// Form card
+.ld-form-card {
+    background: $white;
+    border-radius: $radius-lg;
+    padding: 32px;
+    box-shadow: 0px 24px 64px 0px rgba(0, 0, 0, 0.18);
+}
+
+.ld-form-group {
+    margin-bottom: 20px;
+
+    &:last-child { margin-bottom: 0; }
+}
+
+.ld-form-label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: $dark;
+    margin-bottom: 8px;
+
+    .required { color: $primary; }
+}
+
+.ld-form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba($dark, 0.14);
+    border-radius: $radius;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: $dark;
+    background: $white;
+    @include transitionFast;
+    outline: none;
+    appearance: none;
+
+    &::placeholder { color: rgba($dark, 0.30); }
+
+    &:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 3px rgba($primary, 0.10);
+    }
+}
+
+textarea.ld-form-control {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.ld-phone-input-row {
+    display: flex;
+
+    .ld-phone-country {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 12px 14px;
+        border: 1px solid rgba($dark, 0.14);
+        border-right: none;
+        border-radius: $radius 0 0 $radius;
+        background: #F7F9FC;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: $dark;
+        cursor: pointer;
+        flex-shrink: 0;
+        white-space: nowrap;
+        @include transitionFast;
+
+        svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+        &:hover { background: #edf1f7; }
+    }
+
+    .ld-form-control {
+        border-radius: 0 $radius $radius 0;
+        flex: 1;
+    }
+}

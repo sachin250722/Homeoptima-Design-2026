@@ -122,12 +122,131 @@ document.querySelectorAll('.mp-property-card').forEach(function (card) {
     });
 });
 
+// ================================================
+//  Sold Properties Swiper
+// ================================================
+const soldSwiper = new Swiper('.sold-swiper', {
+    slidesPerView: 1.1,
+    spaceBetween: 24,
+    slidesPerGroup: 1,
+    loop: true,
+    grabCursor: true,
+    navigation: {
+        nextEl: '#soldNext',
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 1.5,
+        },
+        768: {
+            slidesPerView: 2.2,
+        },
+        1200: {
+            slidesPerView: 3.2,
+        },
+    },
+});
 
+// ================================================
+//  Similar Properties Swiper (listing-details.html)
+// ================================================
+const similarSwiper = new Swiper('.similar-swiper', {
+    slidesPerView: 1.1,
+    spaceBetween: 24,
+    slidesPerGroup: 1,
+    loop: true,
+    grabCursor: true,
+    navigation: {
+        nextEl: '#similarNext',
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 1.5,
+        },
+        768: {
+            slidesPerView: 2.2,
+        },
+        1200: {
+            slidesPerView: 3.2,
+        },
+    },
+});
 
-if(jQuery('.dataTables_length select').length > 0 ){
-			jQuery('.dataTables_length select').selectpicker();
-		}
+// ================================================
+//  Featured Listings Swiper
+// ================================================
+const featuredSwiper = new Swiper('.featured-swiper', {
+    slidesPerView: 1.1,
+    spaceBetween: 24,
+    slidesPerGroup: 1,
+    loop: true,
+    grabCursor: true,
+    navigation: {
+        nextEl: '#featuredNext',
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 1.5,
+        },
+        768: {
+            slidesPerView: 2.2,
+        },
+        1200: {
+            slidesPerView: 3.2,
+        },
+    },
+});
 
-if(jQuery('.dataTables_length select').length > 0 ){
-			jQuery('.dataTables_length select').selectpicker();
-		}
+// ================================================
+//  Cities Swiper
+// ================================================
+const citiesSwiper = new Swiper('.cities-swiper', {
+    slidesPerView: 1.1,
+    spaceBetween: 24,
+    slidesPerGroup: 1,
+    loop: true,
+    grabCursor: true,
+    navigation: {
+        nextEl: '#citiesNext',
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 1.5,
+        },
+        768: {
+            slidesPerView: 2.2,
+        },
+        1200: {
+            slidesPerView: 3.5,
+        },
+    },
+});
+
+// ================================================
+//  Testimonials Swiper
+// ================================================
+const testimonialsSwiper = new Swiper('.testimonials-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    slidesPerGroup: 1,
+    loop: true,
+    grabCursor: true,
+    navigation: {
+        prevEl: '#testimonialPrev',
+        nextEl: '#testimonialNext',
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 1.2,
+        },
+        768: {
+            slidesPerView: 1.5,
+        },
+        992: {
+            slidesPerView: 1,
+        },
+        1200: {
+            slidesPerView: 2.3,
+        },
+    },
+});

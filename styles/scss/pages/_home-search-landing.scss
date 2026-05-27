@@ -1,0 +1,1181 @@
+// ================================================
+//  HOME SEARCH LANDING PAGE
+//  Scope: body.hs-page
+//  All section classes prefixed .hs-
+// ================================================
+
+// ---- PAGE WRAPPER ----
+.hs-page {
+    background: #f7f8fa;
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: $radius !important;
+        padding: 12px 24px;
+        @include transitionFast;
+
+        img {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+    }
+
+    .btn-primary {
+        background: $primary;
+        border-color: $primary;
+        color: $white;
+
+        &:hover {
+            background: darken($primary, 8%);
+            border-color: darken($primary, 8%);
+        }
+    }
+
+    .btn-outline-primary {
+        background: transparent;
+        border: 1px solid rgba($dark, 0.2);
+        color: $dark;
+
+        &:hover {
+            background: rgba($dark, 0.04);
+            border-color: rgba($dark, 0.4);
+        }
+    }
+}
+
+
+// ============================================================
+//  0. COMPACT MAP HEADER (visible in map view only)
+// ============================================================
+.hs-map-header {
+    display: none;
+    background: #edf2fe;
+    border-bottom: 1px solid rgba($primary, 0.08);
+    padding: 24px 0;
+    position: relative;
+    z-index: 1;
+
+    &.is-active {
+        display: block;
+    }
+}
+
+.hs-map-header-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    @include respond('tab-port') {
+        flex-wrap: wrap;
+    }
+
+    @include respond('phone') {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+// Map header search bar — same glassmorphism as hero, on a light bg
+// Figma: rgba(255,255,255,0.35) / blur(3px) / border rgba(255,255,255,0.2)
+.hs-search-bar--light {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.10);
+    max-width: 720px;
+}
+
+// Map header pill container — light glass
+// Figma: rgba(255,255,255,0.24) / blur(3px) / border rgba(255,255,255,0.16)
+.hs-filter-pills--light {
+    background: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: none;
+    justify-content: flex-start;
+}
+
+
+// ============================================================
+//  1. HERO
+// ============================================================
+.hs-hero {
+    position: relative;
+    width: 100%;
+    min-height: 524px;
+    display: flex;
+    align-items: center;
+    background: url('../../images/main-landing-hero.png') center center / cover no-repeat;
+
+    @include respond("tab-port") {
+        min-height: 420px;
+    }
+
+    @include respond("phone-land") {
+        min-height: 340px;
+    }
+}
+
+.hs-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba($dark, 0.50);
+    z-index: 1;
+}
+
+.hs-hero>.container {
+    position: relative;
+    z-index: 2;
+}
+
+.hs-hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 56px 0;
+
+    @include respond("tab-port") {
+        padding: 40px 0;
+        gap: 16px;
+    }
+}
+
+// -- Badge --
+.hs-hero-badge-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.hs-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba($dark, 0.32);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+// -- Hero Title --
+.hs-hero-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800;
+    font-size: 76px;
+    line-height: 1.03;
+    color: $white;
+    text-align: center;
+    margin: 0;
+
+    @include respond("tab-land") {
+        font-size: 56px;
+    }
+
+    @include respond("tab-port") {
+        font-size: 38px;
+    }
+
+    @include respond("phone") {
+        font-size: 30px;
+        line-height: 1.1;
+    }
+}
+
+// -- Search Bar --
+.hs-search-bar {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 18px;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.10);
+
+    @include respond("phone-land") {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+.hs-search-input-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 24px;
+    background: $white;
+    border: 1px solid #f2f2f2;
+    border-radius: $radius;
+    min-width: 0;
+}
+
+.hs-search-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.hs-search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(146, 157, 170, 0.8);
+    background: transparent;
+    min-width: 0;
+
+    &::placeholder {
+        color: rgba(146, 157, 170, 0.56);
+    }
+
+    &:focus {
+        color: $dark;
+    }
+}
+
+.hs-search-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: $primary;
+    color: $white;
+    border: none;
+    border-radius: $radius;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    @include transitionFast;
+
+    img {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+
+    &:hover {
+        background: darken($primary, 8%);
+    }
+}
+
+// -- Filter Pills --
+.hs-filter-pills {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 18px;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.10);
+
+    @include respond("phone-land") {
+        gap: 10px;
+    }
+}
+
+.hs-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: $white;
+    background: rgba($dark, 0.32);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(250, 255, 214, 0.14);
+    cursor: pointer;
+    @include transitionFast;
+
+    img {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        filter: brightness(0) invert(1);
+    }
+
+    svg {
+        flex-shrink: 0;
+    }
+
+    &:hover {
+        background: rgba($dark, 0.52);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+// Map header pills — light glass on a light bg
+// Figma: rgba(255,255,255,0.46) / blur(12px) / border rgba(242,242,242,0.98) / dark text
+.hs-pill--light {
+    background: rgba(255, 255, 255, 0.46);
+    border: 1px solid rgba(242, 242, 242, 0.98);
+    color: $dark;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 10px 12px; // Figma: px-[12px] py-[10px]
+
+    img {
+        filter: none;
+    }
+
+    svg path,
+    svg circle {
+        stroke: $dark;
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.72);
+        border-color: rgba($dark, 0.14);
+    }
+}
+
+
+// -- Applied pill state --
+.hs-pill.hs-pill--applied {
+    background: rgba($primary, 0.85);
+    border-color: rgba($primary, 0.5);
+    color: $white;
+
+    img {
+        filter: brightness(0) invert(1);
+    }
+
+    svg path,
+    svg circle {
+        stroke: $white;
+    }
+}
+
+.hs-pill--light.hs-pill--applied {
+    background: rgba($primary, 0.14);
+    border-color: rgba($primary, 0.32);
+    color: $primary;
+
+    img {
+        filter: none;
+    }
+
+    svg path,
+    svg circle {
+        stroke: $primary;
+    }
+}
+
+// ---- FILTER DROPDOWNS ----
+.hs-filter-wrap {
+    position: relative;
+}
+
+.hs-filter-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    min-width: 280px;
+    background: $white;
+    border: 1px solid rgba($dark, 0.10);
+    border-radius: $radius-lg;
+    box-shadow: 0px 24px 64px 0px rgba(0, 0, 0, 0.16);
+    padding: 20px;
+    z-index: 200;
+    display: none;
+
+    &.is-open {
+        display: block;
+    }
+
+    &--right {
+        left: auto;
+        right: 0;
+    }
+}
+
+.hs-dd-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: $dark;
+    margin: 0 0 14px;
+}
+
+// Price row
+.hs-price-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.hs-price-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hs-price-lbl {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba($dark, 0.50);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.hs-price-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid rgba($dark, 0.14);
+    border-radius: $radius;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: $dark;
+    background: $white;
+    cursor: pointer;
+    appearance: auto;
+
+    &:focus {
+        outline: none;
+        border-color: $primary;
+        box-shadow: 0 0 0 3px rgba($primary, 0.10);
+    }
+}
+
+// Option buttons (beds / baths / type)
+.hs-opts {
+    display: flex;
+    gap: 8px;
+    flex-wrap: nowrap;
+
+    &--wrap {
+        flex-wrap: wrap;
+    }
+}
+
+.hs-opt {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba($dark, 0.14);
+    background: $white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: $dark;
+    cursor: pointer;
+    white-space: nowrap;
+    @include transitionFast;
+
+    &:hover {
+        border-color: $primary;
+        color: $primary;
+    }
+
+    &--active {
+        background: $primary;
+        border-color: $primary;
+        color: $white;
+
+        &:hover {
+            background: darken($primary, 8%);
+            border-color: darken($primary, 8%);
+            color: $white;
+        }
+    }
+}
+
+// Checkboxes (more filters)
+.hs-checks {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.hs-check-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: $dark;
+    cursor: pointer;
+}
+
+.hs-check-inp {
+    width: 17px;
+    height: 17px;
+    accent-color: $primary;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+// Dropdown footer (Clear + Apply)
+.hs-dd-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid rgba($dark, 0.08);
+    margin-top: 4px;
+}
+
+.hs-dd-clear {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba($dark, 0.52);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 6px 0;
+
+    &:hover {
+        color: $dark;
+    }
+}
+
+.hs-dd-apply {
+    padding: 10px 22px;
+    background: $primary;
+    color: $white;
+    border: none;
+    border-radius: $radius;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    @include transitionFast;
+
+    &:hover {
+        background: darken($primary, 8%);
+    }
+}
+
+
+// ============================================================
+//  2. LISTINGS SECTION
+// ============================================================
+.hs-listings {
+    background: #FBFDFF;
+    padding: 80px 0;
+
+    @include respond("tab-port") {
+        padding: 56px 0;
+    }
+}
+
+// -- View Tabs (List / Map) --
+.hs-view-tabs {
+    display: none; // hidden by default, activated via JS
+}
+
+// -- Results Header --
+.hs-results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+
+    @include respond("tab-port") {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+}
+
+.hs-results-title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hs-results-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: $dark;
+    margin: 0;
+    line-height: 1.2;
+
+    @include respond("tab-port") {
+        font-size: 24px;
+    }
+}
+
+.hs-results-count {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    background: rgba($primary, 0.08);
+    border: 1px solid rgba($primary, 0.16);
+    border-radius: 999px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: $primary;
+    white-space: nowrap;
+}
+
+.hs-results-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+
+    @include respond("phone") {
+        gap: 8px;
+    }
+}
+
+.hs-sort-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 16px;
+    height: 48px;
+    background: $white;
+    border: 1px solid rgba($dark, 0.12);
+    border-radius: $radius;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: $dark;
+    cursor: pointer;
+    white-space: nowrap;
+    @include transitionFast;
+
+    svg {
+        flex-shrink: 0;
+    }
+
+    &:hover,
+    &.is-open {
+        border-color: $primary;
+        color: $primary;
+    }
+}
+
+// Sort dropdown — full-width list of text options
+.hs-sort-dropdown {
+    min-width: 220px;
+    padding: 16px;
+}
+
+.hs-sort-opts {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.hs-sort-opt {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    text-align: left;
+    border: none;
+    background: transparent;
+    border-radius: $radius;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: $dark;
+    cursor: pointer;
+    @include transitionFast;
+
+    &:hover {
+        background: rgba($primary, 0.06);
+        color: $primary;
+    }
+
+    &--active {
+        background: rgba($primary, 0.08);
+        color: $primary;
+        font-weight: 500;
+    }
+}
+
+.hs-view-toggle {
+    display: flex;
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius;
+    overflow: hidden;
+    height: 48px;
+}
+
+.hs-view-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba($dark, 0.48);
+    background: transparent;
+    border: none;
+    border-left: 1px solid rgba($dark, 0.08);
+    cursor: pointer;
+    white-space: nowrap;
+    @include transitionFast;
+
+    &:first-child {
+        border-left: none;
+    }
+
+    img,
+    svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+
+    &.active {
+        color: $dark;
+        background: rgba($dark, 0.05);
+    }
+
+    &:hover:not(.active) {
+        color: $primary;
+    }
+}
+
+// -- Property Grid (List View) --
+.hs-prop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 56px;
+
+    @include respond("tab-land") {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    @include respond("phone-land") {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+// -- Property Card --
+.hs-prop-card {
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+    @include transitionFast;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0px 16px 56px 0px rgba(0, 0, 0, 0.10);
+        transform: translateY(-4px);
+    }
+}
+
+.hs-card-img {
+    height: 220px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #e8ecf0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        @include transitionSlow;
+    }
+
+    .hs-prop-card:hover & img {
+        transform: scale(1.04);
+    }
+}
+
+.hs-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px;
+    flex: 1;
+}
+
+.hs-card-price {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+    color: $dark;
+    margin: 0;
+}
+
+.hs-card-name {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: $dark;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hs-card-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #929DAA;
+    font-weight: 400;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.hs-card-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: auto;
+    padding-top: 14px;
+}
+
+.hs-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #929DAA;
+    font-weight: 400;
+    white-space: nowrap;
+
+    img {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+}
+
+// -- Pagination --
+.hs-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px; // Figma: gap-[16px]
+}
+
+.hs-page-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px; // Figma: p-[16px] — 24+16+16 = 56px total
+    border-radius: 999px;
+    background: $white;
+    border: 1px solid rgba(146, 157, 170, 0.24); // Figma: border-[rgba(146,157,170,0.24)]
+    color: $dark;
+    cursor: pointer;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.04); // Figma: drop-shadow
+    @include transitionFast;
+
+    svg {
+        flex-shrink: 0;
+    }
+
+    &:hover:not(.hs-page-nav--disabled) {
+        border-color: $primary;
+        color: $primary;
+        box-shadow: 0 0 0 3px rgba($primary, 0.1);
+    }
+
+    &--disabled {
+        opacity: 0.40; // Figma: opacity-40
+        cursor: default;
+        pointer-events: none;
+    }
+}
+
+.hs-page-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px; // Figma: w-[48px]
+    height: 48px;
+    border-radius: $radius; // Figma: rounded-[12px] — NOT circles
+    background: $white;
+    border: 1px solid rgba($dark, 0.20); // Figma: border-[rgba(14,23,31,0.2)]
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: $dark;
+    cursor: pointer;
+    @include transitionFast;
+
+    &:hover:not(.hs-page-btn--active):not(.hs-page-btn--ellipsis) {
+        border-color: $primary;
+        color: $primary;
+    }
+
+    &--active {
+        background: $primary;
+        border-color: $primary;
+        color: $white;
+    }
+
+    &--ellipsis {
+        width: auto;
+        padding: 0 18px; // Figma: px-[18px]
+        cursor: default;
+        pointer-events: none;
+        border-color: rgba($dark, 0.20);
+    }
+}
+
+
+// ============================================================
+//  MAP VIEW PANEL
+// ============================================================
+.hs-map-view {
+    display: none;
+    gap: 40px; // Figma: gap-[40px]
+    align-items: flex-start; // Figma: items-start
+    margin-bottom: 56px;
+
+    &.is-active {
+        display: flex;
+    }
+
+    @include respond("tab-land") {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+// Sidebar = white card container (Figma: w-[464px] h-[935px] p-[12px])
+.hs-map-sidebar {
+    width: 464px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; // Figma: gap-[16px]
+    height: 935px; // Figma: h-[935px]
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+    padding: 12px; // Figma: p-[12px]
+    overflow: hidden;
+
+    @include respond("tab-land") {
+        width: 100%;
+        height: auto;
+        max-height: 700px;
+    }
+}
+
+// Scrollable inner area — takes flex-1, hides native scrollbar
+.hs-map-sidebar-scroll {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    gap: 8px; // Figma: gap-[8px] between card col + track
+    overflow: hidden;
+}
+
+// Card list column (scrollable, native scrollbar hidden)
+.hs-map-sidebar-cards {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; // Figma: gap-[24px] between cards
+    overflow-y: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    // Full-size card images in sidebar (Figma: h-[320px])
+    .hs-prop-card {
+        flex-shrink: 0;
+
+        .hs-card-img {
+            height: 320px;
+        }
+    }
+
+    // Content wrapper: desc + meta with 24px gap (Figma: flex-col gap-[24px])
+    .hs-card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .hs-card-meta {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+// Custom scrollbar track (visual decoration — Figma: w-[8px] border rounded-[999px])
+.hs-map-sidebar-track {
+    width: 8px;
+    flex-shrink: 0;
+    border: 1px solid rgba(146, 157, 170, 0.12);
+    border-radius: 999px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.hs-map-sidebar-track-top,
+.hs-map-sidebar-track-bottom {
+    flex: 1;
+    min-height: 0;
+    background: #f2f6ff; // Figma: bg-[#f2f6ff]
+}
+
+.hs-map-sidebar-track-thumb {
+    height: 119px; // Figma: h-[119px]
+    flex-shrink: 0;
+    background: #abbfd7; // Figma: bg-[#abbfd7]
+}
+
+// Map area: white card, map fills edge-to-edge (Figma: overflow-clip, map image overflows padding)
+.hs-map-area {
+    flex: 1;
+    min-height: 934px; // Figma: h-[934px]
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden; // clips map + pins to rounded card corners
+
+    // Iframe fills the full card area — no padding frame
+    iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+    }
+
+    @include respond("tab-land") {
+        min-height: 480px;
+    }
+}
+
+.hs-map-pins {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+// Blue circle pins (Figma: bg-[#2c6efe] p-[12px] rounded-[999px] size-[48px] drop-shadow)
+.hs-map-pin {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: $primary;
+    border-radius: 999px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.04);
+    padding: 12px;
+    @include transitionFast;
+
+    svg {
+        display: block;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 20px rgba($primary, 0.40);
+        transform: translate(-50%, -50%) scale(1.08);
+    }
+}
+
+// Sidebar pagination — inherits main pagination styles, no overrides needed
+.hs-pagination--sidebar {
+    flex-shrink: 0;
+}
+
+
+// ============================================================
+//  3. CTA SECTION  — reuses .hv-cta-blue from _home-value.scss
+//     Only the wave-transition shape is page-specific.
+// ============================================================
+
+// Wave sits absolute at the top of .hv-cta-blue so it fades
+// the light listings background into blue.
+.hs-page .hv-cta-blue {
+
+    .hs-cta-wave {
+        position: relative;
+        line-height: 0;
+        width: 100%;
+        z-index: 3;
+
+        svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}

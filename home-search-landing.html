@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Primary Meta -->
+    <title>Homes for Sale in Mississauga | HomeOptima</title>
+    <meta name="description"
+        content="Search homes for sale in Mississauga and Southern Ontario. Filter by price, bedrooms, bathrooms and property type. Find your perfect home with HomeOptima.">
+    <meta name="keywords"
+        content="homes for sale Mississauga, real estate Ontario, buy home, search listings, HomeOptima">
+    <meta name="author" content="HomeOptima">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.homeoptima.ca/homes-for-sale/">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.homeoptima.ca/homes-for-sale/">
+    <meta property="og:title" content="Homes for Sale in Mississauga | HomeOptima">
+    <meta property="og:description"
+        content="Search and filter hundreds of listings in Southern Ontario. Find your perfect home today.">
+    <meta property="og:site_name" content="HomeOptima">
+    <meta property="og:locale" content="en_CA">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Homes for Sale in Mississauga | HomeOptima">
+    <meta name="twitter:description" content="Search and filter hundreds of listings in Southern Ontario.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Libraries -->
+    <link rel="stylesheet" href="libraries/swiper/swiper-bundle.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles/css/style.css">
+</head>
+
+<body class="hs-page">
+
+    <!-- ============================= HEADER ============================= -->
+    <div class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <div class="logo-box">Logo</div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHS"
+                        aria-controls="navbarHS" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarHS">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Buy</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Sell</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Home Value</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Open Houses</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Pre-construction</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="extra-nav">
+                        <a href="javascript:void(0);" class="btn btn-outline-primary me-3">Sign in
+                            <img src="images/icons/chevron-right.svg" alt=""></a>
+                        <a href="javascript:void(0);" class="btn btn-primary">My properties
+                            <img src="images/icons/chevron-right-white.svg" alt=""></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- ============================= /HEADER ============================= -->
+
+
+    <!-- ============================= MAP HEADER (compact — map view only) ============================= -->
+    <div class="hs-map-header" id="hsMapHeader" aria-hidden="true">
+        <div class="hs-map-header-inner">
+            <!-- Search -->
+            <div class="hs-search-bar hs-search-bar--light">
+                <div class="hs-search-input-wrap">
+                    <img src="images/icons/search.svg" alt="" class="hs-search-icon" aria-hidden="true">
+                    <input type="text" class="hs-search-input" placeholder="Enter City, neighborhood, ZIP, or address"
+                        aria-label="Search properties">
+                </div>
+                <button class="hs-search-btn" type="button">
+                    Search
+                    <img src="images/icons/chevron-right-white.svg" alt="">
+                </button>
+            </div>
+            <!-- Filter Pills (light style) -->
+            <div class="hs-filter-pills hs-filter-pills--light">
+
+                <!-- Price -->
+                <div class="hs-filter-wrap">
+                    <button class="hs-pill hs-pill--light" type="button" data-dropdown="mhd-price"
+                        data-filter-pill="price">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="#0E171F" stroke-width="1.5" />
+                            <path d="M12 7v10M9.5 9.5h3.75a1.25 1.25 0 0 1 0 2.5H10.5a1.25 1.25 0 0 0 0 2.5H14.5"
+                                stroke="#0E171F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span data-filter-label="price">Any price</span>
+                    </button>
+                    <div class="hs-filter-dropdown" id="mhd-price">
+                        <p class="hs-dd-title">Price range</p>
+                        <div class="hs-price-row">
+                            <div class="hs-price-col">
+                                <label class="hs-price-lbl">Min price</label>
+                                <select class="hs-price-select" id="mhd-price-min">
+                                    <option value="">No min</option>
+                                    <option value="400000">$400K</option>
+                                    <option value="500000">$500K</option>
+                                    <option value="600000">$600K</option>
+                                    <option value="750000">$750K</option>
+                                    <option value="1000000">$1M</option>
+                                    <option value="1250000">$1.25M</option>
+                                    <option value="1500000">$1.5M</option>
+                                    <option value="2000000">$2M</option>
+                                </select>
+                            </div>
+                            <div class="hs-price-col">
+                                <label class="hs-price-lbl">Max price</label>
+                                <select class="hs-price-select" id="mhd-price-max">
+                                    <option value="">No max</option>
+                                    <option value="500000">$500K</option>
+                                    <option value="600000">$600K</option>
+                                    <option value="750000">$750K</option>
+                                    <option value="1000000">$1M</option>
+                                    <option value="1250000">$1.25M</option>
+                                    <option value="1500000">$1.5M</option>
+                                    <option value="2000000">$2M</option>
+                                    <option value="2500000">$2.5M+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hs-dd-footer">
+                            <button class="hs-dd-clear" type="button" data-clear="price">Clear</button>
+                            <button class="hs-dd-apply" type="button" data-apply="price">Apply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beds -->
+                <div class="hs-filter-wrap">
+                    <button class="hs-pill hs-pill--light" type="button" data-dropdown="mhd-beds"
+                        data-filter-pill="beds">
+                        <img src="images/icons/bed-single.svg" alt="" aria-hidden="true">
+                        <span data-filter-label="beds">Any beds</span>
+                    </button>
+                    <div class="hs-filter-dropdown" id="mhd-beds">
+                        <p class="hs-dd-title">Bedrooms</p>
+                        <div class="hs-opts">
+                            <button class="hs-opt hs-opt--active" type="button" data-filter="beds" data-value=""
+                                data-label="Any beds">Any</button>
+                            <button class="hs-opt" type="button" data-filter="beds" data-value="1"
+                                data-label="1+ beds">1+</button>
+                            <button class="hs-opt" type="button" data-filter="beds" data-value="2"
+                                data-label="2+ beds">2+</button>
+                            <button class="hs-opt" type="button" data-filter="beds" data-value="3"
+                                data-label="3+ beds">3+</button>
+                            <button class="hs-opt" type="button" data-filter="beds" data-value="4"
+                                data-label="4+ beds">4+</button>
+                            <button class="hs-opt" type="button" data-filter="beds" data-value="5"
+                                data-label="5+ beds">5+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baths -->
+                <div class="hs-filter-wrap">
+                    <button class="hs-pill hs-pill--light" type="button" data-dropdown="mhd-baths"
+                        data-filter-pill="baths">
+                        <img src="images/icons/bathtub.svg" alt="" aria-hidden="true">
+                        <span data-filter-label="baths">Any baths</span>
+                    </button>
+                    <div class="hs-filter-dropdown" id="mhd-baths">
+                        <p class="hs-dd-title">Bathrooms</p>
+                        <div class="hs-opts">
+                            <button class="hs-opt hs-opt--active" type="button" data-filter="baths" data-value=""
+                                data-label="Any baths">Any</button>
+                            <button class="hs-opt" type="button" data-filter="baths" data-value="1"
+                                data-label="1+ baths">1+</button>
+                            <button class="hs-opt" type="button" data-filter="baths" data-value="2"
+                                data-label="2+ baths">2+</button>
+                            <button class="hs-opt" type="button" data-filter="baths" data-value="3"
+                                data-label="3+ baths">3+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Type -->
+                <div class="hs-filter-wrap">
+                    <button class="hs-pill hs-pill--light" type="button" data-dropdown="mhd-type"
+                        data-filter-pill="type">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9.5Z" stroke="#0E171F"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M9 21V12h6v9" stroke="#0E171F" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span data-filter-label="type">House</span>
+                    </button>
+                    <div class="hs-filter-dropdown" id="mhd-type">
+                        <p class="hs-dd-title">Property type</p>
+                        <div class="hs-opts hs-opts--wrap">
+                            <button class="hs-opt" type="button" data-filter="type" data-value=""
+                                data-label="Any type">Any</button>
+                            <button class="hs-opt hs-opt--active" type="button" data-filter="type" data-value="house"
+                                data-label="House">House</button>
+                            <button class="hs-opt" type="button" data-filter="type" data-value="condo"
+                                data-label="Condo">Condo</button>
+                            <button class="hs-opt" type="button" data-filter="type" data-value="townhouse"
+                                data-label="Townhouse">Townhouse</button>
+                            <button class="hs-opt" type="button" data-filter="type" data-value="semi"
+                                data-label="Semi-det.">Semi-det.</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More filters -->
+                <div class="hs-filter-wrap">
+                    <button class="hs-pill hs-pill--light" type="button" data-dropdown="mhd-more"
+                        data-filter-pill="more">
+                        <span data-filter-label="more">More</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9l6 6 6-6" stroke="#0E171F" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="hs-filter-dropdown hs-filter-dropdown--right" id="mhd-more">
+                        <p class="hs-dd-title">More filters</p>
+                        <div class="hs-checks">
+                            <label class="hs-check-row">
+                                <input type="checkbox" class="hs-check-inp" data-filter="more" value="open-house"> Open
+                                house
+                            </label>
+                            <label class="hs-check-row">
+                                <input type="checkbox" class="hs-check-inp" data-filter="more" value="garage"> Garage
+                            </label>
+                            <label class="hs-check-row">
+                                <input type="checkbox" class="hs-check-inp" data-filter="more" value="pool"> Pool
+                            </label>
+                            <label class="hs-check-row">
+                                <input type="checkbox" class="hs-check-inp" data-filter="more" value="basement">
+                                Basement
+                            </label>
+                            <label class="hs-check-row">
+                                <input type="checkbox" class="hs-check-inp" data-filter="more" value="new-listing"> New
+                                listing
+                            </label>
+                        </div>
+                        <div class="hs-dd-footer">
+                            <button class="hs-dd-clear" type="button" data-clear="more">Clear</button>
+                            <button class="hs-dd-apply" type="button" data-apply="more">Apply</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ============================= /MAP HEADER ============================= -->
+
+
+    <!-- ============================= 1. HERO ============================= -->
+    <section class="hs-hero" id="hsHero">
+        <div class="hs-hero-overlay" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hs-hero-inner">
+
+                <!-- Badge -->
+                <div class="hs-hero-badge-wrap">
+                    <span class="hs-hero-badge">Homes for sale</span>
+                </div>
+
+                <!-- Title -->
+                <h1 class="hs-hero-title">Find Your Dream Home<br>in Mississauga</h1>
+
+                <!-- Search Bar -->
+                <div class="hs-search-bar">
+                    <div class="hs-search-input-wrap">
+                        <img src="images/icons/search.svg" alt="" class="hs-search-icon" aria-hidden="true">
+                        <input type="text" class="hs-search-input"
+                            placeholder="Enter City, neighborhood, ZIP, or address" aria-label="Search properties">
+                    </div>
+                    <button class="hs-search-btn" type="button">
+                        Search
+                        <img src="images/icons/chevron-right-white.svg" alt="">
+                    </button>
+                </div>
+
+                <!-- Filter Pills -->
+                <div class="hs-filter-pills">
+
+                    <!-- Price -->
+                    <div class="hs-filter-wrap">
+                        <button class="hs-pill" type="button" data-dropdown="hd-price" data-filter-pill="price">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5" />
+                                <path d="M12 7v10M9.5 9.5h3.75a1.25 1.25 0 0 1 0 2.5H10.5a1.25 1.25 0 0 0 0 2.5H14.5"
+                                    stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span data-filter-label="price">Any price</span>
+                        </button>
+                        <div class="hs-filter-dropdown" id="hd-price">
+                            <p class="hs-dd-title">Price range</p>
+                            <div class="hs-price-row">
+                                <div class="hs-price-col">
+                                    <label class="hs-price-lbl">Min price</label>
+                                    <select class="hs-price-select" id="hd-price-min">
+                                        <option value="">No min</option>
+                                        <option value="400000">$400K</option>
+                                        <option value="500000">$500K</option>
+                                        <option value="600000">$600K</option>
+                                        <option value="750000">$750K</option>
+                                        <option value="1000000">$1M</option>
+                                        <option value="1250000">$1.25M</option>
+                                        <option value="1500000">$1.5M</option>
+                                        <option value="2000000">$2M</option>
+                                    </select>
+                                </div>
+                                <div class="hs-price-col">
+                                    <label class="hs-price-lbl">Max price</label>
+                                    <select class="hs-price-select" id="hd-price-max">
+                                        <option value="">No max</option>
+                                        <option value="500000">$500K</option>
+                                        <option value="600000">$600K</option>
+                                        <option value="750000">$750K</option>
+                                        <option value="1000000">$1M</option>
+                                        <option value="1250000">$1.25M</option>
+                                        <option value="1500000">$1.5M</option>
+                                        <option value="2000000">$2M</option>
+                                        <option value="2500000">$2.5M+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="hs-dd-footer">
+                                <button class="hs-dd-clear" type="button" data-clear="price">Clear</button>
+                                <button class="hs-dd-apply" type="button" data-apply="price">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beds -->
+                    <div class="hs-filter-wrap">
+                        <button class="hs-pill" type="button" data-dropdown="hd-beds" data-filter-pill="beds">
+                            <img src="images/icons/bed-single.svg" alt="" aria-hidden="true">
+                            <span data-filter-label="beds">Any beds</span>
+                        </button>
+                        <div class="hs-filter-dropdown" id="hd-beds">
+                            <p class="hs-dd-title">Bedrooms</p>
+                            <div class="hs-opts">
+                                <button class="hs-opt hs-opt--active" type="button" data-filter="beds" data-value=""
+                                    data-label="Any beds">Any</button>
+                                <button class="hs-opt" type="button" data-filter="beds" data-value="1"
+                                    data-label="1+ beds">1+</button>
+                                <button class="hs-opt" type="button" data-filter="beds" data-value="2"
+                                    data-label="2+ beds">2+</button>
+                                <button class="hs-opt" type="button" data-filter="beds" data-value="3"
+                                    data-label="3+ beds">3+</button>
+                                <button class="hs-opt" type="button" data-filter="beds" data-value="4"
+                                    data-label="4+ beds">4+</button>
+                                <button class="hs-opt" type="button" data-filter="beds" data-value="5"
+                                    data-label="5+ beds">5+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Baths -->
+                    <div class="hs-filter-wrap">
+                        <button class="hs-pill" type="button" data-dropdown="hd-baths" data-filter-pill="baths">
+                            <img src="images/icons/bathtub.svg" alt="" aria-hidden="true">
+                            <span data-filter-label="baths">Any baths</span>
+                        </button>
+                        <div class="hs-filter-dropdown" id="hd-baths">
+                            <p class="hs-dd-title">Bathrooms</p>
+                            <div class="hs-opts">
+                                <button class="hs-opt hs-opt--active" type="button" data-filter="baths" data-value=""
+                                    data-label="Any baths">Any</button>
+                                <button class="hs-opt" type="button" data-filter="baths" data-value="1"
+                                    data-label="1+ baths">1+</button>
+                                <button class="hs-opt" type="button" data-filter="baths" data-value="2"
+                                    data-label="2+ baths">2+</button>
+                                <button class="hs-opt" type="button" data-filter="baths" data-value="3"
+                                    data-label="3+ baths">3+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property Type -->
+                    <div class="hs-filter-wrap">
+                        <button class="hs-pill" type="button" data-dropdown="hd-type" data-filter-pill="type">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 10.5L12 3l9 7.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-9.5Z" stroke="white"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9 21V12h6v9" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span data-filter-label="type">House</span>
+                        </button>
+                        <div class="hs-filter-dropdown" id="hd-type">
+                            <p class="hs-dd-title">Property type</p>
+                            <div class="hs-opts hs-opts--wrap">
+                                <button class="hs-opt" type="button" data-filter="type" data-value=""
+                                    data-label="Any type">Any</button>
+                                <button class="hs-opt hs-opt--active" type="button" data-filter="type"
+                                    data-value="house" data-label="House">House</button>
+                                <button class="hs-opt" type="button" data-filter="type" data-value="condo"
+                                    data-label="Condo">Condo</button>
+                                <button class="hs-opt" type="button" data-filter="type" data-value="townhouse"
+                                    data-label="Townhouse">Townhouse</button>
+                                <button class="hs-opt" type="button" data-filter="type" data-value="semi"
+                                    data-label="Semi-det.">Semi-det.</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More filters -->
+                    <div class="hs-filter-wrap">
+                        <button class="hs-pill" type="button" data-dropdown="hd-more" data-filter-pill="more">
+                            <span data-filter-label="more">More</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9l6 6 6-6" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="hs-filter-dropdown hs-filter-dropdown--right" id="hd-more">
+                            <p class="hs-dd-title">More filters</p>
+                            <div class="hs-checks">
+                                <label class="hs-check-row">
+                                    <input type="checkbox" class="hs-check-inp" data-filter="more" value="open-house">
+                                    Open house
+                                </label>
+                                <label class="hs-check-row">
+                                    <input type="checkbox" class="hs-check-inp" data-filter="more" value="garage">
+                                    Garage
+                                </label>
+                                <label class="hs-check-row">
+                                    <input type="checkbox" class="hs-check-inp" data-filter="more" value="pool"> Pool
+                                </label>
+                                <label class="hs-check-row">
+                                    <input type="checkbox" class="hs-check-inp" data-filter="more" value="basement">
+                                    Basement
+                                </label>
+                                <label class="hs-check-row">
+                                    <input type="checkbox" class="hs-check-inp" data-filter="more" value="new-listing">
+                                    New listing
+                                </label>
+                            </div>
+                            <div class="hs-dd-footer">
+                                <button class="hs-dd-clear" type="button" data-clear="more">Clear</button>
+                                <button class="hs-dd-apply" type="button" data-apply="more">Apply</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ============================= /HERO ============================= -->
+
+
+    <!-- ============================= 2. LISTINGS ============================= -->
+    <section class="hs-listings">
+        <div class="container">
+
+            <!-- Results Header -->
+            <div class="hs-results-header">
+                <div class="hs-results-title-wrap">
+                    <h4 class="hs-results-title">Homes for sale in Mississauga</h4>
+                    <span class="hs-results-count">18 of 248 listings</span>
+                </div>
+                <div class="hs-results-controls">
+                    <!-- Sort dropdown -->
+                    <div class="hs-filter-wrap">
+                        <button class="hs-sort-btn" type="button" data-dropdown="sort-dd">
+                            <span id="sortLabel">Newest</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="hs-filter-dropdown hs-filter-dropdown--right hs-sort-dropdown" id="sort-dd">
+                            <p class="hs-dd-title">Sort by</p>
+                            <div class="hs-sort-opts">
+                                <button class="hs-sort-opt hs-sort-opt--active" type="button"
+                                    data-sort="newest">Newest listings</button>
+                                <button class="hs-sort-opt" type="button"
+                                    data-sort="oldest">Oldest listings</button>
+                                <button class="hs-sort-opt" type="button"
+                                    data-sort="price-high">Price: High to Low</button>
+                                <button class="hs-sort-opt" type="button"
+                                    data-sort="price-low">Price: Low to High</button>
+                                <button class="hs-sort-opt" type="button"
+                                    data-sort="popular">Most popular</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- View Toggle -->
+                    <div class="hs-view-toggle">
+                        <button class="hs-view-btn active" id="btnListView" type="button" onclick="hsSetView('list')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            List view
+                        </button>
+                        <button class="hs-view-btn" id="btnMapView" type="button" onclick="hsSetView('map')">
+                            <img src="images/icons/location.svg" alt="" aria-hidden="true">
+                            Map view
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Grid -->
+            <div class="hs-prop-grid">
+
+                <!-- Card 1 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-01.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 1,000,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-02.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 875,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-03.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 1,250,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-04.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 950,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-01.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 1,100,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-02.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 780,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-03.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 1,350,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-04.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 990,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-01.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 1,050,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-02.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 840,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-03.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 1,180,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-04.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 920,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 13 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-01.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 1,420,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 14 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-02.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 860,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 15 -->
+                <div class="hs-prop-card">
+                    <div class="hs-card-img">
+                        <img src="images/listing-03.jpg" alt="Property listing — In rutrum imperdiet">
+                    </div>
+                    <div class="hs-card-body">
+                        <h5 class="hs-card-price">$ 1,300,000</h5>
+                        <p class="hs-card-name">In rutrum imperdiet</p>
+                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter
+                            miller del altro.</p>
+                        <div class="hs-card-meta">
+                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern
+                                Ontario</span>
+                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Property Grid -->
+
+            <!-- Pagination -->
+            <div class="hs-pagination">
+                <button class="hs-page-nav hs-page-nav--disabled" type="button" aria-label="Previous page" aria-disabled="true">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="hs-page-btn hs-page-btn--active" type="button">1</button>
+                <button class="hs-page-btn" type="button">2</button>
+                <button class="hs-page-btn" type="button">3</button>
+                <button class="hs-page-btn hs-page-btn--ellipsis" type="button">...</button>
+                <button class="hs-page-nav" type="button" aria-label="Next page">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <!-- /Pagination -->
+
+            <!-- ============================= MAP VIEW PANEL (hidden by default) ============================= -->
+            <div class="hs-map-view" id="hsMapView">
+
+                <!-- Left: Sidebar — white card container -->
+                <div class="hs-map-sidebar">
+
+                    <!-- Scrollable card list + custom scrollbar track -->
+                    <div class="hs-map-sidebar-scroll">
+                        <div class="hs-map-sidebar-cards">
+
+                            <!-- Card 1 -->
+                            <div class="hs-prop-card">
+                                <div class="hs-card-img">
+                                    <img src="images/listing-01.jpg" alt="Property listing — In rutrum imperdiet">
+                                </div>
+                                <div class="hs-card-body">
+                                    <h5 class="hs-card-price">$ 1,000,000</h5>
+                                    <p class="hs-card-name">In rutrum imperdiet</p>
+                                    <div class="hs-card-content">
+                                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter miller del altro.</p>
+                                        <div class="hs-card-meta">
+                                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern Ontario</span>
+                                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="hs-prop-card">
+                                <div class="hs-card-img">
+                                    <img src="images/listing-02.jpg" alt="Property listing — In rutrum imperdiet">
+                                </div>
+                                <div class="hs-card-body">
+                                    <h5 class="hs-card-price">$ 875,000</h5>
+                                    <p class="hs-card-name">In rutrum imperdiet</p>
+                                    <div class="hs-card-content">
+                                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter miller del altro.</p>
+                                        <div class="hs-card-meta">
+                                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern Ontario</span>
+                                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="hs-prop-card">
+                                <div class="hs-card-img">
+                                    <img src="images/listing-03.jpg" alt="Property listing — In rutrum imperdiet">
+                                </div>
+                                <div class="hs-card-body">
+                                    <h5 class="hs-card-price">$ 1,250,000</h5>
+                                    <p class="hs-card-name">In rutrum imperdiet</p>
+                                    <div class="hs-card-content">
+                                        <p class="hs-card-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter miller del altro.</p>
+                                        <div class="hs-card-meta">
+                                            <span class="hs-meta-item"><img src="images/icons/location.svg" alt=""> Southern Ontario</span>
+                                            <span class="hs-meta-item"><img src="images/icons/bed-single.svg" alt=""> 4 bed</span>
+                                            <span class="hs-meta-item"><img src="images/icons/bathtub.svg" alt=""> 3 bath</span>
+                                            <span class="hs-meta-item"><img src="images/icons/dashed-line.svg" alt=""> 2,400 sqft</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Custom scrollbar track (visual — Figma) -->
+                        <div class="hs-map-sidebar-track" aria-hidden="true">
+                            <div class="hs-map-sidebar-track-top"></div>
+                            <div class="hs-map-sidebar-track-thumb"></div>
+                            <div class="hs-map-sidebar-track-bottom"></div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar pagination -->
+                    <div class="hs-pagination hs-pagination--sidebar">
+                        <button class="hs-page-nav hs-page-nav--disabled" type="button" aria-label="Previous page" aria-disabled="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="hs-page-btn hs-page-btn--active" type="button">1</button>
+                        <button class="hs-page-btn" type="button">2</button>
+                        <button class="hs-page-btn" type="button">3</button>
+                        <button class="hs-page-btn hs-page-btn--ellipsis" type="button">...</button>
+                        <button class="hs-page-nav" type="button" aria-label="Next page">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Right: Map area — white card -->
+                <div class="hs-map-area">
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-79.8%2C43.4%2C-79.3%2C43.8&amp;layer=mapnik"
+                        title="Map of Mississauga listings" loading="lazy" allowfullscreen>
+                    </iframe>
+                    <!-- Blue circle map pins overlay — marker-pin-02 stroke icon (Figma exact) -->
+                    <div class="hs-map-pins" aria-hidden="true">
+                        <span class="hs-map-pin" style="top:calc(50% - 100px);left:calc(50% + 13px)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.43a3.12 3.12 0 1 0 0-6.24 3.12 3.12 0 0 0 0 6.24Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.62 8.49c1.97-8.66 14.8-8.65 16.76.01 1.15 5.08-2.01 9.38-4.78 12.04a5.193 5.193 0 0 1-7.21 0C5.63 17.88 2.47 13.57 3.62 8.49Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="hs-map-pin" style="top:calc(50% + 24px);left:calc(50% - 86px)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.43a3.12 3.12 0 1 0 0-6.24 3.12 3.12 0 0 0 0 6.24Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.62 8.49c1.97-8.66 14.8-8.65 16.76.01 1.15 5.08-2.01 9.38-4.78 12.04a5.193 5.193 0 0 1-7.21 0C5.63 17.88 2.47 13.57 3.62 8.49Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="hs-map-pin" style="top:calc(50% + 187px);left:calc(50% - 50px)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.43a3.12 3.12 0 1 0 0-6.24 3.12 3.12 0 0 0 0 6.24Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.62 8.49c1.97-8.66 14.8-8.65 16.76.01 1.15 5.08-2.01 9.38-4.78 12.04a5.193 5.193 0 0 1-7.21 0C5.63 17.88 2.47 13.57 3.62 8.49Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="hs-map-pin" style="top:calc(50% + 164px);left:calc(50% - 390px)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.43a3.12 3.12 0 1 0 0-6.24 3.12 3.12 0 0 0 0 6.24Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.62 8.49c1.97-8.66 14.8-8.65 16.76.01 1.15 5.08-2.01 9.38-4.78 12.04a5.193 5.193 0 0 1-7.21 0C5.63 17.88 2.47 13.57 3.62 8.49Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="hs-map-pin" style="top:calc(50% - 246px);left:calc(50% + 105px)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.43a3.12 3.12 0 1 0 0-6.24 3.12 3.12 0 0 0 0 6.24Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.62 8.49c1.97-8.66 14.8-8.65 16.76.01 1.15 5.08-2.01 9.38-4.78 12.04a5.193 5.193 0 0 1-7.21 0C5.63 17.88 2.47 13.57 3.62 8.49Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="hs-map-pin" style="top:calc(50% - 319px);left:calc(50% - 198px)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.43a3.12 3.12 0 1 0 0-6.24 3.12 3.12 0 0 0 0 6.24Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.62 8.49c1.97-8.66 14.8-8.65 16.76.01 1.15 5.08-2.01 9.38-4.78 12.04a5.193 5.193 0 0 1-7.21 0C5.63 17.88 2.47 13.57 3.62 8.49Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="hs-map-pin" style="top:calc(50% - 201px);left:calc(50% - 371px)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.43a3.12 3.12 0 1 0 0-6.24 3.12 3.12 0 0 0 0 6.24Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.62 8.49c1.97-8.66 14.8-8.65 16.76.01 1.15 5.08-2.01 9.38-4.78 12.04a5.193 5.193 0 0 1-7.21 0C5.63 17.88 2.47 13.57 3.62 8.49Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="hs-map-pin" style="top:calc(50% - 232px);left:calc(50% + 380px)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.43a3.12 3.12 0 1 0 0-6.24 3.12 3.12 0 0 0 0 6.24Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.62 8.49c1.97-8.66 14.8-8.65 16.76.01 1.15 5.08-2.01 9.38-4.78 12.04a5.193 5.193 0 0 1-7.21 0C5.63 17.88 2.47 13.57 3.62 8.49Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="hs-map-pin" style="top:calc(50% - 114px);left:calc(50% - 289px)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.43a3.12 3.12 0 1 0 0-6.24 3.12 3.12 0 0 0 0 6.24Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.62 8.49c1.97-8.66 14.8-8.65 16.76.01 1.15 5.08-2.01 9.38-4.78 12.04a5.193 5.193 0 0 1-7.21 0C5.63 17.88 2.47 13.57 3.62 8.49Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="hs-map-pin" style="top:calc(50% - 367px);left:calc(50% + 296px)">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 13.43a3.12 3.12 0 1 0 0-6.24 3.12 3.12 0 0 0 0 6.24Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.62 8.49c1.97-8.66 14.8-8.65 16.76.01 1.15 5.08-2.01 9.38-4.78 12.04a5.193 5.193 0 0 1-7.21 0C5.63 17.88 2.47 13.57 3.62 8.49Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ============================= /MAP VIEW PANEL ============================= -->
+
+        </div>
+    </section>
+    <!-- ============================= /LISTINGS ============================= -->
+
+
+    <!-- ============================= 3. CTA ============================= -->
+    <!-- Wave: white to blue -->
+    <div class="shape" aria-hidden="true" style="background-color: #FBFDFF;">
+        <img src="images/icons/blue-shape.svg" alt="Decorative wave shape" class="shape-img">
+    </div>
+    <section class="hv-cta-blue">
+
+        <!-- Decorative corner house photos -->
+        <div class="hv-cta-deco hv-cta-deco--tl" aria-hidden="true">
+            <img src="images/listing-03.jpg" alt="">
+        </div>
+        <div class="hv-cta-deco hv-cta-deco--bl" aria-hidden="true">
+            <img src="images/listing-04.jpg" alt="">
+        </div>
+        <div class="hv-cta-deco hv-cta-deco--tr" aria-hidden="true">
+            <img src="images/listing-01.jpg" alt="">
+        </div>
+        <div class="hv-cta-deco hv-cta-deco--br" aria-hidden="true">
+            <img src="images/listing-02.jpg" alt="">
+        </div>
+
+        <div class="container">
+            <div class="hv-cta-blue-content">
+                <h2 class="hv-cta-blue-heading">Need help<br>finding a home?</h2>
+                <p class="hv-cta-blue-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br
+                        class="d-none d-lg-block">Vivamus ut interdum lacus.</p>
+                <a href="javascript:void(0);" class="hv-cta-blue-btn btn">
+                    Contact an agent
+                    <img src="images/icons/chevron-right.svg" alt="">
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <!-- ============================= /CTA ============================= -->
+
+
+    <!-- ============================= FOOTER ============================= -->
+    <footer class="home-footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Logo / About -->
+                <div class="col-lg-3 col-md-6">
+                    <a href="#" class="footer-logo d-inline-flex align-items-center justify-content-center">Logo</a>
+                    <p class="footer-text">Local expertise. Honest advice. Real results for buyers, sellers, and
+                        homeowners.</p>
+                    <div class="footer-social">
+                        <h6 class="footer-title">Follow Us</h6>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><img src="images/icons/facebook.svg" alt="Facebook"></a>
+                            <a href="#" aria-label="X"><img src="images/icons/x.svg" alt="X"></a>
+                            <a href="#" aria-label="Instagram"><img src="images/icons/instagram.svg"
+                                    alt="Instagram"></a>
+                            <a href="#" aria-label="TikTok"><img src="images/icons/tiktok.svg" alt="TikTok"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Discover -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Discover</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Search Listings</a></li>
+                        <li><a href="#">Open Houses</a></li>
+                        <li><a href="#">Pre-construction</a></li>
+                        <li><a href="#">First-Time Buyers</a></li>
+                    </ul>
+                </div>
+                <!-- Home Owner -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Home Owner</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Home Value Hub</a></li>
+                        <li><a href="#">Real Estate Scorecard</a></li>
+                        <li><a href="#">My Properties</a></li>
+                        <li><a href="#">Sell Your Home</a></li>
+                    </ul>
+                </div>
+                <!-- Company -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Company</h6>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Flyer Scan</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
+                <!-- Primary Contact -->
+                <div class="col-lg-3 col-md-12">
+                    <h6 class="footer-title">Primary Contact</h6>
+                    <div class="contact-box">
+                        <a href="mailto:contact@homeoptima.ca">
+                            <span class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M10.4975 11.9988H4.9975M4.91284 12.2903L2.57792 19.265c-.183.548-.275.822-.209.99.066.148.19.259.34.302.175.049.439-.07.966-.307l16.712-7.52c.514-.232.771-.347.851-.508a.5.5 0 0 0 0-.444c-.08-.161-.337-.276-.851-.508L3.659 3.74654c-.526-.236-.79-.354-.966-.307a.5.5 0 0 0-.34.302c-.066.168.027.441.21.99l2.342 7.062c.03.094.046.141.052.19a.5.5 0 0 1-.001.19c-.006.048-.022.095-.052.189Z"
+                                        stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>contact@homeoptima.ca</span>
+                            <svg class="ms-auto" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 12L10 8L6 4" stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="tel:+1234567896">
+                            <span class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M8.38028 8.85335C9.07627 10.303 10.0251 11.6616 11.2266 12.8632C12.4282 14.0648 13.7869 15.0136 15.2365 15.7096c.1247.0698.187.0998.2659.1228a1.5 1.5 0 0 0 1.2-.208c.067-.048.124-.105.238-.219.35-.35.524-.524.701-.64a2 2 0 0 1 2.2 0c.177.116.35.29.7.64l.195.196c.531.531.797.797.942 1.082a2.5 2.5 0 0 1 0 2.238c-.145.285-.41.55-.941 1.082l-.158.157c-.529.53-.794.795-1.154.997-.4.224-1.02.386-1.479.384-.428-.001-.71-.08-1.275-.24a18.26 18.26 0 0 1-7.944-4.765 18.26 18.26 0 0 1-4.765-7.944c-.16-.564-.24-.847-.24-1.275-.002-.458.16-1.079.383-1.478.202-.36.467-.625.997-1.155l.157-.157c.531-.531.797-.797 1.082-.942a2.5 2.5 0 0 1 2.238 0c.285.145.55.41 1.082.942l.195.195c.35.35.524.524.64.7a2 2 0 0 1 0 2.201c-.116.177-.29.35-.64.7-.114.114-.171.171-.22.238a1.5 1.5 0 0 0-.207 1.2c.023.079.053.14.112.266Z"
+                                        stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>(123) 456-7896</span>
+                            <svg class="ms-auto" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 12L10 8L6 4" stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                    <a href="#" class="btn-contact mt-3">Contact us
+                        <img src="images/icons/chevron-right.svg" alt=""></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom mt-5 pt-4">
+                <div class="row align-items-center gy-3">
+                    <div class="col-lg-4 text-center text-lg-start">
+                        <p class="mb-0 small-text">© 2026 HomeOptima — All Right Reserved</p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <a href="#" class="footer-brand"><img src="images/01.png" alt="HomeOptima"></a>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <a href="#" class="small-link">Terms of Use</a>
+                        <span class="dot">•</span>
+                        <a href="#" class="small-link">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ============================= /FOOTER ============================= -->
+
+
+    <!-- JS Libraries -->
+    <script src="libraries/jquery/jquery.min.js"></script>
+    <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="libraries/swiper/swiper-bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/custom-swiper.js"></script>
+</body>
+
+</html>

@@ -176,3 +176,227 @@
         background: $primary;
     }
 }
+
+// ---- Global Listing Card ----
+// Used in featured listings swiper and similar properties grids.
+
+.listing-card {
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    overflow: hidden;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+    @include transitionMedium;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0px 16px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .listing-img {
+        height: 320px;
+        overflow: hidden;
+
+        @include respond("phone") { height: 220px; }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    .listing-body {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .listing-body-lower {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .listing-price {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 32px;
+        color: $dark;
+    }
+
+    .listing-name {
+        font-family: "Archivo", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: $dark;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .listing-desc {
+        font-size: 16px;
+        line-height: 24px;
+        color: #929DAA;
+        font-weight: 400;
+    }
+
+    .listing-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .listing-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 14px;
+        line-height: 16px;
+        color: #929DAA;
+        font-weight: 400;
+        white-space: nowrap;
+
+        img { width: 16px; height: 16px; }
+    }
+
+    &--sold {
+        .listing-img {
+            position: relative;
+            img { filter: grayscale(100%); }
+        }
+    }
+}
+
+.listing-sold-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(44, 110, 254, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.listing-sold-tag {
+    background: rgba(44, 110, 254, 0.82);
+    color: #fff;
+    font-family: "Archivo", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px 32px;
+    border-radius: 8px;
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(2px);
+}
+
+// ---- Global CTA Section ----
+// Used across multiple pages (main landing, first-time buyer, listing details).
+
+.cta-section {
+    position: relative;
+    background: transparent;
+
+    .cta-section-wave {
+        width: 100%;
+        line-height: 0;
+
+        img { width: 100%; display: block; }
+    }
+
+    .cta-inner {
+        position: relative;
+        background: $primary;
+        padding: 120px 40px;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-bg-wave {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.15;
+        z-index: 0;
+
+        img {
+            position: absolute;
+            width: 166%;
+            left: -33%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .cta-deco {
+        position: absolute;
+        z-index: 1;
+        border-radius: $radius-lg;
+        overflow: hidden;
+        border: 1px solid rgba($dark, 0.08);
+        box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
+
+        img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        @include respond("tab-port") { display: none; }
+
+        &--tl { width: 82px;  height: 82px;  top: 56px;    left: 160px;   }
+        &--bl { width: 197px; height: 197px; bottom: 64px;  left: 64px;    }
+        &--tr { width: 180px; height: 180px; top: 40px;    right: 140px;  }
+        &--br { width: 131px; height: 131px; bottom: 72px;  right: 152px;  }
+    }
+
+    .cta-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1000px;
+    }
+
+    .cta-heading {
+        font-family: "Archivo", sans-serif;
+        font-weight: 500;
+        font-size: 68px;
+        color: $white;
+        line-height: 1.1;
+        margin-bottom: 24px;
+
+        @include respond("tab-land") { font-size: 48px; }
+        @include respond("tab-port") { font-size: 36px; }
+    }
+
+    .cta-sub {
+        font-size: 20px;
+        line-height: 1.7;
+        color: rgba($white, 0.8);
+        font-weight: 400;
+        margin-bottom: 32px;
+    }
+
+    .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: $white;
+        color: $primary;
+        padding: 16px 24px !important;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: $radius;
+        @include transitionMedium;
+
+        img { width: 16px; height: 16px; }
+
+        &:hover { background: rgba($white, 0.9); color: $primary; }
+    }
+}

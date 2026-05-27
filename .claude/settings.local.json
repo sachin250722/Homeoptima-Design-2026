@@ -21,7 +21,10 @@
       "Bash(curl -s -o \"C:/Users/ADMIN/AppData/Local/Temp/page_hires.png\" \"https://www.figma.com/api/mcp/asset/301de5ab-4ff2-4887-a86d-e7bfb96afc09\")",
       "Bash(curl -s -o \"C:/Users/ADMIN/AppData/Local/Temp/sec_overview.png\" \"https://www.figma.com/api/mcp/asset/5c940f85-db25-4016-aa14-e1e8f5dbf062\")",
       "Bash(curl -s -o \"C:/Users/ADMIN/AppData/Local/Temp/sec_market.png\" \"https://www.figma.com/api/mcp/asset/d3aa48eb-a2ed-4668-bff0-5a8974a46556\")",
-      "Bash(curl -s -o \"C:/Users/ADMIN/AppData/Local/Temp/sec_valuation.png\" \"https://www.figma.com/api/mcp/asset/1f27278b-9bc5-423c-a644-774b3d57dc30\")"
+      "Bash(curl -s -o \"C:/Users/ADMIN/AppData/Local/Temp/sec_valuation.png\" \"https://www.figma.com/api/mcp/asset/1f27278b-9bc5-423c-a644-774b3d57dc30\")",
+      "Bash(Get-Item styles/css/style.css)",
+      "Bash(Select-Object LastWriteTime, Length)",
+      "PowerShell(Get-Item \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\styles\\\\css\\\\style.css\" | Select-Object LastWriteTime, @{n='SizeKB';e={[math]::Round\\($_.Length/1KB,1\\)}})"
     ]
   }
 }
