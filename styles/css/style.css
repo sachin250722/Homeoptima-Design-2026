@@ -12839,6 +12839,10 @@ textarea.form-control {
 .cta-section {
   position: relative;
   background: transparent;
+  overflow: hidden;
+}
+.cta-section .wave-how {
+  z-index: 1;
 }
 .cta-section .cta-section-wave {
   width: 100%;
@@ -16233,7 +16237,7 @@ textarea.form-control {
   min-height: 492px;
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: 0;
   position: relative;
   overflow: hidden;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
@@ -16277,7 +16281,7 @@ textarea.form-control {
 }
 
 .hv-app-left {
-  flex: 0 0 500px;
+  flex: 0 0 600px;
   min-width: 0;
   position: relative;
   z-index: 1;
@@ -24614,4 +24618,848 @@ textarea.ld-form-control {
   opacity: 0.92;
   transform: translateY(-2px);
   color: #0d6efd;
+}
+
+.pc-section-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  background: linear-gradient(to bottom, rgba(44, 110, 254, 0.06), rgba(44, 110, 254, 0.16));
+  border: 0.5px solid #0d6efd;
+  border-radius: 999px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #0d6efd;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+.pc-section-badge--white {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.16));
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.pc-section-title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 62px;
+  color: #212529;
+  margin: 8px 0 0;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .pc-section-title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media only screen and (max-width: 35.9375rem) {
+  .pc-section-title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+.pc-section-desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  color: #929daa;
+  margin: 24px 0 0;
+}
+@media only screen and (max-width: 35.9375rem) {
+  .pc-section-desc {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.pc-page .ftb-hero-section {
+  background: #f5f7fa;
+  padding: 80px 0;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+}
+.pc-page .ftb-hero-section .container {
+  width: 100%;
+}
+.pc-page .ftb-hero-section .row {
+  align-items: center;
+}
+
+.pc-page .ftb-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-right: 32px;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .pc-page .ftb-hero-content {
+    padding-right: 0;
+  }
+}
+
+.pc-page .ftb-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background: rgba(14, 23, 31, 0.46);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 999px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 16px;
+  margin-right: 8px;
+  margin-bottom: 0;
+}
+
+.pc-page .ftb-hero-title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 78px;
+  color: #212529;
+  margin: 0;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .pc-page .ftb-hero-title {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+@media only screen and (max-width: 35.9375rem) {
+  .pc-page .ftb-hero-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+.pc-page .ftb-hero-sub {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  color: #929daa;
+  margin: 0;
+}
+@media only screen and (max-width: 35.9375rem) {
+  .pc-page .ftb-hero-sub {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.pc-hero__location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  color: rgba(14, 23, 31, 0.68);
+}
+.pc-hero__location svg {
+  flex-shrink: 0;
+}
+
+.pc-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.pc-hero__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: rgba(14, 23, 31, 0.68);
+}
+.pc-hero__meta-item svg {
+  flex-shrink: 0;
+}
+
+.pc-page .ftb-hero-img-wrap {
+  position: relative;
+  height: 320px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.pc-page .ftb-hero-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+
+.pc-page .ftb-benefits-section {
+  background: #fff;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.pc-page .ftb-wave-deco {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 1;
+}
+.pc-page .ftb-wave-deco svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.pc-page .ftb-benefits-title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 62px;
+  color: #212529;
+  margin: 8px 0 0;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .pc-page .ftb-benefits-title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media only screen and (max-width: 35.9375rem) {
+  .pc-page .ftb-benefits-title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+.pc-page .ftb-benefits-sub {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  color: #929daa;
+  margin: 24px 0 0;
+}
+@media only screen and (max-width: 35.9375rem) {
+  .pc-page .ftb-benefits-sub {
+    font-size: 16px;
+  }
+}
+
+.pc-page .ftb-benefit-card {
+  background: #fff;
+  border: 1px solid rgba(14, 23, 31, 0.08);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pc-page .ftb-benefit-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  line-height: 16px;
+  white-space: nowrap;
+  border: 0.5px solid transparent;
+}
+.pc-page .ftb-benefit-icon[style*="rgba(46,124,246"] {
+  border-color: rgba(46, 124, 246, 0.12);
+  color: #2e7cf6;
+}
+.pc-page .ftb-benefit-icon[style*="rgba(233,189,95"] {
+  border-color: rgba(233, 189, 95, 0.12);
+  color: #d3a644;
+}
+.pc-page .ftb-benefit-icon[style*="rgba(44,110,254"] {
+  border-color: rgba(44, 110, 254, 0.12);
+  color: #70cf75;
+}
+.pc-page .ftb-benefit-icon[style*="rgba(141,235,146"] {
+  border-color: rgba(141, 235, 146, 0.12);
+  color: #70cf75;
+}
+.pc-page .ftb-benefit-icon[style*="rgba(255,130,118"] {
+  border-color: rgba(255, 130, 118, 0.12);
+  color: #ff8276;
+}
+
+.pc-page .ftb-benefit-title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #212529;
+  margin: 0;
+}
+
+.pc-page .ftb-benefit-desc {
+  display: none;
+}
+
+.pc-amenities {
+  position: relative;
+  background: #0d6efd;
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-amenities__wave-top,
+.pc-amenities__wave-bottom {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.pc-amenities__wave-top svg,
+.pc-amenities__wave-bottom svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pc-amenities__body {
+  position: relative;
+  padding: 0 0 40px;
+  z-index: 1;
+}
+
+.pc-amenities__wave-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.pc-amenities__wave-lines svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pc-amenities__img-wrap {
+  border-radius: 24px;
+  overflow: hidden;
+  height: 438px;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .pc-amenities__img-wrap {
+    height: 280px;
+  }
+}
+
+.pc-amenities__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+
+.pc-amenities__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pc-amenities__title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 62px;
+  color: #fff;
+  margin: 0;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .pc-amenities__title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media only screen and (max-width: 35.9375rem) {
+  .pc-amenities__title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+.pc-amenities__desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+@media only screen and (max-width: 35.9375rem) {
+  .pc-amenities__desc {
+    font-size: 16px;
+  }
+}
+
+.pc-amenities__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pc-amenity-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.04);
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  transition: background 0.2s;
+}
+.pc-amenity-tag:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+.pc-amenity-tag svg {
+  flex-shrink: 0;
+}
+
+.pc-gallery {
+  padding: 80px 0;
+  background: #fff;
+}
+.pc-gallery .hvh-lf-header {
+  max-width: 700px;
+  margin-bottom: 56px;
+}
+.pc-gallery .ld-gallery {
+  display: flex;
+  gap: 24px;
+  height: 640px;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.pc-gallery .ld-gallery-main {
+  flex: 1;
+  min-width: 0;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.pc-gallery .ld-gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+.pc-gallery .ld-gallery-thumbs {
+  width: 296px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.pc-gallery .ld-gallery-thumbs .ld-gallery-thumb {
+  flex: 1;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.pc-gallery .ld-gallery-thumbs .ld-gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  display: block;
+}
+.pc-gallery .ld-thumb-strip {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: nowrap;
+}
+.pc-gallery .ld-thumb-images {
+  display: flex;
+  gap: 10px;
+}
+.pc-gallery .ld-thumb-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: 0.5;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.pc-gallery .ld-thumb-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pc-gallery .ld-thumb-img--active {
+  opacity: 1;
+  outline: 2px solid #0d6efd;
+  outline-offset: 0;
+}
+.pc-gallery .ld-thumb-img:hover {
+  opacity: 0.85;
+}
+.pc-gallery .ld-thumb-nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+}
+.pc-gallery .ld-thumb-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pc-gallery .ld-thumb-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #0d6efd;
+  display: block;
+}
+.pc-gallery .ld-thumb-dot--sm {
+  width: 8px;
+  height: 8px;
+  background: rgba(44, 110, 254, 0.24);
+}
+.pc-gallery .ld-thumb-arrows {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.pc-gallery .slider-arrow {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid rgba(146, 157, 170, 0.24);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.pc-gallery .slider-arrow:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+.pc-gallery .ld-count-badge {
+  background: #0d6efd;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 16px;
+}
+
+.pc-floorplans {
+  padding: 80px 0;
+  background: #fff;
+}
+.pc-floorplans__header {
+  max-width: 700px;
+  margin-bottom: 56px;
+}
+.pc-floorplans__header .pc-section-title {
+  margin-bottom: 0;
+}
+.pc-floorplans__grid-wrap {
+  position: relative;
+}
+.pc-floorplans__row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.pc-floorplans__row:last-of-type {
+  margin-bottom: 0;
+}
+
+.pc-fp-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+  height: 340px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  flex-shrink: 0;
+}
+.pc-fp-card--narrow {
+  width: 550px;
+}
+.pc-fp-card--wide {
+  flex: 1;
+  min-width: 0;
+}
+.pc-fp-card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+.pc-fp-card__icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.pc-fp-card__icon-wrap--gold {
+  background: rgba(233, 189, 95, 0.12);
+}
+.pc-fp-card__icon-wrap--blue {
+  background: rgba(46, 124, 246, 0.12);
+}
+.pc-fp-card__icon-wrap--green {
+  background: rgba(141, 235, 146, 0.12);
+}
+.pc-fp-card__icon-wrap--red {
+  background: rgba(255, 130, 118, 0.12);
+}
+.pc-fp-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.pc-fp-card__name {
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #212529;
+  margin: 0;
+}
+.pc-fp-card__desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #929daa;
+  margin: 0;
+}
+.pc-fp-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #212529;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.pc-fp-card__link:hover {
+  color: #0d6efd;
+}
+.pc-fp-card__img {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 55%;
+  height: calc(100% + 8px);
+  overflow: hidden;
+}
+.pc-fp-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pc-fp-card--narrow .pc-fp-card__img {
+  width: 55%;
+}
+.pc-fp-card--wide .pc-fp-card__img {
+  width: 58%;
+}
+
+.pc-floorplans__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(251, 253, 255, 0) 0%, rgba(251, 253, 255, 0.85) 30%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.pc-floorplans__overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  padding: 40px 80px;
+  max-width: 800px;
+}
+.pc-floorplans__overlay-title {
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 62px;
+  color: #212529;
+  margin: 0;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .pc-floorplans__overlay-title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media only screen and (max-width: 35.9375rem) {
+  .pc-floorplans__overlay-title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+.pc-floorplans__overlay-desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  color: #929daa;
+  margin: 0;
+}
+@media only screen and (max-width: 35.9375rem) {
+  .pc-floorplans__overlay-desc {
+    font-size: 16px;
+  }
+}
+.pc-floorplans__overlay-btn {
+  padding: 15px 24px;
+  font-size: 16px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pc-gallery .hvh-lf-heading {
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 62px;
+  color: #212529;
+}
+@media only screen and (max-width: 61.9375rem) {
+  .pc-gallery .hvh-lf-heading {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+@media only screen and (max-width: 35.9375rem) {
+  .pc-gallery .hvh-lf-heading {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
+.pc-gallery .hvh-lf-sub {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 32px;
+  color: #929daa;
+  margin-top: 24px;
+}
+
+@media only screen and (max-width: 61.9375rem) {
+  .pc-amenities__tags {
+    gap: 12px;
+  }
+  .pc-amenity-tag {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+  .pc-floorplans__row {
+    flex-wrap: wrap;
+  }
+  .pc-fp-card {
+    width: 100% !important;
+    flex: 1 1 300px;
+  }
+  .pc-floorplans__overlay-content {
+    padding: 40px 24px;
+  }
+}
+@media only screen and (max-width: 35.9375rem) {
+  .pc-page .ftb-hero-section {
+    padding: 48px 0;
+  }
+  .pc-amenities__img-wrap {
+    height: 220px;
+  }
+  .pc-gallery {
+    padding: 48px 0;
+  }
+  .pc-gallery .ld-gallery {
+    height: 300px;
+  }
+  .pc-gallery .ld-gallery-thumbs {
+    display: none;
+  }
+  .pc-floorplans {
+    padding: 48px 0;
+  }
+  .pc-floorplans__row {
+    flex-direction: column;
+  }
+  .pc-fp-card {
+    height: auto;
+    min-height: 300px;
+  }
+  .pc-fp-card__img {
+    display: none;
+  }
 }

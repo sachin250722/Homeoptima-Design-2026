@@ -442,11 +442,6 @@
     position: relative;
     z-index: 1;
 
-
-
-
-
-
     @include respond('tab-port') {
         padding: 80px 0;
     }
@@ -1047,7 +1042,7 @@
     min-height: 492px;
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 0;
     position: relative;
     overflow: hidden;
     box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
@@ -1089,7 +1084,7 @@
 
 // Left column
 .hv-app-left {
-    flex: 0 0 500px;
+    flex: 0 0 600px;
     min-width: 0;
     position: relative;
     z-index: 1;

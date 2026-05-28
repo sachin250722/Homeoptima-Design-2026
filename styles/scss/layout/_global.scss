@@ -304,6 +304,11 @@
 .cta-section {
     position: relative;
     background: transparent;
+    overflow: hidden;
+
+    .wave-how {
+        z-index: 1;
+    }
 
     .cta-section-wave {
         width: 100%;
