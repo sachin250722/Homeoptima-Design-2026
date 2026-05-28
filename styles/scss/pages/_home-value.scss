@@ -987,6 +987,42 @@
     }
 }
 
+.hv-cta-blue-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hv-cta-blue-btn--secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent !important;
+    border: 1.5px solid rgba($white, 0.7) !important;
+    color: $white !important;
+    padding: 16px 32px !important;
+    border-radius: $radius !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    @include transitionFast;
+
+    img {
+        width: 16px;
+        height: 16px;
+        filter: brightness(0) invert(1);
+    }
+
+    &:hover {
+        background: rgba($white, 0.12) !important;
+        border-color: $white !important;
+        color: $white !important;
+    }
+}
+
 
 // ============================================================
 //  7. APP DOWNLOAD SECTION
