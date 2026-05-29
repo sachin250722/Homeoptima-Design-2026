@@ -182,7 +182,8 @@ const featuredSwiper = new Swiper('.featured-swiper', {
     loop: true,
     grabCursor: true,
     navigation: {
-        nextEl: '#featuredNext',
+        nextEl: '#listingsNext',
+        prevEl: '#listingsPrev',
     },
     breakpoints: {
         576: {
@@ -193,6 +194,12 @@ const featuredSwiper = new Swiper('.featured-swiper', {
         },
         1200: {
             slidesPerView: 3.2,
+        },
+    },
+    on: {
+        slideChange: function () {
+            const prevBtn = document.getElementById('listingsPrev');
+            if (prevBtn) prevBtn.classList.toggle('swiper-btn-hidden', this.realIndex === 0);
         },
     },
 });
@@ -208,6 +215,7 @@ const citiesSwiper = new Swiper('.cities-swiper', {
     grabCursor: true,
     navigation: {
         nextEl: '#citiesNext',
+        prevEl: '#citiesPrev',
     },
     breakpoints: {
         576: {
@@ -218,6 +226,12 @@ const citiesSwiper = new Swiper('.cities-swiper', {
         },
         1200: {
             slidesPerView: 3.5,
+        },
+    },
+    on: {
+        slideChange: function () {
+            const prevBtn = document.getElementById('citiesPrev');
+            if (prevBtn) prevBtn.classList.toggle('swiper-btn-hidden', this.realIndex === 0);
         },
     },
 });

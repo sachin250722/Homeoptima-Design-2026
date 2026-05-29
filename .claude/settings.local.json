@@ -37,7 +37,20 @@
       "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/8b2b0790-a303-4d8d-9c0c-91d740b772fb\" -OutFile \"C:\\\\Users\\\\ADMIN\\\\Downloads\\\\ftb_figma_hd.png\"; Write-Host \"Done\")",
       "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/bbd0d311-f4a5-43a3-aee9-d5d1de68bf64\" -OutFile \"C:\\\\Users\\\\ADMIN\\\\Downloads\\\\ftb_testimonials.png\")",
       "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/9a77615e-1d35-44da-bdbf-9322f2ac24db\" -OutFile \"C:\\\\Users\\\\ADMIN\\\\Downloads\\\\ftb_consult.png\")",
-      "PowerShell(Select-String -Path \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\styles\\\\scss\\\\abstracts\\\\_variables.scss\" -Pattern \"\\(yellow|gold|E9BD|primary\\)\" | ForEach-Object { Write-Host \"$\\($_.LineNumber\\): $\\($_.Line.Trim\\(\\)\\)\" })"
+      "PowerShell(Select-String -Path \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\styles\\\\scss\\\\abstracts\\\\_variables.scss\" -Pattern \"\\(yellow|gold|E9BD|primary\\)\" | ForEach-Object { Write-Host \"$\\($_.LineNumber\\): $\\($_.Line.Trim\\(\\)\\)\" })",
+      "Bash(curl *)",
+      "Bash(Select-String -Pattern \"Error|error\")",
+      "Bash(Select-Object -First 10)",
+      "PowerShell(cd \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\"; $out = npx sass styles/scss/style.scss styles/css/style.css --no-source-map 2>&1; $errors = $out | Where-Object { $_ -match \"Error|error\" }; if \\($errors\\) { $errors } else { \"Compiled OK\" })",
+      "PowerShell(cd \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\"; $out = npx sass styles/scss/style.scss styles/css/style.css --no-source-map 2>&1; $errors = $out | Where-Object { $_ -match \"^Error\" }; if \\($errors\\) { $errors } else { \"Compiled OK\" })",
+      "Bash(where sass *)",
+      "Bash(where node-sass *)",
+      "Bash(npm --version)",
+      "Bash(Remove-Item \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\blog-design-screenshot.png\" -Force)",
+      "Bash(Remove-Item \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\blog-design-hires.png\" -Force)",
+      "Bash(del \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\blog-design-screenshot.png\")",
+      "Bash(del \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\blog-design-hires.png\")",
+      "PowerShell(Get-Content *)"
     ]
   }
 }

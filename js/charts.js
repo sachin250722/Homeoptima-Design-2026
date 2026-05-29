@@ -262,6 +262,304 @@
 })();
 
 // ================================================================
+//  Life Factors — Population: Households with Children (horizontal bar)
+// ================================================================
+(function () {
+  var ctx = document.getElementById("popHouseholdsChart");
+  if (!ctx) return;
+
+  var dataLabelPlugin = {
+    id: "dataLabelPlugin",
+    afterDatasetsDraw: function (chart) {
+      var c = chart.ctx;
+      chart.data.datasets.forEach(function (dataset, i) {
+        chart.getDatasetMeta(i).data.forEach(function (bar, j) {
+          var value = dataset.data[j] + "%";
+          c.save();
+          c.fillStyle = "rgba(14,23,31,0.88)";
+          c.font = "500 14px Poppins, sans-serif";
+          c.textAlign = "left";
+          c.textBaseline = "middle";
+          c.fillText(value, bar.x + 8, bar.y);
+          c.restore();
+        });
+      });
+    },
+  };
+
+  new Chart(ctx, {
+    type: "bar",
+    plugins: [dataLabelPlugin],
+    data: {
+      labels: ["Mississauga", "This Area"],
+      datasets: [
+        {
+          data: [53, 42],
+          backgroundColor: ["rgba(112,134,253,0.8)", "rgba(111,209,149,0.8)"],
+          borderWidth: 0,
+          borderRadius: 2,
+          barThickness: 40,
+        },
+      ],
+    },
+    options: {
+      indexAxis: "y",
+      responsive: true,
+      maintainAspectRatio: false,
+      layout: { padding: { right: 48 } },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function (ctx) { return " " + ctx.raw + "%"; },
+          },
+        },
+      },
+      scales: {
+        x: {
+          position: "top",
+          min: 0,
+          max: 100,
+          grid: { color: "rgba(14,23,31,0.06)" },
+          border: { display: false },
+          ticks: {
+            stepSize: 20,
+            font: { size: 12, family: "Poppins, sans-serif" },
+            color: "rgba(14,23,31,0.88)",
+          },
+        },
+        y: {
+          grid: { display: false },
+          border: { display: false },
+          ticks: {
+            font: { size: 12, family: "Poppins, sans-serif" },
+            color: "rgba(14,23,31,0.88)",
+          },
+        },
+      },
+    },
+  });
+})();
+
+// ================================================================
+//  Life Factors — Housing: Distribution doughnut chart
+// ================================================================
+(function () {
+  var ctx = document.getElementById("housingDistChart");
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      labels: ["Single-detached house", "Semi-detached house", "Apartment"],
+      datasets: [{
+        data: [62.5, 25, 12.5],
+        backgroundColor: ["rgba(112,134,253,0.85)", "rgba(111,209,149,0.85)", "rgba(255,130,118,0.85)"],
+        borderColor: ["#fff", "#fff", "#fff"],
+        borderWidth: 3,
+        hoverOffset: 6,
+      }],
+    },
+    options: {
+      cutout: "58%",
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function (ctx) {
+              return " " + ctx.label + ": " + ctx.raw + "%";
+            },
+          },
+        },
+      },
+    },
+  });
+})();
+
+// ================================================================
+//  Life Factors — Housing: Year of construction doughnut chart
+// ================================================================
+(function () {
+  var ctx = document.getElementById("housingYearChart");
+  if (!ctx) return;
+  new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      labels: ["1961 to 1980"],
+      datasets: [{
+        data: [100],
+        backgroundColor: ["rgba(112,134,253,0.85)"],
+        borderColor: ["#fff"],
+        borderWidth: 3,
+        hoverOffset: 6,
+      }],
+    },
+    options: {
+      cutout: "58%",
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: function (ctx) {
+              return " " + ctx.label + ": " + ctx.raw + "%";
+            },
+          },
+        },
+      },
+    },
+  });
+})();
+
+// ================================================================
+//  Life Factors — Education doughnut charts
+// ================================================================
+(function () {
+  function makeDoughnut(id, data) {
+    var ctx = document.getElementById(id);
+    if (!ctx) return;
+    new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        labels: ["Postsecondary certificate", "No certificate, diploma"],
+        datasets: [{
+          data: data,
+          backgroundColor: ["rgba(112,134,253,0.85)", "rgba(111,209,149,0.85)"],
+          borderColor: ["#fff", "#fff"],
+          borderWidth: 3,
+          hoverOffset: 6,
+        }],
+      },
+      options: {
+        cutout: "58%",
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function (ctx) { return " " + ctx.label + ": " + ctx.raw + "%"; },
+            },
+          },
+        },
+      },
+    });
+  }
+  makeDoughnut("eduMissChart", [61, 39]);
+  makeDoughnut("eduAreaChart", [55, 45]);
+})();
+
+// ================================================================
+//  Life Factors — Commute Times doughnut charts
+// ================================================================
+(function () {
+  var LABELS = ["Worked at home", "Less than 15 minutes", "15 to 29 minutes", "31 to 60 minutes", "60 minutes and over"];
+  var BG     = ["rgba(152,138,252,0.85)", "rgba(112,134,253,0.85)", "rgba(111,209,149,0.85)", "rgba(255,174,76,0.85)", "rgba(7,219,250,0.85)"];
+
+  function makeCommute(id, data) {
+    var ctx = document.getElementById(id);
+    if (!ctx) return;
+    new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        labels: LABELS,
+        datasets: [{
+          data: data,
+          backgroundColor: BG,
+          borderColor: "#fff",
+          borderWidth: 3,
+          hoverOffset: 6,
+        }],
+      },
+      options: {
+        cutout: "55%",
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function (ctx) { return " " + ctx.label + ": " + ctx.raw + "%"; },
+            },
+          },
+        },
+      },
+    });
+  }
+
+  makeCommute("commuteMissChart", [25.4, 28.4, 14.2, 24.6, 7.5]);
+  makeCommute("commuteAreaChart", [25.4, 30.8, 16.2, 28.0, 7.5]);
+})();
+
+// ================================================================
+//  Life Factors — Immigrants doughnut charts
+// ================================================================
+(function () {
+  function makeDoughnut(id, labels, data, colors) {
+    var ctx = document.getElementById(id);
+    if (!ctx) return;
+    new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        labels: labels,
+        datasets: [{
+          data: data,
+          backgroundColor: colors,
+          borderColor: "#fff",
+          borderWidth: 3,
+          hoverOffset: 6,
+        }],
+      },
+      options: {
+        cutout: "58%",
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function (ctx) { return " " + ctx.label + ": " + ctx.raw + "%"; },
+            },
+          },
+        },
+      },
+    });
+  }
+
+  // Immigrants - Mississauga
+  makeDoughnut(
+    "immigMissChart",
+    ["Non-immigrants", "Immigrants"],
+    [55, 45],
+    ["rgba(112,134,253,0.85)", "rgba(111,209,149,0.85)"]
+  );
+
+  // Immigrants - This Area
+  makeDoughnut(
+    "immigAreaChart",
+    ["Non-immigrants", "Immigrants"],
+    [65, 38],
+    ["rgba(112,134,253,0.85)", "rgba(111,209,149,0.85)"]
+  );
+
+  // Major Ethnicities - This Area
+  makeDoughnut(
+    "immigEthnicChart",
+    ["Indian (India)", "Pakistani", "Italian", "Jamaican", "Sri Lankan"],
+    [25.4, 22.1, 20.9, 10.5, 5.8],
+    [
+      "rgba(152,138,252,0.85)",
+      "rgba(112,134,253,0.85)",
+      "rgba(111,209,149,0.85)",
+      "rgba(255,174,76,0.85)",
+      "rgba(7,219,250,0.85)",
+    ]
+  );
+})();
+
+// ================================================================
 //  Real Estate Scorecard — Demand Supply Graph (rescDemandChart)
 //  3 lines: For sale (blue) / Sold (gold) / New (green)
 // ================================================================

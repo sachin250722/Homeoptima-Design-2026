@@ -1,0 +1,780 @@
+// ================================================================
+//  Pre-Construction  ·  pc-*  +  scoped overrides for shared classes
+// ================================================================
+
+// ── SHARED SECTION BADGE (blue gradient pill) ────────────────────
+// Used on: Project Overview, Gallery, Floorplans headers
+
+.pc-section-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    background: linear-gradient(to bottom, rgba(44, 110, 254, 0.06), rgba(44, 110, 254, 0.16));
+    border: 0.5px solid $primary;
+    border-radius: 999px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: $primary;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 16px;
+    white-space: nowrap;
+
+    &--white {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.16));
+        border-color: rgba(255, 255, 255, 0.5);
+        color: $white;
+    }
+}
+
+.pc-section-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 62px;
+    color: $dark;
+    margin: 8px 0 0;
+
+    @include respond(tab-port) { font-size: 36px; line-height: 48px; }
+    @include respond(phone) { font-size: 28px; line-height: 38px; }
+}
+
+.pc-section-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    color: #929daa;
+    margin: 24px 0 0;
+
+    @include respond(phone) { font-size: 16px; line-height: 26px; }
+}
+
+// ── SECTION 1: HERO ─────────────────────────────────────────────
+// Overrides ftb-hero-section to match pre-construction Figma design
+
+.pc-page .ftb-hero-section {
+    background: #f5f7fa;
+    padding: 80px 0;
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+
+    .container {
+        width: 100%;
+    }
+
+    .row {
+        align-items: center;
+    }
+}
+
+.pc-page .ftb-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-right: 32px;
+
+    @include respond(tab-port) { padding-right: 0; }
+}
+
+// Two hero badges side by side
+.pc-page .ftb-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background: rgba(14, 23, 31, 0.46);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 999px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 16px;
+    margin-right: 8px;
+    margin-bottom: 0;
+}
+
+.pc-page .ftb-hero-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 78px;
+    color: $dark;
+    margin: 0;
+
+    @include respond(tab-port) { font-size: 48px; line-height: 58px; }
+    @include respond(phone) { font-size: 36px; line-height: 46px; }
+}
+
+.pc-page .ftb-hero-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    color: #929daa;
+    margin: 0;
+
+    @include respond(phone) { font-size: 16px; line-height: 26px; }
+}
+
+// Hero location row
+.pc-hero__location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    color: rgba(14, 23, 31, 0.68);
+
+    svg { flex-shrink: 0; }
+}
+
+// Hero meta row (occupancy, price, etc.)
+.pc-hero__meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.pc-hero__meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba(14, 23, 31, 0.68);
+
+    svg { flex-shrink: 0; }
+}
+
+// Hero image
+.pc-page .ftb-hero-img-wrap {
+    position: relative;
+    height: 320px;
+    border-radius: 24px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 24px;
+        display: block;
+    }
+}
+
+// ── SECTION 2: PROJECT OVERVIEW ─────────────────────────────────
+// Overrides ftb-benefits-section to match pre-construction Figma design
+
+.pc-page .ftb-benefits-section {
+    background: $white;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+
+    .container { position: relative; z-index: 1; }
+}
+
+.pc-page .ftb-wave-deco {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 132px));
+    width: 2803px;
+    pointer-events: none;
+    z-index: 0;
+
+    img { width: 100%; display: block; }
+}
+
+.pc-page .ftb-ellipse-deco {
+    position: absolute;
+    left: -310px;
+    top: calc(50% + 86px);
+    transform: translateY(-50%);
+    width: 820px;
+    height: 820px;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+
+    img { width: 100%; height: 100%; display: block; }
+}
+
+.pc-page .ftb-benefits-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 62px;
+    color: $dark;
+    margin: 8px 0 0;
+
+    @include respond(tab-port) { font-size: 36px; line-height: 48px; }
+    @include respond(phone) { font-size: 28px; line-height: 38px; }
+}
+
+.pc-page .ftb-benefits-sub {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    color: #929daa;
+    margin: 24px 0 0;
+
+    @include respond(phone) { font-size: 16px; }
+}
+
+// Stat cards
+.pc-page .ftb-benefit-card {
+    background: $white;
+    border: 1px solid rgba(14, 23, 31, 0.08);
+    border-radius: $radius-lg;
+    padding: 24px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+    overflow: hidden;
+}
+
+// Stat card badge pill (icon + label)
+.pc-page .ftb-benefit-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 999px;
+    width: auto;
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    line-height: 16px;
+    white-space: nowrap;
+    border: 0.5px solid transparent;
+
+    img { width: 18px; height: 18px; flex-shrink: 0; }
+
+    &--blue {
+        background: rgba(46, 124, 246, 0.08);
+        border-color: rgba(46, 124, 246, 0.12);
+        color: #2e7cf6;
+    }
+    &--gold {
+        background: rgba(233, 189, 95, 0.08);
+        border-color: rgba(233, 189, 95, 0.12);
+        color: #d3a644;
+    }
+    &--green {
+        background: rgba(141, 235, 146, 0.08);
+        border-color: rgba(141, 235, 146, 0.12);
+        color: #70cf75;
+    }
+    &--red {
+        background: rgba(255, 130, 118, 0.08);
+        border-color: rgba(255, 130, 118, 0.12);
+        color: #ff8276;
+    }
+}
+
+.pc-page .ftb-benefit-title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    color: $dark;
+    margin: 0;
+}
+
+.pc-page .ftb-benefit-desc { display: none; }
+
+// ── SECTION 3: AMENITIES (Blue) ─────────────────────────────────
+
+.pc-amenities {
+    position: relative;
+    background: $primary;
+    overflow: hidden;
+    padding: 80px 0;
+
+    .container { position: relative; z-index: 1; }
+}
+
+// Figma wave-lines background image
+.pc-amenities__wave-lines {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 126px));
+    width: 2803px;
+    pointer-events: none;
+    z-index: 0;
+
+    img { width: 100%; display: block; }
+}
+
+// Ellipse blur (right edge, Figma)
+.pc-amenities__ellipse {
+    position: absolute;
+    right: -310px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 752px;
+    height: 752px;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+
+    img { width: 100%; height: 100%; display: block; }
+}
+
+.pc-amenities__img-wrap {
+    border-radius: $radius-lg;
+    overflow: hidden;
+    height: 438px;
+
+    @include respond(tab-port) { height: 280px; }
+}
+
+.pc-amenities__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $radius-lg;
+    display: block;
+}
+
+.pc-amenities__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.pc-amenities__title {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 62px;
+    color: $white;
+    margin: 0;
+
+    @include respond(tab-port) { font-size: 36px; line-height: 48px; }
+    @include respond(phone) { font-size: 28px; line-height: 38px; }
+}
+
+.pc-amenities__desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+
+    @include respond(phone) { font-size: 16px; }
+}
+
+.pc-amenities__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.pc-amenity-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.04);
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    transition: background 0.2s;
+
+    &:hover { background: rgba(255, 255, 255, 0.18); }
+
+    img,
+    svg { width: 24px; height: 24px; flex-shrink: 0; }
+}
+
+// ── SECTION 4: GALLERY ──────────────────────────────────────────
+// Wrapper only — uses existing ld-* + hvh-lf-* classes inside
+
+.pc-gallery {
+    padding: 80px 0;
+    background: $white;
+
+    .pc-gallery__header {
+        max-width: 700px;
+        margin-bottom: 56px;
+    }
+
+    // Make the ld-gallery match the Figma 1120px left + 296px right layout
+    .ld-gallery {
+        display: flex;
+        gap: 24px;
+        height: 640px;
+        border-radius: $radius-lg;
+        overflow: hidden;
+        margin-bottom: 24px;
+    }
+
+    .ld-gallery-main {
+        flex: 1;
+        min-width: 0;
+        border-radius: $radius-lg;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $radius-lg;
+            display: block;
+        }
+    }
+
+    .ld-gallery-thumbs {
+        width: 296px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .ld-gallery-thumb {
+            flex: 1;
+            border-radius: $radius-lg;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: $radius-lg;
+                display: block;
+            }
+        }
+    }
+
+    // Thumbnail strip layout
+    .ld-thumb-strip {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: nowrap;
+    }
+
+    .ld-thumb-images {
+        display: flex;
+        gap: 10px;
+    }
+
+    .ld-thumb-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        overflow: hidden;
+        opacity: 0.5;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: opacity 0.2s;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        &--active {
+            opacity: 1;
+            outline: 2px solid $primary;
+            outline-offset: 0;
+        }
+
+        &:hover { opacity: 0.85; }
+    }
+
+    .ld-thumb-nav {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 0;
+    }
+
+    .ld-thumb-dots {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .ld-thumb-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: $primary;
+        display: block;
+
+        &--sm {
+            width: 8px;
+            height: 8px;
+            background: rgba(44, 110, 254, 0.24);
+        }
+    }
+
+    .ld-thumb-arrows {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .slider-arrow {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: $white;
+        border: 1px solid rgba(146, 157, 170, 0.24);
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: box-shadow 0.2s;
+
+        &:hover { box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); }
+    }
+
+    .ld-count-badge {
+        background: $primary;
+        color: $white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        text-transform: uppercase;
+        padding: 14px 20px;
+        border-radius: 999px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        line-height: 16px;
+    }
+}
+
+// ── SECTION 5: FLOORPLANS ───────────────────────────────────────
+
+.pc-floorplans {
+    padding: 80px 0;
+    background: $white;
+
+    &__header {
+        max-width: 700px;
+        margin-bottom: 56px;
+
+        .pc-section-title { margin-bottom: 0; }
+    }
+
+    &__grid-wrap {
+        position: relative;
+    }
+
+    &__row {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 24px;
+
+        &:last-of-type { margin-bottom: 0; }
+    }
+}
+
+// Floorplan cards
+.pc-fp-card {
+    background: $white;
+    border-radius: $radius-lg;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    flex-shrink: 0;
+
+    &--narrow { width: 550px; }
+    &--wide { flex: 1; min-width: 0; }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        flex: 1;
+        min-width: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__icon-wrap {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        &--gold { background: rgba(233, 189, 95, 0.12); }
+        &--blue { background: rgba(46, 124, 246, 0.12); }
+        &--green { background: rgba(141, 235, 146, 0.12); }
+        &--red { background: rgba(255, 130, 118, 0.12); }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__name {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: $dark;
+        margin: 0;
+    }
+
+    &__desc {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        line-height: 22px;
+        color: #929daa;
+        margin: 0;
+    }
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: $dark;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        &:hover { color: $primary; }
+    }
+
+    // Floorplan image — bleeds over from right edge
+    &__img {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        width: 55%;
+        height: calc(100% + 8px);
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &--narrow &__img { width: 55%; }
+    &--wide &__img { width: 58%; }
+}
+
+// Frosted glass overlay (locked "Get Phase 2 floor plans" gate)
+.pc-floorplans__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(251, 253, 255, 0) 0%, rgba(251, 253, 255, 0.85) 30%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+        padding: 40px 80px;
+        max-width: 800px;
+    }
+
+    &-title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 62px;
+        color: $dark;
+        margin: 0;
+
+        @include respond(tab-port) { font-size: 36px; line-height: 48px; }
+        @include respond(phone) { font-size: 28px; line-height: 38px; }
+    }
+
+    &-desc {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+        color: #929daa;
+        margin: 0;
+
+        @include respond(phone) { font-size: 16px; }
+    }
+
+    &-btn {
+        padding: 15px 24px;
+        font-size: 16px;
+        border-radius: 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+// ── RESPONSIVE ──────────────────────────────────────────────────
+
+@include respond(tab-port) {
+    .pc-amenities__tags { gap: 12px; }
+    .pc-amenity-tag { padding: 10px 18px; font-size: 14px; }
+    .pc-floorplans__row { flex-wrap: wrap; }
+    .pc-fp-card { width: 100% !important; flex: 1 1 300px; }
+    .pc-floorplans__overlay-content { padding: 40px 24px; }
+}
+
+@include respond(phone) {
+    .pc-page .ftb-hero-section { padding: 48px 0; }
+    .pc-amenities__img-wrap { height: 220px; }
+    .pc-gallery { padding: 48px 0; }
+    .pc-gallery .ld-gallery { height: 300px; }
+    .pc-gallery .ld-gallery-thumbs { display: none; }
+    .pc-floorplans { padding: 48px 0; }
+    .pc-floorplans__row { flex-direction: column; }
+    .pc-fp-card { height: auto; min-height: 300px; }
+    .pc-fp-card__img { display: none; }
+}

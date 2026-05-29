@@ -3,9 +3,10 @@ if (jQuery('.dataTables_length select').length > 0) {
 }
 
 // ================================================================
-//  Listing Details — Gallery Slider
+//  Listing Details — Gallery Slider  (listing-details.html only)
 // ================================================================
 (function () {
+    if (!document.body.classList.contains('ld-page')) return;
     if (!document.querySelector('.ld-gallery-main')) return;
 
     var images = [
@@ -230,6 +231,36 @@ if (jQuery('.dataTables_length select').length > 0) {
 })();
 
 // ================================================================
+//  Real Estate Scorecard — Next Steps agent slider
+// ================================================================
+(function () {
+    if (!document.body.classList.contains('resc-page')) return;
+    var slides  = document.querySelectorAll('.resc-agent-slide');
+    if (!slides.length) return;
+    var dots    = document.querySelectorAll('.resc-agent-dot');
+    var btnPrev = document.querySelector('.resc-agent-nav__arrow[aria-label="Previous"]');
+    var btnNext = document.querySelector('.resc-agent-nav__arrow[aria-label="Next"]');
+    var current = 0;
+    var TOTAL   = slides.length;
+
+    function goTo(index) {
+        current = ((index % TOTAL) + TOTAL) % TOTAL;
+        slides.forEach(function (slide, i) {
+            slide.classList.toggle('resc-agent-slide--active', i === current);
+        });
+        dots.forEach(function (dot, i) {
+            dot.classList.toggle('resc-agent-dot--active', i === current);
+        });
+    }
+
+    if (btnPrev) btnPrev.addEventListener('click', function () { goTo(current - 1); });
+    if (btnNext) btnNext.addEventListener('click', function () { goTo(current + 1); });
+    dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () { goTo(i); });
+    });
+})();
+
+// ================================================================
 //  Home Search Landing — View toggle + Filter system
 // ================================================================
 (function () {
@@ -411,4 +442,102 @@ if (jQuery('.dataTables_length select').length > 0) {
         if (n >= 1000)    return Math.round(n / 1000) + 'K';
         return n;
     }
+})();
+
+// ================================================================
+//  Pre-Construction — Gallery Slider  (pc-page only)
+// ================================================================
+(function () {
+    if (!document.body.classList.contains('pc-page')) return;
+    var gallery = document.querySelector('.pc-gallery');
+    if (!gallery) return;
+
+    var mainImg    = gallery.querySelector('.ld-gallery-main img');
+    if (!mainImg) return;
+
+    var sideImgs   = gallery.querySelectorAll('.ld-gallery-thumb img');
+    var thumbItems = gallery.querySelectorAll('.ld-thumb-img');
+    var dots       = gallery.querySelectorAll('.ld-thumb-dot');
+    var counter    = gallery.querySelector('.ld-count-badge');
+    var btnPrev    = document.getElementById('ldThumbPrev');
+    var btnNext    = document.getElementById('ldThumbNext');
+
+    var THUMBS_VISIBLE = 5;
+    var current    = 0;
+    var windowStart = 0;
+
+    // Build image list from the thumb strip
+    var images = [];
+    thumbItems.forEach(function (t) {
+        var img = t.querySelector('img');
+        if (img) images.push({ src: img.src, alt: img.alt || '' });
+    });
+    if (!images.length) return;
+    var TOTAL = images.length;
+
+    function mod(n, m) { return ((n % m) + m) % m; }
+
+    function swapSrc(img, src, alt) {
+        img.classList.add('ld-img-swap');
+        setTimeout(function () {
+            img.src = src;
+            img.alt = alt || '';
+            img.classList.remove('ld-img-swap');
+        }, 150);
+    }
+
+    function render() {
+        var cur = images[current];
+        swapSrc(mainImg, cur.src, cur.alt);
+        if (sideImgs[0]) { swapSrc(sideImgs[0], images[mod(current + 1, TOTAL)].src, images[mod(current + 1, TOTAL)].alt); }
+        if (sideImgs[1]) { swapSrc(sideImgs[1], images[mod(current + 2, TOTAL)].src, images[mod(current + 2, TOTAL)].alt); }
+
+        if (current < windowStart) {
+            windowStart = current;
+        } else if (current >= windowStart + THUMBS_VISIBLE) {
+            windowStart = current - THUMBS_VISIBLE + 1;
+        }
+
+        thumbItems.forEach(function (thumb, i) {
+            var imgIdx = windowStart + i;
+            if (imgIdx >= TOTAL) {
+                thumb.style.visibility = 'hidden';
+            } else {
+                thumb.style.visibility = 'visible';
+                thumb.querySelector('img').src = images[imgIdx].src;
+                thumb.classList.toggle('ld-thumb-img--active', imgIdx === current);
+            }
+        });
+
+        var dotPage = Math.floor(current / THUMBS_VISIBLE);
+        dots.forEach(function (dot, i) {
+            dot.classList.toggle('ld-thumb-dot--active', i === dotPage);
+            dot.classList.toggle('ld-thumb-dot--sm',     i !== dotPage);
+        });
+
+        if (counter) counter.textContent = (current + 1) + ' of ' + TOTAL;
+    }
+
+    function goTo(index) {
+        current = mod(index, TOTAL);
+        render();
+    }
+
+    if (btnPrev) btnPrev.addEventListener('click', function () { goTo(current - 1); });
+    if (btnNext) btnNext.addEventListener('click', function () { goTo(current + 1); });
+
+    thumbItems.forEach(function (thumb, i) {
+        thumb.addEventListener('click', function () {
+            var imgIdx = windowStart + i;
+            if (imgIdx < TOTAL) goTo(imgIdx);
+        });
+    });
+
+    gallery.querySelectorAll('.ld-gallery-thumb').forEach(function (thumb, i) {
+        thumb.addEventListener('click', function () {
+            goTo(mod(current + i + 1, TOTAL));
+        });
+    });
+
+    render();
 })();

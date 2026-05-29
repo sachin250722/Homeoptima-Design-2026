@@ -1688,18 +1688,39 @@
     }
 
     .hvh-lf-map-wrap {
-        border-radius: $radius;
+        position: relative;
+        background: #f2f6ff;
+        border-radius: 12px;
         overflow: hidden;
-        line-height: 0;
+        height: 397px;
+
+        @include respond("tab-port") { height: 280px; }
     }
 
     .hvh-lf-map-iframe {
         width: 100%;
-        height: 380px;
+        height: 397px;
         border: 0;
         display: block;
 
-        @include respond("tab-port") { height: 260px; }
+        @include respond("tab-port") { height: 280px; }
+    }
+
+    .hvh-lf-map-pin {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 48px;
+        height: 48px;
+        background: #2c6efe;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.16);
+        pointer-events: none;
+        flex-shrink: 0;
     }
 
     // ---- Tab Bar ----
@@ -1822,7 +1843,7 @@
     .hvh-lf-stat-title {
         font-family: 'Archivo', sans-serif;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 20px;
         line-height: 24px;
         color: $dark;
         margin: 0;
@@ -1841,9 +1862,263 @@
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
         font-size: 14px;
-        line-height: 20px;
+        line-height: 18px;
         color: #929daa;
         margin: 0;
+    }
+
+    // ---- Income tab ----
+    .hvh-lf-income-title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: $dark;
+        margin: 0;
+    }
+
+    .hvh-lf-income-stats {
+        display: flex;
+        gap: 16px;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .hvh-lf-income-stat {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        border: 1px solid #f7f7f7;
+        border-radius: 16px;
+        padding: 16px;
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .hvh-lf-income-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .hvh-lf-income-top {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .hvh-lf-income-label {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba($dark, 0.68);
+        margin: 0;
+    }
+
+    .hvh-lf-income-value {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 34px;
+        color: $dark;
+        margin: 0;
+    }
+
+    .hvh-lf-income-desc {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #929daa;
+        margin: 0;
+    }
+
+    .hvh-lf-income-diff {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+        flex-wrap: wrap;
+    }
+
+    .hvh-lf-income-pct {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: #f35242;
+    }
+
+    // ---- Housing tab ----
+    .hvh-lf-housing-stats {
+        display: flex;
+        gap: 16px;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .hvh-lf-housing-stat {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        border: 1px solid #f7f7f7;
+        border-radius: 16px;
+        padding: 16px;
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .hvh-lf-housing-charts {
+        display: flex;
+        gap: 16px;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .hvh-lf-housing-chart-card {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        border: 1px solid #f7f7f7;
+        border-radius: 16px;
+        padding: 16px;
+        flex: 1;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .hvh-lf-housing-chart-wrap {
+        position: relative;
+        height: 200px;
+
+        canvas {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+
+    // ---- Population tab ----
+    .hvh-lf-pop-row {
+        display: flex;
+        gap: 16px;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .hvh-lf-pop-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 16px;
+        border: 1px solid #f7f7f7;
+        border-radius: 16px;
+        padding: 16px;
+        width: 260px;
+        flex-shrink: 0;
+    }
+
+    .hvh-lf-pop-right {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border: 1px solid #f7f7f7;
+        border-radius: 16px;
+        padding: 16px;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .hvh-lf-pop-card-title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 18px;
+        color: $dark;
+        margin: 0;
+    }
+
+    .hvh-lf-pop-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hvh-lf-pop-number {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 34px;
+        color: $dark;
+        text-align: center;
+        margin: 0;
+    }
+
+    .hvh-lf-pop-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+    }
+
+    .hvh-lf-pop-footer-label {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #929daa;
+    }
+
+    .hvh-lf-pop-footer-value {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba($dark, 0.8);
+    }
+
+    .hvh-lf-pop-chart-wrap {
+        flex: 1;
+        position: relative;
+        min-height: 160px;
+
+        canvas {
+            width: 100% !important;
+        }
+    }
+
+    // Shared legend used across Population, Housing, Education, Commute charts
+    .hvh-lf-pop-legend {
+        display: flex;
+        gap: 4px 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &--wrap { justify-content: flex-start; }
+    }
+
+    .hvh-lf-pop-legend-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        color: rgba($dark, 0.88);
+        padding: 4px;
+        white-space: nowrap;
+    }
+
+    .hvh-lf-pop-legend-dot {
+        width: 8px;
+        height: 8px;
+        flex-shrink: 0;
+        display: inline-block;
+        font-style: normal;
     }
 
     // ---- Responsive ----
@@ -1863,6 +2138,25 @@
 
         .hvh-lf-header {
             margin-bottom: 40px;
+        }
+
+        .hvh-lf-income-stats {
+            flex-direction: column;
+        }
+
+        .hvh-lf-income-value {
+            font-size: 26px;
+            line-height: 30px;
+        }
+
+        .hvh-lf-housing-stats,
+        .hvh-lf-housing-charts,
+        .hvh-lf-pop-row {
+            flex-direction: column;
+        }
+
+        .hvh-lf-pop-left {
+            width: 100%;
         }
 
         .hvh-lf-heading {
