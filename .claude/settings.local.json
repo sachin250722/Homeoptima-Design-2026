@@ -50,7 +50,10 @@
       "Bash(Remove-Item \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\blog-design-hires.png\" -Force)",
       "Bash(del \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\blog-design-screenshot.png\")",
       "Bash(del \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\blog-design-hires.png\")",
-      "PowerShell(Get-Content *)"
+      "PowerShell(Get-Content *)",
+      "Bash(Get-ChildItem -Path \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\" -Recurse -File)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(grep -E \"\\\\.\\(png|jpg|svg\\)$\")"
     ]
   }
 }
