@@ -2135,6 +2135,7 @@
 
     @include respond('tab-port') {
         padding: 60px 0;
+        overflow-x: hidden;
 
         .hvh-lf-header {
             margin-bottom: 40px;
@@ -2168,14 +2169,23 @@
             font-size: 17px;
         }
 
+        // Make tab bar horizontally scrollable instead of wrapping
         .hvh-lf-tabs {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            width: 100%;
             border-radius: 16px;
             padding: 4px;
+
+            &::-webkit-scrollbar { display: none; }
         }
 
         .hvh-lf-tab {
             font-size: 14px;
             padding: 8px 12px;
+            flex-shrink: 0;
         }
     }
 
@@ -2187,8 +2197,8 @@
         }
 
         .hvh-lf-heading {
-            font-size: 30px;
-            line-height: 38px;
+            font-size: 28px;
+            line-height: 36px;
         }
 
         .hvh-lf-sub {
@@ -2196,12 +2206,40 @@
             line-height: 26px;
         }
 
+        .hvh-lf-tabs {
+            border-radius: 12px;
+        }
+
+        .hvh-lf-tab {
+            font-size: 13px;
+            padding: 8px 10px;
+            gap: 5px;
+        }
+
+        .hvh-lf-income-value {
+            font-size: 22px;
+            line-height: 28px;
+        }
+
+        .hvh-lf-income-stat {
+            gap: 12px;
+            padding: 12px;
+        }
+
+        .hvh-lf-housing-chart-wrap {
+            height: 160px;
+        }
+
         .hvh-lf-stat-title {
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .hvh-lf-stat-value {
-            font-size: 14px;
+            font-size: 13px;
+        }
+
+        .hvh-lf-card {
+            padding: 16px;
         }
     }
 }

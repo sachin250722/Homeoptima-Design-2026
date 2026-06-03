@@ -205,6 +205,38 @@ const featuredSwiper = new Swiper('.featured-swiper', {
 });
 
 // ================================================
+//  projects Listings Swiper
+// ================================================
+const projectsSwiper = new Swiper('.projects-swiper', {
+    slidesPerView: 1.1,
+    spaceBetween: 24,
+    slidesPerGroup: 1,
+    loop: true,
+    grabCursor: true,
+    navigation: {
+        nextEl: '#listingsNext',
+        prevEl: '#listingsPrev',
+    },
+    breakpoints: {
+        576: {
+            slidesPerView: 1.5,
+        },
+        768: {
+            slidesPerView: 2.2,
+        },
+        1200: {
+            slidesPerView: 3,
+        },
+    },
+    on: {
+        slideChange: function () {
+            const prevBtn = document.getElementById('listingsPrev');
+            if (prevBtn) prevBtn.classList.toggle('swiper-btn-hidden', this.realIndex === 0);
+        },
+    },
+});
+
+// ================================================
 //  Cities Swiper
 // ================================================
 const citiesSwiper = new Swiper('.cities-swiper', {

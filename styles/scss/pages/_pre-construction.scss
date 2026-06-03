@@ -4,6 +4,20 @@
 
 // ── SHARED SECTION BADGE (blue gradient pill) ────────────────────
 // Used on: Project Overview, Gallery, Floorplans headers
+.calender-box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border: 0.5px solid $primary;
+    height: 538px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.90);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(3px);
+}
 
 .pc-section-badge {
     display: inline-flex;
@@ -37,8 +51,15 @@
     color: $dark;
     margin: 8px 0 0;
 
-    @include respond(tab-port) { font-size: 36px; line-height: 48px; }
-    @include respond(phone) { font-size: 28px; line-height: 38px; }
+    @include respond(tab-port) {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    @include respond(phone) {
+        font-size: 28px;
+        line-height: 38px;
+    }
 }
 
 .pc-section-desc {
@@ -48,7 +69,10 @@
     color: #929daa;
     margin: 24px 0 0;
 
-    @include respond(phone) { font-size: 16px; line-height: 26px; }
+    @include respond(phone) {
+        font-size: 16px;
+        line-height: 26px;
+    }
 }
 
 // ── SECTION 1: HERO ─────────────────────────────────────────────
@@ -76,7 +100,9 @@
     gap: 24px;
     padding-right: 32px;
 
-    @include respond(tab-port) { padding-right: 0; }
+    @include respond(tab-port) {
+        padding-right: 0;
+    }
 }
 
 // Two hero badges side by side
@@ -108,8 +134,15 @@
     color: $dark;
     margin: 0;
 
-    @include respond(tab-port) { font-size: 48px; line-height: 58px; }
-    @include respond(phone) { font-size: 36px; line-height: 46px; }
+    @include respond(tab-port) {
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    @include respond(phone) {
+        font-size: 36px;
+        line-height: 46px;
+    }
 }
 
 .pc-page .ftb-hero-sub {
@@ -119,7 +152,10 @@
     color: #929daa;
     margin: 0;
 
-    @include respond(phone) { font-size: 16px; line-height: 26px; }
+    @include respond(phone) {
+        font-size: 16px;
+        line-height: 26px;
+    }
 }
 
 // Hero location row
@@ -132,7 +168,9 @@
     line-height: 18px;
     color: rgba(14, 23, 31, 0.68);
 
-    svg { flex-shrink: 0; }
+    svg {
+        flex-shrink: 0;
+    }
 }
 
 // Hero meta row (occupancy, price, etc.)
@@ -152,7 +190,9 @@
     line-height: 18px;
     color: rgba(14, 23, 31, 0.68);
 
-    svg { flex-shrink: 0; }
+    svg {
+        flex-shrink: 0;
+    }
 }
 
 // Hero image
@@ -180,7 +220,10 @@
     position: relative;
     overflow: hidden;
 
-    .container { position: relative; z-index: 1; }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 .pc-page .ftb-wave-deco {
@@ -192,7 +235,10 @@
     pointer-events: none;
     z-index: 0;
 
-    img { width: 100%; display: block; }
+    img {
+        width: 100%;
+        display: block;
+    }
 }
 
 .pc-page .ftb-ellipse-deco {
@@ -206,7 +252,11 @@
     z-index: 0;
     overflow: hidden;
 
-    img { width: 100%; height: 100%; display: block; }
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
 }
 
 .pc-page .ftb-benefits-title {
@@ -217,8 +267,15 @@
     color: $dark;
     margin: 8px 0 0;
 
-    @include respond(tab-port) { font-size: 36px; line-height: 48px; }
-    @include respond(phone) { font-size: 28px; line-height: 38px; }
+    @include respond(tab-port) {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    @include respond(phone) {
+        font-size: 28px;
+        line-height: 38px;
+    }
 }
 
 .pc-page .ftb-benefits-sub {
@@ -228,7 +285,9 @@
     color: #929daa;
     margin: 24px 0 0;
 
-    @include respond(phone) { font-size: 16px; }
+    @include respond(phone) {
+        font-size: 16px;
+    }
 }
 
 // Stat cards
@@ -265,23 +324,30 @@
     white-space: nowrap;
     border: 0.5px solid transparent;
 
-    img { width: 18px; height: 18px; flex-shrink: 0; }
+    img {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+    }
 
     &--blue {
         background: rgba(46, 124, 246, 0.08);
         border-color: rgba(46, 124, 246, 0.12);
         color: #2e7cf6;
     }
+
     &--gold {
         background: rgba(233, 189, 95, 0.08);
         border-color: rgba(233, 189, 95, 0.12);
         color: #d3a644;
     }
+
     &--green {
         background: rgba(141, 235, 146, 0.08);
         border-color: rgba(141, 235, 146, 0.12);
         color: #70cf75;
     }
+
     &--red {
         background: rgba(255, 130, 118, 0.08);
         border-color: rgba(255, 130, 118, 0.12);
@@ -298,7 +364,9 @@
     margin: 0;
 }
 
-.pc-page .ftb-benefit-desc { display: none; }
+.pc-page .ftb-benefit-desc {
+    display: none;
+}
 
 // ── SECTION 3: AMENITIES (Blue) ─────────────────────────────────
 
@@ -308,7 +376,10 @@
     overflow: hidden;
     padding: 80px 0;
 
-    .container { position: relative; z-index: 1; }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 // Figma wave-lines background image
@@ -321,7 +392,10 @@
     pointer-events: none;
     z-index: 0;
 
-    img { width: 100%; display: block; }
+    img {
+        width: 100%;
+        display: block;
+    }
 }
 
 // Ellipse blur (right edge, Figma)
@@ -336,7 +410,11 @@
     z-index: 0;
     overflow: hidden;
 
-    img { width: 100%; height: 100%; display: block; }
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
 }
 
 .pc-amenities__img-wrap {
@@ -344,7 +422,9 @@
     overflow: hidden;
     height: 438px;
 
-    @include respond(tab-port) { height: 280px; }
+    @include respond(tab-port) {
+        height: 280px;
+    }
 }
 
 .pc-amenities__img {
@@ -370,8 +450,15 @@
     color: $white;
     margin: 0;
 
-    @include respond(tab-port) { font-size: 36px; line-height: 48px; }
-    @include respond(phone) { font-size: 28px; line-height: 38px; }
+    @include respond(tab-port) {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    @include respond(phone) {
+        font-size: 28px;
+        line-height: 38px;
+    }
 }
 
 .pc-amenities__desc {
@@ -381,7 +468,9 @@
     color: rgba(255, 255, 255, 0.8);
     margin: 0;
 
-    @include respond(phone) { font-size: 16px; }
+    @include respond(phone) {
+        font-size: 16px;
+    }
 }
 
 .pc-amenities__tags {
@@ -408,10 +497,16 @@
     color: rgba(255, 255, 255, 0.9);
     transition: background 0.2s;
 
-    &:hover { background: rgba(255, 255, 255, 0.18); }
+    &:hover {
+        background: rgba(255, 255, 255, 0.18);
+    }
 
     img,
-    svg { width: 24px; height: 24px; flex-shrink: 0; }
+    svg {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+    }
 }
 
 // ── SECTION 4: GALLERY ──────────────────────────────────────────
@@ -509,7 +604,9 @@
             outline-offset: 0;
         }
 
-        &:hover { opacity: 0.85; }
+        &:hover {
+            opacity: 0.85;
+        }
     }
 
     .ld-thumb-nav {
@@ -559,7 +656,9 @@
         cursor: pointer;
         transition: box-shadow 0.2s;
 
-        &:hover { box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); }
+        &:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
     }
 
     .ld-count-badge {
@@ -586,7 +685,9 @@
         max-width: 700px;
         margin-bottom: 56px;
 
-        .pc-section-title { margin-bottom: 0; }
+        .pc-section-title {
+            margin-bottom: 0;
+        }
     }
 
     &__grid-wrap {
@@ -598,7 +699,9 @@
         gap: 24px;
         margin-bottom: 24px;
 
-        &:last-of-type { margin-bottom: 0; }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -615,8 +718,14 @@
     padding: 24px;
     flex-shrink: 0;
 
-    &--narrow { width: 550px; }
-    &--wide { flex: 1; min-width: 0; }
+    &--narrow {
+        width: 550px;
+    }
+
+    &--wide {
+        flex: 1;
+        min-width: 0;
+    }
 
     &__info {
         display: flex;
@@ -638,10 +747,21 @@
         justify-content: center;
         flex-shrink: 0;
 
-        &--gold { background: rgba(233, 189, 95, 0.12); }
-        &--blue { background: rgba(46, 124, 246, 0.12); }
-        &--green { background: rgba(141, 235, 146, 0.12); }
-        &--red { background: rgba(255, 130, 118, 0.12); }
+        &--gold {
+            background: rgba(233, 189, 95, 0.12);
+        }
+
+        &--blue {
+            background: rgba(46, 124, 246, 0.12);
+        }
+
+        &--green {
+            background: rgba(141, 235, 146, 0.12);
+        }
+
+        &--red {
+            background: rgba(255, 130, 118, 0.12);
+        }
     }
 
     &__text {
@@ -679,7 +799,9 @@
         text-decoration: none;
         transition: color 0.2s;
 
-        &:hover { color: $primary; }
+        &:hover {
+            color: $primary;
+        }
     }
 
     // Floorplan image — bleeds over from right edge
@@ -699,8 +821,13 @@
         }
     }
 
-    &--narrow &__img { width: 55%; }
-    &--wide &__img { width: 58%; }
+    &--narrow &__img {
+        width: 55%;
+    }
+
+    &--wide &__img {
+        width: 58%;
+    }
 }
 
 // Frosted glass overlay (locked "Get Phase 2 floor plans" gate)
@@ -733,8 +860,15 @@
         color: $dark;
         margin: 0;
 
-        @include respond(tab-port) { font-size: 36px; line-height: 48px; }
-        @include respond(phone) { font-size: 28px; line-height: 38px; }
+        @include respond(tab-port) {
+            font-size: 36px;
+            line-height: 48px;
+        }
+
+        @include respond(phone) {
+            font-size: 28px;
+            line-height: 38px;
+        }
     }
 
     &-desc {
@@ -744,7 +878,9 @@
         color: #929daa;
         margin: 0;
 
-        @include respond(phone) { font-size: 16px; }
+        @include respond(phone) {
+            font-size: 16px;
+        }
     }
 
     &-btn {
@@ -759,22 +895,213 @@
 
 // ── RESPONSIVE ──────────────────────────────────────────────────
 
+@include respond(tab-land) {
+    .pc-page .ftb-hero-img-wrap {
+        height: 280px;
+    }
+}
+
 @include respond(tab-port) {
-    .pc-amenities__tags { gap: 12px; }
-    .pc-amenity-tag { padding: 10px 18px; font-size: 14px; }
-    .pc-floorplans__row { flex-wrap: wrap; }
-    .pc-fp-card { width: 100% !important; flex: 1 1 300px; }
-    .pc-floorplans__overlay-content { padding: 40px 24px; }
+    .pc-amenities__tags {
+        gap: 12px;
+    }
+
+    .pc-amenity-tag {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .pc-floorplans__row {
+        flex-wrap: wrap;
+    }
+
+    .pc-fp-card {
+        width: 100% !important;
+        flex: 1 1 300px;
+    }
+
+    .pc-floorplans__overlay-content {
+        padding: 40px 24px;
+    }
+
+    // Listings section header stacks nicely on tablet
+    .listings-header-row .col-auto {
+        margin-left: 0 !important;
+    }
+}
+
+@include respond(phone-land) {
+
+    // Gallery thumb-strip: scrollable on phone-land to avoid overflow
+    .pc-gallery .ld-thumb-strip {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
 }
 
 @include respond(phone) {
-    .pc-page .ftb-hero-section { padding: 48px 0; }
-    .pc-amenities__img-wrap { height: 220px; }
-    .pc-gallery { padding: 48px 0; }
-    .pc-gallery .ld-gallery { height: 300px; }
-    .pc-gallery .ld-gallery-thumbs { display: none; }
-    .pc-floorplans { padding: 48px 0; }
-    .pc-floorplans__row { flex-direction: column; }
-    .pc-fp-card { height: auto; min-height: 300px; }
-    .pc-fp-card__img { display: none; }
+    .pc-page .ftb-hero-section {
+        padding: 48px 0;
+        min-height: auto;
+    }
+
+    // Hero image shorter on phone
+    .pc-page .ftb-hero-img-wrap {
+        height: 220px;
+    }
+
+    // Hero meta: tighter gap and smaller font
+    .pc-hero__meta {
+        gap: 12px;
+    }
+
+    .pc-hero__meta-item {
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    // Location row
+    .pc-hero__location {
+        font-size: 15px;
+    }
+
+    // Hero title badge font
+    .pc-page .ftb-badge {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    // Benefits section
+    .pc-page .ftb-benefits-section {
+        padding: 48px 0;
+    }
+
+    // Amenities
+    .pc-amenities {
+        padding: 48px 0;
+    }
+
+    .pc-amenities__img-wrap {
+        height: 220px;
+    }
+
+    .pc-amenities__tags {
+        gap: 10px;
+    }
+
+    .pc-amenity-tag {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .pc-section-badge {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+
+    .pc-section-title {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .pc-section-desc {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    // Gallery
+    .pc-gallery {
+        padding: 48px 0;
+    }
+
+    .pc-gallery .ld-gallery {
+        height: 260px;
+    }
+
+    .pc-gallery .ld-gallery-thumbs {
+        display: none;
+    }
+
+    // Thumb strip: horizontal scroll, hide on very small
+    .pc-gallery .ld-thumb-strip {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        flex-wrap: nowrap;
+        gap: 12px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .pc-gallery .ld-thumb-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .pc-gallery .ld-count-badge {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+
+    .pc-gallery .slider-arrow {
+        width: 44px;
+        height: 44px;
+    }
+
+    // Floorplans
+    .pc-floorplans {
+        padding: 48px 0;
+    }
+
+    .pc-floorplans__row {
+        flex-direction: column;
+    }
+
+    .pc-fp-card {
+        height: auto;
+        min-height: 260px;
+    }
+
+    .pc-fp-card__img {
+        display: none;
+    }
+
+    .pc-fp-card__name {
+        font-size: 20px;
+    }
+
+    .pc-floorplans__overlay-content {
+        padding: 32px 16px;
+        gap: 16px;
+    }
+
+    .pc-floorplans__overlay-title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .pc-floorplans__overlay-desc {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    // hv-app right: reset absolute offset that clips on mobile
+    .hv-app-right {
+        bottom: 0;
+        right: 0;
+        min-height: 260px;
+    }
+
+    .hv-app-review-card {
+        display: none;
+    }
 }

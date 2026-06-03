@@ -18603,6 +18603,7 @@ textarea.form-control {
 @media only screen and (max-width: 61.9375rem) {
   .hvh-lf-section {
     padding: 60px 0;
+    overflow-x: hidden;
   }
   .hvh-lf-section .hvh-lf-header {
     margin-bottom: 40px;
@@ -18630,12 +18631,21 @@ textarea.form-control {
     font-size: 17px;
   }
   .hvh-lf-section .hvh-lf-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    width: 100%;
     border-radius: 16px;
     padding: 4px;
+  }
+  .hvh-lf-section .hvh-lf-tabs::-webkit-scrollbar {
+    display: none;
   }
   .hvh-lf-section .hvh-lf-tab {
     font-size: 14px;
     padding: 8px 12px;
+    flex-shrink: 0;
   }
 }
 @media only screen and (max-width: 35.9375rem) {
@@ -18646,18 +18656,40 @@ textarea.form-control {
     margin-bottom: 32px;
   }
   .hvh-lf-section .hvh-lf-heading {
-    font-size: 30px;
-    line-height: 38px;
+    font-size: 28px;
+    line-height: 36px;
   }
   .hvh-lf-section .hvh-lf-sub {
     font-size: 15px;
     line-height: 26px;
   }
+  .hvh-lf-section .hvh-lf-tabs {
+    border-radius: 12px;
+  }
+  .hvh-lf-section .hvh-lf-tab {
+    font-size: 13px;
+    padding: 8px 10px;
+    gap: 5px;
+  }
+  .hvh-lf-section .hvh-lf-income-value {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .hvh-lf-section .hvh-lf-income-stat {
+    gap: 12px;
+    padding: 12px;
+  }
+  .hvh-lf-section .hvh-lf-housing-chart-wrap {
+    height: 160px;
+  }
   .hvh-lf-section .hvh-lf-stat-title {
-    font-size: 16px;
+    font-size: 15px;
   }
   .hvh-lf-section .hvh-lf-stat-value {
-    font-size: 14px;
+    font-size: 13px;
+  }
+  .hvh-lf-section .hvh-lf-card {
+    padding: 16px;
   }
 }
 
@@ -25117,6 +25149,21 @@ textarea.ld-form-control {
   color: #0d6efd;
 }
 
+.calender-box {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border: 0.5px solid #0d6efd;
+  height: 538px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(3px);
+}
+
 .pc-section-badge {
   display: inline-flex;
   align-items: center;
@@ -25916,6 +25963,11 @@ textarea.ld-form-control {
   gap: 8px;
 }
 
+@media only screen and (max-width: 74.9375rem) {
+  .pc-page .ftb-hero-img-wrap {
+    height: 280px;
+  }
+}
 @media only screen and (max-width: 61.9375rem) {
   .pc-amenities__tags {
     gap: 12px;
@@ -25934,22 +25986,102 @@ textarea.ld-form-control {
   .pc-floorplans__overlay-content {
     padding: 40px 24px;
   }
+  .listings-header-row .col-auto {
+    margin-left: 0 !important;
+  }
+}
+@media only screen and (max-width: 47.9375rem) {
+  .pc-gallery .ld-thumb-strip {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+  .pc-gallery .ld-thumb-strip::-webkit-scrollbar {
+    display: none;
+  }
 }
 @media only screen and (max-width: 35.9375rem) {
   .pc-page .ftb-hero-section {
+    padding: 48px 0;
+    min-height: auto;
+  }
+  .pc-page .ftb-hero-img-wrap {
+    height: 220px;
+  }
+  .pc-hero__meta {
+    gap: 12px;
+  }
+  .pc-hero__meta-item {
+    font-size: 14px;
+    gap: 5px;
+  }
+  .pc-hero__location {
+    font-size: 15px;
+  }
+  .pc-page .ftb-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  .pc-page .ftb-benefits-section {
+    padding: 48px 0;
+  }
+  .pc-amenities {
     padding: 48px 0;
   }
   .pc-amenities__img-wrap {
     height: 220px;
   }
+  .pc-amenities__tags {
+    gap: 10px;
+  }
+  .pc-amenity-tag {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  .pc-section-badge {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+  .pc-section-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+  .pc-section-desc {
+    font-size: 15px;
+    line-height: 24px;
+  }
   .pc-gallery {
     padding: 48px 0;
   }
   .pc-gallery .ld-gallery {
-    height: 300px;
+    height: 260px;
   }
   .pc-gallery .ld-gallery-thumbs {
     display: none;
+  }
+  .pc-gallery .ld-thumb-strip {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+  .pc-gallery .ld-thumb-strip::-webkit-scrollbar {
+    display: none;
+  }
+  .pc-gallery .ld-thumb-img {
+    width: 60px;
+    height: 60px;
+  }
+  .pc-gallery .ld-count-badge {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+  .pc-gallery .slider-arrow {
+    width: 44px;
+    height: 44px;
   }
   .pc-floorplans {
     padding: 48px 0;
@@ -25959,9 +26091,32 @@ textarea.ld-form-control {
   }
   .pc-fp-card {
     height: auto;
-    min-height: 300px;
+    min-height: 260px;
   }
   .pc-fp-card__img {
+    display: none;
+  }
+  .pc-fp-card__name {
+    font-size: 20px;
+  }
+  .pc-floorplans__overlay-content {
+    padding: 32px 16px;
+    gap: 16px;
+  }
+  .pc-floorplans__overlay-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .pc-floorplans__overlay-desc {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .hv-app-right {
+    bottom: 0;
+    right: 0;
+    min-height: 260px;
+  }
+  .hv-app-review-card {
     display: none;
   }
 }

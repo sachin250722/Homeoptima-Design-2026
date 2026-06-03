@@ -33,6 +33,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
+    <link rel="stylesheet" href="libraries/bootstrap-select/bootstrap-select.min.css">
     <!-- Libraries -->
     <link rel="stylesheet" href="libraries/swiper/swiper-bundle.min.css">
 
@@ -160,9 +161,107 @@
     </section>
     <!-- ==================== /HERO ==================== -->
 
+    <!-- ===================== REQUEST REPORT ===================== -->
+    <section class="hvh-rr-section">
+
+        <div class="container">
+            <div class="row g-5 align-items-center">
+
+                <!-- Left: Text -->
+                <div class="col-lg-5">
+                    <div class="hvh-rr-left">
+                        <span class="section-badge">Request report</span>
+                        <h2 class="hvh-rr-heading">Lead capture form<br>for pricing and details.</h2>
+                        <p class="hvh-rr-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet
+                            turpis dapibus, sagittis ante finibus..</p>
+                    </div>
+                </div>
+
+                <!-- Right: Form Card -->
+                <div class="col-lg-7 ms-auto">
+                    <div class="hvh-rr-form-card">
+                        <div class="hvh-rr-form-card__top">
+
+                            <div class="row align-items-center ">
+                                <div class="col-md-6">
+                                    <!-- Full name -->
+                                    <div class="hvh-rr-field mb-3">
+                                        <label class="hvh-rr-field__label">Full name <span
+                                                class="hvh-rr-field__req">*</span></label>
+                                        <input type="text" class="hvh-rr-input" placeholder="Enter full name">
+                                    </div>
+                                    <!-- Phone -->
+                                    <div class="row mb-3">
+                                        <div class="col-xl-2 col-lg-3 col-4">
+                                            <label class="form-label d-block">Phone <span>
+                                                </span></label>
+                                            <select class="selectpicker">
+                                                <option value="us"
+                                                    data-content="<img src='images/icons/flag/01.svg' alt='USA' >">
+                                                    USA (+1)
+                                                </option>
+
+                                                <option value="in"
+                                                    data-content="<img src='images/icons/flag/01.svg' alt='India'/>">
+                                                    USA (+1)
+                                                </option>
+                                            </select>
+
+                                        </div>
+                                        <div class="col-xl-10 col-lg-9 col-8">
+                                            <label class="form-label"> <span>
+                                                </span></label>
+                                            <input type="tel" class="hvh-rr-input" placeholder="Enter phone" />
+                                        </div>
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="hvh-rr-field mb-3">
+                                        <label class="hvh-rr-field__label">Email <span
+                                                class="hvh-rr-field__req">*</span></label>
+                                        <input type="email" class="hvh-rr-input"
+                                            placeholder="Enter email address (e.g john@doe.com)">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Pricing -->
+                                    <div class="hvh-rr-field mb-3">
+                                        <label class="hvh-rr-field__label">Pricing <span
+                                                class="hvh-rr-field__req">*</span></label>
+                                        <input type="text" class="hvh-rr-input"
+                                            placeholder="Enter pricing (e.g $1,000,000,000)">
+                                    </div>
+                                    <!-- Tell us about your property -->
+                                    <div class="hvh-rr-field mb-3">
+                                        <label class="hvh-rr-field__label">Tell us about your property <span
+                                                class="hvh-rr-field__req">*</span></label>
+                                        <textarea class="hvh-rr-input hvh-rr-textarea"
+                                            placeholder="Input here"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="submit" class="hvh-rr-submit-btn">
+                                        Request report
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                            <path d="M9 6L15 12L9 18" stroke="white" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
     <!-- ==================== 2. BENEFITS SECTION ==================== -->
     <section class="ftb-benefits-section">
-
+        <div class="three-line-shape">
+            <img src="images/right-3-line.png" alt="Decorative three lines shape1">
+        </div>
         <!-- Decorative wave lines (background image from Figma) -->
         <div class="ftb-wave-deco" aria-hidden="true">
             <img src="https://www.figma.com/api/mcp/asset/dafbccbe-5eed-42dd-9130-8e200d7cc95e" alt="">
@@ -351,7 +450,7 @@
             <!-- Section header -->
             <div class="pc-gallery__header">
                 <span class="pc-section-badge">Gallery</span>
-                <h2 class="pc-section-title">See it for yourself.</h2>
+                <h2 class="pc-section-title">Property imagery.</h2>
                 <p class="pc-section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet turpis
                     dapibus, sagittis ante finibus, congue nulla.</p>
             </div>
@@ -596,95 +695,758 @@
     </section>
     <!-- /floorplans -->
 
-    <!-- ============================= 7. APP SECTION ============================= -->
-    <section class="hv-app">
+    <!-- ===================== 4. FEATURED LISTINGS ===================== -->
+    <section class="listings-section">
         <div class="container">
-            <div class="hv-app-card">
-                <!-- Blue glow effect -->
-                <div class="hv-app-glow" aria-hidden="true"></div>
-
-                <!-- Left: text + store buttons -->
-                <div class="hv-app-left">
-                    <h2 class="hv-app-heading">
-                        Best home<br>search app<span class="hv-app-dot">.</span>
-                    </h2>
-                    <p class="hv-app-sub">Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit<br>tiam sit amet
-                        turpis dapibus, sagittis ante finibus, congue nulla.</p>
-                    <div class="hv-app-stores">
-                        <!-- App Store badge -->
-                        <a href="#" class="hv-store-badge hv-store-badge--apple" aria-label="Download on the App Store">
-                            <svg width="19" height="23" viewBox="0 0 19 23" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="18.649" height="22.9221" fill="white" />
-                                <path
-                                    d="M15.5761 12.1881C15.5874 11.3095 15.8208 10.448 16.2545 9.68385C16.6882 8.91969 17.3082 8.27765 18.0567 7.81746C17.5812 7.13835 16.9539 6.57946 16.2246 6.1852C15.4953 5.79093 14.6841 5.57215 13.8555 5.54622C12.0879 5.36068 10.3742 6.60394 9.47349 6.60394C8.55531 6.60394 7.16846 5.56464 5.67507 5.59537C4.70909 5.62658 3.76768 5.90748 2.94254 6.41069C2.11741 6.91391 1.43669 7.62229 0.966729 8.46681C-1.06906 11.9915 0.449455 17.1715 2.39957 20.0206C3.37525 21.4157 4.51555 22.9741 6.0076 22.9188C7.46767 22.8582 8.01297 21.9878 9.77539 21.9878C11.5215 21.9878 12.0331 22.9188 13.5554 22.8837C15.1221 22.8582 16.1092 21.4823 17.0507 20.074C17.7517 19.08 18.2911 17.9813 18.649 16.8188C17.7388 16.4338 16.962 15.7894 16.4156 14.9659C15.8691 14.1424 15.5772 13.1763 15.5761 12.1881Z"
-                                    fill="#0E171F" />
-                                <path
-                                    d="M12.7065 3.67434C13.5607 2.64885 13.9816 1.33077 13.8797 0C12.5746 0.137074 11.369 0.760821 10.5033 1.74696C10.08 2.22871 9.75576 2.78917 9.54918 3.3963C9.34261 4.00342 9.25772 4.64531 9.29936 5.28526C9.95214 5.29198 10.5979 5.1505 11.1881 4.87146C11.7783 4.59242 12.2974 4.1831 12.7065 3.67434Z"
-                                    fill="#0E171F" />
-                            </svg>
-
-                            <div class="hv-store-text">
-                                <span class="hv-store-sub">Download on the</span>
-                                <span class="hv-store-name">App Store</span>
-                            </div>
-                        </a>
-                        <!-- Google Play badge -->
-                        <a href="#" class="hv-store-badge hv-store-badge--google" aria-label="Get it on Google Play">
-                            <svg width="20" height="22" viewBox="0 0 20 22" fill="none">
-                                <path d="M1 1.5L11 11L1 20.5V1.5Z" fill="#EA4335" />
-                                <path d="M1 20.5L14 14L11 11L1 20.5Z" fill="#FBBC04" />
-                                <path d="M14 8L11 11L14 14L19 11L14 8Z" fill="#4285F4" />
-                                <path d="M1 1.5L11 11L14 8L1 1.5Z" fill="#34A853" />
-                            </svg>
-                            <div class="hv-store-text">
-                                <span class="hv-store-sub">GET IT ON</span>
-                                <span class="hv-store-name">Google Play</span>
-                            </div>
-                        </a>
-                    </div>
+            <div class="row align-items-end listings-header-row">
+                <div class="col-lg-8">
+                    <span class="section-badge">Discovery</span>
+                    <h2 class="section-title">Discover more <br>amazing projects.</h2>
+                    <p class="section-desc">From your first search to final closing â€” and everything in between â€” we
+                        guide you every step of the way.</p>
                 </div>
-
-                <!-- Right: phone mockup placeholder + floating card -->
-                <div class="hv-app-right">
-                    <!-- Floating star review card -->
-                    <div class="hv-app-review-card">
-                        <div class="hv-review-stars">
-                            <svg viewBox="0 0 24 24" fill="#E9BD5F">
-                                <path
-                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                            </svg>
-                            <svg viewBox="0 0 24 24" fill="#E9BD5F">
-                                <path
-                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                            </svg>
-                            <svg viewBox="0 0 24 24" fill="#E9BD5F">
-                                <path
-                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                            </svg>
-                            <svg viewBox="0 0 24 24" fill="#E9BD5F">
-                                <path
-                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                            </svg>
-                            <svg viewBox="0 0 24 24" fill="#E9BD5F" opacity="0.4">
-                                <path
-                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                            </svg>
-                        </div>
-                        <p class="hv-review-text">Lorem ipsum dolor sit amet, consectetur<br>adipiscing
-                            elit. Etiam sit
-                            amet turpis dapibus.</p>
-                    </div>
-                    <!-- Phone mockup -->
-                    <div class="hv-phone-mockup">
-                        <img src="images/i-phone.png" alt="HomeOptima app" class="hv-phone-img">
-                    </div>
+                <div class="col-auto ms-auto">
+                    <a href="#" class="btn btn-primary d-flex align-items-center gap-2">
+                        View all projects <img src="images/icons/chevron-right-white.svg" alt="">
+                    </a>
                 </div>
             </div>
         </div>
+
+        <div class="listings-swiper-outer">
+            <div class="container">
+                <div class="swiper listings-swiper projects-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Listing 1 -->
+                        <div class="swiper-slide">
+                            <div class="listing-card">
+                                <div class="listing-img">
+                                    <img src="images/listing-01.jpg" alt="Modern detached home in Mississauga">
+                                </div>
+                                <div class="listing-body">
+                                    <div class="listing-price">$1,249,000</div>
+                                    <div class="listing-name">Lakeview Detached â€” Mississauga</div>
+                                    <div class="listing-body-lower">
+                                        <p class="listing-desc">Spacious 4-bed, 3-bath detached with finished basement
+                                            and private backyard in a sought-after Lakeview pocket.</p>
+                                        <div class="listing-meta">
+                                            <span class="listing-meta-item"><img src="images/icons/local.svg"
+                                                    alt="">Mississauga</span>
+                                            <span class="listing-meta-item"><img src="images/icons/bed.svg" alt="">4
+                                                beds</span>
+                                            <span class="listing-meta-item"><img src="images/icons/bath.svg" alt="">3
+                                                baths</span>
+                                            <span class="listing-meta-item"><img src="images/icons/sqft.svg"
+                                                    alt="">2,400 sqft</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Listing 2 -->
+                        <div class="swiper-slide">
+                            <div class="listing-card">
+                                <div class="listing-img">
+                                    <img src="images/listing-02.jpg" alt="Townhome in Oakville">
+                                </div>
+                                <div class="listing-body">
+                                    <div class="listing-price">$899,000</div>
+                                    <div class="listing-name">Uptown Core Townhome â€” Oakville</div>
+                                    <div class="listing-body-lower">
+                                        <p class="listing-desc">Contemporary 3-bed end-unit townhome steps from
+                                            Oakville's best shops, restaurants, and top-rated schools.</p>
+                                        <div class="listing-meta">
+                                            <span class="listing-meta-item"><img src="images/icons/local.svg"
+                                                    alt="">Oakville</span>
+                                            <span class="listing-meta-item"><img src="images/icons/bed.svg" alt="">3
+                                                beds</span>
+                                            <span class="listing-meta-item"><img src="images/icons/bath.svg" alt="">2
+                                                baths</span>
+                                            <span class="listing-meta-item"><img src="images/icons/sqft.svg"
+                                                    alt="">1,800 sqft</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Listing 3 -->
+                        <div class="swiper-slide">
+                            <div class="listing-card">
+                                <div class="listing-img">
+                                    <img src="images/listing-03.jpg" alt="Condo in Burlington">
+                                </div>
+                                <div class="listing-body">
+                                    <div class="listing-price">$649,000</div>
+                                    <div class="listing-name">Waterfront Condo â€” Burlington</div>
+                                    <div class="listing-body-lower">
+                                        <p class="listing-desc">Sun-drenched 2-bed condo with panoramic lake views,
+                                            modern kitchen, and building amenities.</p>
+                                        <div class="listing-meta">
+                                            <span class="listing-meta-item"><img src="images/icons/local.svg"
+                                                    alt="">Burlington</span>
+                                            <span class="listing-meta-item"><img src="images/icons/bed.svg" alt="">2
+                                                beds</span>
+                                            <span class="listing-meta-item"><img src="images/icons/bath.svg" alt="">2
+                                                baths</span>
+                                            <span class="listing-meta-item"><img src="images/icons/sqft.svg"
+                                                    alt="">1,050 sqft</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Listing 4 -->
+                        <div class="swiper-slide">
+                            <div class="listing-card">
+                                <div class="listing-img">
+                                    <img src="images/listing-04.jpg" alt="Semi-detached in Hamilton">
+                                </div>
+                                <div class="listing-body">
+                                    <div class="listing-price">$749,000</div>
+                                    <div class="listing-name">West End Semi â€” Hamilton</div>
+                                    <div class="listing-body-lower">
+                                        <p class="listing-desc">Beautifully updated 3-bed semi-detached with
+                                            open-concept main floor, new kitchen, and large private yard.</p>
+                                        <div class="listing-meta">
+                                            <span class="listing-meta-item"><img src="images/icons/local.svg"
+                                                    alt="">Hamilton</span>
+                                            <span class="listing-meta-item"><img src="images/icons/bed.svg" alt="">3
+                                                beds</span>
+                                            <span class="listing-meta-item"><img src="images/icons/bath.svg" alt="">2
+                                                baths</span>
+                                            <span class="listing-meta-item"><img src="images/icons/sqft.svg"
+                                                    alt="">1,600 sqft</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="listings-prev-fade">
+                <button class="listings-prev-btn swiper-btn-hidden" id="listingsPrev" aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="#0E171F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="listings-next-fade">
+                <button class="listings-next-btn" id="listingsNext" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 6L15 12L9 18" stroke="#0E171F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </section>
-    <!-- ============================= /APP ============================= -->
+
+    <!-- ==================== 3. NEIGHBORHOOD & LIFE FACTORS ==================== -->
+    <section class="hvh-lf-section">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="hvh-lf-header">
+                <span class="section-badge">Life factors</span>
+                <h2 class="hvh-lf-heading">Neighborhood<br>&amp; quality of life factors<span
+                        class="hvh-lf-heading__dot">.</span></h2>
+                <p class="hvh-lf-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet turpis
+                    dapibus, sagittis ante finibus, congue nulla.</p>
+            </div>
+
+            <!-- Tab Bar + Content -->
+            <div class="hvh-lf-body">
+
+                <!-- Tab Bar -->
+                <div class="hvh-lf-tabs" role="tablist">
+                    <button class="hvh-lf-tab hvh-lf-tab--active" role="tab" aria-selected="true" data-tab="summary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="3" width="20" height="18" rx="3" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M2 8H22M8 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                        Summary
+                    </button>
+                    <button class="hvh-lf-tab" role="tab" aria-selected="false" data-tab="map">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 4L3 7V20L9 17L15 20L21 17V4L15 7L9 4Z" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M9 4V17M15 7V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                        Map
+                    </button>
+                    <button class="hvh-lf-tab" role="tab" aria-selected="false" data-tab="income">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 2V22M17 6H9.5C8.57 6 7.68 6.37 7.02 7.02C6.37 7.68 6 8.57 6 9.5C6 10.43 6.37 11.32 7.02 11.98C7.68 12.63 8.57 13 9.5 13H14.5C15.43 13 16.32 13.37 16.98 14.02C17.63 14.68 18 15.57 18 16.5C18 17.43 17.63 18.32 16.98 18.98C16.32 19.63 15.43 20 14.5 20H6"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                        Income
+                    </button>
+                    <button class="hvh-lf-tab" role="tab" aria-selected="false" data-tab="population">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 20H21M5 20V14M9 20V10M13 20V6M17 20V2" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                        </svg>
+                        Population
+                    </button>
+                    <button class="hvh-lf-tab" role="tab" aria-selected="false" data-tab="housing">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 22V11.5L12 2L21 11.5V22H15V16H9V22H3Z" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Housing
+                    </button>
+                    <button class="hvh-lf-tab" role="tab" aria-selected="false" data-tab="education">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M22 9L12 4L2 9L12 14L22 9ZM22 9V15M6 11.5V18C8 20 10 21 12 21C14 21 16 20 18 18V11.5"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        Education
+                    </button>
+                    <button class="hvh-lf-tab" role="tab" aria-selected="false" data-tab="commute">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M5 17H3V12L5.5 6H18.5L21 12V17H19M5 17H19M7 17C7 18.1 7.9 19 9 19C10.1 19 11 18.1 11 17M13 17C13 18.1 13.9 19 15 19C16.1 19 17 18.1 17 17M11 17H13"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        Commute
+                    </button>
+                    <button class="hvh-lf-tab" role="tab" aria-selected="false" data-tab="immigrants">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 16L14 13L16 3L13 2L8 11L3 9L2 11L7 14L6 19L8 20L11 16L18 19L21 16Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        Immigrants
+                    </button>
+                </div>
+
+                <!-- â”€â”€ Panel: Summary â”€â”€ -->
+                <div class="hvh-lf-panel hvh-lf-panel--active" data-panel="summary">
+                    <div class="hvh-lf-card">
+                        <p class="hvh-lf-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae
+                            sem enim. Praesent id odio vel ligula porta condimentum eu eu libero. Sed euismod mattis
+                            augue, in tincidunt mauris pellentesque at. Morbi lacinia nibh sed metus pretium
+                            elementum. Morbi porta, lorem sit amet molestie posuere, odio magna tempus nisi, et
+                            pharetra tortor augue id nibh.</p>
+
+                        <!-- Stat Grid -->
+                        <div class="hvh-lf-stats">
+                            <!-- Row 1 -->
+                            <div class="row g-3">
+                                <!-- Families with Children -->
+                                <div class="col-md-4">
+                                    <div class="hvh-lf-stat">
+                                        <div class="hvh-lf-stat-icon hvh-lf-stat-icon--blue">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M17 21V19C17 16.79 15.21 15 13 15H5C2.79 15 1 16.79 1 19V21M23 21V19C22.99 17.16 21.74 15.57 20 15.13M16 3.13C17.75 3.58 19 5.17 19 7C19 8.83 17.75 10.42 16 10.87M13 7C13 9.21 11.21 11 9 11C6.79 11 5 9.21 5 7C5 4.79 6.79 3 9 3C11.21 3 13 4.79 13 7Z"
+                                                    stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="hvh-lf-stat-content">
+                                            <h4 class="hvh-lf-stat-title">Families with Children</h4>
+                                            <p class="hvh-lf-stat-value">26.7% — Bottom 50%</p>
+                                            <p class="hvh-lf-stat-desc">A smaller proportion of families with
+                                                children.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single-Detached Homes -->
+                                <div class="col-md-4">
+                                    <div class="hvh-lf-stat">
+                                        <div class="hvh-lf-stat-icon hvh-lf-stat-icon--yellow">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                                <path d="M3 22V11.5L12 2L21 11.5V22H15V16H9V22H3Z" stroke="#E9BD5F"
+                                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="hvh-lf-stat-content">
+                                            <h4 class="hvh-lf-stat-title">Single-Detached Homes</h4>
+                                            <p class="hvh-lf-stat-value">49.6% — Bottom 50%</p>
+                                            <p class="hvh-lf-stat-desc">Fewer detached homes compared to national
+                                                averages.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Household Income -->
+                                <div class="col-md-4">
+                                    <div class="hvh-lf-stat">
+                                        <div class="hvh-lf-stat-icon hvh-lf-stat-icon--green">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M12 1V23M17 6H9.5C8.12 6 7 7.12 7 8.5C7 9.88 8.12 11 9.5 11H14.5C15.88 11 17 12.12 17 13.5C17 14.88 15.88 16 14.5 16H7"
+                                                    stroke="#3DC972" stroke-width="1.5" stroke-linecap="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="hvh-lf-stat-content">
+                                            <h4 class="hvh-lf-stat-title">Household Income</h4>
+                                            <p class="hvh-lf-stat-value">46.5% — Bottom 50%</p>
+                                            <p class="hvh-lf-stat-desc">Household incomes fall below the national
+                                                midpoint.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Row 2 -->
+                            <div class="row g-3">
+                                <!-- Born Outside Canada -->
+                                <div class="col-md-4">
+                                    <div class="hvh-lf-stat">
+                                        <div class="hvh-lf-stat-icon hvh-lf-stat-icon--yellow">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M21 16L14 13L16 3L13 2L8 11L3 9L2 11L7 14L6 19L8 20L11 16L18 19L21 16Z"
+                                                    stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="hvh-lf-stat-content">
+                                            <h4 class="hvh-lf-stat-title">Born Outside Canada</h4>
+                                            <p class="hvh-lf-stat-value">53.5% — Top 50%</p>
+                                            <p class="hvh-lf-stat-desc">An area with average levels of immigration.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Postsecondary Education -->
+                                <div class="col-md-4">
+                                    <div class="hvh-lf-stat">
+                                        <div class="hvh-lf-stat-icon hvh-lf-stat-icon--green">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M22 9L12 4L2 9L12 14L22 9ZM22 9V15M6 11.5V18C8 20 10 21 12 21C14 21 16 20 18 18V11.5"
+                                                    stroke="#3DC972" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="hvh-lf-stat-content">
+                                            <h4 class="hvh-lf-stat-title">Postsecondary Education</h4>
+                                            <p class="hvh-lf-stat-value">74.2% — Top 50%</p>
+                                            <p class="hvh-lf-stat-desc">A community with education levels in line
+                                                with
+                                                national norms.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Commute < 30 Min -->
+                                <div class="col-md-4">
+                                    <div class="hvh-lf-stat">
+                                        <div class="hvh-lf-stat-icon hvh-lf-stat-icon--red">
+                                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M12 22C16.42 22 20 18.42 20 14C20 9.58 16.42 6 12 6C7.58 6 4 9.58 4 14C4 18.42 7.58 22 12 22ZM12 14L9.5 11.5M12 6V3M10 3H14M20 5L22 7"
+                                                    stroke="#FF8276" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="hvh-lf-stat-content">
+                                            <h4 class="hvh-lf-stat-title">Commute &lt; 30 Min</h4>
+                                            <p class="hvh-lf-stat-value">34.4% — Bottom 50%</p>
+                                            <p class="hvh-lf-stat-desc">Commutes are generally longer than average.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.hvh-lf-panel[summary] -->
+
+                <!-- ── Panel: Map ── -->
+                <div class="hvh-lf-panel" data-panel="map">
+                    <div class="hvh-lf-card">
+                        <div class="hvh-lf-map-wrap">
+                            <iframe class="hvh-lf-map-iframe"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d369978.9141017289!2d-80.11811621929036!3d43.5761284848791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b469fe76b05b7%3A0x3146cbed75966db!2sMississauga%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sin!4v1780033942230!5m2!1sen!2sin"
+                                width="100%" height="397" loading="lazy" title="Neighbourhood Map" allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+
+                            <div class="hvh-lf-map-pin">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M12 2C8.69 2 6 4.69 6 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.31-2.69-6-6-6zm0 8.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 5.5 12 5.5s2.5 1.12 2.5 2.5S13.38 10.5 12 10.5z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.hvh-lf-panel[map] -->
+
+                <!-- ── Panel: Income ── -->
+                <div class="hvh-lf-panel" data-panel="income">
+                    <div class="hvh-lf-card">
+                        <h3 class="hvh-lf-income-title">Average Household income</h3>
+
+                        <div class="hvh-lf-income-stats">
+
+                            <!-- Mississauga -->
+                            <div class="hvh-lf-income-stat">
+                                <div class="hvh-lf-stat-icon hvh-lf-stat-icon--blue">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2C8.69 2 6 4.69 6 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.31-2.69-6-6-6z"
+                                            stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <circle cx="12" cy="8" r="2.5" stroke="#2C6EFE" stroke-width="1.5" />
+                                    </svg>
+                                </div>
+
+                                <div class="hvh-lf-income-content">
+                                    <div class="hvh-lf-income-top">
+                                        <p class="hvh-lf-income-label">Mississauga</p>
+                                        <p class="hvh-lf-income-value">$126,500</p>
+                                    </div>
+                                    <p class="hvh-lf-income-desc">Average Household Income</p>
+                                </div>
+                            </div>
+
+                            <!-- This Area -->
+                            <div class="hvh-lf-income-stat">
+                                <div class="hvh-lf-stat-icon hvh-lf-stat-icon--red">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                        <path d="M18 20V10M12 20V4M6 20V14" stroke="#FF8276" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+
+                                <div class="hvh-lf-income-content">
+                                    <div class="hvh-lf-income-top">
+                                        <p class="hvh-lf-income-label">This Area</p>
+                                        <p class="hvh-lf-income-value">$103,000</p>
+                                    </div>
+                                    <p class="hvh-lf-income-desc">Average Household Income</p>
+                                </div>
+                            </div>
+
+                            <!-- Income Difference -->
+                            <div class="hvh-lf-income-stat">
+                                <div class="hvh-lf-stat-icon hvh-lf-stat-icon--yellow">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 3v18M3 12h18M6 6l12 12M18 6L6 18" stroke="#E9BD5F"
+                                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+
+                                <div class="hvh-lf-income-content">
+                                    <div class="hvh-lf-income-top">
+                                        <p class="hvh-lf-income-label">Income Difference</p>
+                                        <p class="hvh-lf-income-value">-$23,500</p>
+                                    </div>
+
+                                    <div class="hvh-lf-income-diff">
+                                        <span class="hvh-lf-income-desc">This Area vs Mississauga</span>
+                                        <span class="hvh-lf-income-pct">18.6% Lower</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /.hvh-lf-panel[income] -->
+
+                <!-- â”€â”€ Panel: Population â”€â”€ -->
+                <div class="hvh-lf-panel" data-panel="population">
+                    <div class="hvh-lf-card">
+                        <div class="hvh-lf-pop-row">
+                            <!-- Left: Total Population -->
+                            <div class="hvh-lf-pop-left">
+                                <p class="hvh-lf-pop-card-title">Total Population</p>
+                                <div class="hvh-lf-pop-center">
+                                    <div class="hvh-lf-stat-icon hvh-lf-stat-icon--blue">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                            <path
+                                                d="M17 21V19C17 16.79 15.21 15 13 15H5C2.79 15 1 16.79 1 19V21M23 21V19C22.99 17.16 21.74 15.57 20 15.13M16 3.13C17.75 3.58 19 5.17 19 7C19 8.83 17.75 10.42 16 10.87M13 7C13 9.21 11.21 11 9 11C6.79 11 5 9.21 5 7C5 4.79 6.79 3 9 3C11.21 3 13 4.79 13 7Z"
+                                                stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <p class="hvh-lf-pop-number">543</p>
+                                </div>
+                                <div class="hvh-lf-pop-footer">
+                                    <span class="hvh-lf-pop-footer-label">Average Age</span>
+                                    <span class="hvh-lf-pop-footer-value">43</span>
+                                </div>
+                            </div>
+                            <!-- Right: Bar Chart -->
+                            <div class="hvh-lf-pop-right">
+                                <p class="hvh-lf-pop-card-title">Households with Children</p>
+                                <div class="hvh-lf-pop-chart-wrap">
+                                    <canvas id="popHouseholdsChart" height="160"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.hvh-lf-panel[population] -->
+
+                <!-- â”€â”€ Panel: Housing â”€â”€ -->
+                <div class="hvh-lf-panel" data-panel="housing">
+                    <div class="hvh-lf-card">
+
+                        <!-- Top: 2 stat cards -->
+                        <div class="hvh-lf-housing-stats">
+                            <div class="hvh-lf-housing-stat">
+                                <div class="hvh-lf-stat-icon hvh-lf-stat-icon--blue">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"
+                                            stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="hvh-lf-income-label">Occupied private dwellings</p>
+                                    <p class="hvh-lf-income-value">170</p>
+                                </div>
+                            </div>
+                            <div class="hvh-lf-housing-stat">
+                                <div class="hvh-lf-stat-icon hvh-lf-stat-icon--green">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                                        <path
+                                            d="M19 21V19C19 16.79 17.21 15 15 15H9C6.79 15 5 16.79 5 19V21M12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11ZM3 12H1"
+                                            stroke="#3DC972" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="hvh-lf-income-label">Owners / Renters</p>
+                                    <p class="hvh-lf-income-value">79.0% / 21.0%</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom: 2 chart cards -->
+                        <div class="hvh-lf-housing-charts">
+                            <!-- Housing Distribution -->
+                            <div class="hvh-lf-housing-chart-card">
+                                <p class="hvh-lf-pop-card-title">Housing Distribution in This Area</p>
+                                <div class="hvh-lf-pop-legend">
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#7086fd"></i>Single-detached house</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#6fd195"></i>Semi-detached house</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#ff8276"></i>Apartment</span>
+                                </div>
+                                <div class="hvh-lf-housing-chart-wrap">
+                                    <canvas id="housingDistChart"></canvas>
+                                </div>
+                            </div>
+                            <!-- Year of Construction -->
+                            <div class="hvh-lf-housing-chart-card">
+                                <p class="hvh-lf-pop-card-title">Year of Construction</p>
+                                <div class="hvh-lf-pop-legend">
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#7086fd"></i>1961 to 1980</span>
+                                </div>
+                                <div class="hvh-lf-housing-chart-wrap">
+                                    <canvas id="housingYearChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- /.hvh-lf-panel[housing] -->
+
+                <!-- â”€â”€ Panel: Education â”€â”€ -->
+                <div class="hvh-lf-panel" data-panel="education">
+                    <div class="hvh-lf-card">
+                        <div class="hvh-lf-housing-charts">
+
+                            <!-- Education Levels - Mississauga -->
+                            <div class="hvh-lf-housing-chart-card">
+                                <p class="hvh-lf-pop-card-title">Education Levels - Mississauga</p>
+                                <div class="hvh-lf-pop-legend">
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#7086fd"></i>Postsecondary certificate</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#6fd195"></i>No certificate, diploma</span>
+                                </div>
+                                <div class="hvh-lf-housing-chart-wrap">
+                                    <canvas id="eduMissChart"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Education Levels - This Area -->
+                            <div class="hvh-lf-housing-chart-card">
+                                <p class="hvh-lf-pop-card-title">Education Levels - This Area</p>
+                                <div class="hvh-lf-pop-legend">
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#7086fd"></i>Postsecondary certificate</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#6fd195"></i>No certificate, diploma</span>
+                                </div>
+                                <div class="hvh-lf-housing-chart-wrap">
+                                    <canvas id="eduAreaChart"></canvas>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!-- /.hvh-lf-panel[education] -->
+
+                <!-- â”€â”€ Panel: Commute â”€â”€ -->
+                <div class="hvh-lf-panel" data-panel="commute">
+                    <div class="hvh-lf-card">
+                        <div class="hvh-lf-housing-charts">
+
+                            <!-- Commute Times - Mississauga -->
+                            <div class="hvh-lf-housing-chart-card">
+                                <p class="hvh-lf-pop-card-title">Commute Times - Mississauga</p>
+                                <div class="hvh-lf-pop-legend hvh-lf-pop-legend--wrap">
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#988afc"></i>Worked at home</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#7086fd"></i>Less than 15 minutes</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#6fd195"></i>15 to 29 minutes</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#ffae4c"></i>31 to 60 minutes</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#07dbfa"></i>60 minutes and over</span>
+                                </div>
+                                <div class="hvh-lf-housing-chart-wrap">
+                                    <canvas id="commuteMissChart"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Commute Times - This Area -->
+                            <div class="hvh-lf-housing-chart-card">
+                                <p class="hvh-lf-pop-card-title">Commute Times - This Area</p>
+                                <div class="hvh-lf-pop-legend hvh-lf-pop-legend--wrap">
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#988afc"></i>Worked at home</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#7086fd"></i>Less than 15 minutes</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#6fd195"></i>15 to 29 minutes</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#ffae4c"></i>31 to 60 minutes</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#07dbfa"></i>60 minutes and over</span>
+                                </div>
+                                <div class="hvh-lf-housing-chart-wrap">
+                                    <canvas id="commuteAreaChart"></canvas>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!-- /.hvh-lf-panel[commute] -->
+
+                <!-- â”€â”€ Panel: Immigrants â”€â”€ -->
+                <div class="hvh-lf-panel" data-panel="immigrants">
+                    <div class="hvh-lf-card">
+                        <div class="hvh-lf-housing-charts">
+
+                            <!-- Immigrants - Mississauga -->
+                            <div class="hvh-lf-housing-chart-card">
+                                <p class="hvh-lf-pop-card-title">Immigrants - Mississauga</p>
+                                <div class="hvh-lf-pop-legend">
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#7086fd"></i>Non-immigrants</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#6fd195"></i>Immigrants</span>
+                                </div>
+                                <div class="hvh-lf-housing-chart-wrap">
+                                    <canvas id="immigMissChart"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Immigrants - This Area -->
+                            <div class="hvh-lf-housing-chart-card">
+                                <p class="hvh-lf-pop-card-title">Immigrants - This Area</p>
+                                <div class="hvh-lf-pop-legend">
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#7086fd"></i>Non-immigrants</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#6fd195"></i>Immigrants</span>
+                                </div>
+                                <div class="hvh-lf-housing-chart-wrap">
+                                    <canvas id="immigAreaChart"></canvas>
+                                </div>
+                            </div>
+
+                            <!-- Major Ethnicities - This Area -->
+                            <div class="hvh-lf-housing-chart-card">
+                                <p class="hvh-lf-pop-card-title">Major Ethnicities - This Area</p>
+                                <div class="hvh-lf-pop-legend hvh-lf-pop-legend--wrap">
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#988afc"></i>Indian (India)</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#7086fd"></i>Pakistani</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#6fd195"></i>Italian</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#ffae4c"></i>Jamaican</span>
+                                    <span class="hvh-lf-pop-legend-item"><i class="hvh-lf-pop-legend-dot"
+                                            style="background:#07dbfa"></i>Sri Lankan</span>
+                                </div>
+                                <div class="hvh-lf-housing-chart-wrap">
+                                    <canvas id="immigEthnicChart"></canvas>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!-- /.hvh-lf-panel[immigrants] -->
+
+            </div><!-- /.hvh-lf-body -->
+        </div>
+    </section>
+    <!-- ==================== /NEIGHBORHOOD ==================== -->
+
+    <!-- ===================== REQUEST REPORT ===================== -->
+    <!-- Shape: white → blue -->
+    <div class="shape" aria-hidden="true">
+        <img src="images/icons/right-shape.svg" alt="" class="shape-img">
+    </div>
+
+    <section class="hvh-rr-section">
+        <!-- Decorative wave lines -->
+        <div class="hvh-rr-section__deco" aria-hidden="true">
+            <svg viewBox="0 0 1440 560" fill="none" preserveAspectRatio="xMidYMid slice"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M-100 500 C 200 340, 560 190, 900 300 C 1140 370, 1350 310, 1560 120"
+                    stroke="rgba(44,110,254,0.18)" stroke-width="1.5" />
+                <path d="M-100 580 C 250 410, 620 255, 970 360 C 1200 430, 1410 360, 1620 170"
+                    stroke="rgba(44,110,254,0.11)" stroke-width="1.5" />
+                <path d="M-100 420 C 150 270, 500 130, 850 240 C 1090 308, 1310 248, 1530 58"
+                    stroke="rgba(44,110,254,0.07)" stroke-width="1" />
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="row g-5 align-items-center">
+
+                <!-- Left: Text -->
+                <div class="col-lg-5">
+                    <div class="hvh-rr-left">
+                        <span class="section-badge">Lorem Ipsum</span>
+                        <h2 class="hvh-rr-heading">Book a call</h2>
+                        <p class="hvh-rr-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet.</p>
+                    </div>
+                </div>
+
+                <!-- bottom: Booking calendar Card -->
+                <div class="col-lg-12">
+                    <div class="calender-box">
+                        <div class="placeholder-text">Booking calendar here</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- =========================================================
          FOOTER (shared)
@@ -809,9 +1571,16 @@
     <!-- =========================================================
          SCRIPTS
     ========================================================= -->
+    <!-- js -->
     <script src="libraries/jquery/jquery.min.js"></script>
     <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="libraries/swiper/swiper-bundle.min.js"></script>
+    <script src="libraries/bootstrap-select/boostrap-select.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="js/charts.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/custom-swiper.js"></script>
 
 </body>
 
