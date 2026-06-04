@@ -178,6 +178,38 @@ if (jQuery('.dataTables_length select').length > 0) {
 })();
 
 // ================================================================
+//  Home Value Hub Results — Address item radio toggle
+// ================================================================
+(function () {
+    var items = document.querySelectorAll('.hvh-hero-address-item');
+    if (!items.length) return;
+
+    items.forEach(function (item) {
+        item.addEventListener('click', function () {
+            items.forEach(function (el) {
+                el.classList.remove('hvh-hero-address-item--active');
+                var radio = el.querySelector('.hvh-hero-radio');
+                if (radio) {
+                    radio.classList.remove('hvh-hero-radio--selected');
+                    var dot = radio.querySelector('.hvh-hero-radio-dot');
+                    if (dot) dot.remove();
+                }
+            });
+            item.classList.add('hvh-hero-address-item--active');
+            var radio = item.querySelector('.hvh-hero-radio');
+            if (radio) {
+                radio.classList.add('hvh-hero-radio--selected');
+                if (!radio.querySelector('.hvh-hero-radio-dot')) {
+                    var dot = document.createElement('div');
+                    dot.className = 'hvh-hero-radio-dot';
+                    radio.appendChild(dot);
+                }
+            }
+        });
+    });
+})();
+
+// ================================================================
 //  Home Value Hub Results — Life Factors tab switcher
 // ================================================================
 (function () {
@@ -540,4 +572,388 @@ if (jQuery('.dataTables_length select').length > 0) {
     });
 
     render();
+})();
+
+// ================================================================
+//  Phone Code Dropdown — all forms site-wide
+// ================================================================
+(function () {
+    // Legacy hvh-rr handler
+    document.addEventListener('click', function (e) {
+        var opt = e.target.closest('.hvh-rr-phone-opt');
+        if (!opt) return;
+        e.preventDefault();
+        var code = opt.dataset.code;
+        var flag = opt.dataset.flag;
+        var dropdown = opt.closest('.dropdown');
+        if (!dropdown) return;
+        var btn = dropdown.querySelector('.hvh-rr-phone-code');
+        if (!btn) return;
+        var codeEl = btn.querySelector('span');
+        var flagEl = btn.querySelector('img');
+        if (codeEl) codeEl.textContent = code;
+        if (flagEl && flag) flagEl.src = flag;
+    });
+
+    // Auth page phone-code-dropdown handler
+    document.addEventListener('click', function (e) {
+        var opt = e.target.closest('.phone-code-option');
+        if (!opt) return;
+        var code = opt.dataset.code;
+        var flag = opt.dataset.flag;
+        var name = opt.dataset.name;
+        var dropdown = opt.closest('.phone-code-dropdown');
+        if (!dropdown) return;
+        var btn = dropdown.querySelector('.phone-code-select');
+        if (!btn) return;
+        var codeEl = btn.querySelector('.phone-code-label');
+        var flagEl = btn.querySelector('.phone-flag');
+        if (codeEl) codeEl.textContent = code;
+        if (flagEl && flag) { flagEl.src = flag; flagEl.alt = name || ''; }
+        // Close Bootstrap dropdown
+        var bsDropdown = bootstrap.Dropdown.getInstance(btn);
+        if (bsDropdown) bsDropdown.hide();
+    });
+})();
+
+// ================================================================
+//  Video Section Modal — pc-videos-section (pre-construction only)
+// ================================================================
+(function () {
+    var modal    = document.getElementById('pcVideoModal');
+    if (!modal) return;
+
+    var iframe   = document.getElementById('pcVideoIframe');
+    var closeBtn = document.getElementById('pcVideoClose');
+    var backdrop = modal.querySelector('.pc-video-modal__backdrop');
+
+    function openModal(src) {
+        var sep = src.indexOf('?') >= 0 ? '&' : '?';
+        iframe.src = src + sep + 'autoplay=1&rel=0';
+        modal.classList.add('pc-video-modal--open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('pc-video-modal--open');
+        iframe.src = '';
+        document.body.style.overflow = '';
+    }
+
+    // Open on card click or Enter/Space keypress
+    document.querySelectorAll('.pc-video-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+            openModal(card.dataset.videoSrc);
+        });
+        card.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openModal(card.dataset.videoSrc);
+            }
+        });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('pc-video-modal--open')) {
+            closeModal();
+        }
+    });
+})();
+
+// ================================================================
+//  Schools Near the Property — interactive chart (pre-construction)
+// ================================================================
+(function () {
+    if (!document.getElementById('schoolsBarChart')) return;
+
+    // ---- Per-school data (Reading / Writing / Math school scores) ----
+    var PROVINCIAL = [64, 72, 58]; // constant provincial averages
+
+    var schoolData = [
+        { name: 'Meadowvale Village PS',   scores: [56, 64, 48] },
+        { name: 'Churchville Public School', scores: [62, 58, 44] },
+        { name: 'St. Roch Catholic Elem.',   scores: [70, 68, 60] },
+        { name: 'Heart Lake Secondary',      scores: [52, 55, 40] },
+        { name: 'Notre Dame CSS',            scores: [65, 62, 55] },
+        { name: 'Turner Fenton SS',          scores: [45, 50, 35] }
+    ];
+
+    var emptyEl   = document.getElementById('schoolsChartEmpty');
+    var chartEl   = document.getElementById('schoolsChartArea');
+    var titleEl   = document.getElementById('schoolsChartTitle');
+    var canvas    = document.getElementById('schoolsBarChart');
+    var rows      = document.querySelectorAll('.pc-school-row');
+    var listEl    = document.querySelector('.pc-schools-list');
+    var thumbEl   = document.querySelector('.pc-schools-scrollbar__thumb');
+    var chartInst = null;
+
+    // ---- Decorative scrollbar thumb tracking ----
+    if (listEl && thumbEl) {
+        function updateThumb() {
+            var scrollTop  = listEl.scrollTop;
+            var scrollH    = listEl.scrollHeight - listEl.clientHeight;
+            var trackH     = thumbEl.parentElement.clientHeight;
+            var thumbH     = thumbEl.offsetHeight;
+            var maxTop     = trackH - thumbH;
+            var pct        = scrollH > 0 ? scrollTop / scrollH : 0;
+            thumbEl.style.top = Math.round(pct * maxTop) + 'px';
+        }
+        listEl.addEventListener('scroll', updateThumb, { passive: true });
+        updateThumb(); // initialise position
+    }
+
+    var CHART_OPTIONS = {
+        responsive: true,
+        maintainAspectRatio: false,   // let the CSS wrapper control height
+        plugins: {
+            legend: { display: false },
+            tooltip: {
+                backgroundColor: '#fff',
+                borderColor: '#f1f5f9',
+                borderWidth: 1,
+                titleColor: '#475569',
+                bodyColor: '#64748b',
+                titleFont: { family: "'Poppins', sans-serif", size: 12 },
+                bodyFont: { family: "'Poppins', sans-serif", size: 13 },
+                padding: 10,
+                cornerRadius: 12,
+                callbacks: {
+                    label: function (ctx) {
+                        return '  ' + ctx.dataset.label + ':  ' + ctx.parsed.y;
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                grid: { display: false },
+                ticks: { font: { family: "'Poppins', sans-serif", size: 12 }, color: 'rgba(0,0,0,0.7)' },
+                border: { display: false }
+            },
+            y: {
+                min: 0, max: 100,
+                ticks: { stepSize: 20, font: { family: "'Poppins', sans-serif", size: 12 }, color: 'rgba(0,0,0,0.7)' },
+                grid: { color: 'rgba(0,0,0,0.06)' },
+                border: { display: false }
+            }
+        }
+    };
+
+    function buildDatasets(scores) {
+        return [
+            {
+                label: 'School score',
+                data: scores,
+                backgroundColor: 'rgba(112,134,253,0.8)',
+                borderRadius: 4,
+                barPercentage: 0.85,
+                categoryPercentage: 0.8
+            },
+            {
+                label: 'Provincial score',
+                data: PROVINCIAL,
+                backgroundColor: 'rgba(111,209,149,0.8)',
+                borderRadius: 4,
+                barPercentage: 0.85,
+                categoryPercentage: 0.8
+            }
+        ];
+    }
+
+    function showChart(idx) {
+        var school = schoolData[idx];
+
+        // toggle empty → chart
+        emptyEl.style.display = 'none';
+        chartEl.style.display = 'flex';
+
+        // update title
+        titleEl.textContent = school.name + ' — Score Breakdown';
+
+        if (!chartInst) {
+            // first time: create the chart
+            chartInst = new Chart(canvas, {
+                type: 'bar',
+                data: {
+                    labels: ['Reading', 'Writing', 'Math'],
+                    datasets: buildDatasets(school.scores)
+                },
+                options: CHART_OPTIONS
+            });
+        } else {
+            // subsequent clicks: just swap data and animate update
+            chartInst.data.datasets[0].data = school.scores;
+            chartInst.update('active');
+        }
+    }
+
+    rows.forEach(function (row, idx) {
+        row.style.cursor = 'pointer';
+        row.addEventListener('click', function () {
+            // deactivate all, activate clicked
+            rows.forEach(function (r) { r.classList.remove('pc-school-row--active'); });
+            row.classList.add('pc-school-row--active');
+            showChart(idx);
+        });
+    });
+})();
+
+// ================================================================
+//  Book a Call — interactive calendar (pre-construction only)
+// ================================================================
+(function () {
+    var grid        = document.getElementById('bacGrid');
+    if (!grid) return;
+
+    var monthLabel  = document.getElementById('bacMonthLabel');
+    var prevBtn     = document.getElementById('bacPrev');
+    var nextBtn     = document.getElementById('bacNext');
+    var slotsEmpty  = document.getElementById('bacSlotsEmpty');
+    var slotsBody   = document.getElementById('bacSlotsBody');
+    var slotsGrid   = document.getElementById('bacSlotsGrid');
+    var dateLabel   = document.getElementById('bacDateLabel');
+    var confirmBtn  = document.getElementById('bacConfirm');
+    var confirmedEl = document.getElementById('bacConfirmed');
+    var confirmedTx = document.getElementById('bacConfirmedText');
+    var resetBtn    = document.getElementById('bacReset');
+
+    var MONTH_NAMES = ['January','February','March','April','May','June',
+                       'July','August','September','October','November','December'];
+    var DAY_NAMES   = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+    var ALL_SLOTS = ['9:00 AM','9:30 AM','10:00 AM','10:30 AM',
+                     '11:00 AM','11:30 AM','1:00 PM','1:30 PM',
+                     '2:00 PM','2:30 PM','3:00 PM','4:00 PM'];
+    var BOOKED    = ['9:30 AM','10:30 AM','2:30 PM']; // demo unavailable slots
+
+    var today        = new Date();
+    var viewYear     = today.getFullYear();
+    var viewMonth    = today.getMonth();
+    var selectedDate = null;
+    var selectedTime = null;
+
+    // ---- Render calendar grid ----
+    function renderCalendar() {
+        monthLabel.textContent = MONTH_NAMES[viewMonth] + ' ' + viewYear;
+
+        var first   = new Date(viewYear, viewMonth, 1).getDay();
+        var daysInM = new Date(viewYear, viewMonth + 1, 0).getDate();
+        var daysInP = new Date(viewYear, viewMonth, 0).getDate();
+
+        grid.innerHTML = '';
+
+        // Leading days from previous month
+        for (var p = first - 1; p >= 0; p--) {
+            grid.appendChild(makeDay(daysInP - p, true, false, false, false));
+        }
+
+        // Days of current month
+        for (var d = 1; d <= daysInM; d++) {
+            var cellDate = new Date(viewYear, viewMonth, d);
+            var isPast   = cellDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+            var isSel    = selectedDate && selectedDate.toDateString() === cellDate.toDateString();
+            var isTod    = cellDate.toDateString() === today.toDateString();
+            grid.appendChild(makeDay(d, false, isPast, isSel, isTod));
+        }
+
+        // Trailing filler days
+        var trailer = grid.children.length % 7 === 0 ? 0 : 7 - (grid.children.length % 7);
+        for (var t = 1; t <= trailer; t++) {
+            grid.appendChild(makeDay(t, true, false, false, false));
+        }
+
+        // Disable prev button at current month boundary
+        var prevLimit = new Date(today.getFullYear(), today.getMonth(), 1);
+        prevBtn.disabled = (new Date(viewYear, viewMonth, 1) <= prevLimit);
+    }
+
+    function makeDay(num, isOther, isDisabled, isSelected, isToday) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = num;
+        btn.className = 'bac-day';
+        if (isOther)    btn.classList.add('bac-day--other');
+        if (isDisabled) btn.classList.add('bac-day--disabled');
+        if (isSelected) btn.classList.add('bac-day--selected');
+        if (isToday)    btn.classList.add('bac-day--today');
+
+        if (!isOther && !isDisabled) {
+            btn.addEventListener('click', function () {
+                selectedDate = new Date(viewYear, viewMonth, num);
+                selectedTime = null;
+                renderCalendar();
+                showSlots();
+            });
+        }
+        return btn;
+    }
+
+    // ---- Show time slot panel ----
+    function showSlots() {
+        slotsEmpty.style.display   = 'none';
+        slotsBody.style.display    = 'flex';
+        confirmedEl.style.display  = 'none';
+
+        var d = selectedDate;
+        dateLabel.textContent = DAY_NAMES[d.getDay()] + ', ' +
+            MONTH_NAMES[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+
+        slotsGrid.innerHTML = '';
+        ALL_SLOTS.forEach(function (t) {
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.textContent = t;
+            btn.className = 'bac-slot';
+
+            if (BOOKED.indexOf(t) !== -1) {
+                btn.classList.add('bac-slot--disabled');
+            } else {
+                btn.addEventListener('click', function () {
+                    document.querySelectorAll('.bac-slot--selected')
+                        .forEach(function (s) { s.classList.remove('bac-slot--selected'); });
+                    btn.classList.add('bac-slot--selected');
+                    selectedTime = t;
+                    confirmBtn.disabled = false;
+                });
+            }
+            slotsGrid.appendChild(btn);
+        });
+
+        confirmBtn.disabled = true;
+    }
+
+    // ---- Confirm ----
+    confirmBtn.addEventListener('click', function () {
+        if (!selectedDate || !selectedTime) return;
+        var d = selectedDate;
+        confirmedTx.textContent = DAY_NAMES[d.getDay()] + ', ' +
+            MONTH_NAMES[d.getMonth()] + ' ' + d.getDate() + ' at ' + selectedTime;
+        slotsBody.style.display    = 'none';
+        confirmedEl.style.display  = 'flex';
+    });
+
+    // ---- Reset ----
+    resetBtn.addEventListener('click', function () {
+        selectedDate = null;
+        selectedTime = null;
+        confirmedEl.style.display = 'none';
+        slotsEmpty.style.display  = 'flex';
+        slotsBody.style.display   = 'none';
+        renderCalendar();
+    });
+
+    // ---- Month navigation ----
+    prevBtn.addEventListener('click', function () {
+        if (viewMonth === 0) { viewMonth = 11; viewYear--; } else { viewMonth--; }
+        renderCalendar();
+    });
+    nextBtn.addEventListener('click', function () {
+        if (viewMonth === 11) { viewMonth = 0; viewYear++; } else { viewMonth++; }
+        renderCalendar();
+    });
+
+    renderCalendar();
 })();

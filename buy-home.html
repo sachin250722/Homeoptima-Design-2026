@@ -188,14 +188,20 @@
                                         Phone <span class="bh-form__required">*</span>
                                     </label>
                                     <div class="bh-form__phone-wrap">
-                                        <div class="bh-form__phone-code">
-                                            <span class="bh-form__phone-prefix">+1</span>
-                                            <img src="images/icons/flag/01.svg" alt="US/Canada flag"
-                                                class="bh-form__flag">
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                                <path d="M4 6L8 10L12 6" stroke="#929DAA" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                                        <div class="dropdown">
+                                            <button type="button" class="hvh-rr-phone-code" data-bs-toggle="dropdown" data-bs-strategy="fixed" aria-expanded="false">
+                                                <img src="images/icons/flag/01.svg" alt="USA" width="24" height="24">
+                                                <span>+1</span>
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M6 9L12 15L18 9" stroke="#0E171F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu hvh-rr-phone-menu">
+                                                <li><button type="button" class="dropdown-item hvh-rr-phone-opt" data-code="+1" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +1 <span>USA / Canada</span></button></li>
+                                                <li><button type="button" class="dropdown-item hvh-rr-phone-opt" data-code="+44" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +44 <span>UK</span></button></li>
+                                                <li><button type="button" class="dropdown-item hvh-rr-phone-opt" data-code="+91" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +91 <span>India</span></button></li>
+                                                <li><button type="button" class="dropdown-item hvh-rr-phone-opt" data-code="+61" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +61 <span>Australia</span></button></li>
+                                            </ul>
                                         </div>
                                         <input type="tel" id="bhPhone" name="phone"
                                             class="bh-form__input bh-form__input--phone form-control"

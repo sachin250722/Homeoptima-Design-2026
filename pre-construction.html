@@ -171,9 +171,9 @@
                 <div class="col-lg-5">
                     <div class="hvh-rr-left">
                         <span class="section-badge">Request report</span>
-                        <h2 class="hvh-rr-heading">Lead capture form<br>for pricing and details.</h2>
+                        <h2 class="hvh-rr-heading">Lead capture form<br>for pricing and details<span class="text-primary">.</span></h2>
                         <p class="hvh-rr-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet
-                            turpis dapibus, sagittis ante finibus..</p>
+                            turpis dapibus, sagittis ante finibus.</p>
                     </div>
                 </div>
 
@@ -181,79 +181,74 @@
                 <div class="col-lg-7 ms-auto">
                     <div class="hvh-rr-form-card">
                         <div class="hvh-rr-form-card__top">
+                            <div class="row g-4 align-items-start">
 
-                            <div class="row align-items-center ">
+                                <!-- Left column: Full name, Phone, Email -->
                                 <div class="col-md-6">
                                     <!-- Full name -->
-                                    <div class="hvh-rr-field mb-3">
-                                        <label class="hvh-rr-field__label">Full name <span
-                                                class="hvh-rr-field__req">*</span></label>
+                                    <div class="hvh-rr-field mb-4">
+                                        <label class="hvh-rr-field__label">Full name <span class="hvh-rr-field__req">*</span></label>
                                         <input type="text" class="hvh-rr-input" placeholder="Enter full name">
                                     </div>
                                     <!-- Phone -->
-                                    <div class="row mb-3">
-                                        <div class="col-xl-2 col-lg-3 col-4">
-                                            <label class="form-label d-block">Phone <span>
-                                                </span></label>
-                                            <select class="selectpicker">
-                                                <option value="us"
-                                                    data-content="<img src='images/icons/flag/01.svg' alt='USA' >">
-                                                    USA (+1)
-                                                </option>
-
-                                                <option value="in"
-                                                    data-content="<img src='images/icons/flag/01.svg' alt='India'/>">
-                                                    USA (+1)
-                                                </option>
-                                            </select>
-
-                                        </div>
-                                        <div class="col-xl-10 col-lg-9 col-8">
-                                            <label class="form-label"> <span>
-                                                </span></label>
-                                            <input type="tel" class="hvh-rr-input" placeholder="Enter phone" />
+                                    <div class="hvh-rr-field mb-4">
+                                        <label class="hvh-rr-field__label">Phone <span class="hvh-rr-field__req">*</span></label>
+                                        <div class="hvh-rr-phone-group">
+                                            <div class="dropdown">
+                                                <button type="button" class="hvh-rr-phone-code" data-bs-toggle="dropdown" data-bs-strategy="fixed" aria-expanded="false">
+                                                    <img src="images/icons/flag/01.svg" alt="USA" width="24" height="24">
+                                                    <span>+1</span>
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M6 9L12 15L18 9" stroke="#0E171F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                                <ul class="dropdown-menu hvh-rr-phone-menu">
+                                                    <li><button type="button" class="dropdown-item hvh-rr-phone-opt" data-code="+1" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +1 <span>USA / Canada</span></button></li>
+                                                    <li><button type="button" class="dropdown-item hvh-rr-phone-opt" data-code="+44" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +44 <span>UK</span></button></li>
+                                                    <li><button type="button" class="dropdown-item hvh-rr-phone-opt" data-code="+91" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +91 <span>India</span></button></li>
+                                                    <li><button type="button" class="dropdown-item hvh-rr-phone-opt" data-code="+61" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +61 <span>Australia</span></button></li>
+                                                </ul>
+                                            </div>
+                                            <input type="tel" class="hvh-rr-input hvh-rr-input--phone" placeholder="Enter phone">
                                         </div>
                                     </div>
                                     <!-- Email -->
-                                    <div class="hvh-rr-field mb-3">
-                                        <label class="hvh-rr-field__label">Email <span
-                                                class="hvh-rr-field__req">*</span></label>
-                                        <input type="email" class="hvh-rr-input"
-                                            placeholder="Enter email address (e.g john@doe.com)">
+                                    <div class="hvh-rr-field">
+                                        <label class="hvh-rr-field__label">Email <span class="hvh-rr-field__req">*</span></label>
+                                        <input type="email" class="hvh-rr-input" placeholder="Enter email address (e.g john@doe.com)">
                                     </div>
                                 </div>
+
+                                <!-- Right column: Pricing, Tell us -->
                                 <div class="col-md-6">
                                     <!-- Pricing -->
-                                    <div class="hvh-rr-field mb-3">
-                                        <label class="hvh-rr-field__label">Pricing <span
-                                                class="hvh-rr-field__req">*</span></label>
-                                        <input type="text" class="hvh-rr-input"
-                                            placeholder="Enter pricing (e.g $1,000,000,000)">
+                                    <div class="hvh-rr-field mb-4">
+                                        <label class="hvh-rr-field__label">Pricing <span class="hvh-rr-field__req">*</span></label>
+                                        <input type="text" class="hvh-rr-input" placeholder="Enter pricing (e.g $1,000,000,000)">
                                     </div>
-                                    <!-- Tell us about your property -->
-                                    <div class="hvh-rr-field mb-3">
-                                        <label class="hvh-rr-field__label">Tell us about your property <span
-                                                class="hvh-rr-field__req">*</span></label>
-                                        <textarea class="hvh-rr-input hvh-rr-textarea"
-                                            placeholder="Input here"></textarea>
+                                    <!-- Tell us -->
+                                    <div class="hvh-rr-field">
+                                        <label class="hvh-rr-field__label">Tell us <span class="hvh-rr-field__req">*</span></label>
+                                        <textarea class="hvh-rr-input hvh-rr-textarea" placeholder="Input here"></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <button type="submit" class="hvh-rr-submit-btn">
-                                        Request report
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                            <path d="M9 6L15 12L9 18" stroke="white" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </button>
-                                </div>
+
                             </div>
+                        </div>
+                        <!-- Submit -->
+                        <div class="hvh-rr-form-card__bottom">
+                            <button type="submit" class="hvh-rr-submit-btn">
+                                Submit
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 6L15 12L9 18" stroke="white" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
         </div>
     </section>
 
@@ -702,8 +697,8 @@
                 <div class="col-lg-8">
                     <span class="section-badge">Discovery</span>
                     <h2 class="section-title">Discover more <br>amazing projects.</h2>
-                    <p class="section-desc">From your first search to final closing â€” and everything in between â€” we
-                        guide you every step of the way.</p>
+                    <p class="section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet turpis
+                        dapibus, sagittis ante finibus, congue nulla.</p>
                 </div>
                 <div class="col-auto ms-auto">
                     <a href="#" class="btn btn-primary d-flex align-items-center gap-2">
@@ -721,23 +716,26 @@
                         <div class="swiper-slide">
                             <div class="listing-card">
                                 <div class="listing-img">
-                                    <img src="images/listing-01.jpg" alt="Modern detached home in Mississauga">
+                                    <img src="images/listing-01.jpg" alt="Pre-construction project">
                                 </div>
                                 <div class="listing-body">
-                                    <div class="listing-price">$1,249,000</div>
-                                    <div class="listing-name">Lakeview Detached â€” Mississauga</div>
+                                    <div class="listing-price">$ 1,000,000</div>
+                                    <div class="listing-name">In rutrum imperdiet</div>
                                     <div class="listing-body-lower">
-                                        <p class="listing-desc">Spacious 4-bed, 3-bath detached with finished basement
-                                            and private backyard in a sought-after Lakeview pocket.</p>
+                                        <p class="listing-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter miller del altro.</p>
                                         <div class="listing-meta">
-                                            <span class="listing-meta-item"><img src="images/icons/local.svg"
-                                                    alt="">Mississauga</span>
-                                            <span class="listing-meta-item"><img src="images/icons/bed.svg" alt="">4
-                                                beds</span>
-                                            <span class="listing-meta-item"><img src="images/icons/bath.svg" alt="">3
-                                                baths</span>
-                                            <span class="listing-meta-item"><img src="images/icons/sqft.svg"
-                                                    alt="">2,400 sqft</span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/location.svg" alt="Location">Southern Ontario
+                                            </span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/bed-single.svg" alt="Beds">4 bed
+                                            </span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/bathtub.svg" alt="Baths">3 bath
+                                            </span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/dashed-line.svg" alt="Size">2,400 sqft
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -747,23 +745,26 @@
                         <div class="swiper-slide">
                             <div class="listing-card">
                                 <div class="listing-img">
-                                    <img src="images/listing-02.jpg" alt="Townhome in Oakville">
+                                    <img src="images/listing-02.jpg" alt="Pre-construction project">
                                 </div>
                                 <div class="listing-body">
-                                    <div class="listing-price">$899,000</div>
-                                    <div class="listing-name">Uptown Core Townhome â€” Oakville</div>
+                                    <div class="listing-price">$ 1,000,000</div>
+                                    <div class="listing-name">In rutrum imperdiet</div>
                                     <div class="listing-body-lower">
-                                        <p class="listing-desc">Contemporary 3-bed end-unit townhome steps from
-                                            Oakville's best shops, restaurants, and top-rated schools.</p>
+                                        <p class="listing-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter miller del altro.</p>
                                         <div class="listing-meta">
-                                            <span class="listing-meta-item"><img src="images/icons/local.svg"
-                                                    alt="">Oakville</span>
-                                            <span class="listing-meta-item"><img src="images/icons/bed.svg" alt="">3
-                                                beds</span>
-                                            <span class="listing-meta-item"><img src="images/icons/bath.svg" alt="">2
-                                                baths</span>
-                                            <span class="listing-meta-item"><img src="images/icons/sqft.svg"
-                                                    alt="">1,800 sqft</span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/location.svg" alt="Location">Southern Ontario
+                                            </span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/bed-single.svg" alt="Beds">4 bed
+                                            </span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/bathtub.svg" alt="Baths">3 bath
+                                            </span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/dashed-line.svg" alt="Size">2,400 sqft
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -773,49 +774,55 @@
                         <div class="swiper-slide">
                             <div class="listing-card">
                                 <div class="listing-img">
-                                    <img src="images/listing-03.jpg" alt="Condo in Burlington">
+                                    <img src="images/listing-03.jpg" alt="Pre-construction project">
                                 </div>
                                 <div class="listing-body">
-                                    <div class="listing-price">$649,000</div>
-                                    <div class="listing-name">Waterfront Condo â€” Burlington</div>
+                                    <div class="listing-price">$ 1,000,000</div>
+                                    <div class="listing-name">In rutrum imperdiet</div>
                                     <div class="listing-body-lower">
-                                        <p class="listing-desc">Sun-drenched 2-bed condo with panoramic lake views,
-                                            modern kitchen, and building amenities.</p>
+                                        <p class="listing-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter miller del altro.</p>
                                         <div class="listing-meta">
-                                            <span class="listing-meta-item"><img src="images/icons/local.svg"
-                                                    alt="">Burlington</span>
-                                            <span class="listing-meta-item"><img src="images/icons/bed.svg" alt="">2
-                                                beds</span>
-                                            <span class="listing-meta-item"><img src="images/icons/bath.svg" alt="">2
-                                                baths</span>
-                                            <span class="listing-meta-item"><img src="images/icons/sqft.svg"
-                                                    alt="">1,050 sqft</span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/location.svg" alt="Location">Southern Ontario
+                                            </span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/bed-single.svg" alt="Beds">4 bed
+                                            </span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/bathtub.svg" alt="Baths">3 bath
+                                            </span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/dashed-line.svg" alt="Size">2,400 sqft
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Listing 4 -->
-                        <div class="swiper-slide">
+                        <!-- Listing 4 (peek card — 56% opacity) -->
+                        <div class="swiper-slide listing-slide--peek">
                             <div class="listing-card">
                                 <div class="listing-img">
-                                    <img src="images/listing-04.jpg" alt="Semi-detached in Hamilton">
+                                    <img src="images/listing-04.jpg" alt="Pre-construction project">
                                 </div>
                                 <div class="listing-body">
-                                    <div class="listing-price">$749,000</div>
-                                    <div class="listing-name">West End Semi â€” Hamilton</div>
+                                    <div class="listing-price">$ 1,000,000</div>
+                                    <div class="listing-name">In rutrum imperdiet</div>
                                     <div class="listing-body-lower">
-                                        <p class="listing-desc">Beautifully updated 3-bed semi-detached with
-                                            open-concept main floor, new kitchen, and large private yard.</p>
+                                        <p class="listing-desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor alter miller del altro.</p>
                                         <div class="listing-meta">
-                                            <span class="listing-meta-item"><img src="images/icons/local.svg"
-                                                    alt="">Hamilton</span>
-                                            <span class="listing-meta-item"><img src="images/icons/bed.svg" alt="">3
-                                                beds</span>
-                                            <span class="listing-meta-item"><img src="images/icons/bath.svg" alt="">2
-                                                baths</span>
-                                            <span class="listing-meta-item"><img src="images/icons/sqft.svg"
-                                                    alt="">1,600 sqft</span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/location.svg" alt="Location">Southern Ontario
+                                            </span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/bed-single.svg" alt="Beds">4 bed
+                                            </span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/bathtub.svg" alt="Baths">3 bath
+                                            </span>
+                                            <span class="listing-meta-item">
+                                                <img src="images/icons/dashed-line.svg" alt="Size">2,400 sqft
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -842,6 +849,85 @@
             </div>
         </div>
     </section>
+
+    <!-- ===================== VIDEOS SECTION ===================== -->
+    <section class="pc-videos-section">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="pc-videos-header">
+                <span class="pc-section-badge">Videos</span>
+                <h2 class="pc-section-title">See Heritage Heights<br>come to life<span class="text-primary">.</span></h2>
+                <p class="pc-section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet turpis
+                    dapibus, sagittis ante finibus, congue nulla.</p>
+            </div>
+
+            <!-- Video Cards — stacked -->
+            <div class="pc-videos-list">
+
+                <!-- Card 1 -->
+                <div class="pc-video-card" data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ" role="button" tabindex="0" aria-label="Play video: Heritage Heights Project Tour">
+                    <img src="images/listing-01.jpg" alt="" class="pc-video-card__bg">
+                    <div class="pc-video-card__overlay" aria-hidden="true"></div>
+                    <div class="pc-video-card__content">
+                        <h3 class="pc-video-card__title">Heritage Heights<br>Project Tour</h3>
+                        <button class="pc-video-card__play" aria-label="Play video" tabindex="-1">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 4.5L19.5 12L6 19.5V4.5Z" fill="#2C6EFE"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="pc-video-card" data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ" role="button" tabindex="0" aria-label="Play video: Community & Amenities">
+                    <img src="images/listing-02.jpg" alt="" class="pc-video-card__bg">
+                    <div class="pc-video-card__overlay" aria-hidden="true"></div>
+                    <div class="pc-video-card__content">
+                        <h3 class="pc-video-card__title">Explore the Community<br>&amp; Amenities</h3>
+                        <button class="pc-video-card__play" aria-label="Play video" tabindex="-1">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 4.5L19.5 12L6 19.5V4.5Z" fill="#2C6EFE"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="pc-video-card" data-video-src="https://www.youtube.com/embed/dQw4w9WgXcQ" role="button" tabindex="0" aria-label="Play video: Developer Q&A Phase 2">
+                    <img src="images/listing-03.jpg" alt="" class="pc-video-card__bg">
+                    <div class="pc-video-card__overlay" aria-hidden="true"></div>
+                    <div class="pc-video-card__content">
+                        <h3 class="pc-video-card__title">Developer Q&amp;A<br>Phase 2 Preview</h3>
+                        <button class="pc-video-card__play" aria-label="Play video" tabindex="-1">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 4.5L19.5 12L6 19.5V4.5Z" fill="#2C6EFE"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Video Modal -->
+        <div class="pc-video-modal" id="pcVideoModal" role="dialog" aria-modal="true" aria-label="Video player">
+            <div class="pc-video-modal__backdrop"></div>
+            <div class="pc-video-modal__dialog">
+                <button class="pc-video-modal__close" id="pcVideoClose" aria-label="Close video">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="pc-video-modal__player">
+                    <iframe id="pcVideoIframe" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /videos section -->
 
     <!-- ==================== 3. NEIGHBORHOOD & LIFE FACTORS ==================== -->
     <section class="hvh-lf-section">
@@ -1403,50 +1489,341 @@
             </div><!-- /.hvh-lf-body -->
         </div>
     </section>
+
+    <!-- ===================== SCHOOLS SECTION ===================== -->
+    <section class="pc-schools-section">
+        <div class="container">
+
+            <!-- Header -->
+            <div class="pc-schools-header">
+                <span class="pc-section-badge">Schools</span>
+                <h2 class="pc-section-title">Schools near the Property<span class="text-primary">.</span></h2>
+                <p class="pc-section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet turpis
+                    dapibus, sagittis ante finibus, congue nulla.</p>
+            </div>
+
+            <!-- Body: list + chart -->
+            <div class="pc-schools-body">
+
+                <!-- LEFT: accordion list -->
+                <div class="pc-schools-list-col">
+
+                    <!-- List rows + custom scrollbar -->
+                    <div class="pc-schools-list-wrap">
+                        <div class="pc-schools-list">
+
+                            <!-- Row 1 -->
+                            <div class="pc-school-row">
+                                <div class="pc-school-score">
+                                    <span class="pc-school-score__label">Score</span>
+                                    <span class="pc-school-score__value">72</span>
+                                </div>
+                                <div class="pc-school-info">
+                                    <p class="pc-school-name">Meadowvale Village PS</p>
+                                    <p class="pc-school-addr">890 Old Derry Rd W</p>
+                                </div>
+                                <div class="pc-school-meta">
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Grades</span>
+                                        <span class="pc-school-meta-value">Elementary</span>
+                                    </div>
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Type</span>
+                                        <span class="pc-school-meta-value">Public</span>
+                                    </div>
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Distance</span>
+                                        <span class="pc-school-meta-value">0&ndash;2 km</span>
+                                    </div>
+                                </div>
+                                <svg class="pc-school-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 6L15 12L9 18" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                            <!-- Row 2 -->
+                            <div class="pc-school-row">
+                                <div class="pc-school-score">
+                                    <span class="pc-school-score__label">Score</span>
+                                    <span class="pc-school-score__value">68</span>
+                                </div>
+                                <div class="pc-school-info">
+                                    <p class="pc-school-name">Churchville Public School</p>
+                                    <p class="pc-school-addr">7500 Churchville Rd</p>
+                                </div>
+                                <div class="pc-school-meta">
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Grades</span>
+                                        <span class="pc-school-meta-value">Elementary</span>
+                                    </div>
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Type</span>
+                                        <span class="pc-school-meta-value">Public</span>
+                                    </div>
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Distance</span>
+                                        <span class="pc-school-meta-value">2&ndash;4 km</span>
+                                    </div>
+                                </div>
+                                <svg class="pc-school-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 6L15 12L9 18" stroke="#929DAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                            <!-- Row 3 -->
+                            <div class="pc-school-row">
+                                <div class="pc-school-score">
+                                    <span class="pc-school-score__label">Score</span>
+                                    <span class="pc-school-score__value">75</span>
+                                </div>
+                                <div class="pc-school-info">
+                                    <p class="pc-school-name">St. Roch Catholic Elem.</p>
+                                    <p class="pc-school-addr">10085 Creditview Rd</p>
+                                </div>
+                                <div class="pc-school-meta">
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Grades</span>
+                                        <span class="pc-school-meta-value">Elementary</span>
+                                    </div>
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Type</span>
+                                        <span class="pc-school-meta-value">Catholic</span>
+                                    </div>
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Distance</span>
+                                        <span class="pc-school-meta-value">0&ndash;2 km</span>
+                                    </div>
+                                </div>
+                                <svg class="pc-school-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 6L15 12L9 18" stroke="#929DAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                            <!-- Row 4 -->
+                            <div class="pc-school-row">
+                                <div class="pc-school-score">
+                                    <span class="pc-school-score__label">Score</span>
+                                    <span class="pc-school-score__value">65</span>
+                                </div>
+                                <div class="pc-school-info">
+                                    <p class="pc-school-name">Heart Lake Secondary</p>
+                                    <p class="pc-school-addr">1200 Sandalwood Pkwy E</p>
+                                </div>
+                                <div class="pc-school-meta">
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Grades</span>
+                                        <span class="pc-school-meta-value">Secondary</span>
+                                    </div>
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Type</span>
+                                        <span class="pc-school-meta-value">Public</span>
+                                    </div>
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Distance</span>
+                                        <span class="pc-school-meta-value">4&ndash;6 km</span>
+                                    </div>
+                                </div>
+                                <svg class="pc-school-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 6L15 12L9 18" stroke="#929DAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                            <!-- Row 5 -->
+                            <div class="pc-school-row">
+                                <div class="pc-school-score">
+                                    <span class="pc-school-score__label">Score</span>
+                                    <span class="pc-school-score__value">71</span>
+                                </div>
+                                <div class="pc-school-info">
+                                    <p class="pc-school-name">Notre Dame CSS</p>
+                                    <p class="pc-school-addr">40 Enfield Rd</p>
+                                </div>
+                                <div class="pc-school-meta">
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Grades</span>
+                                        <span class="pc-school-meta-value">Secondary</span>
+                                    </div>
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Type</span>
+                                        <span class="pc-school-meta-value">Catholic</span>
+                                    </div>
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Distance</span>
+                                        <span class="pc-school-meta-value">2&ndash;4 km</span>
+                                    </div>
+                                </div>
+                                <svg class="pc-school-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 6L15 12L9 18" stroke="#929DAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                            <!-- Row 6 -->
+                            <div class="pc-school-row">
+                                <div class="pc-school-score">
+                                    <span class="pc-school-score__label">Score</span>
+                                    <span class="pc-school-score__value">58</span>
+                                </div>
+                                <div class="pc-school-info">
+                                    <p class="pc-school-name">Turner Fenton SS</p>
+                                    <p class="pc-school-addr">7935 Kennedy Rd S</p>
+                                </div>
+                                <div class="pc-school-meta">
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Grades</span>
+                                        <span class="pc-school-meta-value">Secondary</span>
+                                    </div>
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Type</span>
+                                        <span class="pc-school-meta-value">Public</span>
+                                    </div>
+                                    <div class="pc-school-meta-item">
+                                        <span class="pc-school-meta-label">Distance</span>
+                                        <span class="pc-school-meta-value">4&ndash;6 km</span>
+                                    </div>
+                                </div>
+                                <svg class="pc-school-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 6L15 12L9 18" stroke="#929DAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+
+                        </div><!-- /.pc-schools-list -->
+
+                        <!-- Custom decorative scrollbar -->
+                        <div class="pc-schools-scrollbar" aria-hidden="true">
+                            <div class="pc-schools-scrollbar__thumb"></div>
+                        </div>
+                    </div><!-- /.pc-schools-list-wrap -->
+
+                    <!-- Data & Copyright Notice -->
+                    <div class="pc-schools-notice">
+                        <p class="pc-schools-notice__title">Data &amp; Copyright Notice</p>
+                        <p class="pc-schools-notice__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare,
+                            eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo
+                            cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+                    </div>
+
+                </div><!-- /.pc-schools-list-col -->
+
+                <!-- RIGHT: bar chart -->
+                <div class="pc-schools-chart-col">
+                    <div class="pc-schools-chart-card">
+
+                        <!-- Empty state (default) -->
+                        <div class="pc-schools-chart-empty" id="schoolsChartEmpty">
+                            <p>No school record found.<br>Select a school to display data</p>
+                        </div>
+
+                        <!-- Chart area (shown after a row is selected) -->
+                        <div class="pc-schools-chart-area" id="schoolsChartArea" style="display:none;">
+                            <p class="pc-schools-chart-title" id="schoolsChartTitle"></p>
+                            <div class="pc-schools-canvas-wrap">
+                                <canvas id="schoolsBarChart"></canvas>
+                            </div>
+                            <div class="pc-schools-chart-legend">
+                                <span class="pc-schools-chart-legend-item">
+                                    <i style="background:#7086fd;"></i>School score
+                                </span>
+                                <span class="pc-schools-chart-legend-item">
+                                    <i style="background:#6fd195;"></i>Provincial score
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- /.pc-schools-chart-col -->
+
+            </div><!-- /.pc-schools-body -->
+        </div>
+    </section>
+    <!-- /schools section -->
     <!-- ==================== /NEIGHBORHOOD ==================== -->
 
-    <!-- ===================== REQUEST REPORT ===================== -->
-    <!-- Shape: white → blue -->
-    <div class="shape" aria-hidden="true">
-        <img src="images/icons/right-shape.svg" alt="" class="shape-img">
-    </div>
+    <!-- ===================== BOOK A CALL ===================== -->
+    <section class="pc-book-call-section">
 
-    <section class="hvh-rr-section">
-        <!-- Decorative wave lines -->
-        <div class="hvh-rr-section__deco" aria-hidden="true">
-            <svg viewBox="0 0 1440 560" fill="none" preserveAspectRatio="xMidYMid slice"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M-100 500 C 200 340, 560 190, 900 300 C 1140 370, 1350 310, 1560 120"
-                    stroke="rgba(44,110,254,0.18)" stroke-width="1.5" />
-                <path d="M-100 580 C 250 410, 620 255, 970 360 C 1200 430, 1410 360, 1620 170"
-                    stroke="rgba(44,110,254,0.11)" stroke-width="1.5" />
-                <path d="M-100 420 C 150 270, 500 130, 850 240 C 1090 308, 1310 248, 1530 58"
-                    stroke="rgba(44,110,254,0.07)" stroke-width="1" />
+        <!-- Decorative wave lines (Figma background) -->
+        <div class="pc-book-call-section__deco" aria-hidden="true">
+            <svg viewBox="0 0 1440 560" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-100 500 C 200 340, 560 190, 900 300 C 1140 370, 1350 310, 1560 120" stroke="rgba(44,110,254,0.18)" stroke-width="1.5"/>
+                <path d="M-100 580 C 250 410, 620 255, 970 360 C 1200 430, 1410 360, 1620 170" stroke="rgba(44,110,254,0.11)" stroke-width="1.5"/>
+                <path d="M-100 420 C 150 270, 500 130, 850 240 C 1090 308, 1310 248, 1530 58" stroke="rgba(44,110,254,0.07)" stroke-width="1"/>
             </svg>
         </div>
 
         <div class="container">
-            <div class="row g-5 align-items-center">
 
-                <!-- Left: Text -->
-                <div class="col-lg-5">
-                    <div class="hvh-rr-left">
-                        <span class="section-badge">Lorem Ipsum</span>
-                        <h2 class="hvh-rr-heading">Book a call</h2>
-                        <p class="hvh-rr-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet.</p>
-                    </div>
-                </div>
-
-                <!-- bottom: Booking calendar Card -->
-                <div class="col-lg-12">
-                    <div class="calender-box">
-                        <div class="placeholder-text">Booking calendar here</div>
-                    </div>
-                </div>
-
+            <!-- Text block -->
+            <div class="pc-book-call-section__text">
+                <span class="pc-section-badge">Book a call</span>
+                <h2 class="pc-section-title">Book a call<span class="text-primary">.</span></h2>
+                <p class="pc-section-desc" style="max-width:420px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet.</p>
             </div>
+
+            <!-- Calendar card -->
+            <div class="calender-box" id="bacCard">
+
+                <!-- ── BOOKING CALENDAR ── -->
+                <div class="bac-wrap">
+
+                    <!-- LEFT: month calendar -->
+                    <div class="bac-cal">
+                        <div class="bac-cal__header">
+                            <button class="bac-cal__nav" id="bacPrev" aria-label="Previous month">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="#0E171F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                            <span class="bac-cal__month" id="bacMonthLabel"></span>
+                            <button class="bac-cal__nav" id="bacNext" aria-label="Next month">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="#0E171F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+                        <div class="bac-cal__weekdays">
+                            <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                        </div>
+                        <div class="bac-cal__grid" id="bacGrid"></div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="bac-divider" aria-hidden="true"></div>
+
+                    <!-- RIGHT: time slots + confirm -->
+                    <div class="bac-slots">
+
+                        <!-- No-date state -->
+                        <div class="bac-slots__empty" id="bacSlotsEmpty">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M8 2V5M16 2V5M3.5 9.09H20.5M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="#929DAA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <p>Select a date to<br>see available times</p>
+                        </div>
+
+                        <!-- Time slots (shown after date pick) -->
+                        <div class="bac-slots__body" id="bacSlotsBody" style="display:none;">
+                            <p class="bac-slots__date-label" id="bacDateLabel"></p>
+                            <div class="bac-slots__grid" id="bacSlotsGrid"></div>
+                            <button class="bac-slots__confirm btn btn-primary w-100" id="bacConfirm" disabled>
+                                Confirm booking
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                        </div>
+
+                        <!-- Confirmed state -->
+                        <div class="bac-slots__confirmed" id="bacConfirmed" style="display:none;">
+                            <div class="bac-slots__confirmed-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="#2C6EFE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <p class="bac-slots__confirmed-title">Booking confirmed!</p>
+                            <p class="bac-slots__confirmed-sub" id="bacConfirmedText"></p>
+                            <button class="bac-slots__reset" id="bacReset">Book another time</button>
+                        </div>
+
+                    </div><!-- /.bac-slots -->
+
+                </div><!-- /.bac-wrap -->
+
+            </div><!-- /.calender-box -->
+
         </div>
     </section>
+    <!-- /book a call -->
 
     <!-- =========================================================
          FOOTER (shared)

@@ -1105,3 +1105,851 @@
         display: none;
     }
 }
+
+// ================================================================
+//  VIDEOS SECTION
+// ================================================================
+.pc-videos-section {
+    padding: 80px 0;
+    background: $white;
+
+    // ---- Header ----
+    .pc-videos-header {
+        margin-bottom: 48px;
+
+        .pc-section-title {
+            margin-top: 12px;
+            margin-bottom: 16px;
+        }
+    }
+
+    // ---- Stacked list ----
+    .pc-videos-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    // ---- Individual video card ----
+    .pc-video-card {
+        position: relative;
+        border-radius: $radius-lg;
+        overflow: hidden;
+        height: 650px;
+        cursor: pointer;
+        display: block;
+
+        // background image
+        .pc-video-card__bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            @include transitionMedium;
+        }
+
+        // dark overlay
+        .pc-video-card__overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.24);
+            @include transitionFast;
+        }
+
+        // content (title + play button)
+        .pc-video-card__content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            gap: 28px;
+            padding: 40px;
+        }
+
+        // title
+        .pc-video-card__title {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 300;
+            font-size: 56px;
+            line-height: 1.15;
+            color: $white;
+            text-align: center;
+            margin: 0;
+        }
+
+        // play button
+        .pc-video-card__play {
+            width: 80px;
+            height: 80px;
+            border-radius: 999px;
+            background: $white;
+            border: 1.5px solid rgba(146, 157, 170, 0.24);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            cursor: pointer;
+            padding: 0;
+            @include transitionFast;
+
+            svg { display: block; flex-shrink: 0; }
+        }
+
+        // hover states
+        &:hover,
+        &:focus-visible {
+            outline: none;
+
+            .pc-video-card__overlay { background: rgba(0, 0, 0, 0.4); }
+            .pc-video-card__bg     { transform: scale(1.04); }
+            .pc-video-card__play   {
+                transform: scale(1.12);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+            }
+        }
+
+        // ---- Responsive ----
+        @include respond('tab-port') {
+            height: 280px;
+
+            .pc-video-card__title { font-size: 36px; }
+            .pc-video-card__play  { width: 64px; height: 64px; }
+        }
+
+        @include respond('phone') {
+            height: 220px;
+
+            .pc-video-card__title { font-size: 26px; line-height: 1.2; }
+            .pc-video-card__content { gap: 20px; padding: 24px; }
+            .pc-video-card__play  { width: 56px; height: 56px; }
+        }
+    }
+}
+
+// ---- Video Modal (global — fixed overlay) ----
+.pc-video-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+
+    &--open {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    &__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.88);
+        cursor: pointer;
+    }
+
+    &__dialog {
+        position: relative;
+        z-index: 1;
+        width: 90%;
+        max-width: 960px;
+    }
+
+    &__close {
+        position: absolute;
+        top: -52px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        @include transitionFast;
+
+        svg { display: block; }
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.28);
+            transform: scale(1.1);
+        }
+    }
+
+    &__player {
+        position: relative;
+        padding-bottom: 56.25%; // 16:9 ratio
+        height: 0;
+        border-radius: $radius-lg;
+        overflow: hidden;
+        background: #000;
+
+        iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
+}
+
+// ================================================================
+//  SCHOOLS SECTION
+// ================================================================
+.pc-schools-section {
+    padding: 80px 0;
+    background: $white;
+
+    .pc-schools-header {
+        margin-bottom: 56px;
+        max-width: 680px;
+
+        .pc-section-title { margin-top: 8px; margin-bottom: 0; }
+    }
+
+    // ---- Two-column layout ----
+    .pc-schools-body {
+        display: flex;
+        gap: 56px;
+        align-items: stretch; // both columns are always equal height
+
+        @include respond('tab-port') {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    // ---- Left column ----
+    .pc-schools-list-col {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    // Scrollable area: list + decorative scrollbar side-by-side
+    // flex: 1 + min-height: 0 allows this child to shrink below its content height
+    .pc-schools-list-wrap {
+        flex: 1;
+        min-height: 0;          // critical — enables overflow in a flex child
+        display: flex;
+        gap: 16px;
+        align-items: stretch;
+        overflow: hidden;
+    }
+
+    // The actual scrollable list — native scroll, hidden scrollbar
+    .pc-schools-list {
+        flex: 1;
+        min-width: 0;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        overflow-y: auto;
+        padding-right: 4px;
+
+        // hide native scrollbar (replaced by decorative one)
+        scrollbar-width: none;
+        &::-webkit-scrollbar { display: none; }
+    }
+
+    // ---- Individual school row ----
+    .pc-school-row {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding: 24px 16px;
+        background: $white;
+        border: 1px solid rgba($dark, 0.08);
+        border-radius: 16px;
+        cursor: pointer;
+        @include transitionFast;
+
+        &:hover {
+            border-color: rgba($primary, 0.4);
+            box-shadow: 0 4px 16px rgba($primary, 0.06);
+        }
+
+        &--active {
+            border-color: rgba($primary, 0.8);
+            box-shadow: 0 4px 20px rgba($primary, 0.08);
+        }
+    }
+
+    // Score badge
+    .pc-school-score {
+        width: 56px;
+        height: 56px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        background: linear-gradient(to bottom, rgba($primary, 0.06), rgba($primary, 0.16));
+        border: 0.36px solid $primary;
+        border-radius: 6px;
+        overflow: hidden;
+        padding: 10px;
+
+        &__label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+            line-height: 10px;
+            color: $primary;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        &__value {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 18px;
+            color: $primary;
+            text-align: center;
+        }
+    }
+
+    // School name + address
+    .pc-school-info {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .pc-school-name {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        color: $dark;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .pc-school-addr {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba($dark, 0.68);
+        margin: 0;
+    }
+
+    // Meta columns (Grades / Type / Distance)
+    .pc-school-meta {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        gap: 24px;
+        align-items: center;
+
+        @include respond('phone') { display: none; }
+    }
+
+    .pc-school-meta-item {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .pc-school-meta-label {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+        color: $dark;
+    }
+
+    .pc-school-meta-value {
+        font-family: 'Poppins', sans-serif;
+        font-size: 10px;
+        line-height: 12px;
+        color: rgba($dark, 0.68);
+    }
+
+    .pc-school-chevron {
+        flex-shrink: 0;
+    }
+
+    // ---- Custom decorative scrollbar ----
+    .pc-schools-scrollbar {
+        width: 8px;
+        flex-shrink: 0;
+        border: 1px solid rgba(146, 157, 170, 0.12);
+        border-radius: 999px;
+        background: #f2f6ff;
+        position: relative; // thumb is positioned inside
+        overflow: hidden;
+
+        &__thumb {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;             // updated by JS on scroll
+            height: 30%;        // proportional thumb size
+            background: #abbfd7;
+            border-radius: 999px;
+            transition: top 0.1s linear;
+        }
+    }
+
+    // ---- Data & Copyright Notice ----
+    .pc-schools-notice {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        &__title {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18px;
+            color: $dark;
+            margin: 0;
+        }
+
+        &__text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            color: #929daa;
+            margin: 0;
+        }
+    }
+
+    // ---- Right column: chart card ----
+    .pc-schools-chart-col {
+        flex: 1;
+        min-width: 0;
+        display: flex;           // column itself is flex so card can fill it
+        flex-direction: column;
+    }
+
+    .pc-schools-chart-card {
+        flex: 1;                 // fills the full height of the right column
+        background: $white;
+        border: 1px solid rgba($dark, 0.08);
+        border-radius: $radius-lg;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    // Empty state
+    .pc-schools-chart-empty {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            color: #929daa;
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    // Chart area (visible when a school is selected)
+    .pc-schools-chart-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .pc-schools-chart-title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: $dark;
+        margin: 0;
+    }
+
+    // Canvas wrapper — grows to fill all remaining card height
+    .pc-schools-canvas-wrap {
+        position: relative;
+        flex: 1;
+        min-height: 0;   // allows flex child to shrink below content size
+        width: 100%;
+
+        canvas {
+            position: absolute;
+            inset: 0;
+        }
+    }
+
+    .pc-schools-chart-legend {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .pc-schools-chart-legend-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.7);
+
+        i {
+            width: 10px;
+            height: 10px;
+            border-radius: 2px;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+    }
+
+    @include respond('tab-port') {
+        padding: 60px 0;
+
+        .pc-school-name { font-size: 16px; }
+        .pc-school-addr { font-size: 14px; }
+    }
+
+    @include respond('phone') {
+        padding: 48px 0;
+    }
+}
+
+// ================================================================
+//  BOOK A CALL SECTION
+// ================================================================
+.pc-book-call-section {
+    position: relative;
+    padding: 80px 0;
+    background: #f2f6ff;
+    overflow: hidden;
+
+    &__deco {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        svg { width: 100%; height: 100%; }
+    }
+
+    .container { position: relative; z-index: 1; }
+
+    // Text block above the card
+    &__text {
+        margin-bottom: 34px;
+        max-width: 420px;
+
+        .pc-section-title { margin-top: 8px; margin-bottom: 0; }
+        .pc-section-desc  { margin-top: 16px; }
+    }
+
+    // Override calender-box for this section
+    .calender-box {
+        height: auto;       // let the calendar determine height
+        min-height: 538px;
+        padding: 0;
+        align-items: stretch;
+        justify-content: stretch;
+    }
+}
+
+// ── Booking Calendar ──────────────────────────────────────────────
+.bac-wrap {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-height: 538px;
+
+    @include respond('tab-port') {
+        flex-direction: column;
+    }
+}
+
+// ---- Left: month picker ----
+.bac-cal {
+    flex: 1;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__month {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: $dark;
+    }
+
+    &__nav {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid rgba($dark, 0.1);
+        background: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        @include transitionFast;
+
+        &:hover { border-color: $primary; }
+        &:disabled { opacity: 0.35; cursor: not-allowed; }
+    }
+
+    &__weekdays {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        text-align: center;
+
+        span {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            color: #929daa;
+            padding: 4px 0;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 4px;
+        flex: 1;
+    }
+}
+
+// Individual day cell
+.bac-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: $dark;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    @include transitionFast;
+
+    &:hover:not(.bac-day--disabled):not(.bac-day--other) {
+        background: rgba($primary, 0.08);
+        color: $primary;
+    }
+
+    &--today {
+        font-weight: 600;
+        color: $primary;
+    }
+
+    &--selected {
+        background: $primary !important;
+        color: $white !important;
+        font-weight: 600;
+    }
+
+    &--disabled {
+        color: rgba($dark, 0.25);
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    &--other {
+        color: rgba($dark, 0.2);
+        cursor: default;
+        pointer-events: none;
+    }
+}
+
+// ---- Divider ----
+.bac-divider {
+    width: 1px;
+    background: rgba($dark, 0.07);
+    flex-shrink: 0;
+    margin: 24px 0;
+
+    @include respond('tab-port') {
+        width: auto;
+        height: 1px;
+        margin: 0 24px;
+    }
+}
+
+// ---- Right: time slots ----
+.bac-slots {
+    flex: 0 0 300px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include respond('tab-port') { flex: 1; }
+
+    // Empty prompt
+    &__empty {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        text-align: center;
+
+        svg { opacity: 0.5; }
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            line-height: 22px;
+            color: #929daa;
+            margin: 0;
+        }
+    }
+
+    // Body (after date selected)
+    &__body {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__date-label {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        color: $dark;
+        margin: 0;
+    }
+
+    // Time slot grid
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        flex: 1;
+        align-content: start;
+    }
+}
+
+// Individual time slot pill
+.bac-slot {
+    padding: 10px 8px;
+    border-radius: 10px;
+    border: 1px solid rgba($dark, 0.1);
+    background: $white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: $dark;
+    text-align: center;
+    cursor: pointer;
+    @include transitionFast;
+
+    &:hover:not(.bac-slot--disabled) {
+        border-color: $primary;
+        color: $primary;
+        background: rgba($primary, 0.04);
+    }
+
+    &--selected {
+        background: $primary;
+        border-color: $primary;
+        color: $white;
+        font-weight: 500;
+    }
+
+    &--disabled {
+        color: rgba($dark, 0.25);
+        background: rgba($dark, 0.03);
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}
+
+// Confirm button
+.bac-slots__confirm {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+// Confirmed state
+.bac-slots__confirmed {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+
+    &-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: rgba($primary, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        color: $dark;
+        margin: 0;
+    }
+
+    &-sub {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: #929daa;
+        margin: 0;
+    }
+}
+
+.bac-slots__reset {
+    background: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: $primary;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    margin-top: 4px;
+}

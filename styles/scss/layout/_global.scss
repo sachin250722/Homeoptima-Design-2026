@@ -185,6 +185,12 @@
 // ---- Global Listing Card ----
 // Used in featured listings swiper and similar properties grids.
 
+// Peek slide — 4th card partially visible (Figma opacity-56)
+.listing-slide--peek {
+    opacity: 0.56;
+    pointer-events: none;
+}
+
 .listing-card {
     background: $white;
     border: 1px solid rgba($dark, 0.08);

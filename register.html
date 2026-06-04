@@ -12,7 +12,6 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="stylesheet" href="libraries/bootstrap-select/bootstrap-select.min.css">
     <!-- Styles -->
     <link rel="stylesheet" href="styles/css/style.css">
 </head>
@@ -39,7 +38,7 @@
 
                             <!-- heading -->
                             <div class="auth-heading-group">
-                                <h1 class="auth-title">Create your account.</h1>
+                                <h1 class="auth-title">Create your account<span class="auth-title-dot">.</span></h1>
                                 <p class="auth-subtitle">Phasellus ac aliquet magna. Ut id arcu sapien, Nulla congue,
                                     justo luctus lobortis suscipit.</p>
                             </div>
@@ -57,31 +56,46 @@
                                         placeholder="Enter full name" autocomplete="name" required>
                                 </div>
 
-                                <div class="col-12">
-                                    <div class="row">
-                                        <div class="col-xl-2 col-lg-3 col-4">
-                                            <label class="form-label d-block">Phone <span>
-                                                </span></label>
-                                            <select class="selectpicker">
-                                                <option value="us"
-                                                    data-content="<img src='images/icons/flag/01.svg' alt='USA' >">
-                                                    USA (+1)
-                                                </option>
-
-                                                <option value="in"
-                                                    data-content="<img src='images/icons/flag/01.svg' alt='India'/>">
-                                                    USA (+1)
-                                                </option>
-                                            </select>
-
+                                <!-- Phone -->
+                                <div class="auth-form-group">
+                                    <label>
+                                        Phone
+                                        <span class="required">*</span>
+                                    </label>
+                                    <div class="phone-input-group">
+                                        <div class="dropdown phone-code-dropdown">
+                                            <button type="button" class="phone-code-select" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span class="phone-code-label">+1</span>
+                                                <img class="phone-flag" src="images/icons/flag/01.svg" alt="US">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4 6L8 10L12 6" stroke="#929DAA" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </button>
+                                            <ul class="dropdown-menu phone-code-menu">
+                                                <li>
+                                                    <button type="button" class="phone-code-option" data-code="+1" data-flag="images/icons/flag/01.svg" data-name="US">
+                                                        <img src="images/icons/flag/01.svg" alt="US"> <span>+1</span> <small>USA</small>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="phone-code-option" data-code="+44" data-flag="images/icons/flag/01.svg" data-name="UK">
+                                                        <img src="images/icons/flag/01.svg" alt="UK"> <span>+44</span> <small>UK</small>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="phone-code-option" data-code="+61" data-flag="images/icons/flag/01.svg" data-name="AU">
+                                                        <img src="images/icons/flag/01.svg" alt="AU"> <span>+61</span> <small>Australia</small>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="phone-code-option" data-code="+91" data-flag="images/icons/flag/01.svg" data-name="IN">
+                                                        <img src="images/icons/flag/01.svg" alt="IN"> <span>+91</span> <small>India</small>
+                                                    </button>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <div class="col-xl-10 col-lg-9 col-8">
-                                            <label class="form-label"> <span>
-                                                </span></label>
-                                            <input type="tel" class="form-control" placeholder="Enter phone" />
-                                        </div>
+                                        <input type="tel" name="phone" class="form-control" placeholder="Enter phone">
                                     </div>
-
                                 </div>
                                 <!-- Email -->
                                 <div class="auth-form-group">
@@ -143,11 +157,11 @@
                 </div>
                 <!-- /auth card -->
 
-                <!-- Register link -->
+                <!-- Login link -->
                 <div class="auth-alt-action mt-4">
                     <p>Already have an account?</p>
-                    <a href="register.html" class="btn-auth-secondary">
-                        Create an account
+                    <a href="login.html" class="btn-auth-secondary">
+                        Log in
                         <img src="images/icons/chevron-right.svg" alt="">
                     </a>
                 </div>
@@ -289,7 +303,6 @@
     <!-- js -->
     <script src="libraries/jquery/jquery.min.js"></script>
     <script src="libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="libraries/bootstrap-select/boostrap-select.js"></script>
     <script src="js/custom.js"></script>
     <script>
         // Toggle password visibility

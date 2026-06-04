@@ -156,8 +156,36 @@
 (function () {
   var ctx = document.getElementById("equityChart");
   if (!ctx) return;
+
+  var innerLabelsPlugin = {
+    id: "innerLabels",
+    afterDraw: function (chart) {
+      var c = chart.ctx;
+      var meta = chart.getDatasetMeta(0);
+      var cx = (chart.chartArea.left + chart.chartArea.right) / 2;
+      var cy = (chart.chartArea.top + chart.chartArea.bottom) / 2;
+      meta.data.forEach(function (arc, i) {
+        var mid = arc.startAngle + (arc.endAngle - arc.startAngle) / 2;
+        var r = arc.outerRadius * 0.65;
+        var x = cx + Math.cos(mid) * r;
+        var y = cy + Math.sin(mid) * r;
+        var label = chart.data.labels[i];
+        var value = chart.data.datasets[0].data[i] + "%";
+        c.save();
+        c.fillStyle = "rgba(255,255,255,0.95)";
+        c.textAlign = "center";
+        c.textBaseline = "middle";
+        c.font = "11px Poppins, sans-serif";
+        c.fillText(label, x, y - 8);
+        c.font = "600 12px Poppins, sans-serif";
+        c.fillText(value, x, y + 8);
+        c.restore();
+      });
+    },
+  };
+
   new Chart(ctx, {
-    type: "doughnut",
+    type: "pie",
     data: {
       labels: ["Equity", "Mortgage"],
       datasets: [
@@ -170,7 +198,6 @@
       ],
     },
     options: {
-      cutout: "62%",
       plugins: {
         legend: { display: false },
         tooltip: {
@@ -182,6 +209,7 @@
         },
       },
     },
+    plugins: [innerLabelsPlugin],
   });
 })();
 
@@ -752,4 +780,7 @@
       },
     },
   });
+
+  // Schools bar chart is initialised on-demand in custom.js
+  // (only renders after a school row is selected)
 })();
