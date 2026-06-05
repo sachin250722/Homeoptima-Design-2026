@@ -1,0 +1,262 @@
+// ================================================================
+//  Legal Pages  ·  lgl-*  namespaced styles
+//  Shared by: terms-of-use.html  &  privacy-policy.html
+// ================================================================
+
+// ── HERO SECTION ─────────────────────────────────────────────────
+
+.lgl-hero {
+    background-color: $light-color;
+    position: relative;
+    overflow: hidden;
+    padding: 56px 0;
+
+    .container { position: relative; z-index: 1; }
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.35;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        max-width: 720px;
+    }
+
+    &__badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 14px;
+        border: 0.5px solid $primary;
+        border-radius: 999px;
+        background: linear-gradient(180deg, rgba(44, 110, 254, 0.06) 0%, rgba(44, 110, 254, 0.16) 100%);
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        line-height: 16px;
+        color: $primary;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        align-self: flex-start;
+    }
+
+    &__title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 68px;
+        line-height: 76px;
+        color: $dark;
+        margin: 0;
+
+        @include respond(tab-land) { font-size: 52px; line-height: 60px; }
+        @include respond(tab-port) { font-size: 40px; line-height: 50px; }
+        @include respond(phone)    { font-size: 32px; line-height: 40px; }
+    }
+
+    &__date {
+        font-size: 20px;
+        line-height: 32px;
+        color: $dark;
+        margin: 0;
+
+        &-label { font-family: 'Poppins', sans-serif; }
+        &-value { font-family: 'Archivo', sans-serif; font-weight: 600; }
+    }
+}
+
+// ── BODY SECTION ─────────────────────────────────────────────────
+
+.lgl-body {
+    padding: 80px 0;
+    background: $white;
+
+    @include respond(tab-port) { padding: 56px 0; }
+    @include respond(phone)    { padding: 40px 0; }
+}
+
+// Two-column layout: sidebar + content
+
+.lgl-layout {
+    display: flex;
+    gap: 56px;
+    align-items: flex-start;
+
+    @include respond(tab-land) { gap: 40px; }
+    @include respond(tab-port) { flex-direction: column; gap: 32px; }
+}
+
+// ── SIDEBAR NAV ───────────────────────────────────────────────────
+
+.lgl-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: 100px;
+
+    @include respond(tab-land) { width: 240px; }
+    @include respond(tab-port) {
+        width: 100%;
+        position: static;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px;
+    }
+}
+
+.lgl-nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 16px 16px 24px;
+    border: 1px solid rgba(242, 242, 242, 0.98);
+    border-radius: 999px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.46);
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+
+    @include respond(tab-port) {
+        flex: none;
+        padding: 10px 16px;
+        gap: 6px;
+        .lgl-nav-item__arrow { display: none; }
+    }
+
+    &__label {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        line-height: normal;
+        color: $dark;
+        white-space: nowrap;
+
+        @include respond(phone) { font-size: 14px; }
+    }
+
+    &__arrow {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        opacity: 0.4;
+
+        img { width: 100%; height: 100%; }
+    }
+
+    &--active {
+        border-color: rgba(44, 110, 254, 0.98);
+
+        .lgl-nav-item__label {
+            font-weight: 600;
+            color: $primary;
+        }
+
+        .lgl-nav-item__arrow { opacity: 1; }
+    }
+
+    &:hover:not(.lgl-nav-item--active) {
+        border-color: rgba($primary, 0.3);
+
+        .lgl-nav-item__label { color: $primary; }
+    }
+}
+
+// ── CONTENT AREA ─────────────────────────────────────────────────
+
+.lgl-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    @include respond(tab-port) { gap: 56px; }
+    @include respond(phone)    { gap: 40px; }
+}
+
+// Overview / section heading
+
+.lgl-content__heading {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 62px;
+    color: $dark;
+    margin: 0;
+
+    @include respond(tab-land) { font-size: 36px; line-height: 48px; }
+    @include respond(tab-port) { font-size: 28px; line-height: 38px; }
+}
+
+// Numbered section block
+
+.lgl-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: $dark;
+        margin: 0;
+
+        @include respond(tab-port) { font-size: 20px; line-height: 28px; }
+    }
+
+    &__text {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        line-height: 28px;
+        color: #7a899a;
+        margin: 0;
+
+        & + & { margin-top: 12px; }
+    }
+
+    &__list {
+        list-style: disc;
+        padding-left: 24px;
+        margin: 0;
+
+        li {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 28px;
+            color: #7a899a;
+        }
+    }
+}
+
+// Standalone paragraph (outside numbered sections)
+
+.lgl-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #7a899a;
+    margin: 0;
+}

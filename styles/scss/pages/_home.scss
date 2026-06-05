@@ -258,7 +258,6 @@
 
     img {
         width: 100%;
-        ;
     }
 
 }
@@ -495,8 +494,7 @@
     .shape img {
         width: 100%;
         position: relative;
-        top: -2px;
-
+        display: block;
     }
 
     .testimonial-section {

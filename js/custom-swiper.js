@@ -1,4 +1,84 @@
 
+// ================================================
+//  What We Do Swiper (≤ 1099px)
+// ================================================
+let wwdSwiper = null;
+const wwdSwiperEl = document.querySelector('.wwd-swiper');
+
+function initWwdSwiper() {
+    if (!wwdSwiperEl) return;
+    const isSlider = window.innerWidth <= 1099;
+    if (isSlider && !wwdSwiper) {
+        wwdSwiper = new Swiper(wwdSwiperEl, {
+            grabCursor: true,
+            navigation: {
+                prevEl: '.wwd-prev',
+                nextEl: '.wwd-next',
+            },
+            pagination: {
+                el: '.wwd-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 16,
+                },
+                768: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 24,
+                },
+            },
+        });
+    } else if (!isSlider && wwdSwiper) {
+        wwdSwiper.destroy(true, true);
+        wwdSwiper = null;
+    }
+}
+
+initWwdSwiper();
+window.addEventListener('resize', initWwdSwiper);
+
+// ================================================
+//  Why Choose Us Swiper (≤ 767px)
+// ================================================
+let whyUsSwiper = null;
+const whyUsSwiperEl = document.querySelector('.why-us-swiper');
+
+function initWhyUsSwiper() {
+    if (!whyUsSwiperEl) return;
+    const isSlider = window.innerWidth <= 1099;
+    if (isSlider && !whyUsSwiper) {
+        whyUsSwiper = new Swiper(whyUsSwiperEl, {
+            grabCursor: true,
+            navigation: {
+                prevEl: '.why-us-prev',
+                nextEl: '.why-us-next',
+            },
+            pagination: {
+                el: '.why-us-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+            },
+            breakpoints: {
+                0: { slidesPerView: 1.2, spaceBetween: 16 },
+                768: { slidesPerView: 2.5, spaceBetween: 24 },
+            },
+        });
+    } else if (!isSlider && whyUsSwiper) {
+        whyUsSwiper.destroy(true, true);
+        whyUsSwiper = null;
+    }
+}
+
+initWhyUsSwiper();
+window.addEventListener('resize', initWhyUsSwiper);
+
 // Agent section: photo fades (left), info slides (right), synced via realIndex
 const agentPhotoSwiper = new Swiper(".agent-photo-swiper", {
     slidesPerView: 1,
@@ -30,6 +110,43 @@ const agentInfoSwiper = new Swiper(".agent-info-swiper", {
         },
     },
 });
+
+// ================================================
+//  Agent Mobile Swiper (≤ 991px)
+// ================================================
+let agentMobileSwiper = null;
+const agentMobileSwiperEl = document.querySelector('.agent-mobile-swiper');
+
+function initAgentMobileSwiper() {
+    if (!agentMobileSwiperEl) return;
+    const isMobile = window.innerWidth <= 991;
+    if (isMobile && !agentMobileSwiper) {
+        agentMobileSwiper = new Swiper(agentMobileSwiperEl, {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            loop: true,
+            grabCursor: true,
+            watchOverflow: false,
+            navigation: {
+                prevEl: '.agent-mob-prev',
+                nextEl: '.agent-mob-next',
+            },
+            pagination: {
+                el: '.agent-mob-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+            },
+        });
+    } else if (!isMobile && agentMobileSwiper) {
+        agentMobileSwiper.destroy(true, true);
+        agentMobileSwiper = null;
+    }
+}
+
+initAgentMobileSwiper();
+window.addEventListener('resize', initAgentMobileSwiper);
 
 const swiper = new Swiper(".testimonial-swiper", {
     slidesPerView: 2.35,
@@ -176,24 +293,34 @@ const similarSwiper = new Swiper('.similar-swiper', {
 //  Featured Listings Swiper
 // ================================================
 const featuredSwiper = new Swiper('.featured-swiper', {
-    slidesPerView: 1.1,
-    spaceBetween: 24,
+    slidesPerView: 1.2,
+    spaceBetween: 16,
     slidesPerGroup: 1,
     loop: true,
     grabCursor: true,
     navigation: {
-        nextEl: '#listingsNext',
-        prevEl: '#listingsPrev',
+        nextEl: '.listings-nav-next',
+        prevEl: '.listings-nav-prev',
+    },
+    pagination: {
+        el: '.listings-mobile-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '"></span>';
+        },
     },
     breakpoints: {
         576: {
             slidesPerView: 1.5,
+            spaceBetween: 24,
         },
         768: {
             slidesPerView: 2.2,
+            spaceBetween: 24,
         },
         1200: {
             slidesPerView: 3.2,
+            spaceBetween: 24,
         },
     },
     on: {
@@ -238,32 +365,42 @@ const projectsSwiper = new Swiper('.projects-swiper', {
 
 // ================================================
 //  Cities Swiper
+//  Mobile (base): centeredSlides, active card taller via CSS
+//  Desktop (≥1100px): slidesPerView:'auto', cards use fixed CSS widths
 // ================================================
 const citiesSwiper = new Swiper('.cities-swiper', {
-    slidesPerView: 1.1,
-    spaceBetween: 24,
-    slidesPerGroup: 1,
+    slidesPerView: 1.15,
+    spaceBetween: 16,
+    centeredSlides: true,
     loop: true,
+    watchOverflow: false,
     grabCursor: true,
     navigation: {
-        nextEl: '#citiesNext',
-        prevEl: '#citiesPrev',
+        nextEl: '.cities-nav-next',
+        prevEl: '.cities-nav-prev',
+    },
+    pagination: {
+        el: '.cities-mobile-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '"></span>';
+        },
     },
     breakpoints: {
         576: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.4,
+            spaceBetween: 16,
+            centeredSlides: true,
         },
         768: {
             slidesPerView: 2.2,
+            spaceBetween: 24,
+            centeredSlides: false,
         },
-        1200: {
-            slidesPerView: 3.5,
-        },
-    },
-    on: {
-        slideChange: function () {
-            const prevBtn = document.getElementById('citiesPrev');
-            if (prevBtn) prevBtn.classList.toggle('swiper-btn-hidden', this.realIndex === 0);
+        1100: {
+            slidesPerView: 'auto',
+            spaceBetween: 24,
+            centeredSlides: false,
         },
     },
 });
@@ -271,6 +408,32 @@ const citiesSwiper = new Swiper('.cities-swiper', {
 // ================================================
 //  Testimonials Swiper
 // ================================================
+// ================================================
+//  Contact Agent: Agent Cards Swiper
+// ================================================
+const caAgentsSwiper = new Swiper('.ca-agents-swiper', {
+    slidesPerView: 2,
+    spaceBetween: 24,
+    grabCursor: true,
+    loop: true,
+    navigation: {
+        prevEl: '.ca-agents-prev',
+        nextEl: '.ca-agents-next',
+    },
+    pagination: {
+        el: '.ca-agents-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '"></span>';
+        },
+    },
+    breakpoints: {
+        0: { slidesPerView: 1.1, spaceBetween: 16 },
+        576: { slidesPerView: 1.5, spaceBetween: 20 },
+        768: { slidesPerView: 2, spaceBetween: 24 },
+    },
+});
+
 const testimonialsSwiper = new Swiper('.testimonials-swiper', {
     slidesPerView: 1,
     spaceBetween: 24,

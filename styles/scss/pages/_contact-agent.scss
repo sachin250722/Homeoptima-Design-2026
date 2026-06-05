@@ -1,0 +1,753 @@
+// ================================================================
+//  Contact Agent Page  ·  ca-*  namespaced styles
+// ================================================================
+
+// ── SECTION 1: HERO ─────────────────────────────────────────────
+
+.ca-hero {
+    background-color: $light-color;
+    position: relative;
+    overflow: hidden;
+    padding: 56px 0 72px;
+
+    .container { position: relative; z-index: 1; }
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+        @include respond(tab-land) { gap: 28px; }
+        @include respond(tab-port) { flex-direction: column; gap: 48px; }
+    }
+
+    &__left {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+
+        @include respond(tab-port) { gap: 36px; }
+    }
+
+    &__text-group {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: rgba($dark, 0.46);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        align-self: flex-start;
+    }
+
+    &__title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 700;
+        font-size: 76px;
+        line-height: 78px;
+        color: $dark;
+        margin: 0;
+
+        @include respond(tab-land) { font-size: 56px; line-height: 62px; }
+        @include respond(tab-port) { font-size: 44px; line-height: 52px; }
+        @include respond(phone)    { font-size: 36px; line-height: 44px; }
+    }
+
+    &__desc {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+        color: #929DAA;
+        margin: 0;
+
+        @include respond(tab-port) { font-size: 17px; line-height: 28px; }
+    }
+
+    &__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+    }
+}
+
+// ── HERO FORM CARD ───────────────────────────────────────────────
+
+.ca-form-card {
+    width: 500px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+
+    @include respond(tab-land) { width: 440px; }
+    @include respond(tab-port) { width: 100%; }
+
+    &__body {
+        padding: 16px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+}
+
+// Form field wrapper
+.ca-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ca-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.14px;
+    color: $dark;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 0;
+
+    .ca-required {
+        color: #E9BD5F;
+    }
+}
+
+.ca-input {
+    width: 100%;
+    background: $white;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.14px;
+    color: $dark;
+    box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
+    outline: none;
+    transition: border-color 0.2s ease;
+
+    &::placeholder { color: #929DAA; }
+
+    &:focus {
+        border-color: rgba($primary, 0.4);
+        box-shadow: 0 0 0 3px rgba($primary, 0.08);
+    }
+}
+
+textarea.ca-input {
+    height: 104px;
+    resize: none;
+    align-items: flex-start;
+}
+
+// Phone row: country-code selector + number input
+.ca-phone-row {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.ca-phone-code {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px;
+    background: $white;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.14px;
+    color: $dark;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: border-color 0.2s;
+
+    img { width: 24px; height: 24px; border-radius: 2px; }
+
+    svg { width: 16px; height: 16px; opacity: 0.5; }
+
+    &:focus, &:active { border-color: rgba($primary, 0.4); outline: none; }
+}
+
+// ── SECTION 2: WHY LIST WITH US ──────────────────────────────────
+
+.ca-why {
+    background: $white;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+
+    @include respond(tab-port) { padding: 56px 0; }
+
+    &__bg-wave {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.08;
+        img { width: 100%; height: 100%; object-fit: cover; }
+    }
+
+    .container { position: relative; z-index: 1; }
+
+    &__header {
+        margin-bottom: 56px;
+        max-width: 682px;
+
+        @include respond(tab-port) { margin-bottom: 36px; }
+    }
+
+    &__title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 62px;
+        color: $dark;
+        margin-bottom: 16px;
+
+        @include respond(tab-land) { font-size: 36px; line-height: 48px; }
+        @include respond(tab-port) { font-size: 28px; line-height: 38px; }
+    }
+
+    &__desc {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+        color: #929DAA;
+        margin: 0;
+
+        @include respond(tab-port) { font-size: 17px; }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+
+        @include respond(tab-land) { grid-template-columns: repeat(2, 1fr); }
+        @include respond(phone)    { grid-template-columns: 1fr; }
+    }
+}
+
+.ca-why-card {
+    background: $white;
+    border: 1px solid rgba($dark, 0.08);
+    border-radius: $radius-lg;
+    padding: 24px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+    }
+
+    &__icon {
+        width: 50px;
+        height: 50px;
+        border-radius: $radius;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        img, svg { width: 34px; height: 34px; }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        color: $dark;
+        margin: 0;
+    }
+
+    &__desc {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #929DAA;
+        margin: 0;
+    }
+}
+
+// ── SECTION 3: MEET YOUR AGENT ───────────────────────────────────
+
+.ca-agents {
+    background-color: $light-color;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+
+    @include respond(tab-port) { padding: 56px 0; }
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        img { width: 100%; height: 100%; object-fit: cover; opacity: 0.3; }
+    }
+
+    .container { position: relative; z-index: 1; }
+
+    &__inner {
+        display: flex;
+        gap: 56px;
+        align-items: flex-start;
+
+        @include respond(tab-land) { gap: 40px; }
+        @include respond(tab-port) { flex-direction: column; gap: 48px; }
+    }
+
+    // ── Left column ──────────────────────────────────
+    &__left {
+        width: 324px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include respond(tab-land) { width: 280px; }
+        @include respond(tab-port) { width: 100%; }
+    }
+
+    &__title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 62px;
+        color: $dark;
+        margin: 0;
+
+        @include respond(tab-land) { font-size: 36px; line-height: 48px; }
+        @include respond(tab-port) { font-size: 28px; line-height: 38px; }
+    }
+
+    &__desc {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+        color: #929DAA;
+        margin: 0;
+
+        @include respond(tab-port) { font-size: 17px; }
+    }
+
+    &__stats {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+        margin-top: 8px;
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &-number {
+            font-family: 'Archivo', sans-serif;
+            font-weight: 300;
+            font-size: 28px;
+            line-height: 36px;
+            color: #29323C;
+        }
+
+        &-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 1px;
+            color: #929DAA;
+        }
+    }
+
+    // ── Right column ─────────────────────────────────
+    &__right {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__slider-wrap {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__slider {
+        overflow: visible !important;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__dots {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: rgba($primary, 0.24);
+        cursor: pointer;
+        transition: width 0.2s, background 0.2s;
+
+        &--active {
+            width: 12px;
+            height: 12px;
+            background: $primary;
+        }
+    }
+}
+
+// ── Agent card ───────────────────────────────────────────────────
+
+.ca-agent-card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__photo {
+        height: 310px;
+        border-radius: $radius-lg;
+        overflow: hidden;
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+    }
+
+    &:hover &__photo img { transform: scale(1.03); }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__name {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: $dark;
+        margin: 0;
+    }
+
+    &__role {
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        line-height: 16px;
+        color: #929DAA;
+        margin: 0;
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    // Email / phone bar
+    &__contact-bar {
+        display: flex;
+        align-items: center;
+        background: $white;
+        border: 1px solid rgba($dark, 0.08);
+        border-radius: $radius;
+        height: 48px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+
+    &__contact-half {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 8px 16px;
+        height: 46px;
+        flex: 1;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        color: $dark;
+        text-decoration: none;
+        transition: background 0.2s;
+        white-space: nowrap;
+        overflow: hidden;
+
+        svg { width: 18px; height: 18px; flex-shrink: 0; }
+        span { overflow: hidden; text-overflow: ellipsis; }
+
+        &:first-child { border-right: 1px solid rgba($dark, 0.08); }
+        &:hover { background: rgba($dark, 0.04); color: $dark; }
+    }
+}
+
+// ── SECTION 4: OUR PROCESS ───────────────────────────────────────
+
+.ca-process {
+    background-color: $primary;
+    position: relative;
+    overflow: hidden;
+
+    &__inner {
+        display: flex;
+        gap: 120px;
+        align-items: flex-start;
+        padding: 120px 0;
+
+        @include respond(tab-land) { gap: 64px; }
+        @include respond(tab-port) { flex-direction: column; gap: 48px; padding: 80px 0; }
+    }
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        img { width: 100%; height: 100%; object-fit: cover; opacity: 0.2; }
+    }
+
+    .container { position: relative; z-index: 1; }
+
+    // ── Left ─────────────────────────────────────────
+    &__left {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 0.5px solid $white;
+        background: linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.16) 100%);
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        line-height: 16px;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        align-self: flex-start;
+    }
+
+    &__title {
+        font-family: 'Archivo', sans-serif;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 62px;
+        color: $white;
+        margin: 0;
+
+        @include respond(tab-land) { font-size: 36px; line-height: 48px; }
+        @include respond(tab-port) { font-size: 28px; line-height: 38px; }
+    }
+
+    &__desc {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+        color: rgba($white, 0.8);
+        margin: 0;
+    }
+
+    &__text-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__map {
+        height: 370px;
+        border-radius: $radius-lg;
+        overflow: hidden;
+        border: 1px solid rgba($dark, 0.08);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+        flex-shrink: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    // ── Right: steps ─────────────────────────────────
+    &__right {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__step {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__step-num {
+        width: 80px;
+        height: 80px;
+        border-radius: 999px;
+        background: rgba(249, 249, 249, 0.16);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;
+        font-size: 28px;
+        line-height: 40px;
+        color: $white;
+        flex-shrink: 0;
+    }
+
+    &__step-body {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__step-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        color: $white;
+        margin: 0;
+    }
+
+    &__step-desc {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        line-height: 28px;
+        color: rgba($white, 0.8);
+        margin: 0;
+    }
+}
+
+// ── Nav circle buttons (prev/next) ──────────────────────────────
+
+.btn-nav-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    background: $primary;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s;
+
+    &:hover { background: darken($primary, 8%); }
+
+    &--outline {
+        background: $white;
+        border: 1px solid rgba($dark, 0.12);
+        &:hover { background: rgba($dark, 0.04); }
+    }
+}
+
+// ── Wave section dividers ────────────────────────────────────────
+
+.ca-wave {
+    display: block;
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+
+    img { width: 100%; display: block; }
+
+    &--white-to-blue {
+        background: $light-color;
+        svg path { fill: $white; }
+    }
+
+    &--blue-to-dark {
+        background: $primary;
+        svg path { fill: $light-color; }
+    }
+}
+
+// Responsive tweaks
+@include respond(tab-port) {
+    .ca-agent-card__photo { height: 240px; }
+    .ca-form-card { max-width: 520px; margin: 0 auto; }
+}
+
+@include respond(phone) {
+    .ca-hero__title { font-size: 36px; line-height: 44px; }
+    .ca-why-card__title { font-size: 18px; }
+    .ca-process__step-title { font-size: 20px; }
+}

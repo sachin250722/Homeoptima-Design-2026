@@ -1,0 +1,798 @@
+// responsive start
+@media (max-width: 1350px) and (min-width: 1200px) {
+    .main-header {
+        .navbar-brand {
+            margin-right: 20px;
+        }
+
+        .nav-link {
+            padding: 12px 18px !important;
+        }
+
+    }
+}
+
+@include respond('laptop') {
+    .testimonial-section {
+        .testimonial-left-content h2 {
+            font-size: 60px;
+        }
+    }
+}
+
+@include respond('tab-land') {
+    .main-header {
+        .nav-link {
+            padding: 12px 18px !important;
+        }
+    }
+
+    
+
+    .testimonial-section {
+        .testimonial-left-content h2 {
+            font-size: 44px;
+            line-height: 50px;
+        }
+    }
+    .cta-section .cta-deco--tr{
+
+        width:100px;
+        height:100px;
+    }
+
+    .banner-section {
+        .form-card .valuation-btn {
+            padding: 12px 93px !important;
+        }
+    }
+}
+
+@include respond('tab-port') {
+    .footer-logo-col {
+        order: 1;
+    }
+    .ftb-hero-title{
+        font-size:46px;
+        line-height:56px;
+    }
+   
+
+    .footer-contact {
+        order: 2;
+    }
+
+    .footer-discover {
+        order: 3;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .footer-homeowner {
+        order: 4;
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+
+    .footer-company {
+        order: 5;
+        margin-top: 0px;
+        //   margin-bottom:40px;
+    }
+
+    .home-footer {
+        .contact-box {
+            width: 100%;
+        }
+
+        .btn-contact {
+            width: 100%;
+        }
+    }
+
+    .home-footer {
+        .footer-bottom {
+
+            padding-top: 24px;
+            margin-top: 24px;
+        }
+
+    }
+
+    .main-header {
+        .navicon {
+            span {
+                display: block;
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                border-radius: 1px;
+                opacity: 1;
+                background-color: #000;
+                right: 22px;
+                transform: rotate(0deg);
+                transition: 0.25s ease-in-out;
+
+                &:nth-child(1) {
+                    top: 25px;
+                    width: 32px;
+                }
+
+                &:nth-child(2) {
+                    top: 35px;
+                    width: 32px;
+                }
+
+                &:nth-child(3) {
+                    top: 45px;
+                    width: 32px;
+                }
+            }
+
+            &.open {
+                span {
+                    &:nth-child(1) {
+                        top: 23px;
+                        transform: rotate(135deg);
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                        left: -60px;
+                    }
+
+                    &:nth-child(3) {
+                        top: 23px;
+                        width: 32px;
+                        transform: rotate(-135deg);
+                    }
+                }
+            }
+        }
+
+        // dono .navbar-collapse rules ko merge kiya gaya hai
+        .navbar-collapse {
+            background: linear-gradient(0deg, rgba(0, 28, 88, 0.93) 0%, rgba(0, 28, 88, 0.93) 100%), rgba(230, 240, 255, 0.40);
+            backdrop-filter: blur(6px);
+            margin-top: 12px;
+            margin-left: -16px;
+            margin-right: -16px;
+            padding: 40px 24px;
+        }
+
+        .nav-link {
+            padding: 0 !important;
+            color: var(--white);
+            padding-bottom: 32px !important;
+            font-size: 28px;
+            font-weight: 400;
+            font-family: Archivo;
+            line-height: 32px;
+
+            &.active {
+                color: var(--white);
+            }
+        }
+
+        .navbar-nav-scroll {
+            min-height: 300px;
+        }
+
+        .extra-nav {
+            margin-top: 56px;
+
+            .btn {
+                display: block;
+                width: 100%;
+                color: var(--white);
+                border: 1px solid rgba(255, 255, 255, 0.20);
+                padding: 12px 24px !important;
+
+                &:first-child {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+    }
+
+    .listings-section {
+        .section-desc {
+            margin-bottom: 24px;
+        }
+    }
+
+    .btn {
+        padding: 10px 16px !important;
+    }
+
+    .testimonial-section {
+        .testimonial-left-content {
+            h2 {
+                font-size: 34px;
+                line-height: 44px;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 24px;
+                margin-bottom: 40px;
+            }
+        }
+
+        .testimonial-card {
+            padding: 16px;
+
+            .testimonial-card-body p {
+                font-size: 18px;
+                line-height: 32px;
+            }
+
+            .testimonial-card-header {
+                margin-bottom: 16px;
+            }
+
+            .testimonial-card-footer {
+                margin-top: 16px;
+            }
+        }
+    }
+
+    .testimonial-controls {
+        margin-top: 24px;
+    }
+
+    .stats-bar {
+        padding: 24px 0;
+
+        .stat-number {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+    }
+
+    .what-we-do-section,
+    .listings-section,
+    .why-us-section .why-us-inner,
+    .cities-section,
+    .advantage-section,
+    .agent-section .agent-section-inner,
+    .testimonial-section,
+    .app-section {
+        padding: 40px 0;
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+    }
+
+    .listings-section .listings-header-row,
+    .why-us-section .why-us-header-row {
+        margin-bottom: 40px;
+    }
+
+    .advantage-section {
+        .advantage-card--img-right .advantage-card-img {
+            position: relative;
+            width: 373px;
+            left: -27px;
+            top: -27px;
+            height: 169px;
+        }
+
+        .advantage-title {
+            font-size: 20px;
+            margin-top: 24px;
+        }
+
+        .advantage-card {
+            gap: 0;
+            padding: 16px;
+        }
+
+        .advantage-card-bottom {
+            gap: 16px;
+        }
+    }
+
+    .service-icon-wrap {
+        width: 40px;
+        height: 40px;
+
+        img {
+            width: 21px;
+            height: 21px;
+        }
+    }
+
+    .agent-section .agent-cta-row .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-section .cta-inner {
+        padding: 120px 16px;
+    }
+
+    .testimonial-controls,
+    .testimonial-controls-1,
+    .testimonial-controls-2 {
+        justify-content: space-between;
+    }
+
+    .testimonial-controls-1,
+    .testimonial-controls-2 {
+        display: flex !important;
+    }
+
+    .advantage-section {
+        .advantage-header-row {
+            margin-bottom: 40px;
+        }
+
+        .advantage-card {
+            height: auto;
+            min-height: 0;
+            flex-direction: column-reverse;
+            padding: 0  ;
+            gap: 16px;
+        }
+
+        // Spacer moves to top of column to reserve space for the absolute image
+        .advantage-card-spacer {
+            order: -1;
+            height: 146px;
+            flex: none;
+            width: 100%;
+        }
+
+        .advantage-card-content {
+            flex: none;
+            z-index: 1;
+            padding: 0 16px;
+            gap: 16px;
+        }
+
+        // Override tab-port relative positioning — image goes back to absolute at top
+        .advantage-card--img-right .advantage-card-img {
+            position: static;
+            top: -7px;
+            left: -7px;
+            right: -7px;
+            bottom: auto;
+            width: auto;
+            height: 162px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .advantage-card-bottom {
+            gap: 16px;
+        }
+
+        .advantage-title {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 16px;
+            margin-top: 0;
+            br {
+                display: none;
+            }
+        }
+
+        .advantage-desc {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
+
+// .nav-btn,
+// .nav-btn-1,
+// .nav-btn-2 {
+//     width: 56px;
+//     height: 56px;
+//     border: 1px solid #929DAA3D;
+//     border-radius: 50%;
+//     background: var(--white);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     box-shadow: 0px 0px 24px 0px #0000000A;
+//     transition: 0.3s ease;
+// }
+
+// // teeno repeated .custom-dots groups ko ek block me merge kiya gaya hai
+// .custom-dots,
+// .custom-dots-1,
+// .custom-dots-2 {
+//     display: flex;
+//     align-items: center;
+//     gap: 8px;
+//     width: auto !important;
+
+//     .swiper-pagination-bullet {
+//         width: 8px;
+//         height: 8px;
+//         border-radius: 50%;
+//         margin: 0 !important;
+//         background: rgba(44, 110, 254, 0.24);
+//     }
+
+//     .swiper-pagination-bullet-active {
+//         width: 12px;
+//         height: 12px;
+//         border-radius: 999px;
+//         background: var(--primary-color);
+//         margin: 0 !important;
+//     }
+// }
+
+// .custom-dots-2 {
+//     .swiper-pagination-bullet {
+//         background: #FFFFFF3D;
+//     }
+
+//     .swiper-pagination-bullet-active {
+//         background: var(--white);
+//     }
+//     .testimonial-section {
+//         padding: 40px 0;
+
+//         .testimonial-left-content h2 {
+//             font-size: 34px;
+//         }
+//     }
+
+//     .banner-section {
+//         padding: 40px 0;
+
+//         h1,
+//         .h1 {
+//             font-size: 38px;
+//             line-height: 48px;
+//             margin-bottom: 16px;
+//         }
+
+//         p {
+//             font-size: 18px;
+//         }
+
+//         .badge-banner {
+//             margin-bottom: 16px;
+//         }
+
+//         .banner-content {
+//             margin-bottom: 40px;
+//         }
+
+//         .info-card {
+//             margin-bottom: 16px;
+//             padding: 16px;
+
+//             .review-box {
+//                 padding: 10px;
+
+//                 .review-content {
+//                     h4 {
+//                         font-size: 14px;
+//                     }
+
+//                     .stars small {
+//                         font-size: 13px;
+//                     }
+//                 }
+//             }
+
+//             .house-image {
+//                 margin-bottom: 16px;
+
+//                 img {
+//                     height: 172px;
+//                 }
+//             }
+//         }
+
+//         .form-card {
+//             padding: 16px;
+
+//             .valuation-btn {
+//                 padding: 12px 18px !important;
+//             }
+//         }
+//     }
+
+//     .testimonial-controls {
+//         justify-content: center;
+//     }
+// }
+
+// .bootstrap-select {
+//     width: 100% !important;
+//     height: 48px !important;
+//     box-shadow: 0px 2px 16px 0px rgba(17, 18, 57, 0.03);
+//     border: 1px solid rgba(237, 237, 237, 1);
+//     border-radius: 8px;
+
+//     .btn {
+//         &:hover {
+//             background-color: #fff;
+//             border: 1px solid rgba(237, 237, 237, 1);
+//         }
+
+//         &:active {
+//             background-color: #fff;
+//             border: 1px solid rgba(237, 237, 237, 1);
+//         }
+//     }
+// }
+
+@include respond("phone-land") {
+    .hero-section {
+        min-height: auto;
+
+        .hero-inner {
+            padding: 24px 16px 40px;
+            gap: 40px;
+        }
+
+        .hero-heading {
+            font-size: 44px;
+            line-height: 56px;
+        }
+
+        .hero-sub {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .hero-text-group {
+            gap: 16px;
+        }
+
+        .hero-search-wrap {
+            flex-direction: column;
+            gap: 16px;
+
+            .hero-search-input {
+                width: 100%;
+                padding: 16px;
+
+                input {
+                    font-size: 13px;
+                }
+
+                .hero-search-icon {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+
+        .hero-search-btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .stats-bar {
+        padding: 24px 16px;
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-label {
+            line-height: 16px;
+        }
+    }
+
+    .section-title {
+        font-size: 34px;
+        line-height: 44px;
+    }
+
+    .section-desc {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .listings-section {
+        // Hide desktop left/right fade overlays
+        .listings-prev-fade,
+        .listings-next-fade {
+            display: none;
+        }
+
+        // Show mobile prev | dots | next row
+        .listings-mobile-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 24px;
+        }
+
+        .listings-mobile-pagination {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            position: static;
+            transform: none;
+            width: auto;
+        }
+
+        // Full-width CTA button via CSS (keeps col-auto ms-auto intact for desktop)
+        .listings-cta-col {
+            width: 100%;
+            margin-top: 16px;
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        // Shrink listing card for mobile
+        .listing-img {
+            height: 203px;
+        }
+
+        .listing-body {
+            padding: 16px;
+        }
+
+        .listing-price {
+            font-size: 22px;
+            line-height: 24px;
+        }
+
+        // Meta wraps on mobile with tighter gap
+        .listing-meta {
+            gap: 12px;
+        }
+    }
+
+    .cities-section {
+        .cities-swiper-fade {
+            display: none;
+        }
+
+        .cities-mobile-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 24px;
+        }
+
+        .cities-mobile-pagination {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            position: static;
+            transform: none;
+            width: auto;
+        }
+
+        .cities-cta-col {
+            width: 100%;
+            margin-top: 16px;
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        // Mobile card heights: non-active 296px, active 374px
+        .city-card--sm,
+        .city-card--lg,
+        .city-card--md {
+            width: 100%;
+            height: 296px;
+            transition: height 0.4s ease;
+        }
+
+        .swiper-slide-active .city-card {
+            height: 374px;
+        }
+    }
+
+    .agent-section {
+        .agent-desktop-row { display: none; }
+        .agent-mobile-block { display: block; }
+    }
+
+    .agent-section-style2 {
+        .agent-s2-photo {
+            height: 334px;
+        }
+
+        .agent-s2-desc {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+}
+
+// Section sliders activate at ≤ 1099px (What We Do, Why Choose Us, and future sections)
+@include custommq($max: 1099px) {
+    .what-we-do-section {
+        .wwd-swiper {
+            .swiper-wrapper { gap: 0; }
+            .swiper-slide { flex: none; }
+        }
+
+        .wwd-nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 24px;
+        }
+
+        .wwd-pagination {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            position: static;
+            transform: none;
+            width: auto;
+        }
+    }
+
+    .why-us-section {
+        .why-us-swiper {
+            .swiper-wrapper { gap: 0; }
+            .swiper-slide { flex: none; }
+        }
+
+        .why-us-nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 24px;
+        }
+
+        .why-us-pagination {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            position: static;
+            transform: none;
+            width: auto;
+        }
+    }
+
+    // At ≤1099px Swiper controls slide widths — reset card widths to 100%
+    .cities-section {
+        .city-card--sm,
+        .city-card--lg,
+        .city-card--md {
+            width: 100%;
+            height: 360px;
+        }
+    }
+}
+
+@include respond("phone") {
+    .agent-section-style2 .agent-s2-cards {
+        width: 100%;
+    }
+    .agent-section-style2 .agent-s2-pills {
+        flex-direction: column;
+    }
+}

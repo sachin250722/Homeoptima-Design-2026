@@ -28,6 +28,8 @@
 @import "pages/real-estate-scorecard";
 @import "pages/pre-construction";
 @import "pages/blog";
+@import "pages/legal";
+@import "pages/contact-agent";
 
 
 
@@ -35,4 +37,7 @@
 // auth\\
 
 @import "auth/auth-common";
+
+// responsive
+@import "responsive";
 

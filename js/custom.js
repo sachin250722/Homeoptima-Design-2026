@@ -802,6 +802,27 @@ if (jQuery('.dataTables_length select').length > 0) {
 })();
 
 // ================================================================
+//  Sticky header — scroll-triggered glassmorphism animation
+// ================================================================
+(function () {
+    var header = document.querySelector('.main-header');
+    if (!header) return;
+
+    var THRESHOLD = 40; // px before the effect kicks in
+
+    function onScroll() {
+        if (window.scrollY > THRESHOLD) {
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // run once on load in case page is already scrolled
+})();
+
+// ================================================================
 //  Book a Call — interactive calendar (pre-construction only)
 // ================================================================
 (function () {

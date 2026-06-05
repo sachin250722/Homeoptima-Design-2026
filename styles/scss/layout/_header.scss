@@ -1,10 +1,26 @@
 .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background: rgba(255, 255, 255, 1);
+    transition:
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        backdrop-filter 0.35s ease;
+
+    &.header-scrolled {
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        box-shadow: 0 2px 24px rgba(14, 23, 31, 0.08);
+    }
+
     .nav-link {
         color: var(--dark);
         font-size: 14px;
         padding: 12px 24px !important;
         font-weight: 500;
-       
+        transition: color 0.2s ease;
     }
 
     .navbar-brand {
@@ -15,7 +31,7 @@
         padding: 15px 44px;
         border: 1px solid rgba(219, 219, 219, 1);
         border-radius: 8px;
-       font-family: "Archivo", sans-serif;
+        font-family: "Archivo", sans-serif;
         font-weight: 700;
         font-style: Bold;
         font-size: 14px;
@@ -23,9 +39,7 @@
         line-height: 100%;
         letter-spacing: 0%;
         text-align: center;
-
     }
-
 }
 
 .extra-nav {
@@ -34,13 +48,10 @@
             margin-left: 8px;
         }
     }
-
-
 }
 
-.navbar-toggler{
-
+.navbar-toggler {
     &:focus {
-        box-shadow: none!important;
+        box-shadow: none !important;
     }
 }
