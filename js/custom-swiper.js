@@ -43,6 +43,49 @@ initWwdSwiper();
 window.addEventListener('resize', initWwdSwiper);
 
 // ================================================
+//  Pre-Construction: Benefits Swiper (≤ 1099px)
+// ================================================
+let ftbBenefitsSwiper = null;
+const ftbBenefitsSwiperEl = document.querySelector('.ftb-benefits-swiper');
+
+function initFtbBenefitsSwiper() {
+    if (!ftbBenefitsSwiperEl) return;
+    const isSlider = window.innerWidth <= 1099;
+    if (isSlider && !ftbBenefitsSwiper) {
+        ftbBenefitsSwiper = new Swiper(ftbBenefitsSwiperEl, {
+            grabCursor: true,
+            navigation: {
+                prevEl: '.ftb-benefits-prev',
+                nextEl: '.ftb-benefits-next',
+            },
+            pagination: {
+                el: '.ftb-benefits-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 16,
+                },
+                768: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 24,
+                },
+            },
+        });
+    } else if (!isSlider && ftbBenefitsSwiper) {
+        ftbBenefitsSwiper.destroy(true, true);
+        ftbBenefitsSwiper = null;
+    }
+}
+
+initFtbBenefitsSwiper();
+window.addEventListener('resize', initFtbBenefitsSwiper);
+
+// ================================================
 //  Why Choose Us Swiper (≤ 767px)
 // ================================================
 let whyUsSwiper = null;
@@ -78,6 +121,41 @@ function initWhyUsSwiper() {
 
 initWhyUsSwiper();
 window.addEventListener('resize', initWhyUsSwiper);
+
+// ================================================
+//  Neighborhood Stats Swiper (≤ 1099px)
+// ================================================
+window.hvhStatsSwiper = null;
+const hvhStatsSwiperEl = document.querySelector('.hvh-lf-stats-swiper');
+
+function initHvhStatsSwiper() {
+    if (!hvhStatsSwiperEl) return;
+    const isSlider = window.innerWidth <= 1099;
+    if (isSlider && !window.hvhStatsSwiper) {
+        window.hvhStatsSwiper = new Swiper(hvhStatsSwiperEl, {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            grabCursor: true,
+            navigation: {
+                prevEl: '.hvh-lf-stats-prev',
+                nextEl: '.hvh-lf-stats-next',
+            },
+            pagination: {
+                el: '.hvh-lf-stats-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+            },
+        });
+    } else if (!isSlider && window.hvhStatsSwiper) {
+        window.hvhStatsSwiper.destroy(true, true);
+        window.hvhStatsSwiper = null;
+    }
+}
+
+initHvhStatsSwiper();
+window.addEventListener('resize', initHvhStatsSwiper);
 
 // Agent section: photo fades (left), info slides (right), synced via realIndex
 const agentPhotoSwiper = new Swiper(".agent-photo-swiper", {
@@ -341,8 +419,15 @@ const projectsSwiper = new Swiper('.projects-swiper', {
     loop: true,
     grabCursor: true,
     navigation: {
-        nextEl: '#listingsNext',
-        prevEl: '#listingsPrev',
+        nextEl: '.pc-listings-next',
+        prevEl: '.pc-listings-prev',
+    },
+    pagination: {
+        el: '.listings-mobile-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '"></span>';
+        },
     },
     breakpoints: {
         576: {
@@ -357,8 +442,10 @@ const projectsSwiper = new Swiper('.projects-swiper', {
     },
     on: {
         slideChange: function () {
-            const prevBtn = document.getElementById('listingsPrev');
-            if (prevBtn) prevBtn.classList.toggle('swiper-btn-hidden', this.realIndex === 0);
+            const realIdx = this.realIndex;
+            document.querySelectorAll('.pc-listings-prev').forEach(function (btn) {
+                btn.classList.toggle('swiper-btn-hidden', realIdx === 0);
+            });
         },
     },
 });

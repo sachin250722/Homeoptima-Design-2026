@@ -229,6 +229,10 @@ if (jQuery('.dataTables_length select').length > 0) {
             panels.forEach(function (panel) {
                 panel.classList.toggle('hvh-lf-panel--active', panel.dataset.panel === target);
             });
+            // Re-measure stats swiper when Summary panel is re-shown
+            if (target === 'summary' && window.hvhStatsSwiper) {
+                window.hvhStatsSwiper.update();
+            }
         });
     });
 })();

@@ -368,6 +368,92 @@
     display: none;
 }
 
+// ── BENEFITS CARDS: desktop grid / mobile slider ─────────────────
+
+.ftb-benefits-cards-wrap {
+    margin-top: 32px;
+}
+
+// Desktop: Swiper wrapper acts as a 4-column flex grid
+.pc-page .ftb-benefits-swiper {
+    overflow: visible;
+
+    .swiper-wrapper {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .swiper-slide {
+        width: calc(25% - 18px); // 4 cols · 3×24px gaps = 72px ÷ 4 = 18px offset
+        height: auto;
+    }
+
+    // When JS initialises Swiper (≤1099px): restore slider behaviour
+    &.swiper-initialized {
+        overflow: hidden;
+
+        .swiper-wrapper {
+            flex-wrap: nowrap;
+            gap: 0;
+        }
+
+        .swiper-slide {
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+// Navigation bar (prev · dots · next) — hidden on desktop
+.ftb-benefits-nav {
+    display: none;
+
+    @include custommq($max: 1099px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 28px;
+        padding: 0 4px;
+    }
+}
+
+// Swiper bullet pagination inside .ftb-benefits-pagination
+.ftb-benefits-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: rgba(44, 110, 254, 0.24);
+        border-radius: 999px;
+        opacity: 1;
+        margin: 0;
+        @include transitionFast;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 12px;
+        height: 12px;
+        background: $primary;
+    }
+}
+
+// On mobile: pull swiper edge-to-edge so the peek card is visible
+@include custommq($max: 1099px) {
+    .pc-page .ftb-benefits-section .ftb-benefits-cards-wrap {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    .pc-page .ftb-benefits-swiper {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
 // ── SECTION 3: AMENITIES (Blue) ─────────────────────────────────
 
 .pc-amenities {
@@ -609,7 +695,7 @@
         }
     }
 
-    .ld-thumb-nav {
+    .ld-thumb-bottom {
         flex: 1;
         display: flex;
         align-items: center;
@@ -932,18 +1018,23 @@
 
 @include respond(phone-land) {
 
-    // Gallery thumb-strip: scrollable on phone-land to avoid overflow
-    .pc-gallery .ld-thumb-strip {
+    // Gallery: column layout on tablet/phone-land
+    .pc-gallery .ld-gallery { height: 284px; border-radius: 16px; }
+    .pc-gallery .ld-gallery-thumbs { display: none; }
+    .pc-gallery .ld-thumb-strip { flex-direction: column; gap: 16px; overflow: visible; }
+    .pc-gallery .ld-thumb-images {
+        width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         flex-wrap: nowrap;
-        padding-bottom: 4px;
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
+        &::-webkit-scrollbar { display: none; }
     }
+    .pc-gallery .ld-thumb-bottom { width: 100%; }
+    .pc-gallery .ld-thumb-img { width: 65px; height: 65px; border-radius: 10px; }
+    .pc-gallery .ld-count-badge { font-size: 14px; padding: 12px 14px; }
+    .pc-gallery .slider-arrow { width: 44px; height: 44px; }
 }
 
 @include respond(phone) {
@@ -1021,40 +1112,9 @@
         padding: 48px 0;
     }
 
-    .pc-gallery .ld-gallery {
-        height: 260px;
-    }
-
-    .pc-gallery .ld-gallery-thumbs {
-        display: none;
-    }
-
-    // Thumb strip: horizontal scroll, hide on very small
-    .pc-gallery .ld-thumb-strip {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        flex-wrap: nowrap;
-        gap: 12px;
-
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
-
     .pc-gallery .ld-thumb-img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .pc-gallery .ld-count-badge {
-        font-size: 13px;
-        padding: 10px 14px;
-    }
-
-    .pc-gallery .slider-arrow {
-        width: 44px;
-        height: 44px;
+        width: 56px;
+        height: 56px;
     }
 
     // Floorplans
@@ -1952,4 +2012,79 @@
     text-decoration: underline;
     padding: 0;
     margin-top: 4px;
+}
+
+// ── DISCOVERY / LISTINGS SECTION MOBILE LAYOUT ────────────────
+// Base: hide mobile nav (desktop uses fade overlays)
+.pc-page .listings-section .listings-mobile-nav {
+    display: none;
+}
+
+@include custommq($max: 1099px) {
+    .pc-page .listings-section {
+        // Hide desktop fade + arrow overlays
+        .listings-prev-fade,
+        .listings-next-fade {
+            display: none;
+        }
+
+        // Header row: reduce bottom margin
+        .listings-header-row {
+            margin-bottom: 24px;
+        }
+
+        // Full-width CTA button
+        .listings-cta-col {
+            width: 100%;
+            margin-top: 8px;
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        // Mobile nav row: prev | dots | next
+        .listings-mobile-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 28px;
+        }
+
+        .listings-mobile-pagination {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            position: static;
+            transform: none;
+            width: auto;
+
+            .swiper-pagination-bullet {
+                width: 8px;
+                height: 8px;
+                background: rgba($primary, 0.24);
+                border-radius: 999px;
+                opacity: 1;
+                margin: 0;
+                @include transitionFast;
+            }
+
+            .swiper-pagination-bullet-active {
+                width: 12px;
+                height: 12px;
+                background: $primary;
+            }
+        }
+
+        // Card sizing
+        .listing-img { height: 203px; }
+        .listing-body { padding: 16px; }
+        .listing-price { font-size: 22px; line-height: 24px; }
+        .listing-name { font-size: 16px; line-height: 20px; }
+        .listing-desc { font-size: 14px; line-height: 22px; }
+        .listing-meta { gap: 12px; }
+    }
 }

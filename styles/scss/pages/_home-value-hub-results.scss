@@ -2025,11 +2025,74 @@
         margin: 0;
     }
 
-    // ---- Stat rows ----
-    .hvh-lf-stats {
+    // ---- Stat Swiper wrapper ----
+    .hvh-lf-stats-wrap {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 0;
+    }
+
+    // Desktop: flex-wrap grid (3 per row); mobile: real Swiper
+    .hvh-lf-stats-swiper {
+        overflow: visible;
+
+        .swiper-wrapper {
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .swiper-slide {
+            width: calc(33.333% - 11px);
+            height: auto;
+        }
+
+        &.swiper-initialized {
+            overflow: hidden;
+
+            .swiper-wrapper {
+                flex-wrap: nowrap;
+                gap: 0;
+            }
+
+            .swiper-slide {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .hvh-lf-stats-nav {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .hvh-lf-stats-pagination {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        position: static;
+        transform: none;
+        width: auto;
+
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background: rgba($primary, 0.24);
+            border-radius: 999px;
+            opacity: 1;
+            margin: 0;
+            @include transitionFast;
+        }
+
+        .swiper-pagination-bullet-active {
+            width: 12px;
+            height: 12px;
+            background: $primary;
+        }
     }
 
     // ---- Individual stat card ----
@@ -2471,6 +2534,28 @@
             padding: 16px;
         }
     }
+
+    // Stat slider activates at ≤ 1099px
+    @include custommq($max: 1099px) {
+        .hvh-lf-stats-nav {
+            display: flex;
+        }
+
+        // Force linear layout BEFORE Swiper initialises — prevents dimension miscalculation
+        .hvh-lf-stats-swiper {
+            overflow: hidden;
+
+            .swiper-wrapper {
+                flex-wrap: nowrap;
+                gap: 0;
+            }
+
+            .swiper-slide {
+                flex: 0 0 100%;
+                min-width: 100%;
+            }
+        }
+    }
 }
 
 // ===================== REQUEST REPORT =====================
@@ -2621,6 +2706,7 @@
         white-space: nowrap;
         flex-shrink: 0;
         @include transitionFast;
+        height: 100%;
 
         &::after { display: none; } // hide Bootstrap dropdown caret
 
