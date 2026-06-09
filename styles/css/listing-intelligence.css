@@ -2713,7 +2713,7 @@ img {
 .li-cta__listing-img {
     position: absolute;
     left: 0;
-    top: -202px; /* section padding-top (80px) + bleed above (122px) */
+    top: -250px; /* section padding-top (80px) + bleed above (122px) */
     width: 248px;
     height: 267px;
     border-radius: 12px;
