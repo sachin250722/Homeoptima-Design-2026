@@ -12152,6 +12152,10 @@ h6, .h6 {
   font-size: 16px;
 }
 
+img, svg {
+  max-width: 100%;
+}
+
 ::selection {
   background: var(--primary-color);
   color: #fff;
@@ -20157,12 +20161,49 @@ textarea.form-control {
   box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
   flex-shrink: 0;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #0E171F;
+  white-space: nowrap;
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
   transition: all 0.2s;
 }
+.bh-form__phone-code::after {
+  display: none;
+}
 .bh-form__phone-code:hover {
-  border-color: rgba(33, 37, 41, 0.3);
+  border-color: rgba(14, 23, 31, 0.3);
+}
+.bh-form__phone-menu {
+  min-width: 200px;
+  border-radius: 10px;
+  border: 1px solid #ededed;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 6px;
+}
+.bh-form__phone-opt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #0E171F;
+  border-radius: 6px;
+}
+.bh-form__phone-opt img {
+  flex-shrink: 0;
+  width: 20px;
+}
+.bh-form__phone-opt span {
+  color: #929daa;
+  font-size: 13px;
+}
+.bh-form__phone-opt:hover {
+  background: rgba(44, 110, 254, 0.06);
+  color: #2C6EFE;
 }
 .bh-form__phone-prefix {
   font-family: "Poppins", sans-serif;
@@ -27977,8 +28018,8 @@ textarea.ld-form-control {
 .bfs-card__title {
   font-family: "Archivo", sans-serif;
   font-weight: 500;
-  font-size: 38px;
-  line-height: 50px;
+  font-size: 32px;
+  line-height: 40px;
   color: #212529;
   margin: 0;
 }
@@ -28153,6 +28194,8 @@ textarea.ld-form-control {
 }
 .bfs-latest-item__img {
   width: 80px;
+  height: 80px;
+  background-color: #ededed;
   align-self: stretch;
   border-radius: 8px;
   overflow: hidden;
@@ -28268,12 +28311,37 @@ textarea.ld-form-control {
   background: #F2F6FF;
   padding: 80px 0;
   overflow: hidden;
+  position: relative;
 }
-.bt-section > .container:first-of-type {
+
+.bt-title-wrap {
   margin-bottom: 40px;
 }
-.bt-section > .container:last-of-type {
+
+.bt-controls-wrap {
   margin-top: 56px;
+}
+
+.bt-bg-deco {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2803px;
+  height: 460px;
+  pointer-events: none;
+  z-index: 0;
+}
+.bt-bg-deco img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bt-container-rel {
+  position: relative;
+  z-index: 1;
 }
 
 .bt-title {
@@ -28314,19 +28382,23 @@ textarea.ld-form-control {
 }
 
 .bt-card {
-  border-left: 1px solid rgba(44, 110, 254, 0.36);
+  border-left: 1px solid rgba(207, 207, 207, 0.36);
   padding-left: 24px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
   position: relative;
+  width: 100%;
+  color: #0E171F;
 }
 .bt-card__img {
   height: 240px;
+  width: 100%;
   border-radius: 24px;
   overflow: hidden;
   flex-shrink: 0;
-  transition: box-shadow 0.3s;
+  background-color: rgba(0, 82, 121, 0.2);
 }
 .bt-card__img img {
   width: 100%;
@@ -28342,7 +28414,8 @@ textarea.ld-form-control {
   display: flex;
   align-items: center;
   gap: 8px;
-  flex-wrap: wrap;
+  width: 100%;
+  flex-shrink: 0;
 }
 .bt-card__date {
   font-family: "Poppins", sans-serif;
@@ -28352,6 +28425,7 @@ textarea.ld-form-control {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  flex-shrink: 1;
 }
 .bt-card__tag {
   display: inline-flex;
@@ -28364,23 +28438,27 @@ textarea.ld-form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 16px;
-  color: rgba(33, 37, 41, 0.56);
+  color: rgba(14, 23, 31, 0.56);
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .bt-card__title {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
+  width: 100%;
 }
 .bt-card__desc {
   font-family: "Poppins", sans-serif;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #929DAA;
   margin: 0;
+  width: 100%;
 }
 .bt-card__readmore {
   display: inline-flex;
@@ -28390,12 +28468,27 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
+  flex-shrink: 0;
   transition: color 0.2s, gap 0.2s;
+  position: relative;
+}
+.bt-card__readmore::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  bottom: 0;
+  top: 0;
+  display: block;
+  width: 0;
+  border-left: 1px solid #2C6EFE;
+  height: 100%;
+  transition: width 0.2s;
 }
 .bt-card__readmore img {
   width: 18px;
   height: 18px;
+  flex-shrink: 0;
 }
 .bt-card__readmore:hover {
   color: #2C6EFE;
@@ -28909,12 +29002,10 @@ textarea.ld-form-control {
   border-radius: 24px;
   padding: 24px;
   width: 400px;
-  height: 400px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   gap: 24px;
-  overflow: hidden;
 }
 @media only screen and (max-width: 74.9375rem) {
   .bda-next-card {
@@ -28924,7 +29015,6 @@ textarea.ld-form-control {
 @media only screen and (max-width: 61.9375rem) {
   .bda-next-card {
     width: 100%;
-    height: auto;
   }
 }
 .bda-next-card__title {
@@ -28937,15 +29027,18 @@ textarea.ld-form-control {
   flex-shrink: 0;
 }
 .bda-next-card .swiper {
-  flex: 1;
-  min-height: 0;
-  overflow: visible;
+  overflow: hidden;
+  margin: 0;
+}
+.bda-next-card .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .bda-next-card__cta-group {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-top: auto;
+  gap: 12px;
 }
 .bda-next-card__nav {
   display: flex;
@@ -29043,6 +29136,7 @@ textarea.ld-form-control {
   display: flex;
   align-items: center;
   gap: 8px;
+  justify-content: center;
 }
 
 .bda-hero__note {
@@ -31307,3 +31401,5 @@ textarea.ca-input {
     flex-direction: column;
   }
 }
+
+/*# sourceMappingURL=style.css.map */

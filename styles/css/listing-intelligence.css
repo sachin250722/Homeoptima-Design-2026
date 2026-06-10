@@ -1,9 +1,9 @@
-/* ============================================================
-   Listing Intelligence Page — Standalone Stylesheet
+﻿/* ============================================================
+   Listing Intelligence Page â€” Standalone Stylesheet
    Font: Manrope (loaded from /fonts/)
    ============================================================ */
 
-/* ── Manrope Font Faces ────────────────────────────────────── */
+/* â”€â”€ Manrope Font Faces â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @font-face {
     font-family: 'Manrope';
     src: url('../../fonts/Manrope-ExtraLight.eot');
@@ -95,7 +95,7 @@
     font-display: swap;
 }
 
-/* ── CSS Variables ─────────────────────────────────────────── */
+/* â”€â”€ CSS Variables â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :root {
     --li-primary:     #0a5bd8;
     --li-text:        #111111;
@@ -108,7 +108,7 @@
     --li-hero-bg:     #323946;
 }
 
-/* ── Reset / Base ───────────────────────────────────────────── */
+/* â”€â”€ Reset / Base â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 *,
 *::before,
 *::after {
@@ -159,15 +159,15 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 12px;
+    padding: 0 12px;
     border-radius: 8px;
     text-decoration: none;
     flex-shrink: 0;
 }
 
 .li-header__logo img {
-    width: 128px;
-    height: 24px;
+    width: 210px;
+    height: 45px;
     object-fit: contain;
     display: block;
 }
@@ -220,7 +220,7 @@ img {
     position: relative;
 }
 
-/* ── Left content column ───────────────────────────────────── */
+/* â”€â”€ Left content column â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-hero__col-left {
     display: flex;
     flex-direction: column;
@@ -388,292 +388,12 @@ img {
     display: block;
 }
 
-/* ── Right visual column ───────────────────────────────────── */
 .li-hero__col-right {
     position: relative;
 }
 
 .li-hero__visual {
     position: relative;
-    height: 700px;
-}
-
-/* ── Photo cards ───────────────────────────────────────────── */
-.li-hero__photo {
-    position: absolute;
-    border-radius: 12px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.08);
-    transform: rotate(4deg) skewX(4deg);
-    z-index: 1;
-}
-
-.li-hero__photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Positions relative to right col left edge */
-/* frame_offset=-47.64 + figma_item_left */
-.li-hero__photo--top {
-    left: 306px;    /* 353.14 - 47.64 */
-    top: 28px;
-    width: 248px;
-    height: 267px;
-}
-
-.li-hero__photo--bottom {
-    left: 263px;    /* 310.24 - 47.64 */
-    top: 347px;
-    width: 200px;
-    height: 220px;
-}
-
-/* ── Donut chart ───────────────────────────────────────────── */
-.li-hero__donut {
-    position: absolute;
-    left: 20px;     /* 67.84 - 47.64 */
-    top: 96px;
-    width: 100px;
-    height: 100px;
-    transform: rotate(4deg) skewX(4deg);
-    z-index: 3;
-}
-
-.li-hero__donut-seg {
-    position: absolute;
-    object-fit: contain;
-    display: block;
-    max-width: none;
-}
-
-.li-hero__donut-seg--1 { top: 0; left: 9.55%; right: 0; bottom: 50%; }
-.li-hero__donut-seg--2 { inset: 20.51% 34.67% 0 0; }
-.li-hero__donut-seg--3 { inset: 66.31% 13.31% 2.32% 57.22%; }
-.li-hero__donut-seg--4 { inset: 49.89% 0 15.96% 67.58%; }
-
-/* ── Main chart card ───────────────────────────────────────── */
-.li-hero__card-main {
-    position: absolute;
-    left: -46px;    /* 1 - 47.64 */
-    top: 121px;
-    width: 392px;
-    height: 377px;
-    transform: rotate(4deg) skewX(4deg);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-    overflow: hidden;
-    z-index: 2;
-}
-
-/* Chart internals (absolutely positioned inside card) */
-.li-hero__card-shape {
-    position: absolute;
-    top: 20px;
-    left: 25px;
-    right: 25px;
-    bottom: 188px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    object-position: left center;
-}
-
-.li-hero__card-shape1 {
-    position: absolute;
-    top: -2px;
-    left: 26px;
-    right: 48px;
-    bottom: 232px;
-    object-fit: fill;
-    opacity: 0.9;
-}
-
-.li-hero__card-linechart {
-    position: absolute;
-    left: 25px;
-    top: 32px;
-    width: 340px;
-    height: 153px;
-    object-fit: contain;
-    object-position: left top;
-}
-
-.li-hero__card-vector {
-    position: absolute;
-    left: 26px;
-    top: 80px;
-    right: 1px;
-    height: 16px;
-    object-fit: fill;
-    opacity: 0.7;
-}
-
-/* Inventory trend dark section */
-.li-hero__card-inventory {
-    position: absolute;
-    left: 25px;
-    top: 204px;
-    width: 260px;
-    height: 152px;
-    background: rgba(18, 18, 18, 0.8);
-    overflow: hidden;
-}
-
-.li-hero__card-inventory-title {
-    position: absolute;
-    left: 12px;
-    top: 7px;
-    font-family: var(--li-font);
-    font-size: 12px;
-    font-weight: 800;
-    color: white;
-    line-height: 20px;
-    white-space: nowrap;
-    margin: 0;
-}
-
-.li-hero__card-barchart {
-    position: absolute;
-    left: 50%;
-    top: 40px;
-    width: 84px;
-    height: 211px;
-    object-fit: contain;
-    transform: translateX(calc(-50% + 8px)) rotate(90deg);
-    transform-origin: center;
-}
-
-.li-hero__card-dots {
-    position: absolute;
-    left: 12px;
-    top: 38px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.li-hero__card-dot {
-    width: 12px;
-    height: 4px;
-    background: rgba(98, 122, 153, 0.16);
-    border-radius: 7px;
-    flex-shrink: 0;
-}
-
-/* ── Floating badges ───────────────────────────────────────── */
-.li-hero__badge {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.74);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    padding: 12px 24px;
-    font-family: var(--li-font);
-    font-size: 16px;
-    font-weight: 800;
-    color: white;
-    line-height: 20px;
-    white-space: nowrap;
-    transform: rotate(4deg) skewX(4deg);
-    z-index: 4;
-}
-
-/* Asymmetric "speech tab" shape — left side fully rounded, top-right 190px, bottom-right sharp */
-.li-hero__badge--tab {
-    border-radius: 999px 190px 0 999px;
-}
-
-/* Slightly less rounded top-right */
-.li-hero__badge--tab2 {
-    border-radius: 999px 80px 0 999px;
-}
-
-/* Fully pill */
-.li-hero__badge--pill {
-    border-radius: 999px;
-}
-
-/* Positions (right col coordinates: figma_item_left - 47.64) */
-.li-hero__badge--active140 {
-    left: 154px;    /* 202 - 47.64 */
-    top: 77px;
-}
-
-.li-hero__badge--recent {
-    left: 374px;    /* 421.36 - 47.64 */
-    top: 51px;
-}
-
-/* "Sold stable" is a direct child of right col in Figma (not inside frame) */
-.li-hero__badge--sold {
-    left: 300px;    /* 348 - 47.64 (accounting for frame offset) */
-    top: 223px;
-}
-
-.li-hero__badge--smart {
-    left: 314px;    /* 361.36 - 47.64 */
-    top: 461px;
-}
-
-/* ── Stat cards ────────────────────────────────────────────── */
-.li-hero__stat {
-    position: absolute;
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    border: 0.5px solid rgba(255, 255, 255, 0.16);
-    border-radius: 12px;
-    padding: 12px 16px;
-    background: linear-gradient(1.35deg, rgba(255, 255, 255, 0.16) 3.58%, rgba(255, 255, 255, 0.064) 85.98%);
-    transform: rotate(4deg) skewX(4deg);
-    white-space: nowrap;
-    z-index: 4;
-    font-family: var(--li-font);
-    line-height: 20px;
-}
-
-.li-hero__stat-val {
-    display: block;
-    font-size: 21px;
-    font-weight: 800;
-    line-height: 20px;
-    margin-bottom: 4px;
-}
-
-.li-hero__stat-lbl {
-    display: block;
-    font-size: 16px;
-    font-weight: 400;
-    color: white;
-    line-height: 20px;
-}
-
-.li-hero__stat-val--red    { color: #dc2626; }
-.li-hero__stat-val--orange { color: #f97316; }
-.li-hero__stat-val--green  { color: #30b862; }
-
-/* Positions:
-   competitors — frame: left -47.64px → col: -95.28px → simplified to left edge of col: 0
-   reductions  — direct child of col: left 65px
-   price       — direct child of col: left 129px
-*/
-.li-hero__stat--competitors {
-    left: 0px;
-    top: 434px;
-}
-
-.li-hero__stat--reductions {
-    left: 65px;
-    top: 516px;
-}
-
-.li-hero__stat--price {
-    left: 129px;
-    top: 594px;
 }
 
 /* ============================================================
@@ -733,7 +453,7 @@ img {
     margin: 0;
 }
 
-/* Slider wrapper — clips overflow on mobile */
+/* Slider wrapper â€” clips overflow on mobile */
 .li-features-slider-wrap {
     overflow: hidden;
     /* extra bottom padding so box-shadow isn't clipped */
@@ -819,7 +539,7 @@ img {
     margin: 0;
 }
 
-/* ── Responsive — features ──────────────────────────────── */
+/* â”€â”€ Responsive â€” features â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media only screen and (max-width: 74.9375rem) {
     .li-features__heading { font-size: 40px; line-height: 52px; }
 }
@@ -830,7 +550,7 @@ img {
     .li-features__heading { font-size: 34px; line-height: 44px; }
 }
 
-/* ≤1099px — slider active, allow peek overflow */
+/* â‰¤1099px â€” slider active, allow peek overflow */
 @media only screen and (max-width: 68.6875rem) {
     .li-features-slider-wrap {
         /* let slides peek past the container edge */
@@ -864,16 +584,8 @@ img {
     overflow: hidden;
 }
 
-.li-testimonials__inner {
-    display: flex;
-    gap: 80px;
-    align-items: center;
-}
-
 /* Left column */
 .li-testimonials__left {
-    width: 500px;
-    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -881,44 +593,41 @@ img {
 
 .li-testimonials__heading {
     font-family: var(--li-font);
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 68px;
+    font-weight: 500;
     color: #111;
-    line-height: 62px;
-    margin: 0;
+    line-height: 74px;
+    margin-bottom: 24px;
+    margin-top: 0;
 }
 
 .li-testimonials__sub {
     font-family: var(--li-font);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     color: #2e2e2e;
-    line-height: 24px;
+    line-height: 32px;
     margin: 0;
 }
 
 /* Right column */
 .li-testimonials__right {
-    flex: 1;
-    min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 40px;
 }
 
-/* Slider wrapper */
-.li-testimonials-slider-wrap {
-    overflow: visible;
-    padding-bottom: 8px;
+.li-testimonials-swiper-outer {
+    width: 100%;
+    min-width: 0;
 }
 
 /* Testimonial card */
 .li-tcard {
     background: #fff;
-    border: 1px solid rgba(17, 17, 17, 0.08);
+    border: 1px solid rgba(14, 23, 31, 0.08);
     border-radius: 24px;
-    padding: 24px;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+    padding: 27px;
+    box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -998,106 +707,88 @@ img {
 
 .li-tcard__role {
     font-family: var(--li-font);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     color: #2e2e2e;
-    line-height: 16px;
+    line-height: 20px;
     margin: 0;
-    white-space: nowrap;
 }
 
-/* Navigation row */
-.li-testimonials__nav {
+/* Controls row: prev | dots | next */
+.li-testimonials-controls {
     display: flex;
     align-items: center;
     gap: 24px;
-    flex-shrink: 0;
+    justify-content: flex-start;
+    margin-top: 28px;
 }
 
-/* Prev / Next buttons */
-.li-testimonials__btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.li-testimonials-nav-btn {
     width: 56px;
     height: 56px;
+    border: 1px solid rgba(146, 157, 170, 0.24);
+    border-radius: 50%;
     background: #fff;
-    border: 1px solid rgba(46, 46, 46, 0.24);
-    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.04);
+    transition: 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
-    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-    flex-shrink: 0;
-    padding: 0;
-    color: #2e2e2e;
-}
-
-.li-testimonials__btn:hover {
-    background: #f4f6fa;
-    border-color: rgba(46, 46, 46, 0.4);
-    transform: scale(1.04);
-}
-
-.li-testimonials__btn.swiper-button-disabled {
-    opacity: 0.4;
-    pointer-events: none;
-}
-
-.li-testimonials__btn svg {
-    width: 24px;
-    height: 24px;
-    display: block;
     flex-shrink: 0;
 }
 
-/* Pagination dots */
-.li-testimonials-pagination {
+.li-testimonials-nav-btn:hover {
+    border-color: var(--li-primary);
+    box-shadow: 0 0 0 3px rgba(10, 91, 216, 0.1);
+}
+
+.li-testimonials-dots {
     display: flex;
     align-items: center;
     gap: 8px;
     width: auto !important;
 }
 
-.li-t-bullet {
-    display: inline-block;
+.li-testimonials-dots .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
-    border-radius: 999px;
-    background: rgba(10, 91, 216, 0.24);
-    cursor: pointer;
-    transition: width 0.2s ease, background 0.2s ease;
-    flex-shrink: 0;
+    border-radius: 50%;
+    margin: 0 !important;
+    background: rgba(44, 110, 254, 0.24);
+    opacity: 1;
 }
 
-.li-t-bullet--active {
+.li-testimonials-dots .swiper-pagination-bullet-active {
     width: 12px;
     height: 12px;
-    background: #0a5bd8;
+    border-radius: 999px;
+    background: var(--li-primary);
 }
 
-/* ── Responsive — testimonials ───────────────────────── */
+/* Responsive — matches main landing page testimonial-section pattern */
+@media only screen and (max-width: 87.5rem) {
+    .li-testimonials__heading { font-size: 60px; line-height: 68px; }
+}
+
 @media only screen and (max-width: 74.9375rem) {
-    .li-testimonials__left { width: 380px; }
-    .li-testimonials__heading { font-size: 40px; line-height: 52px; }
-    .li-testimonials__inner { gap: 56px; }
+    .li-testimonials__heading { font-size: 50px; line-height: 58px; }
 }
 
 @media only screen and (max-width: 61.9375rem) {
-    .li-testimonials { padding: 60px 0; }
-    .li-testimonials__inner { flex-direction: column; gap: 40px; align-items: flex-start; }
-    .li-testimonials__left { width: 100%; }
+    .li-testimonials { padding: 40px 0; }
     .li-testimonials__heading { font-size: 34px; line-height: 44px; }
+    .li-testimonials-controls { justify-content: center; }
 }
 
 @media only screen and (max-width: 47.9375rem) {
-    .li-testimonials { padding: 48px 0; }
+    .li-testimonials { padding: 40px 0; }
     .li-testimonials__heading { font-size: 28px; line-height: 36px; }
     .li-tcard__quote { font-size: 18px; line-height: 30px; }
 }
 
 @media only screen and (max-width: 35.9375rem) {
     .li-testimonials__heading { font-size: 24px; line-height: 32px; }
-    .li-testimonials__btn { width: 44px; height: 44px; }
     .li-tcard__quote { font-size: 16px; line-height: 26px; }
 }
 
@@ -1147,6 +838,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    max-width: 100%;
 }
 
 /* Alert badge */
@@ -1292,7 +984,7 @@ img {
 
 .li-price__range-labels strong { font-weight: 700; }
 
-/* Range track — three-part: [space | fill | space] */
+/* Range track â€” three-part: [space | fill | space] */
 .li-price__range-track {
     height: 23px;
     background: rgba(44, 110, 254, 0.04);
@@ -1387,7 +1079,7 @@ img {
     margin: 0;
 }
 
-/* ── Responsive — price recommendation ─────────────────── */
+/* â”€â”€ Responsive â€” price recommendation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media only screen and (max-width: 74.9375rem) {
     .li-price__left { width: 440px; }
     .li-price__heading { font-size: 40px; line-height: 52px; }
@@ -1468,7 +1160,7 @@ img {
     gap: 24px;
 }
 
-/* ── Report identity card ───────────────────────────────── */
+/* â”€â”€ Report identity card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-sample__report-card {
     display: flex;
     align-items: center;
@@ -1542,7 +1234,7 @@ img {
     flex-shrink: 0;
 }
 
-/* ── Signal cards ───────────────────────────────────────── */
+/* â”€â”€ Signal cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-sample__signals {
     display: flex;
     gap: 24px;
@@ -1625,7 +1317,7 @@ img {
     margin: 0;
 }
 
-/* ── Data panels ────────────────────────────────────────── */
+/* â”€â”€ Data panels â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-sample__panels {
     display: flex;
     gap: 24px;
@@ -1642,7 +1334,7 @@ img {
     min-width: 0;
 }
 
-/* ── Left panel (MPS + chart) ───────────────────────────── */
+/* â”€â”€ Left panel (MPS + chart) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-sample__panel--left {
     display: flex;
     flex-direction: column;
@@ -1852,7 +1544,7 @@ img {
     text-align: center;
 }
 
-/* ── Right panel (activity table) ──────────────────────── */
+/* â”€â”€ Right panel (activity table) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-sample__panel--right {
     display: flex;
     flex-direction: column;
@@ -1987,7 +1679,7 @@ img {
     text-align: center;
 }
 
-/* ── Responsive — sample report ─────────────────────────── */
+/* â”€â”€ Responsive â€” sample report â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media only screen and (max-width: 74.9375rem) {
     .li-sample__heading { font-size: 40px; line-height: 52px; }
     .li-sample__report-address { font-size: 26px; }
@@ -2221,7 +1913,7 @@ img {
    RESPONSIVE
    ============================================================ */
 
-/* ≤1199px */
+/* â‰¤1199px */
 @media only screen and (max-width: 74.9375rem) {
     .li-hero__heading { font-size: 52px; }
 
@@ -2229,7 +1921,7 @@ img {
     .li-footer__brand { width: 260px; }
 }
 
-/* ≤991px — tablet */
+/* â‰¤991px â€” tablet */
 @media only screen and (max-width: 61.9375rem) {
     .li-hero {
         padding: 60px 0 80px;
@@ -2238,7 +1930,7 @@ img {
     .li-hero__heading { font-size: 44px; }
     .li-hero__sub { font-size: 18px; }
 
-    /* Hide the right visual on tablet — not enough room */
+    /* Hide the right visual on tablet â€” not enough room */
     .li-hero__col-right {
         display: none;
     }
@@ -2250,7 +1942,7 @@ img {
     .li-footer__links li a { font-size: 14px; }
 }
 
-/* ≤767px — mobile */
+/* â‰¤767px â€” mobile */
 @media only screen and (max-width: 47.9375rem) {
     .li-hero {
         padding: 48px 0 64px;
@@ -2286,7 +1978,7 @@ img {
     }
 }
 
-/* ≤575px */
+/* â‰¤575px */
 @media only screen and (max-width: 35.9375rem) {
     .li-header__logo img { width: 104px; height: 20px; }
     .li-header__cta { font-size: 14px; padding: 10px 18px; }
@@ -2349,7 +2041,7 @@ img {
     z-index: 1;
 }
 
-/* ── Section header ─────────────────────────────────────── */
+/* â”€â”€ Section header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-deepfeat__header {
     text-align: center;
     margin-bottom: 56px;
@@ -2374,7 +2066,7 @@ img {
     max-width: 540px;
 }
 
-/* ── 2x2 card grid ──────────────────────────────────────── */
+/* â”€â”€ 2x2 card grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-deepfeat__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -2382,7 +2074,7 @@ img {
     margin: 0 auto;
 }
 
-/* ── Individual card ────────────────────────────────────── */
+/* â”€â”€ Individual card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-dfcard {
     background: #ffffff;
     border-radius: 16px;
@@ -2458,7 +2150,7 @@ img {
     opacity: 0.5;
 }
 
-/* ── Responsive ─────────────────────────────────────────── */
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media only screen and (max-width: 74.9375rem) {
     .li-deepfeat { padding: 80px 0; }
     .li-deepfeat__heading { font-size: 42px; }
@@ -2519,14 +2211,14 @@ img {
     z-index: 1;
 }
 
-/* ── Two-column row ─────────────────────────────────────── */
+/* â”€â”€ Two-column row â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-ai-recs__row {
     display: flex;
     gap: 56px;
     align-items: center;
 }
 
-/* ── Left panel ─────────────────────────────────────────── */
+/* â”€â”€ Left panel â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-ai-recs__left {
     flex: 1 0 0;
     min-width: 0;
@@ -2584,7 +2276,7 @@ img {
     margin: 0;
 }
 
-/* ── Right panel (5 cards) ──────────────────────────────── */
+/* â”€â”€ Right panel (5 cards) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-ai-recs__right {
     flex: 1 0 0;
     min-width: 0;
@@ -2593,7 +2285,7 @@ img {
     gap: 24px;
 }
 
-/* ── Individual card ────────────────────────────────────── */
+/* â”€â”€ Individual card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-ai-recs__card {
     background: #ffffff;
     border-left: 2px solid transparent;
@@ -2650,7 +2342,7 @@ img {
     font-weight: 700;
 }
 
-/* ── Responsive ─────────────────────────────────────────── */
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media only screen and (max-width: 74.9375rem) {
     .li-ai-recs__heading { font-size: 40px; line-height: 52px; }
     .li-ai-recs__row { gap: 40px; }
@@ -2690,14 +2382,14 @@ img {
     padding: 80px 0;
 }
 
-/* ── Row layout ─────────────────────────────────────────── */
+/* â”€â”€ Row layout â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-cta__row {
     display: flex;
     gap: 24px;
     align-items: center;
 }
 
-/* ── Left: heading column ───────────────────────────────── */
+/* â”€â”€ Left: heading column â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-cta__left {
     flex: 1 0 0;
     min-width: 0;
@@ -2709,7 +2401,7 @@ img {
     text-align: center;
 }
 
-/* Decorative property photo — bleeds 122px above section top */
+/* Decorative property photo â€” bleeds 122px above section top */
 .li-cta__listing-img {
     position: absolute;
     left: 0;
@@ -2755,6 +2447,8 @@ img {
     text-transform: uppercase;
     letter-spacing: 0.06em;
     white-space: nowrap;
+    z-index: 11;
+    position: relative;
 }
 
 .li-cta__heading-group {
@@ -2790,7 +2484,7 @@ img {
     margin: 0;
 }
 
-/* ── Right: form card ───────────────────────────────────── */
+/* â”€â”€ Right: form card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-cta__card {
     width: 500px;
     flex-shrink: 0;
@@ -2805,7 +2499,7 @@ img {
     flex-direction: column;
 }
 
-/* Step panels — JS-controlled visibility */
+/* Step panels â€” JS-controlled visibility */
 .li-cta__step-panel[hidden] { display: none; }
 
 /* Step indicator */
@@ -3053,7 +2747,7 @@ img {
     background: rgba(0, 0, 0, 0.03);
 }
 
-/* ── All Done panel ─────────────────────────────────────── */
+/* â”€â”€ All Done panel â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-cta__done {
     display: flex;
     flex-direction: column;
@@ -3140,7 +2834,7 @@ img {
     white-space: nowrap;
 }
 
-/* ── Responsive ─────────────────────────────────────────── */
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media only screen and (max-width: 74.9375rem) {
     .li-cta__heading { font-size: 56px; line-height: 66px; }
     .li-cta__card { width: 440px; }
@@ -3190,7 +2884,7 @@ img {
     gap: 24px;
 }
 
-/* ── Main card ──────────────────────────────────────────── */
+/* â”€â”€ Main card â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-demo__card {
     background: #ffffff;
     border: 0.8px solid rgba(17, 17, 17, 0.08);
@@ -3270,14 +2964,14 @@ img {
     flex-shrink: 0;
 }
 
-/* ── Divider ────────────────────────────────────────────── */
+/* â”€â”€ Divider â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-demo__divider {
     height: 1px;
     background: rgba(17, 17, 17, 0.08);
     width: 100%;
 }
 
-/* ── Disclaimer ─────────────────────────────────────────── */
+/* â”€â”€ Disclaimer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .li-demo__disclaimer {
     font-family: var(--li-font);
     font-size: 14px;
@@ -3290,7 +2984,7 @@ img {
     text-overflow: ellipsis;
 }
 
-/* ── Responsive ─────────────────────────────────────────── */
+/* â”€â”€ Responsive â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media only screen and (max-width: 74.9375rem) {
     .li-demo__heading { font-size: 30px; line-height: 40px; }
 }
@@ -3311,3 +3005,4 @@ img {
     .li-demo__btn { font-size: 14px; padding: 10px 20px; }
     .li-demo__disclaimer { font-size: 12px; line-height: 18px; }
 }
+

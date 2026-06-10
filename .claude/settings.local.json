@@ -62,7 +62,9 @@
       "Bash(awk 'NR>=29450 && NR<=29460 {print NR\": \"$0}' styles/css/style.css)",
       "Bash(awk '/^@media/{mq=$0; mq_line=NR} NR==29694{print \"Line \"NR\" is inside media query at line \"mq_line\": \"mq}' styles/css/style.css)",
       "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/29df083c-853c-4007-84bd-ff9c9e0cfa28\" -OutFile \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\li-cta-property.jpg\" -UseBasicParsing; Write-Host \"Downloaded successfully\")",
-      "PowerShell(\\(Get-Item \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\li-cta-property.jpg\"\\).Length)"
+      "PowerShell(\\(Get-Item \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\li-cta-property.jpg\"\\).Length)",
+      "Bash(awk *)",
+      "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/3035fae7-1bdb-4e67-a642-a52d4607ddc4\" -OutFile \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\figma-trending-screenshot.png\" -UseBasicParsing; Write-Output \"Done\")"
     ]
   }
 }

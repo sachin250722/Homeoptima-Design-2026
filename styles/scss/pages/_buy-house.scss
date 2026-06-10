@@ -325,10 +325,48 @@
         box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
         flex-shrink: 0;
         cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        color: #0E171F;
+        white-space: nowrap;
         @include transitionFast;
 
+        &::after { display: none; }
+
         &:hover {
-            border-color: rgba($dark, 0.3);
+            border-color: rgba(#0E171F, 0.3);
+        }
+    }
+
+    &__phone-menu {
+        min-width: 200px;
+        border-radius: 10px;
+        border: 1px solid #ededed;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        padding: 6px;
+    }
+
+    &__phone-opt {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        padding: 8px 12px;
+        font-family: "Poppins", sans-serif;
+        font-size: 14px;
+        color: #0E171F;
+        border-radius: 6px;
+
+        img { flex-shrink: 0; width: 20px; }
+
+        span {
+            color: #929daa;
+            font-size: 13px;
+        }
+
+        &:hover {
+            background: rgba($primary, 0.06);
+            color: $primary;
         }
     }
 
