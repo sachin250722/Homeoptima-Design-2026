@@ -462,7 +462,7 @@
     position: relative;
 
     @include respond("tab-port") {
-        padding: 56px 0;
+        padding: 40px 0;
     }
 
     &__header {
@@ -470,6 +470,11 @@
 
         .section-desc {
             margin-top: 16px;
+        }
+
+        @include respond("tab-port") {
+            margin-bottom: 40px;
+            text-align: left;
         }
     }
 
@@ -487,7 +492,8 @@
         }
 
         @include respond("tab-port") {
-            font-size: 30px;
+            font-size: 34px;
+            line-height: 44px;
         }
     }
 }
@@ -525,7 +531,8 @@
         }
 
         @include respond("tab-port") {
-            font-size: 30px;
+            font-size: 34px;
+            line-height: 1.3;
         }
     }
 
@@ -669,7 +676,29 @@
         margin-top: 0;
     }
 
-    
+    // How It Works: left-align header text, tighten row-gap, reduce bottom margin
+    .bh-steps__header-row {
+        --bs-gutter-y: 1rem; // tighten row-gap so sub-text sits closer to heading
+        margin-bottom: 40px;
+
+        .col-lg-5 {
+            text-align: left !important;
+        }
+    }
+
+    // Show/hide desktop vs mobile layouts
+    .bh-steps__desktop-cards {
+        display: none !important;
+    }
+
+    .bh-steps__mobile-layout {
+        display: flex !important;
+    }
+
+    // Reduce section padding on phone
+    .bh-steps {
+        padding: 40px 0;
+    }
 }
 
 @include respond("phone-land") {
@@ -690,5 +719,148 @@
 
     .bh-cta {
         padding: 48px 20px;
+    }
+}
+
+
+// Mobile-only: full-width CTA shown between header and steps
+.bh-steps__mobile-cta {
+    margin-bottom: 40px;
+
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 12px 24px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: 12px;
+        background: $primary;
+        border-color: $primary;
+        color: $white;
+
+        img {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        &:hover {
+            background: darken($primary, 8%);
+            border-color: darken($primary, 8%);
+            color: $white;
+        }
+    }
+}
+
+
+// ================================================
+//  HOW IT WORKS — MOBILE VERTICAL TIMELINE
+// ================================================
+
+.bh-steps__mobile-layout {
+    display: none;
+    flex-direction: column;
+
+    .bh-step-card {
+        flex: 1;
+        min-width: 0;
+        padding: 16px;
+        gap: 16px;
+
+        &:hover {
+            transform: none;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+        }
+    }
+
+    .bh-step-card__icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0;
+        border-radius: 9.6px;
+        padding: 6.4px;
+
+        svg {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    .bh-step-card__title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
+
+    .bh-step-card__desc {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.bh-steps__mstep {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+
+    &:not(:last-child) {
+        padding-bottom: 24px;
+    }
+}
+
+.bh-steps__mvtl {
+    width: 36px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bh-steps__mvnum {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: rgba($primary, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11.57px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $primary;
+}
+
+.bh-steps__mvline {
+    flex: 1;
+    min-height: 16px;
+    width: 0;
+    border-left: 1.5px dashed rgba($primary, 0.45);
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 5px solid rgba($primary, 0.45);
+    }
+
+    .bh-steps__mstep:last-child & {
+        flex: 0 0 20px;
+
+        &::after { display: none; }
     }
 }

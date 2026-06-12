@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Buy a Home â€” HomeOptima | Southern Ontario</title>
+    <title>Buy a Home | HomeOptima | Southern Ontario</title>
     <meta name="description"
         content="Looking to buy a home in Southern Ontario? HomeOptima's local experts help you find the right home at the right price. Start your search today.">
     <meta name="keywords"
@@ -408,28 +408,26 @@
                         </div>
 
                     </div>
+                </div><!-- /.swiper -->
 
-                    <!-- Prev Button -->
+                <!-- Mobile navigation bar (hidden on desktop) -->
+                <div class="hv-why-nav">
                     <button class="nav-btn prev-btn" type="button" aria-label="Previous slide">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15 18L9 12L15 6" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round"></path>
                         </svg>
                     </button>
-
-                    <!-- Pagination Dots -->
                     <div class="custom-dots"></div>
-
-                    <!-- Next Button -->
                     <button class="nav-btn next-btn" type="button" aria-label="Next slide">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.75 12.75L6.75 6.75L0.75 0.75" stroke="#2C6EFE" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 6L15 12L9 18" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
                         </svg>
                     </button>
+                </div><!-- /.hv-why-nav -->
 
-                </div>
-            </div>
+            </div><!-- /.hv-why-cards -->
         </div>
     </section>
     <!-- ============================= /WHY CHOOSE US ============================= -->
@@ -451,10 +449,17 @@
                 <div class="col-lg-5 text-end">
                     <p class="section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet turpis
                         dapibus, sagittis ante finibus, congue nulla.</p>
-                    <a href="#bhLeadForm" class="btn btn-primary mt-3">
+                    <a href="#bhLeadForm" class="btn btn-primary mt-3 d-none d-lg-flex">
                         Contact agent <img src="images/icons/chevron-right-white.svg" alt="">
                     </a>
                 </div>
+            </div>
+
+            <!-- Mobile-only: full-width standalone CTA (hidden on desktop) -->
+            <div class="bh-steps__mobile-cta d-lg-none">
+                <a href="#bhLeadForm" class="btn btn-primary w-100 justify-content-center">
+                    Contact agent <img src="images/icons/chevron-right-white.svg" alt="">
+                </a>
             </div>
 
             <!-- Step numbers row -->
@@ -499,8 +504,8 @@
                 </div>
             </div>
 
-            <!-- Step cards row -->
-            <div class="card-bh">
+            <!-- Step cards row (desktop) -->
+            <div class="card-bh bh-steps__desktop-cards">
                 <div class="row g-4">
 
                     <!-- Step 1 -->
@@ -567,6 +572,84 @@
 
                 </div>
             </div>
+
+            <!-- Mobile: vertical timeline + stacked cards -->
+            <div class="bh-steps__mobile-layout">
+
+                <!-- Step 1 -->
+                <div class="bh-steps__mstep">
+                    <div class="bh-steps__mvtl" aria-hidden="true">
+                        <div class="bh-steps__mvnum">01</div>
+                        <div class="bh-steps__mvline"></div>
+                    </div>
+                    <div class="bh-step-card">
+                        <div class="bh-step-card__icon bh-step-card__icon--blue">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 21L15.8033 15.8033M15.8033 15.8033C17.1605 14.4461 18 12.5711 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C12.5711 18 14.4461 17.1605 15.8033 15.8033Z"
+                                    stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h4 class="bh-step-card__title">Tell us What You Need</h4>
+                        <p class="bh-step-card__desc">We know the market and neighborhood.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bh-steps__mstep">
+                    <div class="bh-steps__mvtl" aria-hidden="true">
+                        <div class="bh-steps__mvnum">02</div>
+                        <div class="bh-steps__mvline"></div>
+                    </div>
+                    <div class="bh-step-card">
+                        <div class="bh-step-card__icon bh-step-card__icon--yellow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 11L11 13L15 9M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                                    stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h4 class="bh-step-card__title">We Find The Best Matches</h4>
+                        <p class="bh-step-card__desc">We help you find homes at the right price.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bh-steps__mstep">
+                    <div class="bh-steps__mvtl" aria-hidden="true">
+                        <div class="bh-steps__mvnum">03</div>
+                        <div class="bh-steps__mvline"></div>
+                    </div>
+                    <div class="bh-step-card">
+                        <div class="bh-step-card__icon bh-step-card__icon--green">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 12H21M12 3V21M5 5L19 19M19 5L5 19" stroke="#8DEB92" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <h4 class="bh-step-card__title">Tour &amp; Compare</h4>
+                        <p class="bh-step-card__desc">We fight for the best terms for you.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bh-steps__mstep">
+                    <div class="bh-steps__mvtl" aria-hidden="true">
+                        <div class="bh-steps__mvnum">04</div>
+                        <div class="bh-steps__mvline"></div>
+                    </div>
+                    <div class="bh-step-card">
+                        <div class="bh-step-card__icon bh-step-card__icon--coral">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M3 9L12 2L21 9V20C21 20.5523 20.5523 21 20 21H15V16H9V21H4C3.44772 21 3 20.5523 3 20V9Z"
+                                    stroke="#FF8276" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h4 class="bh-step-card__title">Make Your Move</h4>
+                        <p class="bh-step-card__desc">Your goals first. Always.</p>
+                    </div>
+                </div>
+
+            </div><!-- /.bh-steps__mobile-layout -->
+
         </div>
     </section>
     <!-- ============================= /HOW IT WORKS ============================= -->

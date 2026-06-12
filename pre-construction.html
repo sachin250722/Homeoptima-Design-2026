@@ -622,138 +622,146 @@
             <!-- Floorplan cards grid + blurred overlay -->
             <div class="pc-floorplans__grid-wrap">
 
-                <!-- Row 1 -->
-                <div class="pc-floorplans__row">
+                <div class="swiper pc-fp-swiper">
+                    <div class="swiper-wrapper">
 
-                    <!-- Plan 1 (narrow) -->
-                    <div class="pc-fp-card pc-fp-card--narrow">
-                        <div class="pc-fp-card__info">
-                            <div class="pc-fp-card__icon-wrap pc-fp-card__icon-wrap--gold">
-                                <svg width="34" height="34" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V9Z"
-                                        stroke="#D3A644" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M9 21V12H15V21" stroke="#D3A644" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                        <!-- Plan 1 (narrow on desktop) -->
+                        <div class="swiper-slide pc-fp-card pc-fp-card--narrow">
+                            <div class="pc-fp-card__img-mob">
+                                <img src="images/listing-01.jpg" alt="Plan 1 floorplan">
                             </div>
-                            <div class="pc-fp-card__text">
-                                <h3 class="pc-fp-card__name">Plan 1</h3>
-                                <p class="pc-fp-card__desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor
-                                    alter miller.</p>
-                                <a href="javascript:void(0);" class="pc-fp-card__link">Learn more
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            <div class="pc-fp-card__info">
+                                <div class="pc-fp-card__icon-wrap pc-fp-card__icon-wrap--gold">
+                                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                        <path d="M9 18L15 12L9 6" stroke="#0E171F" stroke-width="1.5"
+                                        <path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V9Z"
+                                            stroke="#D3A644" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M9 21V12H15V21" stroke="#D3A644" stroke-width="1.5"
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-                                </a>
+                                </div>
+                                <div class="pc-fp-card__text">
+                                    <h3 class="pc-fp-card__name">Plan 1</h3>
+                                    <p class="pc-fp-card__desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum
+                                        dolor alter miller.</p>
+                                    <a href="javascript:void(0);" class="pc-fp-card__link">Learn more
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path d="M9 18L15 12L9 6" stroke="#0E171F" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pc-fp-card__img">
+                                <img src="images/listing-01.jpg" alt="Plan 1 floorplan">
                             </div>
                         </div>
-                        <div class="pc-fp-card__img">
-                            <img src="images/listing-01.jpg" alt="Plan 1 floorplan">
-                        </div>
-                    </div>
 
-                    <!-- Plan 2 (wide) -->
-                    <div class="pc-fp-card pc-fp-card--wide">
-                        <div class="pc-fp-card__info">
-                            <div class="pc-fp-card__icon-wrap pc-fp-card__icon-wrap--blue">
-                                <svg width="34" height="34" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V9Z"
-                                        stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M9 21V12H15V21" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                        <!-- Plan 2 (wide on desktop) -->
+                        <div class="swiper-slide pc-fp-card pc-fp-card--wide">
+                            <div class="pc-fp-card__img-mob">
+                                <img src="images/listing-02.jpg" alt="Plan 2 floorplan">
                             </div>
-                            <div class="pc-fp-card__text">
-                                <h3 class="pc-fp-card__name">Plan 2</h3>
-                                <p class="pc-fp-card__desc">Lorem ipsum dolor alter miller del altro.<br>Lorem ipsum
-                                    dolor alter miller.</p>
-                                <a href="javascript:void(0);" class="pc-fp-card__link">Learn more
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            <div class="pc-fp-card__info">
+                                <div class="pc-fp-card__icon-wrap pc-fp-card__icon-wrap--blue">
+                                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                        <path d="M9 18L15 12L9 6" stroke="#0E171F" stroke-width="1.5"
+                                        <path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V9Z"
+                                            stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M9 21V12H15V21" stroke="#2C6EFE" stroke-width="1.5"
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-                                </a>
+                                </div>
+                                <div class="pc-fp-card__text">
+                                    <h3 class="pc-fp-card__name">Plan 2</h3>
+                                    <p class="pc-fp-card__desc">Lorem ipsum dolor alter miller del altro.<br>Lorem
+                                        ipsum dolor alter miller.</p>
+                                    <a href="javascript:void(0);" class="pc-fp-card__link">Learn more
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path d="M9 18L15 12L9 6" stroke="#0E171F" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pc-fp-card__img">
+                                <img src="images/listing-02.jpg" alt="Plan 2 floorplan">
                             </div>
                         </div>
-                        <div class="pc-fp-card__img">
-                            <img src="images/listing-01.jpg" alt="Plan 2 floorplan">
-                        </div>
-                    </div>
 
-                </div>
-
-                <!-- Row 2 -->
-                <div class="pc-floorplans__row">
-
-                    <!-- Plan 3 (wide) -->
-                    <div class="pc-fp-card pc-fp-card--wide">
-                        <div class="pc-fp-card__info">
-                            <div class="pc-fp-card__icon-wrap pc-fp-card__icon-wrap--green">
-                                <svg width="34" height="34" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V9Z"
-                                        stroke="#70CF75" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M9 21V12H15V21" stroke="#70CF75" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                        <!-- Plan 3 (wide on desktop) -->
+                        <div class="swiper-slide pc-fp-card pc-fp-card--wide">
+                            <div class="pc-fp-card__img-mob">
+                                <img src="images/listing-03.jpg" alt="Plan 3 floorplan">
                             </div>
-                            <div class="pc-fp-card__text">
-                                <h3 class="pc-fp-card__name">Plan 3</h3>
-                                <p class="pc-fp-card__desc">Lorem ipsum dolor alter miller del altro.<br>Lorem ipsum
-                                    dolor alter miller.</p>
-                                <a href="javascript:void(0);" class="pc-fp-card__link">Learn more
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            <div class="pc-fp-card__info">
+                                <div class="pc-fp-card__icon-wrap pc-fp-card__icon-wrap--green">
+                                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                        <path d="M9 18L15 12L9 6" stroke="#0E171F" stroke-width="1.5"
+                                        <path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V9Z"
+                                            stroke="#70CF75" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M9 21V12H15V21" stroke="#70CF75" stroke-width="1.5"
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-                                </a>
+                                </div>
+                                <div class="pc-fp-card__text">
+                                    <h3 class="pc-fp-card__name">Plan 3</h3>
+                                    <p class="pc-fp-card__desc">Lorem ipsum dolor alter miller del altro.<br>Lorem
+                                        ipsum dolor alter miller.</p>
+                                    <a href="javascript:void(0);" class="pc-fp-card__link">Learn more
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path d="M9 18L15 12L9 6" stroke="#0E171F" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pc-fp-card__img">
+                                <img src="images/listing-03.jpg" alt="Plan 3 floorplan">
                             </div>
                         </div>
-                        <div class="pc-fp-card__img">
-                            <img src="images/listing-01.jpg" alt="Plan 3 floorplan">
-                        </div>
-                    </div>
 
-                    <!-- Plan 4 (narrow) -->
-                    <div class="pc-fp-card pc-fp-card--narrow">
-                        <div class="pc-fp-card__info">
-                            <div class="pc-fp-card__icon-wrap pc-fp-card__icon-wrap--red">
-                                <svg width="34" height="34" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V9Z"
-                                        stroke="#FF8276" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                    <path d="M9 21V12H15V21" stroke="#FF8276" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                        <!-- Plan 4 (narrow on desktop) -->
+                        <div class="swiper-slide pc-fp-card pc-fp-card--narrow">
+                            <div class="pc-fp-card__img-mob">
+                                <img src="images/listing-04.jpg" alt="Plan 4 floorplan">
                             </div>
-                            <div class="pc-fp-card__text">
-                                <h3 class="pc-fp-card__name">Plan 4</h3>
-                                <p class="pc-fp-card__desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum dolor
-                                    alter miller.</p>
-                                <a href="javascript:void(0);" class="pc-fp-card__link">Learn more
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            <div class="pc-fp-card__info">
+                                <div class="pc-fp-card__icon-wrap pc-fp-card__icon-wrap--red">
+                                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                        <path d="M9 18L15 12L9 6" stroke="#0E171F" stroke-width="1.5"
+                                        <path d="M3 9L12 2L21 9V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V9Z"
+                                            stroke="#FF8276" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M9 21V12H15V21" stroke="#FF8276" stroke-width="1.5"
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-                                </a>
+                                </div>
+                                <div class="pc-fp-card__text">
+                                    <h3 class="pc-fp-card__name">Plan 4</h3>
+                                    <p class="pc-fp-card__desc">Lorem ipsum dolor alter miller del altro. Lorem ipsum
+                                        dolor alter miller.</p>
+                                    <a href="javascript:void(0);" class="pc-fp-card__link">Learn more
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path d="M9 18L15 12L9 6" stroke="#0E171F" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pc-fp-card__img">
+                                <img src="images/listing-04.jpg" alt="Plan 4 floorplan">
                             </div>
                         </div>
-                        <div class="pc-fp-card__img">
-                            <img src="images/listing-01.jpg" alt="Plan 4 floorplan">
-                        </div>
-                    </div>
 
+                    </div>
                 </div>
 
                 <!-- Frosted glass overlay (locked content) -->
@@ -775,6 +783,26 @@
                 </div>
 
             </div>
+
+            <!-- Mobile slider navigation (hidden on desktop) -->
+            <div class="pc-fp-nav">
+                <button class="slider-arrow pc-fp-prev" aria-label="Previous plan">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M15 18L9 12L15 6" stroke="#0E171F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="pc-fp-pagination"></div>
+                <button class="slider-arrow pc-fp-next" aria-label="Next plan">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M9 18L15 12L9 6" stroke="#0E171F" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
         </div>
     </section>
     <!-- /floorplans -->
@@ -1046,6 +1074,44 @@
         </div>
     </section>
     <!-- /videos section -->
+
+    <!-- ===================== LOCATION SECTION ===================== -->
+    <section class="pc-location-section" aria-labelledby="pc-location-heading">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="pc-location-header">
+                <span class="pc-section-badge">Location</span>
+                <h2 class="pc-section-title" id="pc-location-heading">
+                    Located in the heart<br class="d-none d-md-block"> of Brampton<span class="text-primary">.</span>
+                </h2>
+                <p class="pc-section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit tiam sit amet turpis
+                    dapibus, sagittis ante finibus, congue nulla.</p>
+            </div>
+
+            <!-- Full-width location map image -->
+            <div class="pc-location-map">
+                <img src="images/Wildfield.png" alt="Heritage Heights — Brampton, ON location overview"
+                    class="pc-location-map__img">
+
+                <!-- Location pin overlay -->
+                <!-- <div class="pc-location-pin" aria-hidden="true">
+                    <div class="pc-location-pin__marker">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                                fill="#2C6EFE" />
+                            <circle cx="12" cy="9" r="2.5" fill="white" />
+                        </svg>
+                    </div>
+                    <span class="pc-location-pin__label">Heritage Heights</span>
+                </div> -->
+            </div>
+
+        </div>
+    </section>
+    <!-- /location section -->
 
     <!-- ==================== 3. NEIGHBORHOOD & LIFE FACTORS ==================== -->
     <section class="hvh-lf-section">

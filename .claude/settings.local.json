@@ -64,7 +64,8 @@
       "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/29df083c-853c-4007-84bd-ff9c9e0cfa28\" -OutFile \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\li-cta-property.jpg\" -UseBasicParsing; Write-Host \"Downloaded successfully\")",
       "PowerShell(\\(Get-Item \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\li-cta-property.jpg\"\\).Length)",
       "Bash(awk *)",
-      "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/3035fae7-1bdb-4e67-a642-a52d4607ddc4\" -OutFile \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\figma-trending-screenshot.png\" -UseBasicParsing; Write-Output \"Done\")"
+      "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/3035fae7-1bdb-4e67-a642-a52d4607ddc4\" -OutFile \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\figma-trending-screenshot.png\" -UseBasicParsing; Write-Output \"Done\")",
+      "Bash(grep -v \"DEPRECATION\\\\|color-functions\\\\|green\\(\\)\\\\|_functions\\\\|_variables\\\\|_include\\\\|style.scss\\\\|More info\\\\|color.channel\\\\|repetitive\\\\|verbose\\\\|^$\\\\|╷\\\\|╵\\\\|│\\\\|^\\\\s\")"
     ]
   }
 }

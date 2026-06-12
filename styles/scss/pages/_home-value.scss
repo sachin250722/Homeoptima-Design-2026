@@ -127,8 +127,20 @@
         background: rgba(141, 235, 146, 0.12);
     }
 
-    &--red {
+    &--red,
+    &--coral {
         background: rgba(255, 130, 118, 0.12);
+    }
+
+    @include respond('tab-port') {
+        width: 40px;
+        height: 40px;
+        border-radius: 9.6px;
+
+        svg {
+            width: 27.2px;
+            height: 27.2px;
+        }
     }
 }
 
@@ -341,11 +353,8 @@
     gap: 24px;
 
     @include respond('tab-port') {
-        flex-wrap: wrap;
-
-        .hv-feature-card {
-            flex: 0 0 calc(50% - 12px);
-        }
+        flex-direction: column;
+        gap: 24px;
     }
 
     @include respond('phone') {
@@ -399,6 +408,40 @@
     color: #929DAA;
     font-weight: 400;
     margin-bottom: 0;
+
+    @include respond('tab-port') {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+// ─── Mobile card overrides ────────────────────────────────────
+@include respond('tab-port') {
+    .hv-feature-card {
+        padding: 16px;
+        gap: 16px;
+
+        &:hover {
+            transform: none;
+        }
+    }
+
+    .hv-feature-title {
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
+
+// ─── Mobile navigation bar (below the swiper) ────────────────
+.hv-why-nav {
+    display: none;
+    width: 100%;
+
+    @include respond('tab-port') {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 

@@ -211,18 +211,18 @@
                                         </label>
                                         <div class="sh-phone-row">
                                             <div class="dropdown">
-                                                <button type="button" class="hvh-rr-phone-code" data-bs-toggle="dropdown" data-bs-strategy="fixed" aria-expanded="false">
+                                                <button type="button" class="sh-phone-code" data-bs-toggle="dropdown" data-bs-strategy="fixed" aria-expanded="false">
                                                     <img src="images/icons/flag/01.svg" alt="USA" width="24" height="24">
                                                     <span>+1</span>
                                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                                                         <path d="M6 9L12 15L18 9" stroke="#0E171F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                     </svg>
                                                 </button>
-                                                <ul class="dropdown-menu hvh-rr-phone-menu">
-                                                    <li><button type="button" class="dropdown-item hvh-rr-phone-opt" data-code="+1" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +1 <span>USA / Canada</span></button></li>
-                                                    <li><button type="button" class="dropdown-item hvh-rr-phone-opt" data-code="+44" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +44 <span>UK</span></button></li>
-                                                    <li><button type="button" class="dropdown-item hvh-rr-phone-opt" data-code="+91" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +91 <span>India</span></button></li>
-                                                    <li><button type="button" class="dropdown-item hvh-rr-phone-opt" data-code="+61" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +61 <span>Australia</span></button></li>
+                                                <ul class="dropdown-menu sh-phone-menu">
+                                                    <li><button type="button" class="dropdown-item sh-phone-opt" data-code="+1" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +1 <span>USA / Canada</span></button></li>
+                                                    <li><button type="button" class="dropdown-item sh-phone-opt" data-code="+44" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +44 <span>UK</span></button></li>
+                                                    <li><button type="button" class="dropdown-item sh-phone-opt" data-code="+91" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +91 <span>India</span></button></li>
+                                                    <li><button type="button" class="dropdown-item sh-phone-opt" data-code="+61" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +61 <span>Australia</span></button></li>
                                                 </ul>
                                             </div>
                                             <input id="sh-phone" type="tel" class="sh-form-control"
@@ -404,28 +404,26 @@
                         </div>
 
                     </div>
+                </div><!-- /.swiper -->
 
-                    <!-- Prev Button -->
+                <!-- Mobile navigation bar (hidden on desktop) -->
+                <div class="hv-why-nav">
                     <button class="nav-btn prev-btn" type="button" aria-label="Previous slide">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15 18L9 12L15 6" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round"></path>
                         </svg>
                     </button>
-
-                    <!-- Pagination Dots -->
                     <div class="custom-dots"></div>
-
-                    <!-- Next Button -->
                     <button class="nav-btn next-btn" type="button" aria-label="Next slide">
-                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.75 12.75L6.75 6.75L0.75 0.75" stroke="#2C6EFE" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 6L15 12L9 18" stroke="#2C6EFE" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
                         </svg>
                     </button>
+                </div><!-- /.hv-why-nav -->
 
-                </div>
-            </div>
+            </div><!-- /.hv-why-cards -->
 
         </div><!-- /.container -->
     </section>
@@ -462,7 +460,7 @@
                         </div>
                     </div>
 
-                    <!-- Right: sub-text + CTA -->
+                    <!-- Right: sub-text + CTA (CTA hidden on mobile — shown standalone below) -->
                     <div class="col-lg-6">
                         <div class="sh-process__header-right">
                             <p class="sh-process__sub">
@@ -470,7 +468,7 @@
                                 adipiscing elit tiam sit amet turpis dapibus,<br class="d-none d-xl-block">
                                 sagittis ante finibus, congue nulla.
                             </p>
-                            <a href="javascript:void(0);" class="btn btn-primary">
+                            <a href="javascript:void(0);" class="btn btn-primary d-none d-lg-flex">
                                 Contact agent
                                 <img src="images/icons/chevron-right-white.svg" alt="">
                             </a>
@@ -478,6 +476,14 @@
                     </div>
 
                 </div><!-- /.sh-process__header -->
+
+                <!-- Mobile-only: full-width standalone CTA (hidden on desktop) -->
+                <div class="sh-process__mobile-cta d-lg-none">
+                    <a href="javascript:void(0);" class="btn btn-primary w-100 justify-content-center">
+                        Contact agent
+                        <img src="images/icons/chevron-right-white.svg" alt="">
+                    </a>
+                </div>
 
                 <!-- Steps: number circles + connector lines + cards below -->
                 <div class="sh-process__steps-wrap">
@@ -491,10 +497,11 @@
                         <div class="sh-process__num">03</div>
                         <div class="sh-process__num-line"></div>
                         <div class="sh-process__num">04</div>
+                        <div class="sh-process__num-line"></div>
                     </div>
 
-                    <!-- 4 process cards -->
-                    <div class="row g-4">
+                    <!-- 4 process cards (desktop) -->
+                    <div class="row g-4 sh-process__desktop-cards">
 
                         <!-- Card 1: Consult (blue) -->
                         <div class="col-sm-6 col-xl-3">
@@ -588,6 +595,103 @@
 
                     </div><!-- /.row cards -->
 
+                    <!-- Mobile: vertical timeline + stacked cards -->
+                    <div class="sh-process__mobile-layout">
+
+                        <!-- Step 1 -->
+                        <div class="sh-process__mstep">
+                            <div class="sh-process__mvtl" aria-hidden="true">
+                                <div class="sh-process__mvnum">01</div>
+                                <div class="sh-process__mvline"></div>
+                            </div>
+                            <div class="sh-process-card">
+                                <div class="sh-icon-box sh-icon-box--blue">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+                                        fill="none" stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                    </svg>
+                                </div>
+                                <div class="sh-process-card__body">
+                                    <h4 class="sh-process-card__title">Consult</h4>
+                                    <p class="sh-process-card__desc">We'll learn about your goals and evaluate your home,</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="sh-process__mstep">
+                            <div class="sh-process__mvtl" aria-hidden="true">
+                                <div class="sh-process__mvnum">02</div>
+                                <div class="sh-process__mvline"></div>
+                            </div>
+                            <div class="sh-process-card">
+                                <div class="sh-icon-box sh-icon-box--yellow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+                                        fill="none" stroke="#C49A2A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <line x1="12" y1="1" x2="12" y2="23" />
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                    </svg>
+                                </div>
+                                <div class="sh-process-card__body">
+                                    <h4 class="sh-process-card__title">Price and Plan</h4>
+                                    <p class="sh-process-card__desc">We create a winning strategy to get you top dollar,</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="sh-process__mstep">
+                            <div class="sh-process__mvtl" aria-hidden="true">
+                                <div class="sh-process__mvnum">03</div>
+                                <div class="sh-process__mvline"></div>
+                            </div>
+                            <div class="sh-process-card">
+                                <div class="sh-icon-box sh-icon-box--green">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+                                        fill="none" stroke="#3DAA4A" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                                        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                                        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+                                        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                                    </svg>
+                                </div>
+                                <div class="sh-process-card__body">
+                                    <h4 class="sh-process-card__title">Market and Show</h4>
+                                    <p class="sh-process-card__desc">We market your home and attract serious buyers,</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="sh-process__mstep">
+                            <div class="sh-process__mvtl" aria-hidden="true">
+                                <div class="sh-process__mvnum">04</div>
+                                <div class="sh-process__mvline"></div>
+                            </div>
+                            <div class="sh-process-card">
+                                <div class="sh-icon-box sh-icon-box--red">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
+                                        fill="none" stroke="#E05C52" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                        <polyline points="22 4 12 14.01 9 11.01" />
+                                    </svg>
+                                </div>
+                                <div class="sh-process-card__body">
+                                    <h4 class="sh-process-card__title">Offer to Close</h4>
+                                    <p class="sh-process-card__desc">We negotiate the best offer and handle the rest.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /.sh-process__mobile-layout -->
+
                 </div><!-- /.sh-process__steps-wrap -->
 
             </div><!-- /.container -->
@@ -599,18 +703,12 @@
 
     </section>
     <!-- END SECTION 3 -->
-
-
-    <!-- Wave: light-blue to white -->
-    <div class="shape" aria-hidden="true">
-        <img src="images/icons/section-shape.svg" alt="Decorative wave shape" class="shape-img">
-    </div>
     <!-- ============================= /RESOURCES ============================= -->
 
 
     <!-- ============================= 6. CTA BLUE ============================= -->
     <!-- Wave: white to blue -->
-    <div class="shape" aria-hidden="true">
+    <div class="shape" aria-hidden="true" style="background-color: #F2F6FF;">
         <img src="images/icons/blue-shape.svg" alt="Decorative wave shape" class="shape-img">
     </div>
 

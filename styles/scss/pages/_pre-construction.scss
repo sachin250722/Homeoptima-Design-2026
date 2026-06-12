@@ -779,14 +779,16 @@
     &__grid-wrap {
         position: relative;
     }
+}
 
-    &__row {
-        display: flex;
-        gap: 24px;
-        margin-bottom: 24px;
+// Desktop: swiper wrapper acts as a 2-row flex grid
+@include custommq($min: 1100px) {
+    .pc-fp-swiper {
+        overflow: visible;
 
-        &:last-of-type {
-            margin-bottom: 0;
+        .swiper-wrapper {
+            flex-wrap: wrap;
+            gap: 24px;
         }
     }
 }
@@ -811,6 +813,11 @@
     &--wide {
         flex: 1;
         min-width: 0;
+    }
+
+    // Mobile top image — hidden on desktop
+    &__img-mob {
+        display: none;
     }
 
     &__info {
@@ -890,7 +897,7 @@
         }
     }
 
-    // Floorplan image — bleeds over from right edge
+    // Desktop bleed image — absolute positioned right edge
     &__img {
         position: absolute;
         top: -4px;
@@ -908,7 +915,7 @@
     }
 
     &--narrow &__img {
-        width: 55%;
+        width: 52%;
     }
 
     &--wide &__img {
@@ -916,17 +923,47 @@
     }
 }
 
+// Mobile slider navigation bar (hidden by default, shown via custommq block)
+.pc-fp-nav {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.pc-fp-pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        background: rgba(44, 110, 254, 0.24);
+        border-radius: 999px;
+        opacity: 1;
+        margin: 0;
+        transition: width 0.2s, background 0.2s;
+
+        &-active {
+            width: 12px;
+            height: 12px;
+            background: $primary;
+        }
+    }
+}
+
 // Frosted glass overlay (locked "Get Phase 2 floor plans" gate)
 .pc-floorplans__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(251, 253, 255, 0) 0%, rgba(251, 253, 255, 0.85) 30%);
+    background: linear-gradient(to bottom, rgba(251, 253, 255, 0) 0%, rgba(251, 253, 255, 0.92) 40%);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     &-content {
         display: flex;
@@ -945,16 +982,6 @@
         line-height: 62px;
         color: $dark;
         margin: 0;
-
-        @include respond(tab-port) {
-            font-size: 36px;
-            line-height: 48px;
-        }
-
-        @include respond(phone) {
-            font-size: 28px;
-            line-height: 38px;
-        }
     }
 
     &-desc {
@@ -963,10 +990,6 @@
         line-height: 32px;
         color: #929daa;
         margin: 0;
-
-        @include respond(phone) {
-            font-size: 16px;
-        }
     }
 
     &-btn {
@@ -997,15 +1020,6 @@
         font-size: 14px;
     }
 
-    .pc-floorplans__row {
-        flex-wrap: wrap;
-    }
-
-    .pc-fp-card {
-        width: 100% !important;
-        flex: 1 1 300px;
-    }
-
     .pc-floorplans__overlay-content {
         padding: 40px 24px;
     }
@@ -1013,6 +1027,68 @@
     // Listings section header stacks nicely on tablet
     .listings-header-row .col-auto {
         margin-left: 0 !important;
+    }
+}
+
+// ── MOBILE SLIDER: Floorplan cards (≤ 1099px) ───────────────────
+@include custommq($max: 1099px) {
+
+    .pc-fp-swiper {
+        overflow: hidden;
+    }
+
+    .pc-fp-card {
+        flex-direction: column;
+        height: auto;
+        padding: 16px;
+        gap: 16px;
+
+        &__img-mob {
+            display: block;
+            width: 100%;
+            height: 214px;
+            border-radius: 12px;
+            overflow: hidden;
+            flex-shrink: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__info {
+            flex: none;
+            width: 100%;
+            height: auto;
+            justify-content: flex-start;
+            gap: 16px;
+        }
+
+        &__text {
+            gap: 16px;
+        }
+
+        &__name {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        &--narrow,
+        &--wide {
+            width: auto;
+            flex: none;
+        }
+    }
+
+    .pc-fp-nav {
+        display: flex;
     }
 }
 
@@ -1119,24 +1195,7 @@
 
     // Floorplans
     .pc-floorplans {
-        padding: 48px 0;
-    }
-
-    .pc-floorplans__row {
-        flex-direction: column;
-    }
-
-    .pc-fp-card {
-        height: auto;
-        min-height: 260px;
-    }
-
-    .pc-fp-card__img {
-        display: none;
-    }
-
-    .pc-fp-card__name {
-        font-size: 20px;
+        padding: 40px 0;
     }
 
     .pc-floorplans__overlay-content {
@@ -1145,13 +1204,13 @@
     }
 
     .pc-floorplans__overlay-title {
-        font-size: 24px;
-        line-height: 32px;
+        font-size: 28px;
+        line-height: 38px;
     }
 
     .pc-floorplans__overlay-desc {
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 24px;
     }
 
     // hv-app right: reset absolute offset that clips on mobile
@@ -1361,6 +1420,90 @@
             height: 100%;
             border: 0;
         }
+    }
+}
+
+// ================================================================
+//  LOCATION SECTION
+// ================================================================
+.pc-location-section {
+    padding: 80px 0;
+    background: $light-color;
+
+    // ---- Header ----
+    .pc-location-header {
+        max-width: 680px;
+        margin-bottom: 48px;
+
+        .pc-section-title { margin-top: 8px; margin-bottom: 0; }
+        .pc-section-desc  { margin-top: 16px; }
+    }
+
+    // ---- Full-width map image ----
+    .pc-location-map {
+        position: relative;
+        border-radius: $radius-lg;
+        overflow: hidden;
+        height: 600px;
+        background: #e8edf2;
+
+        .pc-location-map__img {
+            width: 100%;
+            height: 100%;
+            object-position: center;
+            display: block;
+        }
+
+        // ---- Location pin overlay ----
+        .pc-location-pin {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pc-location-pin__marker {
+            width: 52px;
+            height: 52px;
+            background: $white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba($primary, 0.28);
+            flex-shrink: 0;
+        }
+
+        .pc-location-pin__label {
+            background: $white;
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: $dark;
+            line-height: 1.4;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            white-space: nowrap;
+        }
+    }
+
+    // ---- Responsive ----
+    @include respond('tab-port') {
+        padding: 56px 0;
+
+        .pc-location-map { height: 380px; }
+    }
+
+    @include respond('phone') {
+        padding: 40px 0;
+
+        .pc-location-header { margin-bottom: 32px; }
+        .pc-location-map { height: 260px; border-radius: $radius; }
     }
 }
 

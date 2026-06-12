@@ -582,7 +582,7 @@ if (jQuery('.dataTables_length select').length > 0) {
 //  Phone Code Dropdown — all forms site-wide
 // ================================================================
 (function () {
-    // Legacy hvh-rr handler
+    // hvh-rr forms (request-report sections)
     document.addEventListener('click', function (e) {
         var opt = e.target.closest('.hvh-rr-phone-opt');
         if (!opt) return;
@@ -597,6 +597,25 @@ if (jQuery('.dataTables_length select').length > 0) {
         var flagEl = btn.querySelector('img');
         if (codeEl) codeEl.textContent = code;
         if (flagEl && flag) flagEl.src = flag;
+    });
+
+    // sell-home hero form
+    document.addEventListener('click', function (e) {
+        var opt = e.target.closest('.sh-phone-opt');
+        if (!opt) return;
+        e.preventDefault();
+        var code = opt.dataset.code;
+        var flag = opt.dataset.flag;
+        var dropdown = opt.closest('.dropdown');
+        if (!dropdown) return;
+        var btn = dropdown.querySelector('.sh-phone-code');
+        if (!btn) return;
+        var codeEl = btn.querySelector('span');
+        var flagEl = btn.querySelector('img');
+        if (codeEl) codeEl.textContent = code;
+        if (flagEl && flag) flagEl.src = flag;
+        var bsDropdown = bootstrap.Dropdown.getInstance(btn);
+        if (bsDropdown) bsDropdown.hide();
     });
 
     // Auth page phone-code-dropdown handler

@@ -43,6 +43,49 @@ initWwdSwiper();
 window.addEventListener('resize', initWwdSwiper);
 
 // ================================================
+//  Pre-Construction: Floorplans Swiper (≤ 1099px)
+// ================================================
+let pcFpSwiper = null;
+const pcFpSwiperEl = document.querySelector('.pc-fp-swiper');
+
+function initPcFpSwiper() {
+    if (!pcFpSwiperEl) return;
+    const isSlider = window.innerWidth <= 1099;
+    if (isSlider && !pcFpSwiper) {
+        pcFpSwiper = new Swiper(pcFpSwiperEl, {
+            grabCursor: true,
+            navigation: {
+                prevEl: '.pc-fp-prev',
+                nextEl: '.pc-fp-next',
+            },
+            pagination: {
+                el: '.pc-fp-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 16,
+                },
+                768: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 24,
+                },
+            },
+        });
+    } else if (!isSlider && pcFpSwiper) {
+        pcFpSwiper.destroy(true, true);
+        pcFpSwiper = null;
+    }
+}
+
+initPcFpSwiper();
+window.addEventListener('resize', initPcFpSwiper);
+
+// ================================================
 //  Pre-Construction: Benefits Swiper (≤ 1099px)
 // ================================================
 let ftbBenefitsSwiper = null;
@@ -275,16 +318,16 @@ const swiper1 = new Swiper(".testimonial-swiper-1", {
         },
     },
     breakpoints: {
-        360: {
-            slidesPerView: 2,
+        0: {
+            slidesPerView: 1.2,
         },
-        600: {
-            slidesPerView: 2,
+        768: {
+            slidesPerView: 2.5,
         },
         1200: {
-            slidesPerView: 2,
+            slidesPerView: 4,
         },
-         1400: {
+        1400: {
             slidesPerView: 4,
         }
     }
