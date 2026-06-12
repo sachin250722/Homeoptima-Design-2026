@@ -621,6 +621,63 @@ if (jQuery('.dataTables_length select').length > 0) {
 })();
 
 // ================================================================
+//  Searchable Select Dropdown — pc-rr-select-wrap (pre-construction page)
+// ================================================================
+(function () {
+    // Select an option
+    document.addEventListener('click', function (e) {
+        var opt = e.target.closest('.pc-rr-select-opt');
+        if (!opt) return;
+        var menu = opt.closest('.pc-rr-select-menu');
+        var wrap = opt.closest('.pc-rr-select-wrap');
+        if (!wrap) return;
+
+        // Update active state
+        menu.querySelectorAll('.pc-rr-select-opt').forEach(function (o) {
+            o.classList.remove('pc-rr-select-opt--active');
+        });
+        opt.classList.add('pc-rr-select-opt--active');
+
+        // Update button label
+        var valEl = wrap.querySelector('.pc-rr-select-val');
+        if (valEl) {
+            valEl.textContent = opt.textContent.trim();
+            valEl.classList.add('pc-rr-select-val--selected');
+        }
+
+        // Close dropdown
+        var btn = wrap.querySelector('.pc-rr-select-btn');
+        if (btn) {
+            var bsDD = bootstrap.Dropdown.getInstance(btn);
+            if (bsDD) bsDD.hide();
+        }
+    });
+
+    // Live search filter
+    document.addEventListener('input', function (e) {
+        var search = e.target.closest('.pc-rr-select-search');
+        if (!search) return;
+        var q = search.value.trim().toLowerCase();
+        var list = search.closest('.pc-rr-select-menu').querySelector('.pc-rr-select-list');
+        if (!list) return;
+        list.querySelectorAll('li').forEach(function (li) {
+            var txt = li.textContent.trim().toLowerCase();
+            li.style.display = q === '' || txt.indexOf(q) !== -1 ? '' : 'none';
+        });
+    });
+
+    // Clear search when dropdown closes
+    document.addEventListener('hidden.bs.dropdown', function (e) {
+        var wrap = e.target.closest('.pc-rr-select-wrap');
+        if (!wrap) return;
+        var search = wrap.querySelector('.pc-rr-select-search');
+        if (search) search.value = '';
+        var list = wrap.querySelector('.pc-rr-select-list');
+        if (list) list.querySelectorAll('li').forEach(function (li) { li.style.display = ''; });
+    });
+})();
+
+// ================================================================
 //  Video Section Modal — pc-videos-section (pre-construction only)
 // ================================================================
 (function () {

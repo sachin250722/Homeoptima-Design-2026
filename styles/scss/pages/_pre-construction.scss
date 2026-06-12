@@ -2088,3 +2088,172 @@
         .listing-meta { gap: 12px; }
     }
 }
+
+// ===================== REQUEST REPORT — EXTRA FIELDS (pre-construction only) =====================
+
+// Full-width field row inside the Bootstrap grid form card
+.pc-rr-field-full {
+    margin-top: 16px;
+}
+
+// ---- Searchable select ----
+.pc-rr-select-wrap {
+    width: 100%;
+}
+
+.pc-rr-select-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    text-align: left;
+    user-select: none;
+
+    &::after { display: none; }
+
+    &[aria-expanded="true"] .pc-rr-select-chevron {
+        transform: rotate(180deg);
+    }
+}
+
+.pc-rr-select-val {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #929daa;
+
+    &--selected {
+        color: $dark;
+    }
+}
+
+.pc-rr-select-chevron {
+    flex-shrink: 0;
+    margin-left: 8px;
+    @include transitionFast;
+}
+
+.pc-rr-select-menu {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ededed;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 8px;
+    margin-top: 4px !important;
+}
+
+.pc-rr-select-search-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    background: $white;
+
+    svg { flex-shrink: 0; }
+}
+
+.pc-rr-select-search {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: $dark;
+
+    &::placeholder { color: #929daa; }
+}
+
+.pc-rr-select-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.pc-rr-select-opt {
+    display: block;
+    width: 100%;
+    padding: 9px 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: $dark;
+    border-radius: 6px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    @include transitionFast;
+
+    &:hover {
+        background: rgba($primary, 0.06);
+        color: $primary;
+    }
+
+    &--active {
+        background: rgba($primary, 0.10);
+        color: $primary;
+        font-weight: 500;
+    }
+}
+
+// ---- Radio group ----
+.pc-rr-radio-group {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.pc-rr-radio-opt {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: $dark;
+    user-select: none;
+
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    &:hover .pc-rr-radio-custom {
+        border-color: rgba($primary, 0.5);
+    }
+}
+
+.pc-rr-radio-custom {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid rgba($dark, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    @include transitionFast;
+
+    &::after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $primary;
+        display: none;
+    }
+}
+
+.pc-rr-radio-opt input[type="radio"]:checked ~ .pc-rr-radio-custom {
+    border-color: $primary;
+
+    &::after { display: block; }
+}

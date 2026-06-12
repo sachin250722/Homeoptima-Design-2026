@@ -2616,14 +2616,14 @@
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
 
         &__top {
-            padding: 16px 24px 24px;
+            padding: 24px;
             display: flex;
             flex-direction: column;
             gap: 16px;
         }
 
         &__bottom {
-            padding: 12px 24px;
+            padding: 12px 24px 24px;
         }
     }
 
