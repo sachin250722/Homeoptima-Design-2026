@@ -1,5 +1,5 @@
 // responsive start
-@media (max-width: 1350px) and (min-width: 1200px) {
+@media (max-width: 1400px) and (min-width: 1200px) {
     .main-header {
         .navbar-brand {
             margin-right: 20px;
@@ -12,6 +12,7 @@
     }
 }
 
+// 1400px
 @include respond('laptop') {
     .testimonial-section {
         .testimonial-left-content h2 {
@@ -20,6 +21,7 @@
     }
 }
 
+//1199px
 @include respond('tab-land') {
     .main-header {
         .nav-link {
@@ -27,7 +29,7 @@
         }
     }
 
-    
+
 
     .testimonial-section {
         .testimonial-left-content h2 {
@@ -35,10 +37,11 @@
             line-height: 50px;
         }
     }
-    .cta-section .cta-deco--tr{
 
-        width:100px;
-        height:100px;
+    .cta-section .cta-deco--tr {
+
+        width: 100px;
+        height: 100px;
     }
 
     .banner-section {
@@ -48,15 +51,45 @@
     }
 }
 
+@media screen and (min-width: 992px) {
+    .bh-steps {
+        .bh-steps__header-row {
+            .btn-primary {
+                margin-left: auto;
+                max-width: max-content;
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .main-header {
+        .extra-nav.sh-header__ctas {
+            .btn-primary {
+                display: none;
+            }
+        }
+    }
+}
+
+// 991px
 @include respond('tab-port') {
+
+    .bh-hero__left {
+        align-items: center;
+        text-align: center;
+    }
+
     .footer-logo-col {
         order: 1;
     }
-    .ftb-hero-title{
-        font-size:46px;
-        line-height:56px;
+
+    .ftb-hero-title {
+        font-size: 46px;
+        line-height: 56px;
     }
-   
+
 
     .footer-contact {
         order: 2;
@@ -163,8 +196,8 @@
         .nav-link {
             padding: 0 !important;
             color: var(--white);
-            padding-bottom: 32px !important;
-            font-size: 28px;
+            margin-bottom: 18px !important;
+            font-size: 20px;
             font-weight: 400;
             font-family: Archivo;
             line-height: 32px;
@@ -179,7 +212,8 @@
         }
 
         .extra-nav {
-            margin-top: 56px;
+            margin-top: 24px;
+            gap: 0;
 
             .btn {
                 display: block;
@@ -341,7 +375,7 @@
             height: auto;
             min-height: 0;
             flex-direction: column-reverse;
-            padding: 0  ;
+            padding: 0;
             gap: 16px;
         }
 
@@ -386,6 +420,7 @@
             line-height: 24px;
             margin-bottom: 16px;
             margin-top: 0;
+
             br {
                 display: none;
             }
@@ -538,6 +573,7 @@
 //     }
 // }
 
+// 767px
 @include respond("phone-land") {
     .hero-section {
         min-height: auto;
@@ -609,6 +645,7 @@
     }
 
     .listings-section {
+
         // Hide desktop left/right fade overlays
         .listings-prev-fade,
         .listings-next-fade {
@@ -711,8 +748,13 @@
     }
 
     .agent-section {
-        .agent-desktop-row { display: none; }
-        .agent-mobile-block { display: block; }
+        .agent-desktop-row {
+            display: none;
+        }
+
+        .agent-mobile-block {
+            display: block;
+        }
     }
 
     .agent-section-style2 {
@@ -731,8 +773,13 @@
 @include custommq($max: 1099px) {
     .what-we-do-section {
         .wwd-swiper {
-            .swiper-wrapper { gap: 0; }
-            .swiper-slide { flex: none; }
+            .swiper-wrapper {
+                gap: 0;
+            }
+
+            .swiper-slide {
+                flex: none;
+            }
         }
 
         .wwd-nav-row {
@@ -755,8 +802,13 @@
 
     .why-us-section {
         .why-us-swiper {
-            .swiper-wrapper { gap: 0; }
-            .swiper-slide { flex: none; }
+            .swiper-wrapper {
+                gap: 0;
+            }
+
+            .swiper-slide {
+                flex: none;
+            }
         }
 
         .why-us-nav-row {
@@ -779,6 +831,7 @@
 
     // At ≤1099px Swiper controls slide widths — reset card widths to 100%
     .cities-section {
+
         .city-card--sm,
         .city-card--lg,
         .city-card--md {
@@ -788,10 +841,12 @@
     }
 }
 
+// 575px
 @include respond("phone") {
     .agent-section-style2 .agent-s2-cards {
         width: 100%;
     }
+
     .agent-section-style2 .agent-s2-pills {
         flex-direction: column;
     }
