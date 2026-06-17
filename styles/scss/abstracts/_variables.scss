@@ -26,4 +26,15 @@ $light-color:    #F2F6FF;
     --radius-lg:       #{$radius-lg};
     --radius-sm:       #{$radius-sm};
     --text-muted:      #{$text-muted};
+
+    // Listing Intelligence page tokens
+    --li-primary:     #0a5bd8;
+    --li-text:        #111111;
+    --li-text-muted:  rgba(17, 17, 17, 0.56);
+    --li-text-soft:   rgba(17, 17, 17, 0.68);
+    --li-text-med:    rgba(17, 17, 17, 0.80);
+    --li-white:       #ffffff;
+    --li-border:      rgba(146, 157, 170, 0.08);
+    --li-font:        'Manrope', sans-serif;
+    --li-hero-bg:     #0a5bd8;
 }
