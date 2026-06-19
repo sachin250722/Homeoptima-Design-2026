@@ -155,7 +155,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-image: url('../../images/listing-01.jpg');
+    background-image: url('../../images/home-value-hub-hero.png');
     background-size: cover;
     background-position: center;
 
@@ -464,7 +464,7 @@
         position: absolute;
         right: -275px;
         top: -185px;
-
+        z-index: 1;
     }
 }
 
@@ -731,7 +731,7 @@
 // ============================================================
 .hv-resources {
     background: $light-color;
-    padding: 80px, 0px; // extra bottom padding for overlay
+    padding: 80px 0px; // extra bottom padding for overlay
     position: relative;
     overflow: hidden;
 
@@ -754,6 +754,11 @@
         margin-bottom: 36px;
         max-width: 100%;
     }
+}
+
+.hv-resources-row-wrapper {
+    position: relative;
+    padding: 4px 0;
 }
 
 .hv-resources-row {
@@ -1078,9 +1083,9 @@
 }
 
 .hv-app-card {
-    background: var(--dark);
+    background: $secondary;
     border-radius: $radius-lg;
-    padding: 96px 80px;
+    padding: 0 80px 96px;
     min-height: 492px;
     display: flex;
     align-items: center;
@@ -1148,7 +1153,7 @@
     font-family: 'Archivo', sans-serif;
     font-weight: 500;
     font-size: 68px;
-    line-height: 1.09;
+    line-height: 1;
     color: $white;
     margin-bottom: 0;
 

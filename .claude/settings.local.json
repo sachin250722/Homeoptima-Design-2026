@@ -113,7 +113,8 @@
       "Bash(grep -v \"^icons$\")",
       "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/a56f9c97-00c6-45d1-ad0f-4c150523defa\" -OutFile \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\past-client-retention\\\\hero-visual.png\" -UseBasicParsing; Write-Host \"Done\")",
       "PowerShell(npm run *)",
-      "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/94d63cd9-d81b-4549-87a5-3fd11110feb7\" -OutFile \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\past-client-retention\\\\report-house.jpg\" -UseBasicParsing; Write-Output \"Done\")"
+      "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/94d63cd9-d81b-4549-87a5-3fd11110feb7\" -OutFile \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\images\\\\past-client-retention\\\\report-house.jpg\" -UseBasicParsing; Write-Output \"Done\")",
+      "PowerShell(Get-ChildItem \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\styles\\\\css\\\\listing-intelligence.css\", \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\styles\\\\css\\\\seller-lead-generation.css\", \"E:\\\\Home Optima\\\\Homeoptima-2026\\\\Homeoptima Design 2026\\\\styles\\\\css\\\\past-client-retention.css\" | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB,1\\)}})"
     ]
   }
 }

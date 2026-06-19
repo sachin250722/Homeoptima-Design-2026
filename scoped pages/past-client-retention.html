@@ -36,8 +36,8 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="../libraries/swiper/swiper-bundle.min.css">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="../styles/css/style.css">
+    <!-- Past Client Retention module stylesheet -->
+    <link rel="stylesheet" href="../styles/css/past-client-retention.css">
 </head>
 
 <body class="pcr-page li-page">
@@ -1225,167 +1225,11 @@
     <!-- Swiper JS -->
     <script src="../libraries/swiper/swiper-bundle.min.js"></script>
 
-    <script src="../js/listing-intelligence.js"></script>
-
-    <!-- Chart.js -->
-    <!-- NOTE: Chart.js loaded once below, used by both pcrMarketChart and pcrEquityChart -->
+    <!-- Chart.js (required for market stats and equity charts) -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 
-    <script>
-        (function () {
-            var canvas = document.getElementById('pcrMarketChart');
-            if (!canvas) return;
-            var ctx = canvas.getContext('2d');
-
-            var gradient = ctx.createLinearGradient(0, 0, 0, 360);
-            gradient.addColorStop(0, 'rgba(255,255,255,0.18)');
-            gradient.addColorStop(1, 'rgba(255,255,255,0)');
-
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: [
-                        'Sep 2014', 'Sep 2015', 'Sep 2016', 'Sep 2017',
-                        'Sep 2018', 'Sep 2019', 'Sep 2020', 'Sep 2021',
-                        'Sep 2022', 'Sep 2023', 'Sep 2024', 'Sep 2025'
-                    ],
-                    datasets: [{
-                        data: [
-                            1870000, 1190000, 1240000, 1200000,
-                            1560000, 1080000, 1760000, 1185000,
-                            1760000, 1710000, 2130000, 1560000
-                        ],
-                        borderColor: '#ffffff',
-                        borderWidth: 2,
-                        backgroundColor: gradient,
-                        fill: true,
-                        tension: 0.4,
-                        pointBackgroundColor: '#ffffff',
-                        pointBorderColor: '#ffffff',
-                        pointBorderWidth: 2,
-                        pointRadius: 4,
-                        pointHoverRadius: 7,
-                        pointHoverBackgroundColor: '#ffffff',
-                        pointHoverBorderColor: 'rgba(255,255,255,0.4)',
-                        pointHoverBorderWidth: 6
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            backgroundColor: 'rgba(10,91,216,0.9)',
-                            titleColor: '#fff',
-                            bodyColor: '#fff',
-                            borderColor: 'rgba(255,255,255,0.3)',
-                            borderWidth: 1,
-                            padding: 10,
-                            callbacks: {
-                                label: function (context) {
-                                    return '$' + context.parsed.y.toLocaleString('en-CA');
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                color: 'rgba(255,255,255,0.1)',
-                                drawBorder: false
-                            },
-                            border: { display: false },
-                            ticks: {
-                                color: 'rgba(255,255,255,0.7)',
-                                font: { size: 12, family: 'Manrope, sans-serif' },
-                                maxRotation: 35,
-                                minRotation: 35
-                            }
-                        },
-                        y: {
-                            min: 500000,
-                            max: 2200000,
-                            afterBuildTicks: function (axis) {
-                                axis.ticks = [500000, 1200000, 1550000, 1850000, 2000000, 2200000]
-                                    .map(function (v) { return { value: v }; });
-                            },
-                            grid: {
-                                color: 'rgba(255,255,255,0.1)',
-                                drawBorder: false
-                            },
-                            border: { display: false },
-                            ticks: {
-                                color: 'rgba(255,255,255,0.7)',
-                                font: { size: 12, family: 'Manrope, sans-serif' },
-                                callback: function (value) {
-                                    return value.toLocaleString('en-CA');
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-        })();
-    </script>
-
-    <!-- Equity Donut Chart -->
-    <script>
-        (function () {
-            var canvas = document.getElementById('pcrEquityChart');
-            if (!canvas) return;
-            var ctx = canvas.getContext('2d');
-
-            var equityLabelPlugin = {
-                id: 'equityLabels',
-                afterDraw: function (chart) {
-                    var ctx = chart.ctx;
-                    var meta = chart.getDatasetMeta(0);
-                    var slices = [
-                        { name: 'Equity', pct: '32%' },
-                        { name: 'Mortgage', pct: '68%' }
-                    ];
-                    meta.data.forEach(function (arc, i) {
-                        var mid = (arc.startAngle + arc.endAngle) / 2;
-                        var r = (arc.outerRadius + arc.innerRadius) / 2;
-                        var x = arc.x + r * Math.cos(mid);
-                        var y = arc.y + r * Math.sin(mid);
-                        ctx.save();
-                        ctx.textAlign = 'center';
-                        ctx.fillStyle = 'rgba(255,255,255,0.95)';
-                        ctx.font = '7px Poppins, sans-serif';
-                        ctx.fillText(slices[i].name, x, y - 4);
-                        ctx.font = 'bold 10px Poppins, sans-serif';
-                        ctx.fillText(slices[i].pct, x, y + 7);
-                        ctx.restore();
-                    });
-                }
-            };
-
-            new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    datasets: [{
-                        data: [32, 68],
-                        backgroundColor: ['#e9bd5f', '#2c6efe'],
-                        borderWidth: 0,
-                        hoverOffset: 0
-                    }]
-                },
-                options: {
-                    responsive: false,
-                    cutout: '50%',
-                    rotation: -130,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: { enabled: false }
-                    },
-                    animation: { duration: 600 }
-                },
-                plugins: [equityLabelPlugin]
-            });
-        })();
-    </script>
+    <!-- Past Client Retention module JS -->
+    <script src="../js/past-client-retention.js"></script>
 
 </body>
 

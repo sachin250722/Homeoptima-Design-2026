@@ -6,6 +6,10 @@
   "scripts": {
     "build:sass": "sass styles/scss/style.scss styles/css/style.css --no-source-map",
     "watch:sass": "sass --watch styles/scss/style.scss:styles/css/style.css",
+    "build:li": "sass styles/scss/scoped-listing-intelligence.scss styles/css/listing-intelligence.css --no-source-map",
+    "build:slg": "sass styles/scss/scoped-seller-lead-generation.scss styles/css/seller-lead-generation.css --no-source-map",
+    "build:pcr": "sass styles/scss/scoped-past-client-retention.scss styles/css/past-client-retention.css --no-source-map",
+    "build:modules": "npm run build:li && npm run build:slg && npm run build:pcr",
     "start": "npx live-server --port=8000 --open=main-landing-page.html",
     "dev": "concurrently \"npm run watch:sass\" \"npm run start\""
   },

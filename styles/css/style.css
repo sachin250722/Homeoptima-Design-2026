@@ -12094,9 +12094,9 @@ textarea.form-control-lg {
 }
 :root {
   --primary-color: #2C6EFE;
-  --secondary-color: #6c757d;
+  --secondary-color: #0E171F;
   --secondary-dark: #084CC0;
-  --dark: #212529;
+  --dark: #0E171F;
   --white: #fff;
   --heading-color: #0E171F;
   --light-color: #F2F6FF;
@@ -12654,7 +12654,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 16px;
 }
 .section-title.text-white {
@@ -12710,7 +12710,7 @@ textarea.form-control {
   gap: 4px;
   font-size: 14px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   font-family: "Poppins", sans-serif;
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -12726,7 +12726,7 @@ textarea.form-control {
 
 .service-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
@@ -12744,7 +12744,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 10px;
 }
 .service-card .service-desc {
@@ -12817,7 +12817,7 @@ textarea.form-control {
 
 .listing-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
@@ -12860,14 +12860,14 @@ textarea.form-control {
   font-weight: 600;
   font-size: 28px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
 }
 .listing-card .listing-name {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -12974,7 +12974,7 @@ textarea.form-control {
   z-index: 1;
   border-radius: 24px;
   overflow: hidden;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.06);
 }
 .cta-section .cta-deco-prop img {
@@ -13937,7 +13937,7 @@ textarea.form-control {
   position: relative;
   border-radius: 24px;
   overflow: hidden;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
   cursor: pointer;
   -webkit-transition: all 0.5s;
@@ -14098,7 +14098,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 24px;
-  color: #212529;
+  color: #0E171F;
   line-height: 32px;
   margin-bottom: 10px;
 }
@@ -14190,7 +14190,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 24px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 4px;
 }
 .agent-section .agent-title {
@@ -14218,7 +14218,7 @@ textarea.form-control {
   border-radius: 12px;
   overflow: hidden;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
 }
 .agent-section .agent-pill {
   display: flex;
@@ -14228,9 +14228,9 @@ textarea.form-control {
   height: 46px;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
-  color: #212529;
+  color: #0E171F;
   font-weight: 400;
-  border-right: 1px solid rgba(33, 37, 41, 0.08);
+  border-right: 1px solid rgba(14, 23, 31, 0.08);
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
   transition: all 0.2s;
@@ -14242,7 +14242,7 @@ textarea.form-control {
   border-right: none;
 }
 .agent-section .agent-pill:hover {
-  background: rgba(33, 37, 41, 0.03);
+  background: rgba(14, 23, 31, 0.03);
   color: #2C6EFE;
 }
 .agent-section .agent-nav-row {
@@ -14310,7 +14310,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
 }
 .agent-section .agent-mobile-role {
   font-family: "Poppins", sans-serif;
@@ -14351,7 +14351,7 @@ textarea.form-control {
   border-radius: 12px;
   overflow: hidden;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   height: 48px;
 }
 .agent-section .agent-contact-bar .agent-contact-item {
@@ -14362,9 +14362,9 @@ textarea.form-control {
   gap: 6px;
   font-size: 12px;
   font-family: "Poppins", sans-serif;
-  color: #212529;
+  color: #0E171F;
   font-weight: 400;
-  border-right: 1px solid rgba(33, 37, 41, 0.08);
+  border-right: 1px solid rgba(14, 23, 31, 0.08);
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
   transition: all 0.2s;
@@ -14379,7 +14379,7 @@ textarea.form-control {
   border-right: none;
 }
 .agent-section .agent-contact-bar .agent-contact-item:hover {
-  background: rgba(33, 37, 41, 0.03);
+  background: rgba(14, 23, 31, 0.03);
   color: #2C6EFE;
 }
 
@@ -14520,7 +14520,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
 }
 .agent-section-style2 .agent-s2-role {
   font-family: "Poppins", sans-serif;
@@ -14547,7 +14547,7 @@ textarea.form-control {
   border-radius: 12px;
   overflow: hidden;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
 }
 .agent-section-style2 .agent-s2-pill {
   display: flex;
@@ -14559,9 +14559,9 @@ textarea.form-control {
   height: 46px;
   font-size: 13px;
   font-family: "Poppins", sans-serif;
-  color: #212529;
+  color: #0E171F;
   font-weight: 400;
-  border-right: 1px solid rgba(33, 37, 41, 0.08);
+  border-right: 1px solid rgba(14, 23, 31, 0.08);
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
   transition: all 0.2s;
@@ -14574,7 +14574,7 @@ textarea.form-control {
   border-right: none;
 }
 .agent-section-style2 .agent-s2-pill:hover {
-  background: rgba(33, 37, 41, 0.03);
+  background: rgba(14, 23, 31, 0.03);
   color: #2C6EFE;
 }
 
@@ -14586,7 +14586,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 500;
   font-size: 68px;
-  color: #212529;
+  color: #0E171F;
   line-height: 1.1;
   margin-bottom: 24px;
 }
@@ -14642,7 +14642,7 @@ textarea.form-control {
 .testimonials-section .testimonial-card {
   flex: 0 0 380px;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
@@ -14661,7 +14661,7 @@ textarea.form-control {
 .testimonials-section .testimonial-text {
   font-size: 20px;
   line-height: 1.8;
-  color: #212529;
+  color: #0E171F;
   font-weight: 300;
   flex: 1;
 }
@@ -14687,7 +14687,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 16px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 4px;
 }
 .testimonials-section .testimonial-location {
@@ -14935,9 +14935,9 @@ textarea.form-control {
   font-weight: 500;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  color: rgba(33, 37, 41, 0.72);
-  background: rgba(33, 37, 41, 0.07);
-  border: 1px solid rgba(33, 37, 41, 0.12);
+  color: rgba(14, 23, 31, 0.72);
+  background: rgba(14, 23, 31, 0.07);
+  border: 1px solid rgba(14, 23, 31, 0.12);
   margin-bottom: 20px;
 }
 
@@ -15016,12 +15016,12 @@ textarea.form-control {
   gap: 8px;
   padding: 10px 20px;
   border-radius: 8px;
-  border: 1px solid rgba(33, 37, 41, 0.18);
+  border: 1px solid rgba(14, 23, 31, 0.18);
   background: #fff;
   font-size: 14px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
-  color: #212529;
+  color: #0E171F;
   text-decoration: none;
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -15040,7 +15040,7 @@ textarea.form-control {
 .ftb-hero-img-wrap {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0px 20px 60px 0px rgba(33, 37, 41, 0.1);
+  box-shadow: 0px 20px 60px 0px rgba(14, 23, 31, 0.1);
   line-height: 0;
 }
 .ftb-hero-img-wrap img {
@@ -15105,7 +15105,7 @@ textarea.form-control {
   font-weight: 700;
   font-size: 44px;
   line-height: 1.15;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 16px;
   letter-spacing: -0.3px;
 }
@@ -15132,7 +15132,7 @@ textarea.form-control {
 
 .ftb-benefit-card {
   background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(33, 37, 41, 0.07);
+  border: 1px solid rgba(14, 23, 31, 0.07);
   border-radius: 24px;
   padding: 24px 22px;
   height: 100%;
@@ -15143,7 +15143,7 @@ textarea.form-control {
 }
 .ftb-benefit-card:hover {
   background: #fff;
-  box-shadow: 0px 8px 32px rgba(33, 37, 41, 0.07);
+  box-shadow: 0px 8px 32px rgba(14, 23, 31, 0.07);
   transform: translateY(-3px);
 }
 
@@ -15167,7 +15167,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 8px;
   line-height: 1.3;
 }
@@ -15269,7 +15269,7 @@ textarea.form-control {
 .ftb-process-img-wrap {
   border-radius: 24px;
   overflow: hidden;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
   flex: 1;
 }
@@ -15386,7 +15386,7 @@ textarea.form-control {
 
 .ftb-program-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 28px 24px;
   height: 100%;
@@ -15484,7 +15484,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 8px;
   letter-spacing: -0.14px;
 }
@@ -15499,7 +15499,7 @@ textarea.form-control {
   padding: 12px 16px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   background: #fff;
   border: 1px solid #ededed;
   border-radius: 8px;
@@ -15535,7 +15535,7 @@ textarea.form-control {
   box-shadow: 0px 2px 8px rgba(17, 18, 57, 0.03);
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   white-space: nowrap;
   flex-shrink: 0;
   cursor: pointer;
@@ -15560,7 +15560,7 @@ textarea.form-control {
   color: #929DAA;
 }
 .ftb-select option {
-  color: #212529;
+  color: #0E171F;
 }
 .ftb-select option:first-child {
   color: #929DAA;
@@ -15605,7 +15605,7 @@ textarea.form-control {
 
 .ftb-testimonial-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
@@ -15635,7 +15635,7 @@ textarea.form-control {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.75;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
   flex: 1;
 }
@@ -15671,7 +15671,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   display: block;
 }
 .ftb-author-info span {
@@ -15697,7 +15697,7 @@ textarea.form-control {
   font-weight: 800;
   font-size: 64px;
   line-height: 1.1;
-  color: #212529;
+  color: #0E171F;
   letter-spacing: -1px;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -15724,18 +15724,18 @@ textarea.form-control {
 .ftb-faq-accordion .accordion-item {
   background: transparent;
   border: none !important;
-  border-bottom: 1px solid rgba(33, 37, 41, 0.1) !important;
+  border-bottom: 1px solid rgba(14, 23, 31, 0.1) !important;
   border-radius: 0 !important;
 }
 .ftb-faq-accordion .accordion-item:first-child {
-  border-top: 1px solid rgba(33, 37, 41, 0.1) !important;
+  border-top: 1px solid rgba(14, 23, 31, 0.1) !important;
 }
 .ftb-faq-accordion .accordion-button {
   background: transparent !important;
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   padding: 22px 0;
   box-shadow: none !important;
   -webkit-transition: all 0.2s;
@@ -15806,12 +15806,12 @@ textarea.form-control {
 }
 .hv-page .btn-outline-primary {
   background: transparent;
-  border: 1px solid rgba(33, 37, 41, 0.2);
-  color: #212529;
+  border: 1px solid rgba(14, 23, 31, 0.2);
+  color: #0E171F;
 }
 .hv-page .btn-outline-primary:hover {
-  background: rgba(33, 37, 41, 0.04);
-  border-color: rgba(33, 37, 41, 0.4);
+  background: rgba(14, 23, 31, 0.04);
+  border-color: rgba(14, 23, 31, 0.4);
 }
 
 .three-line-shape {
@@ -15892,7 +15892,7 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-image: url("../../images/listing-01.jpg");
+  background-image: url("../../images/home-value-hub-hero.png");
   background-size: cover;
   background-position: center;
 }
@@ -16040,7 +16040,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #212529;
+  color: #0E171F;
   width: 100%;
 }
 .hv-search-input::placeholder {
@@ -16111,7 +16111,7 @@ textarea.form-control {
   flex: 1;
   min-width: 0;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
@@ -16139,7 +16139,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 1.6;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
 }
 
@@ -16198,6 +16198,7 @@ textarea.form-control {
   position: absolute;
   right: -275px;
   top: -185px;
+  z-index: 1;
 }
 
 .wave-how {
@@ -16272,7 +16273,7 @@ textarea.form-control {
 }
 
 .hv-how-img-card {
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
@@ -16404,7 +16405,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 1.1;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 24px;
 }
 .hv-stats-heading .text-primary {
@@ -16466,7 +16467,7 @@ textarea.form-control {
 
 .hv-resources {
   background: #F2F6FF;
-  padding: 80px, 0px;
+  padding: 80px 0px;
   position: relative;
   overflow: hidden;
 }
@@ -16492,6 +16493,11 @@ textarea.form-control {
     margin-bottom: 36px;
     max-width: 100%;
   }
+}
+
+.hv-resources-row-wrapper {
+  position: relative;
+  padding: 4px 0;
 }
 
 .hv-resources-row {
@@ -16520,7 +16526,7 @@ textarea.form-control {
   flex: 1;
   min-width: 0;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
@@ -16549,7 +16555,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 1.6;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
 }
 
@@ -16569,7 +16575,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   text-decoration: none;
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -16645,7 +16651,7 @@ textarea.form-control {
   z-index: 1;
   border-radius: 24px;
   overflow: hidden;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
 }
 .hv-cta-deco img {
@@ -16813,9 +16819,9 @@ textarea.form-control {
 }
 
 .hv-app-card {
-  background: var(--dark);
+  background: #0E171F;
   border-radius: 24px;
-  padding: 96px 80px;
+  padding: 0 80px 96px;
   min-height: 492px;
   display: flex;
   align-items: center;
@@ -16887,7 +16893,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 500;
   font-size: 68px;
-  line-height: 1.09;
+  line-height: 1;
   color: #fff;
   margin-bottom: 0;
 }
@@ -17221,7 +17227,7 @@ textarea.form-control {
   flex-wrap: wrap;
   gap: 12px;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 16px;
   padding: 8px 8px 8px 24px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
@@ -17234,7 +17240,7 @@ textarea.form-control {
 .hvh-results-hero .hvh-hero-card-heading {
   font-size: 16px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   font-family: "Poppins", sans-serif;
   margin-bottom: 0;
   white-space: nowrap;
@@ -17249,7 +17255,7 @@ textarea.form-control {
   align-items: flex-start;
   gap: 16px;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 16px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
@@ -17284,7 +17290,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 22px;
   font-weight: 700;
-  color: #212529;
+  color: #0E171F;
   line-height: 1.2;
   margin-bottom: 0;
 }
@@ -17309,7 +17315,7 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   padding: 8px 16px;
-  background: rgba(33, 37, 41, 0.46);
+  background: rgba(14, 23, 31, 0.46);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 999px;
@@ -17326,7 +17332,7 @@ textarea.form-control {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 1.5px solid rgba(33, 37, 41, 0.5);
+  border: 1.5px solid rgba(14, 23, 31, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17356,7 +17362,7 @@ textarea.form-control {
   padding: 12px 24px;
   font-size: 16px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   align-self: flex-start;
@@ -17396,7 +17402,7 @@ textarea.form-control {
   outline: none;
   background: transparent;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   font-family: "Poppins", sans-serif;
   min-width: 0;
 }
@@ -17410,7 +17416,7 @@ textarea.form-control {
 }
 .hvh-results-hero .hvh-hero-specs-panel {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px 24px 0 0;
   padding: 24px;
   display: flex;
@@ -17432,7 +17438,7 @@ textarea.form-control {
   gap: 12px;
   font-size: 20px;
   font-weight: 400;
-  color: rgba(33, 37, 41, 0.8);
+  color: rgba(14, 23, 31, 0.8);
   font-family: "Poppins", sans-serif;
   white-space: nowrap;
 }
@@ -17442,7 +17448,7 @@ textarea.form-control {
   flex-shrink: 0;
 }
 .hvh-results-hero .hvh-hero-value-block {
-  background: #212529;
+  background: #0E171F;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -17534,7 +17540,7 @@ textarea.form-control {
 .hvh-val-card {
   background: #fff;
   border-radius: 24px;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
   overflow: hidden;
 }
@@ -17553,7 +17559,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 20px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
   line-height: 24px;
   white-space: nowrap;
@@ -17563,7 +17569,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
   line-height: 32px;
   white-space: nowrap;
@@ -17594,7 +17600,7 @@ textarea.form-control {
 .hvh-val-val {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
-  color: #212529;
+  color: #0E171F;
   font-weight: 600;
   line-height: 20px;
   text-align: right;
@@ -17618,7 +17624,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
   line-height: 20px;
 }
@@ -17665,7 +17671,7 @@ textarea.form-control {
   font-size: 16px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #212529;
+  color: #0E171F;
   line-height: 20px;
 }
 
@@ -17695,7 +17701,7 @@ textarea.form-control {
   font-size: 14px;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
-  color: #212529;
+  color: #0E171F;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -17715,9 +17721,9 @@ textarea.form-control {
 }
 
 .hvh-recalc-btn {
-  border: 1px solid rgba(33, 37, 41, 0.2);
+  border: 1px solid rgba(14, 23, 31, 0.2);
   border-radius: 12px;
-  color: #212529;
+  color: #0E171F;
   background: transparent;
   padding: 12px 24px;
   font-size: 16px;
@@ -17729,8 +17735,8 @@ textarea.form-control {
   transition: all 0.2s;
 }
 .hvh-recalc-btn:hover {
-  background: rgba(33, 37, 41, 0.04);
-  color: #212529;
+  background: rgba(14, 23, 31, 0.04);
+  color: #0E171F;
 }
 .hvh-recalc-btn img {
   flex-shrink: 0;
@@ -17873,7 +17879,7 @@ textarea.form-control {
 .hvh-market-chart-card {
   background: #fff;
   border-radius: 24px;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
   padding: 8px;
   display: flex;
@@ -17901,7 +17907,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   white-space: nowrap;
 }
 
@@ -17915,7 +17921,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #212529;
+  color: #0E171F;
   white-space: nowrap;
 }
 
@@ -17933,11 +17939,11 @@ textarea.form-control {
 
 .hvh-market-tab {
   background: transparent;
-  border: 1px solid rgba(33, 37, 41, 0.2);
+  border: 1px solid rgba(14, 23, 31, 0.2);
   outline: none;
   font-size: 16px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   padding: 12px 24px;
   border-radius: 12px;
   cursor: pointer;
@@ -17953,7 +17959,7 @@ textarea.form-control {
   color: #fff;
 }
 .hvh-market-tab:hover:not(.hvh-market-tab--active) {
-  background: rgba(33, 37, 41, 0.04);
+  background: rgba(14, 23, 31, 0.04);
 }
 
 .hvh-market-chart-body {
@@ -18021,7 +18027,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 48px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   line-height: 62px;
   margin-bottom: 0;
 }
@@ -18044,7 +18050,7 @@ textarea.form-control {
 .hvh-upgrades-table-wrap {
   background: #fff;
   border-radius: 24px;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   overflow: hidden;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
   display: flex;
@@ -18056,7 +18062,7 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  border-right: 1px solid rgba(33, 37, 41, 0.08);
+  border-right: 1px solid rgba(14, 23, 31, 0.08);
 }
 .hvh-upgrades-col:last-child {
   border-right: none;
@@ -18068,7 +18074,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 20px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   line-height: 24px;
   white-space: nowrap;
 }
@@ -18181,12 +18187,12 @@ textarea.form-control {
   height: 48px;
   padding: 12px 16px;
   border-radius: 12px;
-  border: 1px solid rgba(33, 37, 41, 0.2);
+  border: 1px solid rgba(14, 23, 31, 0.2);
   background: transparent;
   font-size: 16px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
-  color: #212529;
+  color: #0E171F;
   cursor: pointer;
   opacity: 0.4;
   display: inline-flex;
@@ -18227,7 +18233,7 @@ textarea.form-control {
   background: #fff;
   border-radius: 24px;
   padding: 48px 40px;
-  box-shadow: 0 4px 32px rgba(33, 37, 41, 0.06);
+  box-shadow: 0 4px 32px rgba(14, 23, 31, 0.06);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -18240,7 +18246,7 @@ textarea.form-control {
 .hvh-value-card .hvh-value-label {
   font-size: 13px;
   font-weight: 500;
-  color: rgba(33, 37, 41, 0.55);
+  color: rgba(14, 23, 31, 0.55);
   text-transform: uppercase;
   letter-spacing: 0.8px;
   margin-bottom: 12px;
@@ -18265,12 +18271,12 @@ textarea.form-control {
 }
 .hvh-value-card .hvh-value-range {
   font-size: 16px;
-  color: rgba(33, 37, 41, 0.6);
+  color: rgba(14, 23, 31, 0.6);
   margin-bottom: 32px;
 }
 .hvh-value-card .hvh-value-range span {
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
 }
 .hvh-value-card .hvh-value-actions {
   display: flex;
@@ -18293,36 +18299,36 @@ textarea.form-control {
   background: #fff;
   border-radius: 24px;
   padding: 32px 28px;
-  box-shadow: 0 4px 32px rgba(33, 37, 41, 0.06);
+  box-shadow: 0 4px 32px rgba(14, 23, 31, 0.06);
   height: 100%;
 }
 .hvh-details-card .hvh-details-title {
   font-family: "Archivo", sans-serif;
   font-size: 18px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 24px;
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(33, 37, 41, 0.07);
+  border-bottom: 1px solid rgba(14, 23, 31, 0.07);
 }
 .hvh-details-card .hvh-detail-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(33, 37, 41, 0.05);
+  border-bottom: 1px solid rgba(14, 23, 31, 0.05);
 }
 .hvh-details-card .hvh-detail-row:last-child {
   border-bottom: none;
 }
 .hvh-details-card .hvh-detail-row .hvh-detail-key {
   font-size: 14px;
-  color: rgba(33, 37, 41, 0.55);
+  color: rgba(14, 23, 31, 0.55);
   font-weight: 400;
 }
 .hvh-details-card .hvh-detail-row .hvh-detail-val {
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   font-weight: 600;
 }
 
@@ -18338,7 +18344,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 24px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 24px;
 }
 
@@ -18346,7 +18352,7 @@ textarea.form-control {
   background: #fff;
   border-radius: 24px;
   padding: 24px 28px;
-  box-shadow: 0 4px 32px rgba(33, 37, 41, 0.06);
+  box-shadow: 0 4px 32px rgba(14, 23, 31, 0.06);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -18355,7 +18361,7 @@ textarea.form-control {
 .hvh-trend-card .hvh-trend-label {
   font-size: 13px;
   font-weight: 500;
-  color: rgba(33, 37, 41, 0.55);
+  color: rgba(14, 23, 31, 0.55);
   text-transform: uppercase;
   letter-spacing: 0.7px;
 }
@@ -18363,7 +18369,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 28px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   line-height: 1.1;
 }
 .hvh-trend-card .hvh-trend-change {
@@ -18400,7 +18406,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 24px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
 }
 
@@ -18408,13 +18414,13 @@ textarea.form-control {
   background: #fff;
   border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 4px 32px rgba(33, 37, 41, 0.06);
+  box-shadow: 0 4px 32px rgba(14, 23, 31, 0.06);
   -webkit-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
 }
 .hvh-comp-card:hover {
-  box-shadow: 0 8px 48px rgba(33, 37, 41, 0.1);
+  box-shadow: 0 8px 48px rgba(14, 23, 31, 0.1);
   transform: translateY(-2px);
 }
 .hvh-comp-card .hvh-comp-img {
@@ -18430,12 +18436,12 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 4px;
 }
 .hvh-comp-card .hvh-comp-address {
   font-size: 14px;
-  color: rgba(33, 37, 41, 0.6);
+  color: rgba(14, 23, 31, 0.6);
   margin-bottom: 16px;
 }
 .hvh-comp-card .hvh-comp-meta {
@@ -18448,7 +18454,7 @@ textarea.form-control {
   align-items: center;
   gap: 5px;
   font-size: 13px;
-  color: rgba(33, 37, 41, 0.65);
+  color: rgba(14, 23, 31, 0.65);
   font-weight: 400;
 }
 .hvh-comp-card .hvh-comp-meta span img {
@@ -18595,7 +18601,7 @@ textarea.form-control {
 
 .hvh-resources-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
@@ -18613,7 +18619,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .hvh-resources-card__sub {
@@ -18673,7 +18679,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .hvh-resource-item__meta {
@@ -18702,12 +18708,12 @@ textarea.form-control {
   gap: 8px;
   width: 100%;
   padding: 12px 24px;
-  border: 1px solid rgba(33, 37, 41, 0.2);
+  border: 1px solid rgba(14, 23, 31, 0.2);
   border-radius: 12px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #212529;
+  color: #0E171F;
   text-decoration: none;
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -18746,7 +18752,7 @@ textarea.form-control {
 
 .hvh-next-steps-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
@@ -18759,7 +18765,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 
@@ -18809,7 +18815,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
 }
 
 .hvh-agent-role {
@@ -18859,11 +18865,11 @@ textarea.form-control {
   padding: 8px 16px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   height: 46px;
 }
 .hvh-contact-bar__item:first-child {
-  border-right: 1px solid rgba(33, 37, 41, 0.08);
+  border-right: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 12px 0 0 12px;
 }
 .hvh-contact-bar__item:last-child {
@@ -18935,7 +18941,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
   display: block;
 }
 
@@ -18964,7 +18970,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .hvh-lf-section .hvh-lf-heading__dot {
@@ -19034,7 +19040,7 @@ textarea.form-control {
   gap: 4px;
   align-items: center;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 999px;
   padding: 4px;
   width: fit-content;
@@ -19050,7 +19056,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 15px;
-  color: rgba(33, 37, 41, 0.8);
+  color: rgba(14, 23, 31, 0.8);
   cursor: pointer;
   white-space: nowrap;
   -webkit-transition: all 0.2s;
@@ -19059,7 +19065,7 @@ textarea.form-control {
 }
 .hvh-lf-section .hvh-lf-tab svg {
   flex-shrink: 0;
-  color: rgba(33, 37, 41, 0.5);
+  color: rgba(14, 23, 31, 0.5);
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
   transition: all 0.2s;
@@ -19068,17 +19074,17 @@ textarea.form-control {
   background: #fff;
   border-color: rgba(44, 110, 254, 0.8);
   font-weight: 600;
-  color: rgba(33, 37, 41, 0.9);
+  color: rgba(14, 23, 31, 0.9);
 }
 .hvh-lf-section .hvh-lf-tab--active svg {
   color: #2C6EFE;
 }
 .hvh-lf-section .hvh-lf-tab:not(.hvh-lf-tab--active):hover {
-  background: rgba(33, 37, 41, 0.03);
+  background: rgba(14, 23, 31, 0.03);
 }
 .hvh-lf-section .hvh-lf-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
@@ -19197,7 +19203,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .hvh-lf-section .hvh-lf-stat-value {
@@ -19205,7 +19211,7 @@ textarea.form-control {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
   margin: 0;
 }
 .hvh-lf-section .hvh-lf-stat-desc {
@@ -19221,7 +19227,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .hvh-lf-section .hvh-lf-income-stats {
@@ -19258,7 +19264,7 @@ textarea.form-control {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
   margin: 0;
 }
 .hvh-lf-section .hvh-lf-income-value {
@@ -19266,7 +19272,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 32px;
   line-height: 34px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .hvh-lf-section .hvh-lf-income-desc {
@@ -19365,7 +19371,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 16px;
   line-height: 18px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .hvh-lf-section .hvh-lf-pop-center {
@@ -19379,7 +19385,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 32px;
   line-height: 34px;
-  color: #212529;
+  color: #0E171F;
   text-align: center;
   margin: 0;
 }
@@ -19401,7 +19407,7 @@ textarea.form-control {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: rgba(33, 37, 41, 0.8);
+  color: rgba(14, 23, 31, 0.8);
 }
 .hvh-lf-section .hvh-lf-pop-chart-wrap {
   position: relative;
@@ -19426,7 +19432,7 @@ textarea.form-control {
   gap: 4px;
   font-family: "Poppins", sans-serif;
   font-size: 12px;
-  color: rgba(33, 37, 41, 0.88);
+  color: rgba(14, 23, 31, 0.88);
   padding: 4px;
   white-space: nowrap;
 }
@@ -19584,7 +19590,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .hvh-rr-section .hvh-rr-sub {
@@ -19626,7 +19632,7 @@ textarea.form-control {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: -0.14px;
-  color: #212529;
+  color: #0E171F;
 }
 .hvh-rr-section .hvh-rr-field__req {
   color: #e9bd5f;
@@ -19642,7 +19648,7 @@ textarea.form-control {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.14px;
-  color: #212529;
+  color: #0E171F;
   box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
   outline: none;
   -webkit-transition: all 0.2s;
@@ -19676,7 +19682,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
   box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
   cursor: pointer;
   white-space: nowrap;
@@ -19707,7 +19713,7 @@ textarea.form-control {
   padding: 8px 12px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   border-radius: 6px;
 }
 .hvh-rr-section .hvh-rr-phone-menu .hvh-rr-phone-opt img {
@@ -19816,7 +19822,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .hvh-events-section .hvh-events-heading__dot {
@@ -19925,7 +19931,7 @@ textarea.form-control {
 }
 .hvh-events-section .hvh-event-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
@@ -19949,7 +19955,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 24px;
   line-height: 28px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .hvh-events-section .hvh-event-card__body {
@@ -20014,7 +20020,7 @@ textarea.form-control {
 .bh-hero__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(108, 117, 125, 0.56);
+  background: rgba(14, 23, 31, 0.56);
 }
 .bh-hero__nav {
   position: relative;
@@ -20182,7 +20188,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 26px;
   line-height: 34px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 6px;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -20233,7 +20239,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   line-height: 18px;
   letter-spacing: -0.14px;
 }
@@ -20248,7 +20254,7 @@ textarea.form-control {
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   line-height: 22px;
   box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
   -webkit-transition: all 0.2s;
@@ -20326,7 +20332,7 @@ textarea.form-control {
 .bh-form__phone-prefix {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   white-space: nowrap;
 }
 .bh-form__flag {
@@ -20353,7 +20359,7 @@ textarea.form-control {
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
 }
 .bh-form__select option[value=""][disabled] {
   color: #929DAA;
@@ -20387,7 +20393,7 @@ textarea.form-control {
 .bh-form__security span {
   font-family: "Poppins", sans-serif;
   font-size: 13px;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
 }
 @media only screen and (max-width: 35.9375rem) {
   .bh-form__security span {
@@ -20422,7 +20428,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -20462,7 +20468,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin-top: 12px;
   margin-bottom: 0;
 }
@@ -20517,7 +20523,7 @@ textarea.form-control {
 
 .bh-step-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
@@ -20562,7 +20568,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 10px;
 }
 .bh-step-card__desc {
@@ -20774,13 +20780,13 @@ textarea.form-control {
 }
 .sh-page .btn-outline-primary {
   background: transparent;
-  border: 1px solid rgba(33, 37, 41, 0.2);
-  color: #212529;
+  border: 1px solid rgba(14, 23, 31, 0.2);
+  color: #0E171F;
 }
 .sh-page .btn-outline-primary:hover, .sh-page .btn-outline-primary:focus-visible {
-  background: rgba(33, 37, 41, 0.04);
-  border-color: rgba(33, 37, 41, 0.4);
-  color: #212529;
+  background: rgba(14, 23, 31, 0.04);
+  border-color: rgba(14, 23, 31, 0.4);
+  color: #0E171F;
 }
 
 .sh-badge {
@@ -21058,7 +21064,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 28px;
   line-height: 36px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
 }
 @media only screen and (max-width: 35.9375rem) {
@@ -21098,7 +21104,7 @@ textarea.form-control {
   font-weight: 500;
   line-height: 18px;
   letter-spacing: -0.14px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
   white-space: nowrap;
 }
@@ -21118,7 +21124,7 @@ textarea.form-control {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: -0.14px;
-  color: #212529;
+  color: #0E171F;
   box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
   outline: none;
   -webkit-transition: all 0.2s;
@@ -21159,7 +21165,7 @@ textarea.form-control {
   transition: all 0.2s;
 }
 .sh-phone-code:hover {
-  border-color: rgba(33, 37, 41, 0.3);
+  border-color: rgba(14, 23, 31, 0.3);
 }
 .sh-phone-code svg {
   flex-shrink: 0;
@@ -21178,7 +21184,7 @@ textarea.form-control {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: -0.14px;
-  color: #212529;
+  color: #0E171F;
   white-space: nowrap;
 }
 
@@ -21197,7 +21203,7 @@ textarea.form-control {
   padding: 8px 12px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   border-radius: 6px;
 }
 .sh-phone-menu .sh-phone-opt img {
@@ -21218,7 +21224,7 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  border-top: 1px solid rgba(33, 37, 41, 0.06);
+  border-top: 1px solid rgba(14, 23, 31, 0.06);
 }
 
 .sh-form-submit {
@@ -21233,15 +21239,15 @@ textarea.form-control {
 }
 .sh-lead-form__privacy svg {
   flex-shrink: 0;
-  color: rgba(33, 37, 41, 0.5);
-  stroke: rgba(33, 37, 41, 0.5);
+  color: rgba(14, 23, 31, 0.5);
+  stroke: rgba(14, 23, 31, 0.5);
 }
 .sh-lead-form__privacy span {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
   text-align: center;
 }
 
@@ -21332,7 +21338,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -21374,7 +21380,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 34px;
   line-height: 1.4;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -21394,7 +21400,7 @@ textarea.form-control {
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 1px;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
   margin-bottom: 0;
 }
 @media only screen and (max-width: 35.9375rem) {
@@ -21501,7 +21507,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -21544,7 +21550,7 @@ textarea.form-control {
   font-size: 20px;
   font-weight: 400;
   line-height: 32px;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
   text-align: right;
   margin-bottom: 0;
 }
@@ -21644,7 +21650,7 @@ textarea.form-control {
 
 .sh-process-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   min-height: 244px;
@@ -21679,7 +21685,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
 }
 
@@ -21717,7 +21723,7 @@ textarea.form-control {
 .sh-process__mobile-layout .sh-process-card:hover {
   transform: none;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
-  border-color: rgba(33, 37, 41, 0.08);
+  border-color: rgba(14, 23, 31, 0.08);
 }
 .sh-process__mobile-layout .sh-process-card__title {
   font-family: "Poppins", sans-serif;
@@ -21825,7 +21831,7 @@ textarea.form-control {
 .oh-hero__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(108, 117, 125, 0.56);
+  background: rgba(14, 23, 31, 0.56);
 }
 .oh-hero__nav {
   position: relative;
@@ -21986,7 +21992,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 28px;
   line-height: 36px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 0;
 }
 .oh-form-card__qr {
@@ -22042,7 +22048,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   line-height: 18px;
   letter-spacing: -0.14px;
   margin-bottom: 0;
@@ -22059,7 +22065,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #212529;
+  color: #0E171F;
   line-height: 24px;
   letter-spacing: -0.14px;
   box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
@@ -22100,12 +22106,12 @@ textarea.form-control {
   transition: all 0.2s;
 }
 .oh-form__phone-code:hover {
-  border-color: rgba(33, 37, 41, 0.3);
+  border-color: rgba(14, 23, 31, 0.3);
 }
 .oh-form__phone-prefix {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   white-space: nowrap;
 }
 .oh-form__flag {
@@ -22135,7 +22141,7 @@ textarea.form-control {
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
 }
 .oh-form__select.form-select:focus {
@@ -22167,7 +22173,7 @@ textarea.form-control {
 .oh-form__radio-pill span:last-child {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   line-height: 24px;
   letter-spacing: -0.14px;
   white-space: nowrap;
@@ -22182,7 +22188,7 @@ textarea.form-control {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 1.5px solid rgba(33, 37, 41, 0.5);
+  border: 1.5px solid rgba(14, 23, 31, 0.5);
   flex-shrink: 0;
 }
 .oh-form__radio-dot--checked {
@@ -22203,7 +22209,7 @@ textarea.form-control {
   height: 28px;
   flex-shrink: 0;
   background: #fff;
-  border: 1.5px solid rgba(33, 37, 41, 0.5);
+  border: 1.5px solid rgba(14, 23, 31, 0.5);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -22234,7 +22240,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   line-height: 18px;
   letter-spacing: -0.14px;
 }
@@ -22269,7 +22275,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
   white-space: nowrap;
 }
 @media only screen and (max-width: 35.9375rem) {
@@ -22308,7 +22314,7 @@ textarea.form-control {
   font-weight: 500;
   font-size: 68px;
   line-height: 74px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 24px;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -22337,7 +22343,7 @@ textarea.form-control {
 }
 .oh-accordion__item {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08) !important;
+  border: 1px solid rgba(14, 23, 31, 0.08) !important;
   border-radius: 16px !important;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
@@ -22353,7 +22359,7 @@ textarea.form-control {
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
-  color: #212529;
+  color: #0E171F;
   padding: 24px 16px;
   background: #fff !important;
   border: none;
@@ -22614,12 +22620,12 @@ textarea.form-control {
 }
 .mp-page .btn-outline-primary {
   background: transparent;
-  border: 1px solid rgba(33, 37, 41, 0.2);
+  border: 1px solid rgba(14, 23, 31, 0.2);
   color: var(--dark);
 }
 .mp-page .btn-outline-primary:hover {
-  background: rgba(33, 37, 41, 0.04);
-  border-color: rgba(33, 37, 41, 0.4);
+  background: rgba(14, 23, 31, 0.04);
+  border-color: rgba(14, 23, 31, 0.4);
 }
 
 .mp-hero {
@@ -22726,8 +22732,8 @@ textarea.form-control {
   transform: translateY(-2px);
 }
 .mp-stat-card--dark {
-  background: #212529;
-  border-color: #212529;
+  background: #0E171F;
+  border-color: #0E171F;
   box-shadow: none;
 }
 .mp-stat-card--dark .mp-stat-card__label {
@@ -22813,7 +22819,7 @@ textarea.form-control {
   align-items: flex-start;
   gap: 40px;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
@@ -23007,7 +23013,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 12px;
   font-weight: 400;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
   text-transform: uppercase;
   letter-spacing: 0.3px;
   white-space: nowrap;
@@ -23048,7 +23054,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
   line-height: 1;
   white-space: nowrap;
 }
@@ -23272,12 +23278,12 @@ textarea.form-control {
 }
 .hs-page .btn-outline-primary {
   background: transparent;
-  border: 1px solid rgba(33, 37, 41, 0.2);
-  color: #212529;
+  border: 1px solid rgba(14, 23, 31, 0.2);
+  color: #0E171F;
 }
 .hs-page .btn-outline-primary:hover {
-  background: rgba(33, 37, 41, 0.04);
-  border-color: rgba(33, 37, 41, 0.4);
+  background: rgba(14, 23, 31, 0.04);
+  border-color: rgba(14, 23, 31, 0.4);
 }
 
 .hs-map-header {
@@ -23353,7 +23359,7 @@ textarea.form-control {
 .hs-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(33, 37, 41, 0.5);
+  background: rgba(14, 23, 31, 0.5);
   z-index: 1;
 }
 
@@ -23393,7 +23399,7 @@ textarea.form-control {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  background: rgba(33, 37, 41, 0.32);
+  background: rgba(14, 23, 31, 0.32);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -23478,7 +23484,7 @@ textarea.form-control {
   color: rgba(146, 157, 170, 0.56);
 }
 .hs-search-input:focus {
-  color: #212529;
+  color: #0E171F;
 }
 
 .hs-search-btn {
@@ -23538,7 +23544,7 @@ textarea.form-control {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
-  background: rgba(33, 37, 41, 0.32);
+  background: rgba(14, 23, 31, 0.32);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(250, 255, 214, 0.14);
@@ -23557,14 +23563,14 @@ textarea.form-control {
   flex-shrink: 0;
 }
 .hs-pill:hover {
-  background: rgba(33, 37, 41, 0.52);
+  background: rgba(14, 23, 31, 0.52);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
 .hs-pill--light {
   background: rgba(255, 255, 255, 0.46);
   border: 1px solid rgba(242, 242, 242, 0.98);
-  color: #212529;
+  color: #0E171F;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   padding: 10px 12px;
@@ -23574,11 +23580,11 @@ textarea.form-control {
 }
 .hs-pill--light svg path,
 .hs-pill--light svg circle {
-  stroke: #212529;
+  stroke: #0E171F;
 }
 .hs-pill--light:hover {
   background: rgba(255, 255, 255, 0.72);
-  border-color: rgba(33, 37, 41, 0.14);
+  border-color: rgba(14, 23, 31, 0.14);
 }
 
 .hs-pill.hs-pill--applied {
@@ -23617,7 +23623,7 @@ textarea.form-control {
   left: 0;
   min-width: 280px;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.1);
+  border: 1px solid rgba(14, 23, 31, 0.1);
   border-radius: 24px;
   box-shadow: 0px 24px 64px 0px rgba(0, 0, 0, 0.16);
   padding: 20px;
@@ -23636,7 +23642,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 15px;
-  color: #212529;
+  color: #0E171F;
   margin: 0 0 14px;
 }
 
@@ -23657,7 +23663,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 11px;
   font-weight: 500;
-  color: rgba(33, 37, 41, 0.5);
+  color: rgba(14, 23, 31, 0.5);
   text-transform: uppercase;
   letter-spacing: 0.4px;
 }
@@ -23665,11 +23671,11 @@ textarea.form-control {
 .hs-price-select {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid rgba(33, 37, 41, 0.14);
+  border: 1px solid rgba(14, 23, 31, 0.14);
   border-radius: 12px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   background: #fff;
   cursor: pointer;
   appearance: auto;
@@ -23695,12 +23701,12 @@ textarea.form-control {
   justify-content: center;
   padding: 8px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(33, 37, 41, 0.14);
+  border: 1px solid rgba(14, 23, 31, 0.14);
   background: #fff;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   cursor: pointer;
   white-space: nowrap;
   -webkit-transition: all 0.2s;
@@ -23736,7 +23742,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #212529;
+  color: #0E171F;
   cursor: pointer;
 }
 
@@ -23753,7 +23759,7 @@ textarea.form-control {
   align-items: center;
   justify-content: space-between;
   padding-top: 14px;
-  border-top: 1px solid rgba(33, 37, 41, 0.08);
+  border-top: 1px solid rgba(14, 23, 31, 0.08);
   margin-top: 4px;
 }
 
@@ -23761,7 +23767,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(33, 37, 41, 0.52);
+  color: rgba(14, 23, 31, 0.52);
   background: none;
   border: none;
   cursor: pointer;
@@ -23769,7 +23775,7 @@ textarea.form-control {
   padding: 6px 0;
 }
 .hs-dd-clear:hover {
-  color: #212529;
+  color: #0E171F;
 }
 
 .hs-dd-apply {
@@ -23830,7 +23836,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 700;
   font-size: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
   line-height: 1.2;
 }
@@ -23873,12 +23879,12 @@ textarea.form-control {
   padding: 0 16px;
   height: 48px;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.12);
+  border: 1px solid rgba(14, 23, 31, 0.12);
   border-radius: 12px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   cursor: pointer;
   white-space: nowrap;
   -webkit-transition: all 0.2s;
@@ -23915,7 +23921,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #212529;
+  color: #0E171F;
   cursor: pointer;
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -23934,7 +23940,7 @@ textarea.form-control {
 .hs-view-toggle {
   display: flex;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 12px;
   overflow: hidden;
   height: 48px;
@@ -23948,10 +23954,10 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: rgba(33, 37, 41, 0.48);
+  color: rgba(14, 23, 31, 0.48);
   background: transparent;
   border: none;
-  border-left: 1px solid rgba(33, 37, 41, 0.08);
+  border-left: 1px solid rgba(14, 23, 31, 0.08);
   cursor: pointer;
   white-space: nowrap;
   -webkit-transition: all 0.2s;
@@ -23968,8 +23974,8 @@ textarea.form-control {
   flex-shrink: 0;
 }
 .hs-view-btn.active {
-  color: #212529;
-  background: rgba(33, 37, 41, 0.05);
+  color: #0E171F;
+  background: rgba(14, 23, 31, 0.05);
 }
 .hs-view-btn:hover:not(.active) {
   color: #2C6EFE;
@@ -23998,7 +24004,7 @@ textarea.form-control {
   display: flex;
   flex-direction: column;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
@@ -24044,7 +24050,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 28px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 
@@ -24053,7 +24059,7 @@ textarea.form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -24114,7 +24120,7 @@ textarea.form-control {
   border-radius: 999px;
   background: #fff;
   border: 1px solid rgba(146, 157, 170, 0.24);
-  color: #212529;
+  color: #0E171F;
   cursor: pointer;
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.04);
   -webkit-transition: all 0.2s;
@@ -24143,11 +24149,11 @@ textarea.form-control {
   height: 48px;
   border-radius: 12px;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.2);
+  border: 1px solid rgba(14, 23, 31, 0.2);
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   cursor: pointer;
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -24167,7 +24173,7 @@ textarea.form-control {
   padding: 0 18px;
   cursor: default;
   pointer-events: none;
-  border-color: rgba(33, 37, 41, 0.2);
+  border-color: rgba(14, 23, 31, 0.2);
 }
 
 .hs-map-view {
@@ -24194,7 +24200,7 @@ textarea.form-control {
   gap: 16px;
   height: 935px;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
   padding: 12px;
@@ -24271,7 +24277,7 @@ textarea.form-control {
   flex: 1;
   min-height: 934px;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
   position: relative;
@@ -24343,7 +24349,7 @@ textarea.form-control {
 
 .ld-property-header {
   padding: 32px 0;
-  border-bottom: 1px solid rgba(33, 37, 41, 0.08);
+  border-bottom: 1px solid rgba(14, 23, 31, 0.08);
   background: #fff;
 }
 
@@ -24364,7 +24370,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: #fff;
-  background: rgba(33, 37, 41, 0.46);
+  background: rgba(14, 23, 31, 0.46);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -24382,7 +24388,7 @@ textarea.form-control {
   font-weight: 700;
   font-size: 40px;
   line-height: 1.15;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -24612,7 +24618,7 @@ textarea.form-control {
   gap: 30px;
   padding: 24px;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px 24px 0 0;
   margin-bottom: 4px;
   box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.04);
@@ -24625,7 +24631,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
 }
 .ld-spec-item img, .ld-spec-item svg {
   width: 18px;
@@ -24635,7 +24641,7 @@ textarea.form-control {
 
 .ld-price-address {
   padding: 24px;
-  background: #212529;
+  background: #0E171F;
   border-radius: 0 0 24px 24px;
   margin-bottom: 24px;
   display: flex;
@@ -24680,7 +24686,7 @@ textarea.form-control {
 
 .ld-content-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   overflow: hidden;
   margin-bottom: 24px;
@@ -24689,14 +24695,14 @@ textarea.form-control {
 
 .ld-card-header {
   padding: 16px 24px;
-  border-bottom: 1px solid rgba(33, 37, 41, 0.08);
+  border-bottom: 1px solid rgba(14, 23, 31, 0.08);
 }
 
 .ld-card-title {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 
@@ -24743,7 +24749,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 4px;
   line-height: 1.4;
 }
@@ -24810,7 +24816,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 4px;
   line-height: 1.4;
 }
@@ -24842,7 +24848,7 @@ textarea.form-control {
 
 .ld-sidebar-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   overflow: hidden;
   margin-bottom: 24px;
@@ -24857,7 +24863,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 
@@ -24872,7 +24878,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
   line-height: 1.6;
 }
@@ -24895,7 +24901,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  color: #212529;
+  color: #0E171F;
   line-height: 1.3;
 }
 
@@ -24933,7 +24939,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 20px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 4px;
   line-height: 1.2;
 }
@@ -24950,7 +24956,7 @@ textarea.form-control {
 .ld-agent-contact-bar {
   display: flex;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 12px;
   height: 48px;
   overflow: hidden;
@@ -24964,7 +24970,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #212529;
+  color: #0E171F;
   text-decoration: none;
   flex: 1;
   min-width: 0;
@@ -24981,7 +24987,7 @@ textarea.form-control {
   flex-shrink: 0;
 }
 .ld-agent-bar-item:first-child {
-  border-right: 1px solid rgba(33, 37, 41, 0.08);
+  border-right: 1px solid rgba(14, 23, 31, 0.08);
 }
 .ld-agent-bar-item:hover {
   color: #2C6EFE;
@@ -25060,7 +25066,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color: #212529;
+  color: #0E171F;
   text-align: right;
 }
 
@@ -25082,7 +25088,7 @@ textarea.form-control {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  border-bottom: 2px solid rgba(33, 37, 41, 0.08);
+  border-bottom: 2px solid rgba(14, 23, 31, 0.08);
   margin-bottom: 40px;
 }
 
@@ -25110,7 +25116,7 @@ textarea.form-control {
   flex-shrink: 0;
 }
 .ld-tab:hover {
-  color: #212529;
+  color: #0E171F;
 }
 .ld-tab--active {
   color: #2C6EFE;
@@ -25155,7 +25161,7 @@ textarea.form-control {
   padding: 20px;
   background: #F7F9FC;
   border-radius: 12px;
-  border: 1px solid rgba(33, 37, 41, 0.06);
+  border: 1px solid rgba(14, 23, 31, 0.06);
 }
 
 .ld-stat-icon {
@@ -25192,7 +25198,7 @@ textarea.form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 700;
   font-size: 22px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 6px;
   line-height: 1.1;
 }
@@ -25298,7 +25304,7 @@ textarea.form-control {
   font-family: "Poppins", sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 8px;
 }
 .ld-form-label .required {
@@ -25308,12 +25314,12 @@ textarea.form-control {
 .ld-form-control {
   width: 100%;
   padding: 12px 16px;
-  border: 1px solid rgba(33, 37, 41, 0.14);
+  border: 1px solid rgba(14, 23, 31, 0.14);
   border-radius: 12px;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  color: #212529;
+  color: #0E171F;
   background: #fff;
   -webkit-transition: all 0.2s;
   -ms-transition: all 0.2s;
@@ -25322,7 +25328,7 @@ textarea.form-control {
   appearance: none;
 }
 .ld-form-control::placeholder {
-  color: rgba(33, 37, 41, 0.3);
+  color: rgba(14, 23, 31, 0.3);
 }
 .ld-form-control:focus {
   border-color: #2C6EFE;
@@ -25343,14 +25349,14 @@ textarea.ld-form-control {
   align-items: center;
   gap: 6px;
   padding: 12px 14px;
-  border: 1px solid rgba(33, 37, 41, 0.14);
+  border: 1px solid rgba(14, 23, 31, 0.14);
   border-right: none;
   border-radius: 12px 0 0 12px;
   background: #F7F9FC;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   cursor: pointer;
   flex-shrink: 0;
   white-space: nowrap;
@@ -25425,7 +25431,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 56px;
   line-height: 72px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 24px;
 }
 @media only screen and (max-width: 61.9375rem) {
@@ -25530,7 +25536,7 @@ textarea.ld-form-control {
   padding: 12px 40px 12px 16px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   letter-spacing: -0.14px;
   box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
   cursor: pointer;
@@ -25562,7 +25568,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 24px;
 }
 
@@ -25594,7 +25600,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 4px;
 }
 .resc-takeaway-item__desc {
@@ -25630,7 +25636,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .resc-panel__body {
@@ -25658,7 +25664,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -25766,7 +25772,7 @@ textarea.ld-form-control {
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
-  color: #212529;
+  color: #0E171F;
   min-height: 0;
   max-height: 53px;
 }
@@ -25781,7 +25787,7 @@ textarea.ld-form-control {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -25816,7 +25822,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
   white-space: nowrap;
 }
 
@@ -25904,7 +25910,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
   white-space: nowrap;
 }
@@ -25975,7 +25981,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 
@@ -26010,7 +26016,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
   margin: 0 0 2px;
 }
 .resc-agent-info__role {
@@ -26036,7 +26042,7 @@ textarea.ld-form-control {
   padding: 8px 16px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   text-decoration: none;
   border-right: 1px solid rgba(14, 23, 31, 0.08);
   white-space: nowrap;
@@ -26112,7 +26118,7 @@ textarea.ld-form-control {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #212529;
+  color: #0E171F;
   text-decoration: none;
   text-align: center;
   transition: background 0.2s, border-color 0.2s;
@@ -26120,7 +26126,7 @@ textarea.ld-form-control {
 .resc-download-btn:hover {
   background: #f8f9fa;
   border-color: rgba(14, 23, 31, 0.3);
-  color: #212529;
+  color: #0E171F;
 }
 
 .resc-note__title {
@@ -26128,7 +26134,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 8px;
 }
 .resc-note__text {
@@ -26154,7 +26160,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .resc-insight-section__text {
@@ -26473,7 +26479,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin: 8px 0 0;
 }
 @media only screen and (max-width: 61.9375rem) {
@@ -26554,7 +26560,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 70px;
   line-height: 78px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 @media only screen and (max-width: 61.9375rem) {
@@ -26678,7 +26684,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin: 8px 0 0;
 }
 @media only screen and (max-width: 61.9375rem) {
@@ -26770,7 +26776,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 
@@ -27214,7 +27220,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .pc-fp-card__desc {
@@ -27232,7 +27238,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -27312,7 +27318,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .pc-floorplans__overlay-desc {
@@ -27771,7 +27777,7 @@ textarea.ld-form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 500;
-  color: #212529;
+  color: #0E171F;
   line-height: 1.4;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   white-space: nowrap;
@@ -27855,7 +27861,7 @@ textarea.ld-form-control {
   gap: 24px;
   padding: 24px 16px;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 16px;
   cursor: pointer;
   -webkit-transition: all 0.2s;
@@ -27913,7 +27919,7 @@ textarea.ld-form-control {
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -27923,7 +27929,7 @@ textarea.ld-form-control {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
   margin: 0;
 }
 .pc-schools-section .pc-school-meta {
@@ -27950,13 +27956,13 @@ textarea.ld-form-control {
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
-  color: #212529;
+  color: #0E171F;
 }
 .pc-schools-section .pc-school-meta-value {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
   line-height: 12px;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
 }
 .pc-schools-section .pc-school-chevron {
   flex-shrink: 0;
@@ -27990,7 +27996,7 @@ textarea.ld-form-control {
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .pc-schools-section .pc-schools-notice__text {
@@ -28009,7 +28015,7 @@ textarea.ld-form-control {
 .pc-schools-section .pc-schools-chart-card {
   flex: 1;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   display: flex;
@@ -28040,7 +28046,7 @@ textarea.ld-form-control {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .pc-schools-section .pc-schools-canvas-wrap {
@@ -28159,13 +28165,13 @@ textarea.ld-form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 18px;
-  color: #212529;
+  color: #0E171F;
 }
 .bac-cal__nav {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(33, 37, 41, 0.1);
+  border: 1px solid rgba(14, 23, 31, 0.1);
   background: #fff;
   display: flex;
   align-items: center;
@@ -28209,7 +28215,7 @@ textarea.ld-form-control {
   border-radius: 50%;
   font-family: "Poppins", sans-serif;
   font-size: 13px;
-  color: #212529;
+  color: #0E171F;
   cursor: pointer;
   border: none;
   background: transparent;
@@ -28231,19 +28237,19 @@ textarea.ld-form-control {
   font-weight: 600;
 }
 .bac-day--disabled {
-  color: rgba(33, 37, 41, 0.25);
+  color: rgba(14, 23, 31, 0.25);
   cursor: not-allowed;
   pointer-events: none;
 }
 .bac-day--other {
-  color: rgba(33, 37, 41, 0.2);
+  color: rgba(14, 23, 31, 0.2);
   cursor: default;
   pointer-events: none;
 }
 
 .bac-divider {
   width: 1px;
-  background: rgba(33, 37, 41, 0.07);
+  background: rgba(14, 23, 31, 0.07);
   flex-shrink: 0;
   margin: 24px 0;
 }
@@ -28296,7 +28302,7 @@ textarea.ld-form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 15px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .bac-slots__grid {
@@ -28310,11 +28316,11 @@ textarea.ld-form-control {
 .bac-slot {
   padding: 10px 8px;
   border-radius: 10px;
-  border: 1px solid rgba(33, 37, 41, 0.1);
+  border: 1px solid rgba(14, 23, 31, 0.1);
   background: #fff;
   font-family: "Poppins", sans-serif;
   font-size: 13px;
-  color: #212529;
+  color: #0E171F;
   text-align: center;
   cursor: pointer;
   -webkit-transition: all 0.2s;
@@ -28333,8 +28339,8 @@ textarea.ld-form-control {
   font-weight: 500;
 }
 .bac-slot--disabled {
-  color: rgba(33, 37, 41, 0.25);
-  background: rgba(33, 37, 41, 0.03);
+  color: rgba(14, 23, 31, 0.25);
+  background: rgba(14, 23, 31, 0.03);
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -28369,7 +28375,7 @@ textarea.ld-form-control {
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 18px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .bac-slots__confirmed-sub {
@@ -28497,7 +28503,7 @@ textarea.ld-form-control {
   color: #929daa;
 }
 .pc-rr-select-val--selected {
-  color: #212529;
+  color: #0E171F;
 }
 
 .pc-rr-select-chevron {
@@ -28538,7 +28544,7 @@ textarea.ld-form-control {
   background: transparent;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
 }
 .pc-rr-select-search::placeholder {
   color: #929daa;
@@ -28558,7 +28564,7 @@ textarea.ld-form-control {
   padding: 9px 12px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   border-radius: 6px;
   text-align: left;
   background: transparent;
@@ -28590,7 +28596,7 @@ textarea.ld-form-control {
   cursor: pointer;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   user-select: none;
 }
 .pc-rr-radio-opt input[type=radio] {
@@ -28607,7 +28613,7 @@ textarea.ld-form-control {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1.5px solid rgba(33, 37, 41, 0.3);
+  border: 1.5px solid rgba(14, 23, 31, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28672,7 +28678,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 56px;
   line-height: 72px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -28692,7 +28698,7 @@ textarea.ld-form-control {
   background: rgba(255, 255, 255, 0.46);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(33, 37, 41, 0.06);
+  border: 1px solid rgba(14, 23, 31, 0.06);
   border-radius: 24px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
   padding: 24px;
@@ -28758,7 +28764,7 @@ textarea.ld-form-control {
   font-weight: 500;
   font-size: 32px;
   line-height: 40px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -28793,7 +28799,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
   text-decoration: none;
   transition: color 0.2s, gap 0.2s;
 }
@@ -28835,7 +28841,7 @@ textarea.ld-form-control {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 20px;
-  color: rgba(33, 37, 41, 0.8);
+  color: rgba(14, 23, 31, 0.8);
   margin: 0;
 }
 .bfs-card__byline a {
@@ -28867,7 +28873,7 @@ textarea.ld-form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 16px;
-  color: rgba(33, 37, 41, 0.56);
+  color: rgba(14, 23, 31, 0.56);
   white-space: nowrap;
 }
 
@@ -28894,7 +28900,7 @@ textarea.ld-form-control {
 
 .bfs-latest-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
@@ -28908,7 +28914,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 
@@ -28921,7 +28927,7 @@ textarea.ld-form-control {
 .bfs-latest-divider {
   height: 0;
   border: none;
-  border-top: 1px solid rgba(33, 37, 41, 0.06);
+  border-top: 1px solid rgba(14, 23, 31, 0.06);
   margin: 0;
 }
 
@@ -28977,7 +28983,7 @@ textarea.ld-form-control {
   font-family: "Poppins", sans-serif;
   font-size: 12px;
   line-height: 14px;
-  color: rgba(33, 37, 41, 0.56);
+  color: rgba(14, 23, 31, 0.56);
   white-space: nowrap;
 }
 .bfs-latest-item__title {
@@ -28985,7 +28991,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -29030,14 +29036,14 @@ textarea.ld-form-control {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 20px;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
   text-decoration: none;
   white-space: nowrap;
   transition: background 0.2s, color 0.2s;
 }
 .bfs-cat-pill:hover {
   background: rgba(255, 255, 255, 0.85);
-  color: #212529;
+  color: #0E171F;
 }
 .bfs-cat-pill--active {
   background: #2C6EFE;
@@ -29087,7 +29093,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 36px;
   line-height: 40px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 @media only screen and (max-width: 61.9375rem) {
@@ -29290,7 +29296,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 36px;
   line-height: 40px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
   flex: 1;
 }
@@ -29346,7 +29352,7 @@ textarea.ld-form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
 }
 .ban-search-input::placeholder {
   color: rgba(146, 157, 170, 0.56);
@@ -29372,7 +29378,7 @@ textarea.ld-form-control {
 
 .ban-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
@@ -29439,7 +29445,7 @@ textarea.ld-form-control {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   line-height: 16px;
-  color: rgba(33, 37, 41, 0.56);
+  color: rgba(14, 23, 31, 0.56);
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -29448,7 +29454,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 22px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .ban-card__desc {
@@ -29471,7 +29477,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
   transition: color 0.2s, gap 0.2s;
   flex-shrink: 0;
 }
@@ -29495,13 +29501,13 @@ textarea.ld-form-control {
   align-items: center;
   gap: 8px;
   padding: 12px 24px;
-  border: 1px solid rgba(33, 37, 41, 0.2);
+  border: 1px solid rgba(14, 23, 31, 0.2);
   border-radius: 12px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
-  color: #212529;
+  color: #0E171F;
   text-decoration: none;
   transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
@@ -29625,7 +29631,7 @@ textarea.ld-form-control {
   font-weight: 500;
   font-size: 38px;
   line-height: 50px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -29660,7 +29666,7 @@ textarea.ld-form-control {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: 32px;
-  color: rgba(33, 37, 41, 0.68);
+  color: rgba(14, 23, 31, 0.68);
 }
 
 .bda-hero__share {
@@ -29673,7 +29679,7 @@ textarea.ld-form-control {
 .bda-share-label {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
 }
 
 .bda-share-icons {
@@ -29736,7 +29742,7 @@ textarea.ld-form-control {
 
 .bda-next-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   width: 400px;
@@ -29760,7 +29766,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
   flex-shrink: 0;
 }
@@ -29820,7 +29826,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
 }
 
 .bda-agent-role {
@@ -29834,7 +29840,7 @@ textarea.ld-form-control {
   display: flex;
   align-items: center;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 12px;
   height: 48px;
   overflow: hidden;
@@ -29848,7 +29854,7 @@ textarea.ld-form-control {
   flex: 1;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #212529;
+  color: #0E171F;
   text-decoration: none;
   transition: background 0.2s;
   overflow: hidden;
@@ -29864,10 +29870,10 @@ textarea.ld-form-control {
   white-space: nowrap;
 }
 .bda-contact-bar__half:first-child {
-  border-right: 1px solid rgba(33, 37, 41, 0.08);
+  border-right: 1px solid rgba(14, 23, 31, 0.08);
 }
 .bda-contact-bar__half:hover {
-  background: rgba(33, 37, 41, 0.04);
+  background: rgba(14, 23, 31, 0.04);
 }
 
 .bda-card-dots {
@@ -29888,7 +29894,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  color: #212529;
+  color: #0E171F;
   display: block;
 }
 
@@ -29935,7 +29941,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 34px;
   line-height: 44px;
-  color: #212529;
+  color: #0E171F;
   margin: 0 0 12px;
 }
 @media only screen and (max-width: 61.9375rem) {
@@ -30018,7 +30024,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 
@@ -30151,7 +30157,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 68px;
   line-height: 76px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -30175,7 +30181,7 @@ textarea.ld-form-control {
 .lgl-hero__date {
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .lgl-hero__date-label {
@@ -30222,7 +30228,7 @@ textarea.ld-form-control {
   width: 280px;
   flex-shrink: 0;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
   padding: 16px;
@@ -30277,7 +30283,7 @@ textarea.ld-form-control {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   line-height: normal;
-  color: #212529;
+  color: #0E171F;
   white-space: nowrap;
 }
 @media only screen and (max-width: 35.9375rem) {
@@ -30335,7 +30341,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -30361,7 +30367,7 @@ textarea.ld-form-control {
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 @media only screen and (max-width: 61.9375rem) {
@@ -30461,7 +30467,7 @@ textarea.ld-form-control {
   justify-content: center;
   padding: 8px 16px;
   border-radius: 999px;
-  background: rgba(33, 37, 41, 0.46);
+  background: rgba(14, 23, 31, 0.46);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   font-family: "Poppins", sans-serif;
@@ -30477,7 +30483,7 @@ textarea.ld-form-control {
   font-weight: 700;
   font-size: 76px;
   line-height: 78px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -30558,7 +30564,7 @@ textarea.ld-form-control {
   font-size: 14px;
   line-height: 18px;
   letter-spacing: -0.14px;
-  color: #212529;
+  color: #0E171F;
   display: flex;
   align-items: center;
   gap: 4px;
@@ -30578,7 +30584,7 @@ textarea.ld-form-control {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.14px;
-  color: #212529;
+  color: #0E171F;
   box-shadow: 0 2px 8px rgba(17, 18, 57, 0.03);
   outline: none;
   transition: border-color 0.2s ease;
@@ -30616,7 +30622,7 @@ textarea.ca-input {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.14px;
-  color: #212529;
+  color: #0E171F;
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
@@ -30677,7 +30683,7 @@ textarea.ca-input {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin-bottom: 16px;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -30722,7 +30728,7 @@ textarea.ca-input {
 
 .ca-why-card {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 24px;
   padding: 24px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
@@ -30758,7 +30764,7 @@ textarea.ca-input {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .ca-why-card__desc {
@@ -30833,7 +30839,7 @@ textarea.ca-input {
   font-weight: 600;
   font-size: 48px;
   line-height: 62px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 @media only screen and (max-width: 74.9375rem) {
@@ -30955,7 +30961,7 @@ textarea.ca-input {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  color: #212529;
+  color: #0E171F;
   margin: 0;
 }
 .ca-agent-card__role {
@@ -30974,7 +30980,7 @@ textarea.ca-input {
   display: flex;
   align-items: center;
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   border-radius: 12px;
   height: 48px;
   overflow: hidden;
@@ -30989,7 +30995,7 @@ textarea.ca-input {
   flex: 1;
   font-family: "Poppins", sans-serif;
   font-size: 13px;
-  color: #212529;
+  color: #0E171F;
   text-decoration: none;
   transition: background 0.2s;
   white-space: nowrap;
@@ -31005,11 +31011,11 @@ textarea.ca-input {
   text-overflow: ellipsis;
 }
 .ca-agent-card__contact-half:first-child {
-  border-right: 1px solid rgba(33, 37, 41, 0.08);
+  border-right: 1px solid rgba(14, 23, 31, 0.08);
 }
 .ca-agent-card__contact-half:hover {
-  background: rgba(33, 37, 41, 0.04);
-  color: #212529;
+  background: rgba(14, 23, 31, 0.04);
+  color: #0E171F;
 }
 
 .ca-process {
@@ -31109,7 +31115,7 @@ textarea.ca-input {
   height: 370px;
   border-radius: 24px;
   overflow: hidden;
-  border: 1px solid rgba(33, 37, 41, 0.08);
+  border: 1px solid rgba(14, 23, 31, 0.08);
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
   flex-shrink: 0;
 }
@@ -31184,10 +31190,10 @@ textarea.ca-input {
 }
 .btn-nav-circle--outline {
   background: #fff;
-  border: 1px solid rgba(33, 37, 41, 0.12);
+  border: 1px solid rgba(14, 23, 31, 0.12);
 }
 .btn-nav-circle--outline:hover {
-  background: rgba(33, 37, 41, 0.04);
+  background: rgba(14, 23, 31, 0.04);
 }
 
 .ca-wave {
@@ -36887,7 +36893,7 @@ textarea.ca-input {
 .auth-header {
   padding: 20px 0;
   background: #fff;
-  border-bottom: 1px solid rgba(108, 117, 125, 0.08);
+  border-bottom: 1px solid rgba(14, 23, 31, 0.08);
 }
 .auth-header .auth-logo {
   display: inline-flex;
