@@ -76,3 +76,15 @@ Thumbs.db
 !.yarn/sdks
 !.yarn/versions
 styles/css/style.css
+
+# Scoped pages — private, not for sharing
+scoped pages/
+styles/scss/scoped-*.scss
+styles/scss/pages/_listing-intelligence.scss
+styles/scss/pages/_seller-lead-generation.scss
+styles/scss/pages/_past-client-retention.scss
+styles/css/scoped-*.css
+styles/css/scoped-*.css.map
+js/listing-intelligence.js
+js/seller-lead-generation.js
+js/past-client-retention.js
