@@ -33,53 +33,42 @@
 </head>
 
 <body>
-
-    <!-- ==================== HEADER ==================== -->
+    <!-- =========================================================
+         HEADER (shared)
+    ========================================================= -->
     <div class="main-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="main-landing-page.html">Logo</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPC"
+                        aria-controls="navbarPC" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarScroll">
+                    <div class="collapse navbar-collapse" id="navbarPC">
                         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
                             style="--bs-scroll-height: 100px;">
-                            <li class="nav-item">
-                                <a class="nav-link" href="buy-home.html">Buy</a>
+                            <li class="nav-item"><a class="nav-link" href="buy-home.html">Buy</a></li>
+                            <li class="nav-item"><a class="nav-link" href="sell-home.html">Sell</a></li>
+                            <li class="nav-item"><a class="nav-link" href="home-value-hub-landing.html">Home Value</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="sell-home.html">Sell</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="home-value-hub-landing.html">Home Value</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="open-house.html">Open Houses</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="pre-construction.html">Pre-construction</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="blog.html">Blog</a>
-                            </li>
+                            <li class="nav-item"><a class="nav-link" href="open-house.html">Open Houses</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="pre-construction.html">Pre-construction</a></li>
+                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                         </ul>
-                    </div>
-                    <!-- extra-nav -->
-                    <div class="extra-nav">
-                        <a href="login.html" class="btn btn-outline-primary me-3">Sign in <img
-                                src="images/icons/chevron-right.svg" alt=""></a>
-                        <a href="my-properties.html" class="btn btn-primary">My properties <img
-                                src="images/icons/chevron-right-white.svg" alt=""></a>
+                        <div class="extra-nav">
+                            <a href="login.html" class="btn btn-outline-primary me-3">Sign in
+                                <img src="images/icons/chevron-right.svg" alt=""></a>
+                            <a href="my-properties.html" class="btn btn-primary">My properties
+                                <img src="images/icons/chevron-right-white.svg" alt=""></a>
+                        </div>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
-    <!-- ==================== /HEADER ==================== -->
+    <!-- /header -->
 
 
     <!-- ==================== HERO ==================== -->
@@ -122,8 +111,8 @@
                             <label class="ca-label" for="ca-name">
                                 Full name <span class="ca-required">*</span>
                             </label>
-                            <input id="ca-name" type="text" class="ca-input"
-                                placeholder="Enter your full name" autocomplete="name" required>
+                            <input id="ca-name" type="text" class="ca-input" placeholder="Enter your full name"
+                                autocomplete="name" required>
                         </div>
 
                         <!-- Phone -->
@@ -140,8 +129,8 @@
                                             stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </button>
-                                <input id="ca-phone" type="tel" class="ca-input"
-                                    placeholder="(000) 000-0000" autocomplete="tel" style="flex:1" required>
+                                <input id="ca-phone" type="tel" class="ca-input" placeholder="(000) 000-0000"
+                                    autocomplete="tel" style="flex:1" required>
                             </div>
                         </div>
 
@@ -150,8 +139,8 @@
                             <label class="ca-label" for="ca-email">
                                 Email <span class="ca-required">*</span>
                             </label>
-                            <input id="ca-email" type="email" class="ca-input"
-                                placeholder="you@example.com" autocomplete="email" required>
+                            <input id="ca-email" type="email" class="ca-input" placeholder="you@example.com"
+                                autocomplete="email" required>
                         </div>
 
                         <!-- Property address -->
@@ -159,8 +148,8 @@
                             <label class="ca-label" for="ca-address">
                                 Property address <span class="ca-required">*</span>
                             </label>
-                            <input id="ca-address" type="text" class="ca-input"
-                                placeholder="123 Main St, Toronto, ON" autocomplete="street-address" required>
+                            <input id="ca-address" type="text" class="ca-input" placeholder="123 Main St, Toronto, ON"
+                                autocomplete="street-address" required>
                         </div>
 
                         <!-- About property -->
@@ -207,7 +196,8 @@
                 <div class="ca-why-card">
                     <div class="ca-why-card__icon" style="background:rgba(46,124,246,0.12);">
                         <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.667 14.167l4.666-2.917v9.5l-4.666-2.917M5.667 11.25h12.666a2.833 2.833 0 012.834 2.833v7.084a2.833 2.833 0 01-2.834 2.833H5.667A2.833 2.833 0 012.833 21.167v-7.084A2.833 2.833 0 015.667 11.25z"
+                            <path
+                                d="M22.667 14.167l4.666-2.917v9.5l-4.666-2.917M5.667 11.25h12.666a2.833 2.833 0 012.834 2.833v7.084a2.833 2.833 0 01-2.834 2.833H5.667A2.833 2.833 0 012.833 21.167v-7.084A2.833 2.833 0 015.667 11.25z"
                                 stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
@@ -224,7 +214,8 @@
                 <div class="ca-why-card">
                     <div class="ca-why-card__icon" style="background:rgba(233,189,95,0.12);">
                         <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 4.25C10.004 4.25 4.25 10.004 4.25 17S10.004 29.75 17 29.75 29.75 23.996 29.75 17 23.996 4.25 17 4.25zM17 4.25c3.536 0 6.375 5.82 6.375 12.75S20.536 29.75 17 29.75M17 4.25c-3.536 0-6.375 5.82-6.375 12.75S13.464 29.75 17 29.75M4.25 17h25.5"
+                            <path
+                                d="M17 4.25C10.004 4.25 4.25 10.004 4.25 17S10.004 29.75 17 29.75 29.75 23.996 29.75 17 23.996 4.25 17 4.25zM17 4.25c3.536 0 6.375 5.82 6.375 12.75S20.536 29.75 17 29.75M17 4.25c-3.536 0-6.375 5.82-6.375 12.75S13.464 29.75 17 29.75M4.25 17h25.5"
                                 stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
@@ -241,7 +232,8 @@
                 <div class="ca-why-card">
                     <div class="ca-why-card__icon" style="background:rgba(141,235,146,0.12);">
                         <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M28.334 28.333H5.667M9.917 21.25v-5.667M15.584 21.25V9.917M21.25 21.25v-2.833M26.917 21.25v-8.5"
+                            <path
+                                d="M28.334 28.333H5.667M9.917 21.25v-5.667M15.584 21.25V9.917M21.25 21.25v-2.833M26.917 21.25v-8.5"
                                 stroke="#41C248" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
@@ -258,7 +250,8 @@
                 <div class="ca-why-card">
                     <div class="ca-why-card__icon" style="background:rgba(255,130,118,0.12);">
                         <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.334 17l4.25 4.25 7.083-8.5M31.167 17c0 7.824-6.343 14.167-14.167 14.167S2.833 24.824 2.833 17 9.176 2.833 17 2.833 31.167 9.176 31.167 17z"
+                            <path
+                                d="M11.334 17l4.25 4.25 7.083-8.5M31.167 17c0 7.824-6.343 14.167-14.167 14.167S2.833 24.824 2.833 17 9.176 2.833 17 2.833 31.167 9.176 31.167 17z"
                                 stroke="#FF8276" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </div>
@@ -318,7 +311,8 @@
                                 <div class="swiper-slide">
                                     <div class="ca-agent-card">
                                         <div class="ca-agent-card__photo">
-                                            <img src="images/agent-photo.jpg" alt="Sarah Johnson, Senior Real Estate Agent">
+                                            <img src="images/agent-photo.jpg"
+                                                alt="Sarah Johnson, Senior Real Estate Agent">
                                         </div>
                                         <div class="ca-agent-card__info">
                                             <h3 class="ca-agent-card__name">Sarah Johnson</h3>
@@ -330,17 +324,24 @@
                                                 <img src="images/icons/chevron-right-white.svg" alt="">
                                             </a>
                                             <div class="ca-agent-card__contact-bar">
-                                                <a href="mailto:sarah@homeoptima.ca" class="ca-agent-card__contact-half">
-                                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2 7l8.586 5.657a2.25 2.25 0 002.828 0L22 7M3 17.5h18a1 1 0 001-1V7.5a1 1 0 00-1-1H3a1 1 0 00-1 1v9a1 1 0 001 1z"
-                                                            stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <a href="mailto:sarah@homeoptima.ca"
+                                                    class="ca-agent-card__contact-half">
+                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M2 7l8.586 5.657a2.25 2.25 0 002.828 0L22 7M3 17.5h18a1 1 0 001-1V7.5a1 1 0 00-1-1H3a1 1 0 00-1 1v9a1 1 0 001 1z"
+                                                            stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     <span>sarah@homeoptima.ca</span>
                                                 </a>
                                                 <a href="tel:+14165550101" class="ca-agent-card__contact-half">
-                                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8.38 8.853c.696 1.45 1.645 2.808 2.846 4.01 1.202 1.201 2.56 2.15 4.01 2.846.125.06.187.09.266.113.28.082.624.023.861-.147.067-.048.125-.105.238-.218.35-.35.525-.525.701-.639.663-.431 1.517-.431 2.18 0 .176.114.351.289.701.639l.195.195c.531.531.797.797.941 1.082.287.568.287 1.238 0 1.806-.144.285-.41.55-.941 1.082l-.158.157c-.53.53-.794.795-1.154.997-.4.224-1.02.386-1.478.384-.413-.001-.695-.081-1.26-.241C13.295 20.057 10.433 18.433 8.045 16.045 5.657 13.657 4.032 10.795 3.171 7.761c-.16-.564-.24-.847-.241-1.26-.001-.458.161-1.078.384-1.477.202-.36.467-.624.997-1.154l.157-.158c.531-.531.797-.797 1.082-.941.567-.287 1.237-.287 1.805 0 .285.144.55.41 1.082.941l.195.195c.35.35.524.525.639.701.43.663.43 1.517 0 2.18-.114.177-.289.352-.639.701-.114.114-.17.17-.218.238-.17.237-.23.58-.147.861.023.08.053.141.113.266z"
-                                                            stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M8.38 8.853c.696 1.45 1.645 2.808 2.846 4.01 1.202 1.201 2.56 2.15 4.01 2.846.125.06.187.09.266.113.28.082.624.023.861-.147.067-.048.125-.105.238-.218.35-.35.525-.525.701-.639.663-.431 1.517-.431 2.18 0 .176.114.351.289.701.639l.195.195c.531.531.797.797.941 1.082.287.568.287 1.238 0 1.806-.144.285-.41.55-.941 1.082l-.158.157c-.53.53-.794.795-1.154.997-.4.224-1.02.386-1.478.384-.413-.001-.695-.081-1.26-.241C13.295 20.057 10.433 18.433 8.045 16.045 5.657 13.657 4.032 10.795 3.171 7.761c-.16-.564-.24-.847-.241-1.26-.001-.458.161-1.078.384-1.477.202-.36.467-.624.997-1.154l.157-.158c.531-.531.797-.797 1.082-.941.567-.287 1.237-.287 1.805 0 .285.144.55.41 1.082.941l.195.195c.35.35.524.525.639.701.43.663.43 1.517 0 2.18-.114.177-.289.352-.639.701-.114.114-.17.17-.218.238-.17.237-.23.58-.147.861.023.08.053.141.113.266z"
+                                                            stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     <span>(416) 555-0101</span>
                                                 </a>
@@ -354,7 +355,8 @@
                                 <div class="swiper-slide">
                                     <div class="ca-agent-card">
                                         <div class="ca-agent-card__photo">
-                                            <img src="images/flayer-landing-page-img/03.png" alt="John Doe, Real Estate Specialist">
+                                            <img src="images/flayer-landing-page-img/03.png"
+                                                alt="John Doe, Real Estate Specialist">
                                         </div>
                                         <div class="ca-agent-card__info">
                                             <h3 class="ca-agent-card__name">John Doe</h3>
@@ -367,16 +369,22 @@
                                             </a>
                                             <div class="ca-agent-card__contact-bar">
                                                 <a href="mailto:john@homeoptima.ca" class="ca-agent-card__contact-half">
-                                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2 7l8.586 5.657a2.25 2.25 0 002.828 0L22 7M3 17.5h18a1 1 0 001-1V7.5a1 1 0 00-1-1H3a1 1 0 00-1 1v9a1 1 0 001 1z"
-                                                            stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M2 7l8.586 5.657a2.25 2.25 0 002.828 0L22 7M3 17.5h18a1 1 0 001-1V7.5a1 1 0 00-1-1H3a1 1 0 00-1 1v9a1 1 0 001 1z"
+                                                            stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     <span>john@homeoptima.ca</span>
                                                 </a>
                                                 <a href="tel:+14165550202" class="ca-agent-card__contact-half">
-                                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8.38 8.853c.696 1.45 1.645 2.808 2.846 4.01 1.202 1.201 2.56 2.15 4.01 2.846.125.06.187.09.266.113.28.082.624.023.861-.147.067-.048.125-.105.238-.218.35-.35.525-.525.701-.639.663-.431 1.517-.431 2.18 0 .176.114.351.289.701.639l.195.195c.531.531.797.797.941 1.082.287.568.287 1.238 0 1.806-.144.285-.41.55-.941 1.082l-.158.157c-.53.53-.794.795-1.154.997-.4.224-1.02.386-1.478.384-.413-.001-.695-.081-1.26-.241C13.295 20.057 10.433 18.433 8.045 16.045 5.657 13.657 4.032 10.795 3.171 7.761c-.16-.564-.24-.847-.241-1.26-.001-.458.161-1.078.384-1.477.202-.36.467-.624.997-1.154l.157-.158c.531-.531.797-.797 1.082-.941.567-.287 1.237-.287 1.805 0 .285.144.55.41 1.082.941l.195.195c.35.35.524.525.639.701.43.663.43 1.517 0 2.18-.114.177-.289.352-.639.701-.114.114-.17.17-.218.238-.17.237-.23.58-.147.861.023.08.053.141.113.266z"
-                                                            stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M8.38 8.853c.696 1.45 1.645 2.808 2.846 4.01 1.202 1.201 2.56 2.15 4.01 2.846.125.06.187.09.266.113.28.082.624.023.861-.147.067-.048.125-.105.238-.218.35-.35.525-.525.701-.639.663-.431 1.517-.431 2.18 0 .176.114.351.289.701.639l.195.195c.531.531.797.797.941 1.082.287.568.287 1.238 0 1.806-.144.285-.41.55-.941 1.082l-.158.157c-.53.53-.794.795-1.154.997-.4.224-1.02.386-1.478.384-.413-.001-.695-.081-1.26-.241C13.295 20.057 10.433 18.433 8.045 16.045 5.657 13.657 4.032 10.795 3.171 7.761c-.16-.564-.24-.847-.241-1.26-.001-.458.161-1.078.384-1.477.202-.36.467-.624.997-1.154l.157-.158c.531-.531.797-.797 1.082-.941.567-.287 1.237-.287 1.805 0 .285.144.55.41 1.082.941l.195.195c.35.35.524.525.639.701.43.663.43 1.517 0 2.18-.114.177-.289.352-.639.701-.114.114-.17.17-.218.238-.17.237-.23.58-.147.861.023.08.053.141.113.266z"
+                                                            stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     <span>(416) 555-0202</span>
                                                 </a>
@@ -402,17 +410,24 @@
                                                 <img src="images/icons/chevron-right-white.svg" alt="">
                                             </a>
                                             <div class="ca-agent-card__contact-bar">
-                                                <a href="mailto:maria@homeoptima.ca" class="ca-agent-card__contact-half">
-                                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2 7l8.586 5.657a2.25 2.25 0 002.828 0L22 7M3 17.5h18a1 1 0 001-1V7.5a1 1 0 00-1-1H3a1 1 0 00-1 1v9a1 1 0 001 1z"
-                                                            stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <a href="mailto:maria@homeoptima.ca"
+                                                    class="ca-agent-card__contact-half">
+                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M2 7l8.586 5.657a2.25 2.25 0 002.828 0L22 7M3 17.5h18a1 1 0 001-1V7.5a1 1 0 00-1-1H3a1 1 0 00-1 1v9a1 1 0 001 1z"
+                                                            stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     <span>maria@homeoptima.ca</span>
                                                 </a>
                                                 <a href="tel:+14165550303" class="ca-agent-card__contact-half">
-                                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M8.38 8.853c.696 1.45 1.645 2.808 2.846 4.01 1.202 1.201 2.56 2.15 4.01 2.846.125.06.187.09.266.113.28.082.624.023.861-.147.067-.048.125-.105.238-.218.35-.35.525-.525.701-.639.663-.431 1.517-.431 2.18 0 .176.114.351.289.701.639l.195.195c.531.531.797.797.941 1.082.287.568.287 1.238 0 1.806-.144.285-.41.55-.941 1.082l-.158.157c-.53.53-.794.795-1.154.997-.4.224-1.02.386-1.478.384-.413-.001-.695-.081-1.26-.241C13.295 20.057 10.433 18.433 8.045 16.045 5.657 13.657 4.032 10.795 3.171 7.761c-.16-.564-.24-.847-.241-1.26-.001-.458.161-1.078.384-1.477.202-.36.467-.624.997-1.154l.157-.158c.531-.531.797-.797 1.082-.941.567-.287 1.237-.287 1.805 0 .285.144.55.41 1.082.941l.195.195c.35.35.524.525.639.701.43.663.43 1.517 0 2.18-.114.177-.289.352-.639.701-.114.114-.17.17-.218.238-.17.237-.23.58-.147.861.023.08.053.141.113.266z"
-                                                            stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                    <svg viewBox="0 0 24 24" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M8.38 8.853c.696 1.45 1.645 2.808 2.846 4.01 1.202 1.201 2.56 2.15 4.01 2.846.125.06.187.09.266.113.28.082.624.023.861-.147.067-.048.125-.105.238-.218.35-.35.525-.525.701-.639.663-.431 1.517-.431 2.18 0 .176.114.351.289.701.639l.195.195c.531.531.797.797.941 1.082.287.568.287 1.238 0 1.806-.144.285-.41.55-.941 1.082l-.158.157c-.53.53-.794.795-1.154.997-.4.224-1.02.386-1.478.384-.413-.001-.695-.081-1.26-.241C13.295 20.057 10.433 18.433 8.045 16.045 5.657 13.657 4.032 10.795 3.171 7.761c-.16-.564-.24-.847-.241-1.26-.001-.458.161-1.078.384-1.477.202-.36.467-.624.997-1.154l.157-.158c.531-.531.797-.797 1.082-.941.567-.287 1.237-.287 1.805 0 .285.144.55.41 1.082.941l.195.195c.35.35.524.525.639.701.43.663.43 1.517 0 2.18-.114.177-.289.352-.639.701-.114.114-.17.17-.218.238-.17.237-.23.58-.147.861.023.08.053.141.113.266z"
+                                                            stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
                                                     </svg>
                                                     <span>(416) 555-0303</span>
                                                 </a>
@@ -428,17 +443,20 @@
 
                     <!-- Navigation row -->
                     <div class="ca-agents__nav">
-                        <button class="ca-agents-prev btn-nav-circle btn-nav-circle--outline" aria-label="Previous agent">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <button class="ca-agents-prev btn-nav-circle btn-nav-circle--outline"
+                            aria-label="Previous agent">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12.5 15L7.5 10L12.5 5" stroke="#0E171F" stroke-width="1.5"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </button>
                         <div class="ca-agents-pagination swiper-pagination"></div>
                         <button class="ca-agents-next btn-nav-circle" aria-label="Next agent">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.5 15L12.5 10L7.5 5" stroke="#fff" stroke-width="1.5"
-                                    stroke-linecap="round" stroke-linejoin="round" />
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 15L12.5 10L7.5 5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </button>
                     </div>

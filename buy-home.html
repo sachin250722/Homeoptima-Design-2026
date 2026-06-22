@@ -36,6 +36,43 @@
 
 <body class="bh-page">
 
+    <!-- =========================================================
+         HEADER (shared)
+    ========================================================= -->
+    <div class="main-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="main-landing-page.html">Logo</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPC"
+                        aria-controls="navbarPC" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarPC">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+                            <li class="nav-item"><a class="nav-link" href="buy-home.html">Buy</a></li>
+                            <li class="nav-item"><a class="nav-link" href="sell-home.html">Sell</a></li>
+                            <li class="nav-item"><a class="nav-link" href="home-value-hub-landing.html">Home Value</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="open-house.html">Open Houses</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page"
+                                    href="pre-construction.html">Pre-construction</a></li>
+                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        </ul>
+                        <div class="extra-nav">
+                            <a href="login.html" class="btn btn-outline-primary me-3">Sign in
+                                <img src="images/icons/chevron-right.svg" alt=""></a>
+                            <a href="my-properties.html" class="btn btn-primary">My properties
+                                <img src="images/icons/chevron-right-white.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- /header -->
+     
     <!-- ============================= 1. HERO (Navbar + Hero) ============================= -->
     <section class="bh-hero">
 
@@ -44,48 +81,6 @@
             <img src="images/buy-house-img/01.jpg" alt="" class="bh-hero__bg-img">
             <div class="bh-hero__overlay"></div>
         </div>
-
-        <!-- ---- Navbar ---- -->
-        <div class="main-header bh-hero__nav">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="main-landing-page.html">Logo</a>
-                        <div class="d-flex align-items-center gap-3">
-                            <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarBH" aria-controls="navbarBH" aria-expanded="false"
-                                aria-label="Toggle navigation">
-                                <svg width="21" height="14" viewBox="0 0 21 14" fill="none">
-                                    <path
-                                        d="M0 14V11.6667H21V14H0ZM0 8.16667V5.83333H21V8.16667H0ZM0 2.33333V0H21V2.33333H0Z"
-                                        fill="#0E171F" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="collapse navbar-collapse" id="navbarBH">
-                            <ul class="navbar-nav me-auto my-2 my-lg-0">
-                                <li class="nav-item"><a class="nav-link active" aria-current="page" href="buy-home.html">Buy</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="sell-home.html">Sell</a></li>
-                                <li class="nav-item"><a class="nav-link" href="home-value-hub-landing.html">Home Value</a></li>
-                                <li class="nav-item"><a class="nav-link" href="open-house.html">Open Houses</a></li>
-                                <li class="nav-item"><a class="nav-link" href="pre-construction.html">Pre-construction</a></li>
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                            </ul>
-                            <div class="extra-nav ms-auto">
-                                <a href="login.html" class="btn btn-outline-primary me-lg-3 mb-lg-0 mb-3">
-                                    Sign in <img src="images/icons/chevron-right.svg" alt="">
-                                </a>
-                                <a href="my-properties.html" class="btn btn-primary">
-                                    My properties <img src="images/icons/chevron-right-white.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!-- ---- /Navbar ---- -->
 
         <!-- ---- Hero Content ---- -->
         <div class="bh-hero__body">
@@ -189,18 +184,32 @@
                                     </label>
                                     <div class="bh-form__phone-wrap">
                                         <div class="dropdown">
-                                            <button type="button" class="bh-form__phone-code" data-bs-toggle="dropdown" data-bs-strategy="fixed" aria-expanded="false">
+                                            <button type="button" class="bh-form__phone-code" data-bs-toggle="dropdown"
+                                                data-bs-strategy="fixed" aria-expanded="false">
                                                 <img src="images/icons/flag/01.svg" alt="USA" width="24" height="24">
                                                 <span>+1</span>
                                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                                    <path d="M6 9L12 15L18 9" stroke="#0E171F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M6 9L12 15L18 9" stroke="#0E171F" stroke-width="1.5"
+                                                        stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                             </button>
                                             <ul class="dropdown-menu bh-form__phone-menu">
-                                                <li><button type="button" class="dropdown-item bh-form__phone-opt" data-code="+1" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +1 <span>USA / Canada</span></button></li>
-                                                <li><button type="button" class="dropdown-item bh-form__phone-opt" data-code="+44" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +44 <span>UK</span></button></li>
-                                                <li><button type="button" class="dropdown-item bh-form__phone-opt" data-code="+91" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +91 <span>India</span></button></li>
-                                                <li><button type="button" class="dropdown-item bh-form__phone-opt" data-code="+61" data-flag="images/icons/flag/01.svg"><img src="images/icons/flag/01.svg" width="20" height="20" alt=""> +61 <span>Australia</span></button></li>
+                                                <li><button type="button" class="dropdown-item bh-form__phone-opt"
+                                                        data-code="+1" data-flag="images/icons/flag/01.svg"><img
+                                                            src="images/icons/flag/01.svg" width="20" height="20"
+                                                            alt=""> +1 <span>USA / Canada</span></button></li>
+                                                <li><button type="button" class="dropdown-item bh-form__phone-opt"
+                                                        data-code="+44" data-flag="images/icons/flag/01.svg"><img
+                                                            src="images/icons/flag/01.svg" width="20" height="20"
+                                                            alt=""> +44 <span>UK</span></button></li>
+                                                <li><button type="button" class="dropdown-item bh-form__phone-opt"
+                                                        data-code="+91" data-flag="images/icons/flag/01.svg"><img
+                                                            src="images/icons/flag/01.svg" width="20" height="20"
+                                                            alt=""> +91 <span>India</span></button></li>
+                                                <li><button type="button" class="dropdown-item bh-form__phone-opt"
+                                                        data-code="+61" data-flag="images/icons/flag/01.svg"><img
+                                                            src="images/icons/flag/01.svg" width="20" height="20"
+                                                            alt=""> +61 <span>Australia</span></button></li>
                                             </ul>
                                         </div>
                                         <input type="tel" id="bhPhone" name="phone"
@@ -585,8 +594,10 @@
                     <div class="bh-step-card">
                         <div class="bh-step-card__icon bh-step-card__icon--blue">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M21 21L15.8033 15.8033M15.8033 15.8033C17.1605 14.4461 18 12.5711 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C12.5711 18 14.4461 17.1605 15.8033 15.8033Z"
-                                    stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M21 21L15.8033 15.8033M15.8033 15.8033C17.1605 14.4461 18 12.5711 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C12.5711 18 14.4461 17.1605 15.8033 15.8033Z"
+                                    stroke="#2E7CF6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </div>
                         <h4 class="bh-step-card__title">Tell us What You Need</h4>
@@ -603,8 +614,10 @@
                     <div class="bh-step-card">
                         <div class="bh-step-card__icon bh-step-card__icon--yellow">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M9 11L11 13L15 9M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                                    stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M9 11L11 13L15 9M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                                    stroke="#E9BD5F" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </div>
                         <h4 class="bh-step-card__title">We Find The Best Matches</h4>
@@ -639,8 +652,10 @@
                     <div class="bh-step-card">
                         <div class="bh-step-card__icon bh-step-card__icon--coral">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M3 9L12 2L21 9V20C21 20.5523 20.5523 21 20 21H15V16H9V21H4C3.44772 21 3 20.5523 3 20V9Z"
-                                    stroke="#FF8276" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M3 9L12 2L21 9V20C21 20.5523 20.5523 21 20 21H15V16H9V21H4C3.44772 21 3 20.5523 3 20V9Z"
+                                    stroke="#FF8276" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </div>
                         <h4 class="bh-step-card__title">Make Your Move</h4>
